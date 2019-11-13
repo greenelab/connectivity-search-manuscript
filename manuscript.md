@@ -1,12 +1,18 @@
 ---
 author-meta:
-- John Doe
-- Jane Roe
+- Daniel S. Himmelstein
 date-meta: '2019-11-13'
 keywords:
-- markdown
-- publishing
-- manubot
+- hetnets
+- networks
+- connectivity
+- search
+- hetionet
+- knowledge graphs
+- algorithms
+- nodes
+- bioinformatics
+- biomedical informatics
 lang: en-US
 title: Hetnet connectivity search provides rapid insights into how two biomedical
   entities are related
@@ -19,35 +25,34 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/63e27cdff28336807f57fef04f9ac3b4c48ddd61/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@63e27cd](https://github.com/greenelab/connectivity-search-manuscript/tree/63e27cdff28336807f57fef04f9ac3b4c48ddd61)
+from [greenelab/connectivity-search-manuscript@7d9dfd0](https://github.com/greenelab/connectivity-search-manuscript/tree/7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659)
 on November 13, 2019.
 </em></small>
 
 ## Authors
 
+<!-- include the Font Awesome library, per: https://fontawesome.com/start -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+[
+[]{.fas .fa-info-circle .fa-lg} **Manuscript in preparation**<br>
+The authorship information below is incomplete and preliminary.
+This notice will be updated once all contributors meeting [authorship criteria](https://github.com/greenelab/onboarding/blob/master/onboarding.md "Greene Lab Onboarding. See Authorship section") have added themselves to [`metadata.yaml`](https://github.com/greenelab/connectivity-search-manuscript/blob/master/content/metadata.yaml).
+]{.banner .lightpurple}
 
 
-+ **John Doe**<br>
+
++ **Daniel S. Himmelstein**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
+    [0000-0002-3012-7446](https://orcid.org/0000-0002-3012-7446)
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [johndoe](https://github.com/johndoe)
+    [dhimmel](https://github.com/dhimmel)
     · ![Twitter icon](images/twitter.svg){.inline_icon}
-    [johndoe](https://twitter.com/johndoe)<br>
+    [dhimmel](https://twitter.com/dhimmel)<br>
   <small>
-     Department of Something, University of Whatever
-     · Funded by Grant XXXXXXXX
-  </small>
-
-+ **Jane Roe**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [janeroe](https://github.com/janeroe)<br>
-  <small>
-     Department of Something, University of Whatever; Department of Whatever, University of Something
+     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
+     · Funded by GBMF4552
   </small>
 
 
@@ -64,10 +69,12 @@ Yet researchers would still like to know how two nodes are meaningfully connecte
 For example, users may want to know not only how metformin is related to breast cancer, but also how the GJA1 gene might be involved in insomnia.
 Therefore, we developed hetnet connectivity search to propose the most important paths between any two nodes.
 
-The algorithm behind connectivity search identifies types of paths that occur more frequently than would be expected by chance (based on node degree alone). We implemented the method on Hetionet and provide an online interface at <https://het.io/search>. Several optimizations were required to precompute significant instances of node connectivity at scale. We provide an open source implementation of these methods in our new Python package named hetmatpy.
+The algorithm behind connectivity search identifies types of paths that occur more frequently than would be expected by chance (based on node degree alone).
+We implemented the method on Hetionet and provide an online interface at <https://het.io/search>.
+Several optimizations were required to precompute significant instances of node connectivity at scale.
+We provide an open source implementation of these methods in our new Python package named [hetmatpy](https://github.com/hetio/hetmatpy "Python package for matrix storage and operations on hetnets").
 
 To validate the method, we show that it identifies much of the same evidence for specific instances of drug repurposing as the previous supervised approach, but without requiring a training set.
-
 
 
 ## References {.page_break_before}

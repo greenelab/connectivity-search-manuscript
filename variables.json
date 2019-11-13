@@ -2,44 +2,25 @@
   "date": "November 13, 2019",
   "authors": [
     {
-      "github": "johndoe",
-      "name": "John Doe",
-      "initials": "JD",
-      "orcid": "XXXX-XXXX-XXXX-XXXX",
-      "twitter": "johndoe",
-      "email": "john.doe@something.com",
+      "github": "dhimmel",
+      "name": "Daniel S. Himmelstein",
+      "initials": "DSH",
+      "orcid": "0000-0002-3012-7446",
+      "twitter": "dhimmel",
+      "email": "daniel.himmelstein@gmail.com",
       "affiliations": [
-        "Department of Something, University of Whatever"
+        "Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America"
       ],
-      "funders": "Grant XXXXXXXX",
+      "funders": "GBMF4552",
       "affiliation_numbers": [
         1
-      ]
-    },
-    {
-      "github": "janeroe",
-      "name": "Jane Roe",
-      "initials": "JR",
-      "orcid": "XXXX-XXXX-XXXX-XXXX",
-      "email": "jane.roe@whatever.edu",
-      "affiliations": [
-        "Department of Something, University of Whatever",
-        "Department of Whatever, University of Something"
-      ],
-      "affiliation_numbers": [
-        1,
-        2
       ]
     }
   ],
   "affiliations": [
     {
-      "affiliation": "Department of Something, University of Whatever",
+      "affiliation": "Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America",
       "affiliation_number": 1
-    },
-    {
-      "affiliation": "Department of Whatever, University of Something",
-      "affiliation_number": 2
     }
   ],
   "ci_source": {
@@ -47,16 +28,16 @@
     "repo_slug": "greenelab/connectivity-search-manuscript",
     "repo_owner": "greenelab",
     "repo_name": "connectivity-search-manuscript",
-    "commit": "63e27cdff28336807f57fef04f9ac3b4c48ddd61",
-    "triggering_commit": "63e27cdff28336807f57fef04f9ac3b4c48ddd61",
-    "build_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/builds/136353205",
-    "job_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/jobs/256170501",
-    "manuscript_url": "https://greenelab.github.io/connectivity-search-manuscript/v/63e27cdff28336807f57fef04f9ac3b4c48ddd61/"
+    "commit": "7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659",
+    "triggering_commit": "7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659",
+    "build_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/builds/136357071",
+    "job_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/jobs/256180722",
+    "manuscript_url": "https://greenelab.github.io/connectivity-search-manuscript/v/7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659/"
   },
   "manuscript_stats": {
     "reference_counts": {
       "total": 0
     },
-    "word_count": 478
+    "word_count": 538
   }
 }

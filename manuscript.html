@@ -4,10 +4,9 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="John Doe" />
-  <meta name="author" content="Jane Roe" />
+  <meta name="author" content="Daniel S. Himmelstein" />
   <meta name="dcterms.date" content="2019-11-13" />
-  <meta name="keywords" content="markdown, publishing, manubot" />
+  <meta name="keywords" content="hetnets, networks, connectivity, search, hetionet, knowledge graphs, algorithms, nodes, bioinformatics, biomedical informatics" />
   <title>Hetnet connectivity search provides rapid insights into how two biomedical entities are related</title>
   <style>
       code{white-space: pre-wrap;}
@@ -23,16 +22,17 @@
 <header id="title-block-header">
 <h1 class="title">Hetnet connectivity search provides rapid insights into how two biomedical entities are related</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://greenelab.github.io/connectivity-search-manuscript/v/63e27cdff28336807f57fef04f9ac3b4c48ddd61/">permalink</a>) was automatically generated from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/63e27cdff28336807f57fef04f9ac3b4c48ddd61">greenelab/connectivity-search-manuscript@63e27cd</a> on November 13, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://greenelab.github.io/connectivity-search-manuscript/v/7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659/">permalink</a>) was automatically generated from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659">greenelab/connectivity-search-manuscript@7d9dfd0</a> on November 13, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
+<!-- include the Font Awesome library, per: https://fontawesome.com/start -->
+<p><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> <span class="banner lightpurple"><span class="fas fa-info-circle fa-lg"></span> <strong>Manuscript in preparation</strong><br> The authorship information below is incomplete and preliminary. This notice will be updated once all contributors meeting <a href="https://github.com/greenelab/onboarding/blob/master/onboarding.md" title="Greene Lab Onboarding. See Authorship section">authorship criteria</a> have added themselves to <a href="https://github.com/greenelab/connectivity-search-manuscript/blob/master/content/metadata.yaml"><code>metadata.yaml</code></a>.</span></p>
 <ul>
-<li><p><strong>John Doe</strong><br> <img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" /> <a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a> · <img src="images/github.svg" class="inline_icon" alt="GitHub icon" /> <a href="https://github.com/johndoe">johndoe</a> · <img src="images/twitter.svg" class="inline_icon" alt="Twitter icon" /> <a href="https://twitter.com/johndoe">johndoe</a><br> <small> Department of Something, University of Whatever · Funded by Grant XXXXXXXX </small></p></li>
-<li><p><strong>Jane Roe</strong><br> <img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" /> <a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a> · <img src="images/github.svg" class="inline_icon" alt="GitHub icon" /> <a href="https://github.com/janeroe">janeroe</a><br> <small> Department of Something, University of Whatever; Department of Whatever, University of Something </small></p></li>
+<li><strong>Daniel S. Himmelstein</strong><br> <img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" /> <a href="https://orcid.org/0000-0002-3012-7446">0000-0002-3012-7446</a> · <img src="images/github.svg" class="inline_icon" alt="GitHub icon" /> <a href="https://github.com/dhimmel">dhimmel</a> · <img src="images/twitter.svg" class="inline_icon" alt="Twitter icon" /> <a href="https://twitter.com/dhimmel">dhimmel</a><br> <small> Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America · Funded by GBMF4552 </small></li>
 </ul>
 <h2 id="abstract" class="page_break_before">Abstract</h2>
 <p>Hetnets, short for “heterogeneous networks”, contain multiple node and relationship types and offer a way to encode biomedical knowledge. For example, Hetionet connects 11 types of nodes — including genes, diseases, drugs, pathways, and anatomical structures — with over 2 million edges of 24 types. Previously, we trained a classifier to repurpose drugs using features extracted from Hetionet. The model identified types of paths between a drug and disease that occurred more frequently between known treatments.</p>
 <p>For many applications however, a training set of known relationships does not exist; Yet researchers would still like to know how two nodes are meaningfully connected. For example, users may want to know not only how metformin is related to breast cancer, but also how the GJA1 gene might be involved in insomnia. Therefore, we developed hetnet connectivity search to propose the most important paths between any two nodes.</p>
-<p>The algorithm behind connectivity search identifies types of paths that occur more frequently than would be expected by chance (based on node degree alone). We implemented the method on Hetionet and provide an online interface at <a href="https://het.io/search" class="uri">https://het.io/search</a>. Several optimizations were required to precompute significant instances of node connectivity at scale. We provide an open source implementation of these methods in our new Python package named hetmatpy.</p>
+<p>The algorithm behind connectivity search identifies types of paths that occur more frequently than would be expected by chance (based on node degree alone). We implemented the method on Hetionet and provide an online interface at <a href="https://het.io/search" class="uri">https://het.io/search</a>. Several optimizations were required to precompute significant instances of node connectivity at scale. We provide an open source implementation of these methods in our new Python package named <a href="https://github.com/hetio/hetmatpy" title="Python package for matrix storage and operations on hetnets">hetmatpy</a>.</p>
 <p>To validate the method, we show that it identifies much of the same evidence for specific instances of drug repurposing as the previous supervised approach, but without requiring a training set.</p>
 <h2 id="references" class="page_break_before">References</h2>
 <!-- Explicitly insert bibliography here -->
