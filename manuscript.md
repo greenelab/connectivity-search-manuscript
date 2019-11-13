@@ -25,9 +25,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/dce0f2106bcb05315459052a71ff5b73433aff03/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@7d9dfd0](https://github.com/greenelab/connectivity-search-manuscript/tree/7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659)
+from [greenelab/connectivity-search-manuscript@dce0f21](https://github.com/greenelab/connectivity-search-manuscript/tree/dce0f2106bcb05315459052a71ff5b73433aff03)
 on November 13, 2019.
 </em></small>
 

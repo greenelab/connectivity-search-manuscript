@@ -28,11 +28,11 @@
     "repo_slug": "greenelab/connectivity-search-manuscript",
     "repo_owner": "greenelab",
     "repo_name": "connectivity-search-manuscript",
-    "commit": "7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659",
-    "triggering_commit": "7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659",
-    "build_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/builds/136357071",
-    "job_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/jobs/256180722",
-    "manuscript_url": "https://greenelab.github.io/connectivity-search-manuscript/v/7d9dfd09f9c3f41d168e1203a41e6bf1ca0a6659/"
+    "commit": "dce0f2106bcb05315459052a71ff5b73433aff03",
+    "triggering_commit": "dce0f2106bcb05315459052a71ff5b73433aff03",
+    "build_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/builds/136357634",
+    "job_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/jobs/256181845",
+    "manuscript_url": "https://greenelab.github.io/connectivity-search-manuscript/v/dce0f2106bcb05315459052a71ff5b73433aff03/"
   },
   "manuscript_stats": {
     "reference_counts": {
