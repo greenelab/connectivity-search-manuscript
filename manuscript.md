@@ -25,9 +25,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/dce0f2106bcb05315459052a71ff5b73433aff03/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/78579dd4d9d6efa6ac8334d3c8c17defb9bf8ea8/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@dce0f21](https://github.com/greenelab/connectivity-search-manuscript/tree/dce0f2106bcb05315459052a71ff5b73433aff03)
+from [greenelab/connectivity-search-manuscript@78579dd](https://github.com/greenelab/connectivity-search-manuscript/tree/78579dd4d9d6efa6ac8334d3c8c17defb9bf8ea8)
 on November 13, 2019.
 </em></small>
 
@@ -75,6 +75,23 @@ Several optimizations were required to precompute significant instances of node 
 We provide an open source implementation of these methods in our new Python package named [hetmatpy](https://github.com/hetio/hetmatpy "Python package for matrix storage and operations on hetnets").
 
 To validate the method, we show that it identifies much of the same evidence for specific instances of drug repurposing as the previous supervised approach, but without requiring a training set.
+
+
+## Introduction {.page_break_before}
+
+
+
+## Results {.page_break_before}
+
+
+
+## Discussion {.page_break_before}
+
+
+
+## Methods {.page_break_before}
+
+
 
 
 ## References {.page_break_before}
