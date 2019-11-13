@@ -28,16 +28,16 @@
     "repo_slug": "greenelab/connectivity-search-manuscript",
     "repo_owner": "greenelab",
     "repo_name": "connectivity-search-manuscript",
-    "commit": "78579dd4d9d6efa6ac8334d3c8c17defb9bf8ea8",
-    "triggering_commit": "78579dd4d9d6efa6ac8334d3c8c17defb9bf8ea8",
-    "build_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/builds/136358621",
-    "job_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/jobs/256184134",
-    "manuscript_url": "https://greenelab.github.io/connectivity-search-manuscript/v/78579dd4d9d6efa6ac8334d3c8c17defb9bf8ea8/"
+    "commit": "163837892d97e4a7be61496ba36f41f29a8deb4c",
+    "triggering_commit": "163837892d97e4a7be61496ba36f41f29a8deb4c",
+    "build_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/builds/136385797",
+    "job_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/jobs/256245689",
+    "manuscript_url": "https://greenelab.github.io/connectivity-search-manuscript/v/163837892d97e4a7be61496ba36f41f29a8deb4c/"
   },
   "manuscript_stats": {
     "reference_counts": {
       "total": 0
     },
-    "word_count": 550
+    "word_count": 637
   }
 }

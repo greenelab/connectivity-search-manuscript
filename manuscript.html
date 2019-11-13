@@ -22,7 +22,7 @@
 <header id="title-block-header">
 <h1 class="title">Hetnet connectivity search provides rapid insights into how two biomedical entities are related</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://greenelab.github.io/connectivity-search-manuscript/v/78579dd4d9d6efa6ac8334d3c8c17defb9bf8ea8/">permalink</a>) was automatically generated from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/78579dd4d9d6efa6ac8334d3c8c17defb9bf8ea8">greenelab/connectivity-search-manuscript@78579dd</a> on November 13, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://greenelab.github.io/connectivity-search-manuscript/v/163837892d97e4a7be61496ba36f41f29a8deb4c/">permalink</a>) was automatically generated from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/163837892d97e4a7be61496ba36f41f29a8deb4c">greenelab/connectivity-search-manuscript@1638378</a> on November 13, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <!-- include the Font Awesome library, per: https://fontawesome.com/start -->
 <p><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> <span class="banner lightpurple"><span class="fas fa-info-circle fa-lg"></span> <strong>Manuscript in preparation</strong><br> The authorship information below is incomplete and preliminary. This notice will be updated once all contributors meeting <a href="https://github.com/greenelab/onboarding/blob/master/onboarding.md" title="Greene Lab Onboarding. See Authorship section">authorship criteria</a> have added themselves to <a href="https://github.com/greenelab/connectivity-search-manuscript/blob/master/content/metadata.yaml"><code>metadata.yaml</code></a>.</span></p>
@@ -35,9 +35,30 @@
 <p>The algorithm behind connectivity search identifies types of paths that occur more frequently than would be expected by chance (based on node degree alone). We implemented the method on Hetionet and provide an online interface at <a href="https://het.io/search" class="uri">https://het.io/search</a>. Several optimizations were required to precompute significant instances of node connectivity at scale. We provide an open source implementation of these methods in our new Python package named <a href="https://github.com/hetio/hetmatpy" title="Python package for matrix storage and operations on hetnets">hetmatpy</a>.</p>
 <p>To validate the method, we show that it identifies much of the same evidence for specific instances of drug repurposing as the previous supervised approach, but without requiring a training set.</p>
 <h2 id="introduction" class="page_break_before">Introduction</h2>
+<h3 id="hetionet">Hetionet</h3>
+<h3 id="rephetio">Rephetio</h3>
+<h3 id="unsupervised-connectivity-search">Unsupervised connectivity search</h3>
 <h2 id="results" class="page_break_before">Results</h2>
+<h3 id="hetmatpy-package">Hetmatpy Package</h3>
+<h3 id="dwpc-null-distribution">DWPC null distribution</h3>
+<h3 id="enriched-metapaths">Enriched metapaths</h3>
+<h3 id="enriched-paths">Enriched paths</h3>
+<h3 id="comparison-to-rephetio">Comparison to Rephetio</h3>
+<h3 id="detecting-mechanisms-of-action-for-indications">Detecting Mechanisms of Action for Indications</h3>
+<p>Assess ability to predict paths in <a href="https://github.com/SuLab/DrugMechDB" class="uri">https://github.com/SuLab/DrugMechDB</a></p>
+<h3 id="connectivity-search-webapp">Connectivity Search Webapp</h3>
+<h3 id="use-cases">Use cases</h3>
 <h2 id="discussion" class="page_break_before">Discussion</h2>
 <h2 id="methods" class="page_break_before">Methods</h2>
+<h3 id="computing-dwpcs-with-matrix-multiplication">Computing DWPCs with matrix multiplication</h3>
+<h3 id="permuted-hetnets">Permuted hetnets</h3>
+<h3 id="degree-grouping-of-node-pairs">Degree-grouping of node pairs</h3>
+<h3 id="gamma-hurdle-distribution">Gamma-hurdle distribution</h3>
+<h3 id="prioritizing-metapaths-for-database-storage">Prioritizing metapaths for database storage</h3>
+<h3 id="rest-api-backend">Rest API &amp; backend</h3>
+<h3 id="webapp-frontend">Webapp &amp; Frontend</h3>
+<h3 id="realtime-open-science">Realtime open science</h3>
+<h3 id="software-data-availability">Software &amp; data availability</h3>
 <h2 id="references" class="page_break_before">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" role="doc-bibliography">

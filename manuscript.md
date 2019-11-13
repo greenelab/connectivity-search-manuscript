@@ -25,9 +25,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/78579dd4d9d6efa6ac8334d3c8c17defb9bf8ea8/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/163837892d97e4a7be61496ba36f41f29a8deb4c/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@78579dd](https://github.com/greenelab/connectivity-search-manuscript/tree/78579dd4d9d6efa6ac8334d3c8c17defb9bf8ea8)
+from [greenelab/connectivity-search-manuscript@1638378](https://github.com/greenelab/connectivity-search-manuscript/tree/163837892d97e4a7be61496ba36f41f29a8deb4c)
 on November 13, 2019.
 </em></small>
 
@@ -79,11 +79,33 @@ To validate the method, we show that it identifies much of the same evidence for
 
 ## Introduction {.page_break_before}
 
+### Hetionet
 
+### Rephetio
+
+### Unsupervised connectivity search
 
 ## Results {.page_break_before}
 
 
+
+### Hetmatpy Package
+
+### DWPC null distribution
+
+### Enriched metapaths
+
+### Enriched paths
+
+### Comparison to Rephetio
+
+### Detecting Mechanisms of Action for Indications
+
+Assess ability to predict paths in <https://github.com/SuLab/DrugMechDB>
+
+### Connectivity Search Webapp
+
+### Use cases
 
 ## Discussion {.page_break_before}
 
@@ -91,7 +113,23 @@ To validate the method, we show that it identifies much of the same evidence for
 
 ## Methods {.page_break_before}
 
+### Computing DWPCs with matrix multiplication
 
+### Permuted hetnets
+
+### Degree-grouping of node pairs
+
+### Gamma-hurdle distribution
+
+### Prioritizing metapaths for database storage
+
+### Rest API & backend
+
+### Webapp & Frontend
+
+### Realtime open science
+
+### Software & data availability
 
 
 ## References {.page_break_before}
