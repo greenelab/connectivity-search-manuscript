@@ -1,0 +1,62 @@
+{
+  "date": "November 13, 2019",
+  "authors": [
+    {
+      "github": "johndoe",
+      "name": "John Doe",
+      "initials": "JD",
+      "orcid": "XXXX-XXXX-XXXX-XXXX",
+      "twitter": "johndoe",
+      "email": "john.doe@something.com",
+      "affiliations": [
+        "Department of Something, University of Whatever"
+      ],
+      "funders": "Grant XXXXXXXX",
+      "affiliation_numbers": [
+        1
+      ]
+    },
+    {
+      "github": "janeroe",
+      "name": "Jane Roe",
+      "initials": "JR",
+      "orcid": "XXXX-XXXX-XXXX-XXXX",
+      "email": "jane.roe@whatever.edu",
+      "affiliations": [
+        "Department of Something, University of Whatever",
+        "Department of Whatever, University of Something"
+      ],
+      "affiliation_numbers": [
+        1,
+        2
+      ]
+    }
+  ],
+  "affiliations": [
+    {
+      "affiliation": "Department of Something, University of Whatever",
+      "affiliation_number": 1
+    },
+    {
+      "affiliation": "Department of Whatever, University of Something",
+      "affiliation_number": 2
+    }
+  ],
+  "ci_source": {
+    "provider": "travis",
+    "repo_slug": "greenelab/connectivity-search-manuscript",
+    "repo_owner": "greenelab",
+    "repo_name": "connectivity-search-manuscript",
+    "commit": "29fec99aae61b55ea4d355f16f8fbaffb2061966",
+    "triggering_commit": "29fec99aae61b55ea4d355f16f8fbaffb2061966",
+    "build_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/builds/136349397",
+    "job_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/jobs/256161743",
+    "manuscript_url": "https://greenelab.github.io/connectivity-search-manuscript/v/29fec99aae61b55ea4d355f16f8fbaffb2061966/"
+  },
+  "manuscript_stats": {
+    "reference_counts": {
+      "total": 0
+    },
+    "word_count": 236
+  }
+}
