@@ -1,7 +1,80 @@
 ---
 author-meta:
 - Daniel S. Himmelstein
-date-meta: '2019-11-13'
+bibliography:
+- content/manual-references.json
+date-meta: '2020-05-26'
+header-includes: '<!--
+
+  Manubot generated metadata rendered from header-includes-template.html.
+
+  Suggest improvements at https://github.com/manubot/manubot/blob/master/manubot/process/header-includes-template.html
+
+  -->
+
+  <meta name="dc.format" content="text/html" />
+
+  <meta name="dc.title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
+
+  <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
+
+  <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
+
+  <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
+
+  <meta name="dc.date" content="2020-05-26" />
+
+  <meta name="citation_publication_date" content="2020-05-26" />
+
+  <meta name="dc.language" content="en-US" />
+
+  <meta name="citation_language" content="en-US" />
+
+  <meta name="dc.relation.ispartof" content="Manubot" />
+
+  <meta name="dc.publisher" content="Manubot" />
+
+  <meta name="citation_journal_title" content="Manubot" />
+
+  <meta name="citation_technical_report_institution" content="Manubot" />
+
+  <meta name="citation_author" content="Daniel S. Himmelstein" />
+
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
+
+  <meta name="citation_author_orcid" content="0000-0002-3012-7446" />
+
+  <meta name="twitter:creator" content="@dhimmel" />
+
+  <link rel="canonical" href="https://greenelab.github.io/connectivity-search-manuscript/" />
+
+  <meta property="og:url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
+
+  <meta property="twitter:url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
+
+  <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
+
+  <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
+
+  <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
+
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/" />
+
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/" />
+
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/manuscript.pdf" />
+
+  <meta property="og:type" content="article" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
+
+  <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
+
+  <meta name="theme-color" content="#ad1457" />
+
+  <!-- end Manubot generated metadata -->'
 keywords:
 - hetnets
 - networks
@@ -14,8 +87,11 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-title: Hetnet connectivity search provides rapid insights into how two biomedical
-  entities are related
+manubot-clear-requests-cache: false
+manubot-output-bibliography: output/references.json
+manubot-output-citekeys: output/citations.tsv
+manubot-requests-cache-path: ci/cache/requests-cache
+title: Hetnet connectivity search provides rapid insights into how two biomedical entities are related
 ...
 
 
@@ -25,10 +101,10 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/163837892d97e4a7be61496ba36f41f29a8deb4c/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@1638378](https://github.com/greenelab/connectivity-search-manuscript/tree/163837892d97e4a7be61496ba36f41f29a8deb4c)
-on November 13, 2019.
+from [greenelab/connectivity-search-manuscript@ec2d568](https://github.com/greenelab/connectivity-search-manuscript/tree/ec2d568301840b6bf513c42399ceac562395770f)
+on May 26, 2020.
 </em></small>
 
 ## Authors

@@ -1,43 +1,77 @@
 {
-  "date": "November 13, 2019",
-  "authors": [
-    {
-      "github": "dhimmel",
-      "name": "Daniel S. Himmelstein",
-      "initials": "DSH",
-      "orcid": "0000-0002-3012-7446",
-      "twitter": "dhimmel",
-      "email": "daniel.himmelstein@gmail.com",
-      "affiliations": [
-        "Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America"
-      ],
-      "funders": "GBMF4552",
-      "affiliation_numbers": [
-        1
-      ]
-    }
-  ],
-  "affiliations": [
-    {
-      "affiliation": "Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America",
-      "affiliation_number": 1
-    }
-  ],
-  "ci_source": {
-    "provider": "travis",
-    "repo_slug": "greenelab/connectivity-search-manuscript",
-    "repo_owner": "greenelab",
-    "repo_name": "connectivity-search-manuscript",
-    "commit": "163837892d97e4a7be61496ba36f41f29a8deb4c",
-    "triggering_commit": "163837892d97e4a7be61496ba36f41f29a8deb4c",
-    "build_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/builds/136385797",
-    "job_url": "https://travis-ci.com/greenelab/connectivity-search-manuscript/jobs/256245689",
-    "manuscript_url": "https://greenelab.github.io/connectivity-search-manuscript/v/163837892d97e4a7be61496ba36f41f29a8deb4c/"
+  "pandoc": {
+    "title": "Hetnet connectivity search provides rapid insights into how two biomedical entities are related",
+    "keywords": [
+      "hetnets",
+      "networks",
+      "connectivity",
+      "search",
+      "hetionet",
+      "knowledge graphs",
+      "algorithms",
+      "nodes",
+      "bioinformatics",
+      "biomedical informatics"
+    ],
+    "lang": "en-US",
+    "date-meta": "2020-05-26",
+    "author-meta": [
+      "Daniel S. Himmelstein"
+    ],
+    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/master/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta name=\"dc.title\" content=\"Hetnet connectivity search provides rapid insights into how two biomedical entities are related\" />\n<meta name=\"citation_title\" content=\"Hetnet connectivity search provides rapid insights into how two biomedical entities are related\" />\n<meta property=\"og:title\" content=\"Hetnet connectivity search provides rapid insights into how two biomedical entities are related\" />\n<meta property=\"twitter:title\" content=\"Hetnet connectivity search provides rapid insights into how two biomedical entities are related\" />\n<meta name=\"dc.date\" content=\"2020-05-26\" />\n<meta name=\"citation_publication_date\" content=\"2020-05-26\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"Daniel S. Himmelstein\" />\n<meta name=\"citation_author_institution\" content=\"Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-3012-7446\" />\n<meta name=\"twitter:creator\" content=\"@dhimmel\" />\n<link rel=\"canonical\" href=\"https://greenelab.github.io/connectivity-search-manuscript/\" />\n<meta property=\"og:url\" content=\"https://greenelab.github.io/connectivity-search-manuscript/\" />\n<meta property=\"twitter:url\" content=\"https://greenelab.github.io/connectivity-search-manuscript/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://greenelab.github.io/connectivity-search-manuscript/\" />\n<meta name=\"citation_pdf_url\" content=\"https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->",
+    "bibliography": [
+      "content/manual-references.json"
+    ],
+    "manubot-output-bibliography": "output/references.json",
+    "manubot-output-citekeys": "output/citations.tsv",
+    "manubot-requests-cache-path": "ci/cache/requests-cache",
+    "manubot-clear-requests-cache": false
   },
-  "manuscript_stats": {
-    "reference_counts": {
-      "total": 0
+  "manubot": {
+    "date": "May 26, 2020",
+    "authors": [
+      {
+        "github": "dhimmel",
+        "name": "Daniel S. Himmelstein",
+        "initials": "DSH",
+        "orcid": "0000-0002-3012-7446",
+        "twitter": "dhimmel",
+        "email": "daniel.himmelstein@gmail.com",
+        "affiliations": [
+          "Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America"
+        ],
+        "funders": [
+          "GBMF4552"
+        ],
+        "affiliation_numbers": [
+          1
+        ]
+      }
+    ],
+    "affiliations": [
+      {
+        "affiliation": "Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America",
+        "affiliation_number": 1
+      }
+    ],
+    "ci_source": {
+      "provider": "github",
+      "repo_slug": "greenelab/connectivity-search-manuscript",
+      "repo_owner": "greenelab",
+      "repo_name": "connectivity-search-manuscript",
+      "commit": "ec2d568301840b6bf513c42399ceac562395770f",
+      "triggering_commit": "ec2d568301840b6bf513c42399ceac562395770f",
+      "build_url": "https://github.com/greenelab/connectivity-search-manuscript/commit/ec2d568301840b6bf513c42399ceac562395770f/checks",
+      "job_url": "https://github.com/greenelab/connectivity-search-manuscript/runs/run3"
     },
-    "word_count": 637
+    "html_url": "https://greenelab.github.io/connectivity-search-manuscript/",
+    "pdf_url": "https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf",
+    "html_url_versioned": "https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/",
+    "pdf_url_versioned": "https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/manuscript.pdf",
+    "manubot_version": "0.3.1",
+    "rootstock_commit": "b7462701ff85854a67d878db4af89d0268bb11d2",
+    "manuscript_stats": {
+      "word_count": 647
+    }
   }
 }
