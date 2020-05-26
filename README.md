@@ -1,15 +1,14 @@
 # Output directory containing the formatted manuscript
 
-The [`gh-pages`](https://github.com/greenelab/connectivity-search-manuscript/tree/gh-pages) branch hosts the contents of this directory at https://greenelab.github.io/connectivity-search-manuscript/.
-The permalink for this webpage version is https://greenelab.github.io/connectivity-search-manuscript/v/163837892d97e4a7be61496ba36f41f29a8deb4c/.
-To redirect to the permalink for the latest manuscript version at anytime, use the link https://greenelab.github.io/connectivity-search-manuscript/v/freeze/.
+The [`gh-pages`](https://github.com/greenelab/connectivity-search-manuscript/tree/gh-pages) branch hosts the contents of this directory at <https://greenelab.github.io/connectivity-search-manuscript/>.
+The permalink for this webpage version is <https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/>.
+To redirect to the permalink for the latest manuscript version at anytime, use the link <https://greenelab.github.io/connectivity-search-manuscript/v/freeze/>.
 
 ## Files
 
 This directory contains the following files, which are mostly ignored on the `master` branch:
 
 + [`index.html`](index.html) is an HTML manuscript.
-+ [`github-pandoc.css`](github-pandoc.css) sets the display style for `index.html`.
 + [`manuscript.pdf`](manuscript.pdf) is a PDF manuscript.
 
 The `v` directory contains directories for each manuscript version.
@@ -25,7 +24,7 @@ Therefore, `.ots` files are initially incomplete and should be upgraded at a lat
 The `manubot webpage` call during continuous deployment identifies files matched by `webpage/v/**/*.ots` and attempts to upgrade them.
 You can also manually upgrade timestamps, by running the following in the `gh-pages` branch:
 
-```sh
+```shell
 ots upgrade v/*/*.ots
 rm v/*/*.ots.bak
 git add v/*/*.ots
@@ -36,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`163837892d97e4a7be61496ba36f41f29a8deb4c`](https://github.com/greenelab/connectivity-search-manuscript/commit/163837892d97e4a7be61496ba36f41f29a8deb4c).
+[`ec2d568301840b6bf513c42399ceac562395770f`](https://github.com/greenelab/connectivity-search-manuscript/commit/ec2d568301840b6bf513c42399ceac562395770f).
