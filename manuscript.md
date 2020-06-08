@@ -3,7 +3,7 @@ author-meta:
 - Daniel S. Himmelstein
 bibliography:
 - content/manual-references.json
-date-meta: '2020-05-26'
+date-meta: '2020-06-08'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
 
-  <meta name="dc.date" content="2020-05-26" />
+  <meta name="dc.date" content="2020-06-08" />
 
-  <meta name="citation_publication_date" content="2020-05-26" />
+  <meta name="citation_publication_date" content="2020-06-08" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/ec2d568301840b6bf513c42399ceac562395770f/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@ec2d568](https://github.com/greenelab/connectivity-search-manuscript/tree/ec2d568301840b6bf513c42399ceac562395770f)
-on May 26, 2020.
+from [greenelab/connectivity-search-manuscript@0622e9d](https://github.com/greenelab/connectivity-search-manuscript/tree/0622e9d5e41de7d70fe1e59244238ff5bd31828d)
+on June 8, 2020.
 </em></small>
 
 ## Authors
@@ -155,9 +155,63 @@ To validate the method, we show that it identifies much of the same evidence for
 
 ## Introduction {.page_break_before}
 
+A *network* (also known as a [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics))) is a conceptual representation of a group of entities — called *nodes* — and the relationships between them — called *edges*.
+Typically, a network has only one type of node and one type of edge.
+But in many cases, it is necessary to be able to distinguish between different types of entities and relationships.
+
+### Hetnets
+
+A *hetnet* (short for **het**erogeneous information **net**work [@doi:10.15363/thinklab.d104]) is a network where nodes and edges have type.
+The ability to differentiate between different types of entities and relationships allows a hetnet to accurately describe more complex data.
+Hetnets are particularly useful in biomedicine, where it is important to capture the conceptual distinctions between various concepts,
+such as genes and diseases, or upregulation and binding.
+
+The types of nodes and edges in a hetnet are defined by a schema, referred to as a metagraph.
+The metagraph consists of metanodes (types of nodes) and metaedges (types of edges).
+Note that the prefix *meta* is used to refer to type (e.g. compound),
+as opposed to a specific node/edge/path itself (e.g. acetaminophen).
+
 ### Hetionet
 
+[Hetionet](https://het.io/about/) is a knowledge graph of human biology, disease, and medicine, integrating information from millions of studies and decades of research.
+Hetionet v1.0 combines information from [29 public databases](https://git.dhimmel.com/rephetio-manuscript/#tbl:resources).
+The network contains 47,031 nodes of [11 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metanodes) (Table @tbl:metanodes) and 2,250,197 edges of [24 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metaedges).
+
+| Metanode | Abbr | Nodes | Description |
+| --- | --- | --- | --- |
+| Anatomy | A | 402 | Anatomical structures, excluding structures that are known not to be found in humans. From [Uberon](http://uberon.github.io/). |
+| Biological Process | BP | 11381 | Larger processes or biological programs accomplished by multiple molecular activities. From [Gene Ontology](http://geneontology.org/). |
+| Cellular Component | CC | 1391 | The locations relative to cellular structures in which a gene product performs a function. From [Gene Ontology](http://geneontology.org/). |
+| Compound | C | 1552 | Approved small molecule compounds with documented chemical structures. From [DrugBank](https://www.drugbank.ca/). |
+| Disease | D | 137 | Complex diseases, selected to be distinct and specific enough to be clinically relevant yet general enough to be well annotated. From [Disease Ontology](http://disease-ontology.org/). |
+| Gene | G | 20945 | Protein-coding human genes. From [Entrez Gene](https://www.ncbi.nlm.nih.gov/gene). |
+| Molecular Function | MF | 2884 | Activities that occur at the molecular level, such as "catalysis" or "transport". From [Gene Ontology](http://geneontology.org/). |
+| Pathway | PW | 1822 | A series of actions among molecules in a cell that leads to a certain product or change in the cell. From [WikiPathways](https://www.wikipathways.org/index.php/WikiPathways), [Reactome](https://reactome.org/), and Pathway Interaction Database. |
+| Pharmacologic Class | PC | 345 | "Chemical/Ingredient", "Mechanism of Action", and "Physiologic Effect" FDA class types. From [DrugCentral](http://drugcentral.org/). |
+| Side Effect | SE | 5734 | Adverse drug reactions. From [SIDER](http://sideeffects.embl.de/)/[UMLS](https://www.nlm.nih.gov/research/umls/). |
+| Symptom | S | 438 | Signs and Symptoms (i.e. clinical abnormalities that can indicate a medical condition). From the [MeSH ontology](https://www.nlm.nih.gov/mesh/meshhome.html). |
+
+Table: **Node types in Hetionet**
+The abbreviation, number of nodes, and description for each of the 11 metanodes in Hetionet v1.0.
+{#tbl:metanodes}
+
+Hetionet provides a foundation for building hetnet applications.
+It unifies data from several different, disparate sources into a single, comprehensive, accessible, common-format network.
+The database is publicly accessible without login at <https://neo4j.het.io>.
+The Neo4j graph database enables querying Hetionet using the Cypher language,
+which was designed to interact with networks where nodes and edges have both types and properties.
+
+One limitation that restricts the applicability of Hetionet is incompleteness.
+In many cases, Hetionet v1.0 includes only a subset of the nodes from a given resource.
+For example, the Disease Ontology contains over 9,000 diseases [@doi:10.1093/nar/gky1032], while Hetionet includes only 137 diseases [@doi:10.15363/thinklab.d44].
+Nodes were excluded to avoid redundant or overly specific nodes, while ensuring a minimum level of connectivity for compounds and diseases.
+See the [Project Rephetio methods](https://git.dhimmel.com/rephetio-manuscript/#nodes) for more details [@rephetio].
+Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types.
+Other integrative resources, some still under development, include [Wikidata](https://www.wikidata.org) [@doi:10.7554/eLife.52614], [SemMedDB](https://skr3.nlm.nih.gov/SemMedDB/) [@doi:10.1093/bioinformatics/bts591; @doi:10.1109/BIBM.2018.8621568; @doi:10.1186/s12859-019-3297-0], [SPOKE](https://spoke.ucsf.edu/), and [DRKG](https://github.com/gnn4dr/DRKG).
+
 ### Rephetio
+
+
 
 ### Unsupervised connectivity search
 
