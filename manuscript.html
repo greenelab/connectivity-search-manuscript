@@ -46,9 +46,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -62,9 +62,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/0622e9d5e41de7d70fe1e59244238ff5bd31828d">greenelab/connectivity-search-manuscript@0622e9d</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/60ee97e6489e426f53b5c363d5db0b5c6b296bcc">greenelab/connectivity-search-manuscript@60ee97e</a>
 on June 8, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -215,14 +215,30 @@ which was designed to interact with networks where nodes and edges have both typ
 In many cases, Hetionet v1.0 includes only a subset of the nodes from a given resource.
 For example, the Disease Ontology contains over 9,000 diseases <span class="citation" data-cites="1FsruosUW">[<a href="#ref-1FsruosUW" role="doc-biblioref">2</a>]</span>, while Hetionet includes only 137 diseases <span class="citation" data-cites="203l6hC3">[<a href="#ref-203l6hC3" role="doc-biblioref">3</a>]</span>.
 Nodes were excluded to avoid redundant or overly specific nodes, while ensuring a minimum level of connectivity for compounds and diseases.
-See the <a href="https://git.dhimmel.com/rephetio-manuscript/#nodes">Project Rephetio methods</a> for more details <span class="citation" data-cites="rephetio">[<span class="citeproc-not-found" data-reference-id="rephetio"><strong>???</strong></span>]</span>.
+See the <a href="https://git.dhimmel.com/rephetio-manuscript/#nodes">Project Rephetio methods</a> for more details <span class="citation" data-cites="O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>]</span>.
 Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types.
-Other integrative resources, some still under development, include <a href="https://www.wikidata.org">Wikidata</a> <span class="citation" data-cites="HUodcdz1">[<a href="#ref-HUodcdz1" role="doc-biblioref">4</a>]</span>, <a href="https://skr3.nlm.nih.gov/SemMedDB/">SemMedDB</a> <span class="citation" data-cites="eKVkBSDD reekunFL uTOtIsTj">[<a href="#ref-eKVkBSDD" role="doc-biblioref">5</a>,<a href="#ref-reekunFL" role="doc-biblioref">6</a>,<a href="#ref-uTOtIsTj" role="doc-biblioref">7</a>]</span>, <a href="https://spoke.ucsf.edu/">SPOKE</a>, and <a href="https://github.com/gnn4dr/DRKG">DRKG</a>.</p>
+Other integrative resources, some still under development, include <a href="https://www.wikidata.org">Wikidata</a> <span class="citation" data-cites="HUodcdz1">[<a href="#ref-HUodcdz1" role="doc-biblioref">5</a>]</span>, <a href="https://skr3.nlm.nih.gov/SemMedDB/">SemMedDB</a> <span class="citation" data-cites="eKVkBSDD reekunFL uTOtIsTj">[<a href="#ref-eKVkBSDD" role="doc-biblioref">6</a>,<a href="#ref-reekunFL" role="doc-biblioref">7</a>,<a href="#ref-uTOtIsTj" role="doc-biblioref">8</a>]</span>, <a href="https://spoke.ucsf.edu/">SPOKE</a>, and <a href="https://github.com/gnn4dr/DRKG">DRKG</a>.</p>
 <h3 id="rephetio">Rephetio</h3>
 <h3 id="unsupervised-connectivity-search">Unsupervised connectivity search</h3>
 <h2 class="page_break_before" id="results">Results</h2>
 <h3 id="hetmatpy-package">Hetmatpy Package</h3>
+<p>We created the hetmatpy Python package,
+available on <a href="https://github.com/hetio/hetmatpy">GitHub</a> and <a href="https://pypi.org/project/hetmatpy/">PyPI</a> under the permissive BSD-2-Clause Plus Patent License.
+This package provides a matrix-based utilities for hetnets.</p>
 <h3 id="dwpc-null-distribution">DWPC null distribution</h3>
+<p>To assess connectivity between a source and target node, we use the DWPC (degree-weighted path count) metric.
+The DWPC is similar to path count (number of paths between the source and target node along a given metapath), except that it downweights paths through high degree nodes.
+Rather than using the raw DWPC for a source-metapath-target combination, we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling <span class="citation" data-cites="17mGFvxXu">[<a href="#ref-17mGFvxXu" role="doc-biblioref">9</a>]</span>.</p>
+<p>Previously, we had no technique for detecting whether a DWPC value was exceptional.
+One possibility is to evaluate the DWPCs for all pairs of nodes and select the top scores (e.g. the top 5% of DWPCs).
+Another possibility is to pick a transformed DWPC score as a cutoff.
+The shortcomings of these methods are twofold.
+First, neither the percentile nor absolute value of a DWPC has inherent meaning.
+To select transformed DWPCs greater than 6, or alternatively the top 1% of DWPCs, is arbitrary.
+Second, comparing DWPCs between node pairs fails to account for the situation where high-degree node pairs are likely to score higher, solely on account of their degree (TODO: figure).</p>
+<p>To address these shortcomings, we developed a method to compute the right-tail <em>p</em>-value of a DWPC.
+<em>p</em>-values have a broadly understood interpretation — in our case, the probability that a DWPC equal to or greater than the observed DWPC could occur under a null model.
+By tailoring the null distribution for a DWPC to the degree of its source and target node, we account for degree effects when determining the significance of a DWPC.</p>
 <h3 id="enriched-metapaths">Enriched metapaths</h3>
 <h3 id="enriched-paths">Enriched paths</h3>
 <h3 id="comparison-to-rephetio">Comparison to Rephetio</h3>
@@ -232,6 +248,33 @@ Other integrative resources, some still under development, include <a href="http
 <h3 id="use-cases">Use cases</h3>
 <h2 class="page_break_before" id="discussion">Discussion</h2>
 <h2 class="page_break_before" id="methods">Methods</h2>
+<h3 id="the-hetmat-awakens">The HetMat awakens</h3>
+<p>At the core of the hetmatpy package is the HetMat data structure for storing and accessing the network.
+HetMats are stored on disk as a directory, which by convention uses a <code>.hetmat</code> extension.
+A HetMat directory stores a single heterogeneous network, whose data resides in the following files.</p>
+<ol type="1">
+<li>A <code>metagraph.json</code> file stores the schema, defining which types of nodes and edges comprise the hetnet.
+This format is defined by the <a href="https://github.com/hetio/hetnetpy">hetnetpy</a> Python package.
+Hetnetpy was originally developed with the name hetio during prior studies
+<span class="citation" data-cites="WkPlH1ds O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-WkPlH1ds" role="doc-biblioref">10</a>]</span>,
+but we <a href="https://github.com/hetio/hetnetpy/issues/40">renamed</a> it to het<strong>net</strong>py for better disambiguation from het<strong>mat</strong>py.</li>
+<li>A <code>nodes</code> directory containing one file per node type (metanode) that defines each node.
+Currently, <code>.tsv</code> files where each row represents a node are supported.</li>
+<li>An <code>edges</code> directory containing one file per edge type (metadata) that encodes the adjacency matrix.
+The matrix can be serialized using either the Numpy dense format (<code>.npy</code>) or SciPy sparse format (<code>.sparse.npz</code>).</li>
+</ol>
+<p>For node and edge files, compression is supported as detected from <code>.gz</code>, <code>.bz2</code>, <code>.zip</code>, and <code>.xz</code> extensions.
+This structure of storing a hetnet supports selectively reading nodes and edges into memory.
+For example, a certain computation may only require access to a subset of the node and edge types.
+By only loading the required node and edge types, we reduce memory usage and read times.</p>
+<p>Additional subdirectories, such as <code>path-counts</code> and <code>permutations</code>, store data generated from the HetMat.
+By using consistent paths for generated data, we avoid recomputing data that already exists on disk.
+A HetMat directory can be zipped for archiving and transfer.
+Users can selectively include generated data in archives.
+Since the primary application of HetMats is to generate computationally demanding measurements on hetnets, the ability to share HetMats with precomputed data is paramount.</p>
+<p>The <a href="https://hetio.github.io/hetmatpy/reference/hetmatpy/hetmat/#hetmat"><code>HetMat</code></a> class implements the above logic.
+A <code>hetmat_from_graph</code> function creates a HetMat object and directory on disk from the pre-existing <code>hetnetpy.hetnet.Graph</code> format.</p>
+<p>We converted Hetionet v1.0 to HetMat format and uploaded the <code>hetionet-v1.0.hetmat.zip</code> archive to the <a href="https://github.com/hetio/hetionet/tree/master/hetnet/matrix">Hetionet data repository</a>.</p>
 <h3 id="computing-dwpcs-with-matrix-multiplication">Computing DWPCs with matrix multiplication</h3>
 <h3 id="permuted-hetnets">Permuted hetnets</h3>
 <h3 id="degree-grouping-of-node-pairs">Degree-grouping of node pairs</h3>
@@ -241,6 +284,7 @@ Other integrative resources, some still under development, include <a href="http
 <h3 id="webapp-frontend">Webapp &amp; Frontend</h3>
 <h3 id="realtime-open-science">Realtime open science</h3>
 <h3 id="software-data-availability">Software &amp; data availability</h3>
+
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references hanging-indent" role="doc-bibliography">
@@ -262,29 +306,47 @@ Daniel Himmelstein, Tong Shu Li<br />
 <em>ThinkLab</em> (2015-03-30) <a href="https://doi.org/f3mqv5">https://doi.org/f3mqv5</a><br />
 DOI: <a href="https://doi.org/10.15363/thinklab.d44">10.15363/thinklab.d44</a></p>
 </div>
+<div id="ref-O21tn8vf">
+<p>4. <strong>Systematic integration of biomedical knowledge prioritizes drugs for repurposing</strong><br />
+Daniel Scott Himmelstein, Antoine Lizee, Christine Hessler, Leo Brueggeman, Sabrina L Chen, Dexter Hadley, Ari Green, Pouya Khankhanian, Sergio E Baranzini<br />
+<em>eLife</em> (2017-09-22) <a href="https://doi.org/cdfk">https://doi.org/cdfk</a><br />
+DOI: <a href="https://doi.org/10.7554/elife.26726">10.7554/elife.26726</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28936969">28936969</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5640425">PMC5640425</a></p>
+</div>
 <div id="ref-HUodcdz1">
-<p>4. <strong>Wikidata as a knowledge graph for the life sciences</strong><br />
+<p>5. <strong>Wikidata as a knowledge graph for the life sciences</strong><br />
 Andra Waagmeester, Gregory Stupp, Sebastian Burgstaller-Muehlbacher, Benjamin M Good, Malachi Griffith, Obi L Griffith, Kristina Hanspers, Henning Hermjakob, Toby S Hudson, Kevin Hybiske, … Andrew I Su<br />
 <em>eLife</em> (2020-03-17) <a href="https://doi.org/ggqqc6">https://doi.org/ggqqc6</a><br />
 DOI: <a href="https://doi.org/10.7554/elife.52614">10.7554/elife.52614</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32180547">32180547</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7077981">PMC7077981</a></p>
 </div>
 <div id="ref-eKVkBSDD">
-<p>5. <strong>SemMedDB: a PubMed-scale repository of biomedical semantic predications</strong><br />
+<p>6. <strong>SemMedDB: a PubMed-scale repository of biomedical semantic predications</strong><br />
 H. Kilicoglu, D. Shin, M. Fiszman, G. Rosemblat, T. C. Rindflesch<br />
 <em>Bioinformatics</em> (2012-10-08) <a href="https://doi.org/f4hp3x">https://doi.org/f4hp3x</a><br />
 DOI: <a href="https://doi.org/10.1093/bioinformatics/bts591">10.1093/bioinformatics/bts591</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23044550">23044550</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509487">PMC3509487</a></p>
 </div>
 <div id="ref-reekunFL">
-<p>6. <strong>Constructing Biomedical Knowledge Graph Based on SemMedDB and Linked Open Data</strong><br />
+<p>7. <strong>Constructing Biomedical Knowledge Graph Based on SemMedDB and Linked Open Data</strong><br />
 Qing Cong, Zhiyong Feng, Fang Li, Li Zhang, Guozheng Rao, Cui Tao<br />
 <em>Institute of Electrical and Electronics Engineers (IEEE)</em> (2018-12) <a href="https://doi.org/ggzb26">https://doi.org/ggzb26</a><br />
 DOI: <a href="https://doi.org/10.1109/bibm.2018.8621568">10.1109/bibm.2018.8621568</a></p>
 </div>
 <div id="ref-uTOtIsTj">
-<p>7. <strong>Time-resolved evaluation of compound repositioning predictions on a text-mined knowledge network</strong><br />
+<p>8. <strong>Time-resolved evaluation of compound repositioning predictions on a text-mined knowledge network</strong><br />
 Michael Mayers, Tong Shu Li, Núria Queralt-Rosinach, Andrew I. Su<br />
 <em>BMC Bioinformatics</em> (2019-12-11) <a href="https://doi.org/ggpcsr">https://doi.org/ggpcsr</a><br />
 DOI: <a href="https://doi.org/10.1186/s12859-019-3297-0">10.1186/s12859-019-3297-0</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31829175">31829175</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6907279">PMC6907279</a></p>
+</div>
+<div id="ref-17mGFvxXu">
+<p>9. <strong>Transforming DWPCs for hetnet edge prediction</strong><br />
+Daniel Himmelstein, Pouya Khankhanian, Antoine Lizee<br />
+<em>ThinkLab</em> (2016-04-01) <a href="https://doi.org/f3qbmd">https://doi.org/f3qbmd</a><br />
+DOI: <a href="https://doi.org/10.15363/thinklab.d193">10.15363/thinklab.d193</a></p>
+</div>
+<div id="ref-WkPlH1ds">
+<p>10. <strong>Heterogeneous Network Edge Prediction: A Data Integration Approach to Prioritize Disease-Associated Genes</strong><br />
+Daniel S. Himmelstein, Sergio E. Baranzini<br />
+<em>PLOS Computational Biology</em> (2015-07-09) <a href="https://doi.org/98q">https://doi.org/98q</a><br />
+DOI: <a href="https://doi.org/10.1371/journal.pcbi.1004259">10.1371/journal.pcbi.1004259</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26158728">26158728</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4497619">PMC4497619</a></p>
 </div>
 </div>
 <!-- default theme -->

@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/0622e9d5e41de7d70fe1e59244238ff5bd31828d/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@0622e9d](https://github.com/greenelab/connectivity-search-manuscript/tree/0622e9d5e41de7d70fe1e59244238ff5bd31828d)
+from [greenelab/connectivity-search-manuscript@60ee97e](https://github.com/greenelab/connectivity-search-manuscript/tree/60ee97e6489e426f53b5c363d5db0b5c6b296bcc)
 on June 8, 2020.
 </em></small>
 
@@ -221,7 +221,28 @@ Other integrative resources, some still under development, include [Wikidata](ht
 
 ### Hetmatpy Package
 
+We created the hetmatpy Python package,
+available on [GitHub](https://github.com/hetio/hetmatpy) and [PyPI](https://pypi.org/project/hetmatpy/) under the permissive BSD-2-Clause Plus Patent License.
+This package provides a matrix-based utilities for hetnets.
+
 ### DWPC null distribution
+
+To assess connectivity between a source and target node, we use the DWPC (degree-weighted path count) metric.
+The DWPC is similar to path count (number of paths between the source and target node along a given metapath), except that it downweights paths through high degree nodes.
+Rather than using the raw DWPC for a source-metapath-target combination, we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling [@doi:10.15363/thinklab.d193].
+
+Previously, we had no technique for detecting whether a DWPC value was exceptional.
+One possibility is to evaluate the DWPCs for all pairs of nodes and select the top scores (e.g. the top 5% of DWPCs).
+Another possibility is to pick a transformed DWPC score as a cutoff.
+The shortcomings of these methods are twofold.
+First, neither the percentile nor absolute value of a DWPC has inherent meaning.
+To select transformed DWPCs greater than 6, or alternatively the top 1% of DWPCs, is arbitrary.
+Second, comparing DWPCs between node pairs fails to account for the situation where high-degree node pairs are likely to score higher, solely on account of their degree (TODO: figure).
+
+To address these shortcomings, we developed a method to compute the right-tail _p_-value of a DWPC.
+_p_-values have a broadly understood interpretation --- in our case, the probability that a DWPC equal to or greater than the observed DWPC could occur under a null model.
+By tailoring the null distribution for a DWPC to the degree of its source and target node, we account for degree effects when determining the significance of a DWPC.
+
 
 ### Enriched metapaths
 
@@ -243,6 +264,38 @@ Assess ability to predict paths in <https://github.com/SuLab/DrugMechDB>
 
 ## Methods {.page_break_before}
 
+### The HetMat awakens
+
+At the core of the hetmatpy package is the HetMat data structure for storing and accessing the network.
+HetMats are stored on disk as a directory, which by convention uses a `.hetmat` extension.
+A HetMat directory stores a single heterogeneous network, whose data resides in the following files.
+
+1. A `metagraph.json` file stores the schema, defining which types of nodes and edges comprise the hetnet.
+   This format is defined by the [hetnetpy](https://github.com/hetio/hetnetpy) Python package.
+   Hetnetpy was originally developed with the name hetio during prior studies
+   [@hetio-dag; @rephetio],
+   but we [renamed](https://github.com/hetio/hetnetpy/issues/40) it to het**net**py for better disambiguation from het**mat**py.
+2. A `nodes` directory containing one file per node type (metanode) that defines each node.
+   Currently, `.tsv` files where each row represents a node are supported.
+3. An `edges` directory containing one file per edge type (metadata) that encodes the adjacency matrix. 
+   The matrix can be serialized using either the Numpy dense format (`.npy`) or SciPy sparse format (`.sparse.npz`).
+
+For node and edge files, compression is supported as detected from `.gz`, `.bz2`, `.zip`, and `.xz` extensions.
+This structure of storing a hetnet supports selectively reading nodes and edges into memory.
+For example, a certain computation may only require access to a subset of the node and edge types.
+By only loading the required node and edge types, we reduce memory usage and read times.
+
+Additional subdirectories, such as `path-counts` and `permutations`, store data generated from the HetMat.
+By using consistent paths for generated data, we avoid recomputing data that already exists on disk.
+A HetMat directory can be zipped for archiving and transfer.
+Users can selectively include generated data in archives.
+Since the primary application of HetMats is to generate computationally demanding measurements on hetnets, the ability to share HetMats with precomputed data is paramount.
+
+The [`HetMat`](https://hetio.github.io/hetmatpy/reference/hetmatpy/hetmat/#hetmat) class implements the above logic.
+A `hetmat_from_graph` function creates a HetMat object and directory on disk from the pre-existing `hetnetpy.hetnet.Graph` format.
+
+We converted Hetionet v1.0 to HetMat format and uploaded the `hetionet-v1.0.hetmat.zip` archive to the [Hetionet data repository](https://github.com/hetio/hetionet/tree/master/hetnet/matrix).
+
 ### Computing DWPCs with matrix multiplication
 
 ### Permuted hetnets
@@ -260,6 +313,10 @@ Assess ability to predict paths in <https://github.com/SuLab/DrugMechDB>
 ### Realtime open science
 
 ### Software & data availability
+
+
+[@hetio-dag]: doi:10.1371/journal.pcbi.1004259
+[@rephetio]: doi:10.7554/eLife.26726
 
 
 ## References {.page_break_before}
