@@ -73,5 +73,79 @@
     "publisher": "Association for Computing Machinery (ACM)",
     "DOI": "10.1145/3184558.3186978",
     "URL": "https://doi.org/gg2c7w"
+  },
+  {
+    "id": "doi:10.1145/3097983.3098036",
+    "type": "article-journal",
+    "title": "metapath2vec: Scalable Representation Learning for Heterogeneous Networks",
+    "author": [
+      {
+        "family": "Dong",
+        "given": "Yuxiao"
+      },
+      {
+        "family": "Chawla",
+        "given": "Nitesh V."
+      },
+      {
+        "family": "Swami",
+        "given": "Ananthram"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          8
+        ]
+      ]
+    },
+    "container-title": "KDD '17: Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "DOI": "10.1145/3097983.3098036",
+    "URL": "https://doi.org/gfsqzn"
+  },
+  {
+    "id": "doi:10.1109/bibm.2018.8621568",
+    "type": "article-journal",
+    "author": [
+      {
+        "family": "Cong",
+        "given": "Qing"
+      },
+      {
+        "family": "Feng",
+        "given": "Zhiyong"
+      },
+      {
+        "family": "Li",
+        "given": "Fang"
+      },
+      {
+        "family": "Zhang",
+        "given": "Li"
+      },
+      {
+        "family": "Rao",
+        "given": "Guozheng"
+      },
+      {
+        "family": "Tao",
+        "given": "Cui"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          12
+        ]
+      ]
+    },
+    "title": "Constructing Biomedical Knowledge Graph Based on SemMedDB and Linked Open Data",
+    "container-title": "2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "DOI": "10.1109/bibm.2018.8621568",
+    "URL": "https://doi.org/ggzb26"
   }
 ]
