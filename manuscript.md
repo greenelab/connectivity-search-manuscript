@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/41c659bd6ee5e7b61e9869e9433ef3e9ad274e8f/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/87f8579ac2a2dc4b9008212aaeeb7a2480654999/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/41c659bd6ee5e7b61e9869e9433ef3e9ad274e8f/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/87f8579ac2a2dc4b9008212aaeeb7a2480654999/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/41c659bd6ee5e7b61e9869e9433ef3e9ad274e8f/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/87f8579ac2a2dc4b9008212aaeeb7a2480654999/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/41c659bd6ee5e7b61e9869e9433ef3e9ad274e8f/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/87f8579ac2a2dc4b9008212aaeeb7a2480654999/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@41c659b](https://github.com/greenelab/connectivity-search-manuscript/tree/41c659bd6ee5e7b61e9869e9433ef3e9ad274e8f)
+from [greenelab/connectivity-search-manuscript@87f8579](https://github.com/greenelab/connectivity-search-manuscript/tree/87f8579ac2a2dc4b9008212aaeeb7a2480654999)
 on June 17, 2020.
 </em></small>
 
