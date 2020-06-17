@@ -21,14 +21,14 @@ HetMat
 Hetmatpy
 HetMats
 hetnet
-hetnetpy
+Hetnetpy
 hetnets
 Himmelstein
 HINE
 metaedges
 MetaExp
 metagraph
-metanode
+Metanode
 metanodes
 metapath
 metapaths
