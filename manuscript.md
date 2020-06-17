@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/44db0df4b5b6c49db4e724187ec94b56325b0faa/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/cc5ce982b70aed40940798e410a2820a682917e1/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/44db0df4b5b6c49db4e724187ec94b56325b0faa/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/cc5ce982b70aed40940798e410a2820a682917e1/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/44db0df4b5b6c49db4e724187ec94b56325b0faa/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/cc5ce982b70aed40940798e410a2820a682917e1/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/44db0df4b5b6c49db4e724187ec94b56325b0faa/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/cc5ce982b70aed40940798e410a2820a682917e1/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@44db0df](https://github.com/greenelab/connectivity-search-manuscript/tree/44db0df4b5b6c49db4e724187ec94b56325b0faa)
+from [greenelab/connectivity-search-manuscript@cc5ce98](https://github.com/greenelab/connectivity-search-manuscript/tree/cc5ce982b70aed40940798e410a2820a682917e1)
 on June 17, 2020.
 </em></small>
 
@@ -216,28 +216,29 @@ This project [predicted](https://het.io/repurpose/) the probability of drug effi
 The approach learned which types of paths occur more or less frequently between known treatments than non-treatments (Figure @fig:rephetio).
 To train the model, Rephetio created [PharmacotherapyDB](https://doi.org/10.6084/m9.figshare.3103054), a physician-curated catalog of 755 disease-modifying treatments [@doi:10.15363/thinklab.d182].
 
-<!-- note we might want to manually improve this figure as per https://slides.com/dhimmel/rocky2019#/11/1/3 -->
-![**Supervised machine learning approach from Project Rephetio.**
+![
+**Supervised machine learning approach from Project Rephetio.**
 This figure visualizes the feature matrix used by Project Rephetio to make supervised predictions.
 Each row represents a compound–disease pair.
 The top half of rows correspond to known treatments (i.e. positives), while the bottom half correspond to non-treatments (i.e. negatives, not known to be treatments in PharmacotherapyDB).
 Here, an equal number of treatments and non-treatments are shown, but in reality the problem is heavily imbalanced.
 Project Rephetio scaled models to assume a positive prevalence of 0.36% [@rephetio; @doi:10.15363/thinklab.d210].
 Each column represents a metapath, labeled with its abbreviation.
-
+<br><br>
 Feature values are DWPCs (transformed and standardized), which assess the connectivity along the specified metapath between the specific compound and disease.
 Maroon colored values indicate above-average connectivity,
 whereas blue values indicate below average connectivity.
 In general, positives have greater connectivity for the selected metapaths than negatives.
 Rephetio used a logistic regression model to learn the effect of each type of connectivity (feature) on the likelihood that a compound treats a disease.
 The model predicts whether a compound–disease pair is a treatment based on its features, but requires supervision in the form of known treatments.
-](https://github.com/dhimmel/learn/raw/7668c97b2a6f348479b70fa40c3d7db424584315/prediction/figure/example-feature-matrix.svg?sanitize=1){#fig:rephetio width="100%"}
+<!-- note we might want to manually improve this figure as per https://slides.com/dhimmel/rocky2019#/11/1/3 -->
+](https://github.com/dhimmel/learn/raw/7668c97b2a6f348479b70fa40c3d7db424584315/prediction/figure/example-feature-matrix.svg?sanitize=1){#fig:rephetio width="4.5in"}
 
 ### TODO: Other works
 
 https://github.com/greenelab/hetmech/issues/56
 
-Network embeddings edge2vec [@doi:10.1186/s12859-019-2914-2], metapath2vec [@doi:0.1145/3097983.3098036], HINE [@doi:10.1007/978-3-319-55753-3_12].
+Network embeddings edge2vec [@doi:10.1186/s12859-019-2914-2], metapath2vec [@doi:10.1145/3097983.3098036], HINE [@doi:10.1007/978-3-319-55753-3_12].
 
 @doi:10.1145/2736277.2741123 training node pairs to important metapaths (Forward Stagewise Path Generation).
 [MetaExp](https://meta-exp.github.io/) [@doi:10.1145/3184558.3186978] user selects two sets of nodes. MetaExp detects metapaths and interacts with the user to progressively refine metapaths.
