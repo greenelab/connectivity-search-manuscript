@@ -1,22 +1,77 @@
 [
-{
-  "id": "url:https://github.com/manubot/rootstock",
-  "type": "webpage",
-  "URL": "https://github.com/manubot/rootstock",
-  "title": "manubot/rootstock GitHub repository",
-  "container-title": "GitHub",
-  "issued": {
-    "date-parts": [
-      [
-        2019
+  {
+    "id": "doi:10.1145/3184558.3186978",
+    "type": "article-journal",
+    "title": "MetaExp: Interactive Explanation and Exploration of Large Knowledge Graphs",
+    "author": [
+      {
+        "family": "Behrens",
+        "given": "Freya"
+      },
+      {
+        "family": "Aghaei",
+        "given": "Fatemeh"
+      },
+      {
+        "family": "Müller",
+        "given": "Emmanuel"
+      },
+      {
+        "family": "Preusse",
+        "given": "Martin"
+      },
+      {
+        "family": "Müller",
+        "given": "Nikola"
+      },
+      {
+        "family": "Hunger",
+        "given": "Michael"
+      },
+      {
+        "family": "Bischoff",
+        "given": "Sebastian"
+      },
+      {
+        "family": "Ladenburger",
+        "given": "Pius"
+      },
+      {
+        "family": "Rückin",
+        "given": "Julius"
+      },
+      {
+        "family": "Seidel",
+        "given": "Laurenz"
+      },
+      {
+        "family": "Stolp",
+        "given": "Fabian"
+      },
+      {
+        "family": "Vaichenker",
+        "given": "Michael"
+      },
+      {
+        "family": "Ziegler",
+        "given": "Adrian"
+      },
+      {
+        "family": "Mottin",
+        "given": "Davide"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          4
+        ]
       ]
-    ]
-  },
-  "author": [
-    {
-      "given": "Daniel",
-      "family": "Himmelstein"
-    }
-  ]
-}
+    },
+    "container-title": "WWW '18: Companion Proceedings of the The Web Conference 2018",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "DOI": "10.1145/3184558.3186978",
+    "URL": "https://doi.org/gg2c7w"
+  }
 ]
