@@ -22,7 +22,7 @@ Hetmatpy
 HetMats
 hetnet
 Hetnetpy
-hetnets
+Hetnets
 Himmelstein
 HINE
 metaedges
