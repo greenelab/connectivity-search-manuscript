@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Daniel S. Himmelstein" />
-  <meta name="dcterms.date" content="2020-06-08" />
+  <meta name="dcterms.date" content="2020-06-17" />
   <meta name="keywords" content="hetnets, networks, connectivity, search, hetionet, knowledge graphs, algorithms, nodes, bioinformatics, biomedical informatics" />
   <title>Hetnet connectivity search provides rapid insights into how two biomedical entities are related</title>
   <style>
@@ -28,8 +28,8 @@
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2020-06-08" />
-  <meta name="citation_publication_date" content="2020-06-08" />
+  <meta name="dc.date" content="2020-06-17" />
+  <meta name="citation_publication_date" content="2020-06-17" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -46,9 +46,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/44db0df4b5b6c49db4e724187ec94b56325b0faa/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/44db0df4b5b6c49db4e724187ec94b56325b0faa/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/44db0df4b5b6c49db4e724187ec94b56325b0faa/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -62,10 +62,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/60ee97e6489e426f53b5c363d5db0b5c6b296bcc/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/44db0df4b5b6c49db4e724187ec94b56325b0faa/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/60ee97e6489e426f53b5c363d5db0b5c6b296bcc">greenelab/connectivity-search-manuscript@60ee97e</a>
-on June 8, 2020.
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/44db0df4b5b6c49db4e724187ec94b56325b0faa">greenelab/connectivity-search-manuscript@44db0df</a>
+on June 17, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <!-- include the Font Awesome library, per: https://fontawesome.com/start -->
@@ -219,6 +219,30 @@ See the <a href="https://git.dhimmel.com/rephetio-manuscript/#nodes">Project Rep
 Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types.
 Other integrative resources, some still under development, include <a href="https://www.wikidata.org">Wikidata</a> <span class="citation" data-cites="HUodcdz1">[<a href="#ref-HUodcdz1" role="doc-biblioref">5</a>]</span>, <a href="https://skr3.nlm.nih.gov/SemMedDB/">SemMedDB</a> <span class="citation" data-cites="eKVkBSDD reekunFL uTOtIsTj">[<a href="#ref-eKVkBSDD" role="doc-biblioref">6</a>,<a href="#ref-reekunFL" role="doc-biblioref">7</a>,<a href="#ref-uTOtIsTj" role="doc-biblioref">8</a>]</span>, <a href="https://spoke.ucsf.edu/">SPOKE</a>, and <a href="https://github.com/gnn4dr/DRKG">DRKG</a>.</p>
 <h3 id="rephetio">Rephetio</h3>
+<p>Project Rephetio is the name of the <a href="https://git.dhimmel.com/rephetio-manuscript/">study</a> that created Hetionet and applied it repurpose drugs <span class="citation" data-cites="O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>]</span>.
+This project <a href="https://het.io/repurpose/">predicted</a> the probability of drug efficacy for 209,168 compound–disease pairs.
+The approach learned which types of paths occur more or less frequently between known treatments than non-treatments (Figure ??).
+To train the model, Rephetio created <a href="https://doi.org/10.6084/m9.figshare.3103054">PharmacotherapyDB</a>, a physician-curated catalog of 755 disease-modifying treatments <span class="citation" data-cites="5t7pfaPv">[<a href="#ref-5t7pfaPv" role="doc-biblioref">9</a>]</span>.</p>
+<!-- note we might want to manually improve this figure as per https://slides.com/dhimmel/rocky2019#/11/1/3 -->
+<p>![<strong>Supervised machine learning approach from Project Rephetio.</strong>
+This figure visualizes the feature matrix used by Project Rephetio to make supervised predictions.
+Each row represents a compound–disease pair.
+The top half of rows correspond to known treatments (i.e. positives), while the bottom half correspond to non-treatments (i.e. negatives, not known to be treatments in PharmacotherapyDB).
+Here, an equal number of treatments and non-treatments are shown, but in reality the problem is heavily imbalanced.
+Project Rephetio scaled models to assume a positive prevalence of 0.36% <span class="citation" data-cites="O21tn8vf vvdoVrc6">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-vvdoVrc6" role="doc-biblioref">10</a>]</span>.
+Each column represents a metapath, labeled with its abbreviation.</p>
+<p>Feature values are DWPCs (transformed and standardized), which assess the connectivity along the specified metapath between the specific compound and disease.
+Maroon colored values indicate above-average connectivity,
+whereas blue values indicate below average connectivity.
+In general, positives have greater connectivity for the selected metapaths than negatives.
+Rephetio used a logistic regression model to learn the effect of each type of connectivity (feature) on the likelihood that a compound treats a disease.
+The model predicts whether a compound–disease pair is a treatment based on its features, but requires supervision in the form of known treatments.
+](https://github.com/dhimmel/learn/raw/7668c97b2a6f348479b70fa40c3d7db424584315/prediction/figure/example-feature-matrix.svg?sanitize=1){#fig:rephetio width=“100%”}</p>
+<h3 id="todo-other-works">TODO: Other works</h3>
+<p>https://github.com/greenelab/hetmech/issues/56</p>
+<p>Network embeddings edge2vec <span class="citation" data-cites="jyhFBVzQ">[<a href="#ref-jyhFBVzQ" role="doc-biblioref">11</a>]</span>, metapath2vec <span class="citation" data-cites="doi:0.1145/3097983.3098036">[<span class="citeproc-not-found" data-reference-id="doi:0.1145/3097983.3098036"><strong>???</strong></span>]</span>, HINE <span class="citation" data-cites="15kVSbZyi">[<a href="#ref-15kVSbZyi" role="doc-biblioref">12</a>]</span>.</p>
+<p><span class="citation" data-cites="Vz9QIDKV"><a href="#ref-Vz9QIDKV" role="doc-biblioref">13</a></span> training node pairs to important metapaths (Forward Stagewise Path Generation).
+<a href="https://meta-exp.github.io/">MetaExp</a> <span class="citation" data-cites="19H7j1WBd">[<a href="#ref-19H7j1WBd" role="doc-biblioref">14</a>]</span> user selects two sets of nodes. MetaExp detects metapaths and interacts with the user to progressively refine metapaths.</p>
 <h3 id="unsupervised-connectivity-search">Unsupervised connectivity search</h3>
 <h2 class="page_break_before" id="results">Results</h2>
 <h3 id="hetmatpy-package">Hetmatpy Package</h3>
@@ -228,7 +252,7 @@ This package provides a matrix-based utilities for hetnets.</p>
 <h3 id="dwpc-null-distribution">DWPC null distribution</h3>
 <p>To assess connectivity between a source and target node, we use the DWPC (degree-weighted path count) metric.
 The DWPC is similar to path count (number of paths between the source and target node along a given metapath), except that it downweights paths through high degree nodes.
-Rather than using the raw DWPC for a source-metapath-target combination, we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling <span class="citation" data-cites="17mGFvxXu">[<a href="#ref-17mGFvxXu" role="doc-biblioref">9</a>]</span>.</p>
+Rather than using the raw DWPC for a source-metapath-target combination, we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling <span class="citation" data-cites="17mGFvxXu">[<a href="#ref-17mGFvxXu" role="doc-biblioref">15</a>]</span>.</p>
 <p>Previously, we had no technique for detecting whether a DWPC value was exceptional.
 One possibility is to evaluate the DWPCs for all pairs of nodes and select the top scores (e.g. the top 5% of DWPCs).
 Another possibility is to pick a transformed DWPC score as a cutoff.
@@ -256,7 +280,7 @@ A HetMat directory stores a single heterogeneous network, whose data resides in 
 <li>A <code>metagraph.json</code> file stores the schema, defining which types of nodes and edges comprise the hetnet.
 This format is defined by the <a href="https://github.com/hetio/hetnetpy">hetnetpy</a> Python package.
 Hetnetpy was originally developed with the name hetio during prior studies
-<span class="citation" data-cites="WkPlH1ds O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-WkPlH1ds" role="doc-biblioref">10</a>]</span>,
+<span class="citation" data-cites="WkPlH1ds O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-WkPlH1ds" role="doc-biblioref">16</a>]</span>,
 but we <a href="https://github.com/hetio/hetnetpy/issues/40">renamed</a> it to het<strong>net</strong>py for better disambiguation from het<strong>mat</strong>py.</li>
 <li>A <code>nodes</code> directory containing one file per node type (metanode) that defines each node.
 Currently, <code>.tsv</code> files where each row represents a node are supported.</li>
@@ -336,14 +360,50 @@ Michael Mayers, Tong Shu Li, Núria Queralt-Rosinach, Andrew I. Su<br />
 <em>BMC Bioinformatics</em> (2019-12-11) <a href="https://doi.org/ggpcsr">https://doi.org/ggpcsr</a><br />
 DOI: <a href="https://doi.org/10.1186/s12859-019-3297-0">10.1186/s12859-019-3297-0</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31829175">31829175</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6907279">PMC6907279</a></p>
 </div>
+<div id="ref-5t7pfaPv">
+<p>9. <strong>Announcing PharmacotherapyDB: the Open Catalog of Drug Therapies for Disease</strong><br />
+Daniel Himmelstein<br />
+<em>ThinkLab</em> (2016-03-15) <a href="https://doi.org/f3mqtv">https://doi.org/f3mqtv</a><br />
+DOI: <a href="https://doi.org/10.15363/thinklab.d182">10.15363/thinklab.d182</a></p>
+</div>
+<div id="ref-vvdoVrc6">
+<p>10. <strong>Our hetnet edge prediction methodology: the modeling framework for Project Rephetio</strong><br />
+Daniel Himmelstein<br />
+<em>ThinkLab</em> (2016-05-04) <a href="https://doi.org/f3qbmj">https://doi.org/f3qbmj</a><br />
+DOI: <a href="https://doi.org/10.15363/thinklab.d210">10.15363/thinklab.d210</a></p>
+</div>
+<div id="ref-jyhFBVzQ">
+<p>11. <strong>edge2vec: Representation learning using edge semantics for biomedical knowledge discovery</strong><br />
+Zheng Gao, Gang Fu, Chunping Ouyang, Satoshi Tsutsui, Xiaozhong Liu, Jeremy Yang, Christopher Gessner, Brian Foote, David Wild, Ying Ding, Qi Yu<br />
+<em>BMC Bioinformatics</em> (2019-06-10) <a href="https://doi.org/ggpcsq">https://doi.org/ggpcsq</a><br />
+DOI: <a href="https://doi.org/10.1186/s12859-019-2914-2">10.1186/s12859-019-2914-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31238875">31238875</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6593489">PMC6593489</a></p>
+</div>
+<div id="ref-15kVSbZyi">
+<p>12. <strong>HINE: Heterogeneous Information Network Embedding</strong><br />
+Yuxin Chen, Chenguang Wang<br />
+<em>Lecture Notes in Computer Science</em> (2017) <a href="https://doi.org/gg2c7t">https://doi.org/gg2c7t</a><br />
+DOI: <a href="https://doi.org/10.1007/978-3-319-55753-3_12">10.1007/978-3-319-55753-3_12</a></p>
+</div>
+<div id="ref-Vz9QIDKV">
+<p>13. <strong>Discovering Meta-Paths in Large Heterogeneous Information Networks</strong><br />
+Changping Meng, Reynold Cheng, Silviu Maniu, Pierre Senellart, Wangda Zhang<br />
+<em>Association for Computing Machinery (ACM)</em> (2015) <a href="https://doi.org/gg2c7v">https://doi.org/gg2c7v</a><br />
+DOI: <a href="https://doi.org/10.1145/2736277.2741123">10.1145/2736277.2741123</a></p>
+</div>
+<div id="ref-19H7j1WBd">
+<p>14. <strong>MetaExp</strong><br />
+Freya Behrens, Fatemeh Aghaei, Emmanuel Müller, Martin Preusse, Nikola Müller, Michael Hunger, Sebastian Bischoff, Pius Ladenburger, Julius Rückin, Laurenz Seidel, … Davide Mottin<br />
+<em>Association for Computing Machinery (ACM)</em> (2018) <a href="https://doi.org/gg2c7w">https://doi.org/gg2c7w</a><br />
+DOI: <a href="https://doi.org/10.1145/3184558.3186978">10.1145/3184558.3186978</a></p>
+</div>
 <div id="ref-17mGFvxXu">
-<p>9. <strong>Transforming DWPCs for hetnet edge prediction</strong><br />
+<p>15. <strong>Transforming DWPCs for hetnet edge prediction</strong><br />
 Daniel Himmelstein, Pouya Khankhanian, Antoine Lizee<br />
 <em>ThinkLab</em> (2016-04-01) <a href="https://doi.org/f3qbmd">https://doi.org/f3qbmd</a><br />
 DOI: <a href="https://doi.org/10.15363/thinklab.d193">10.15363/thinklab.d193</a></p>
 </div>
 <div id="ref-WkPlH1ds">
-<p>10. <strong>Heterogeneous Network Edge Prediction: A Data Integration Approach to Prioritize Disease-Associated Genes</strong><br />
+<p>16. <strong>Heterogeneous Network Edge Prediction: A Data Integration Approach to Prioritize Disease-Associated Genes</strong><br />
 Daniel S. Himmelstein, Sergio E. Baranzini<br />
 <em>PLOS Computational Biology</em> (2015-07-09) <a href="https://doi.org/98q">https://doi.org/98q</a><br />
 DOI: <a href="https://doi.org/10.1371/journal.pcbi.1004259">10.1371/journal.pcbi.1004259</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26158728">26158728</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4497619">PMC4497619</a></p>

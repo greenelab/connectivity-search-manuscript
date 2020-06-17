@@ -8,6 +8,7 @@ DrugBank
 DrugCentral
 DWPC
 DWPCs
+embeddings
 Entrez
 erogeneous
 Frontend
@@ -21,9 +22,11 @@ Hetmatpy
 HetMats
 hetnet
 Hetnetpy
-Hetnets
+hetnets
 Himmelstein
+HINE
 metaedges
+MetaExp
 metagraph
 metanode
 metanodes
@@ -33,6 +36,7 @@ metformin
 MF
 Neo
 Numpy
+PharmacotherapyDB
 pre
 precompute
 precomputed
@@ -46,11 +50,13 @@ repurposing
 SciPy
 SemMedDB
 SIDER
+Stagewise
 subdirectories
 TODO
 Translational
 Uberon
 UMLS
 upregulation
+vec
 Webapp
 WikiPathways
