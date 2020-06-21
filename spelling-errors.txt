@@ -21,14 +21,14 @@ HetMat
 hetmatpy
 HetMats
 hetnet
-Hetnetpy
+hetnetpy
 Hetnets
 Himmelstein
 HINE
 metaedges
 MetaExp
 metagraph
-metanode
+Metanode
 metanodes
 metapath
 metapaths
@@ -44,7 +44,7 @@ py
 PyPI
 Reactome
 Realtime
-Rephetio
+rephetio
 repurpose
 repurposing
 SciPy
