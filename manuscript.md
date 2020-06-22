@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@8b6be74](https://github.com/greenelab/connectivity-search-manuscript/tree/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9)
+from [greenelab/connectivity-search-manuscript@4a9e9c7](https://github.com/greenelab/connectivity-search-manuscript/tree/4a9e9c7424d769b6212a16110dcb870a6a290370)
 on June 22, 2020.
 </em></small>
 
@@ -410,10 +410,64 @@ We converted Hetionet v1.0 to HetMat format and uploaded the `hetionet-v1.0.hetm
 
 ### Computing DWPCs with matrix multiplication
 
+Prior to this study, we used two implementations for computing DWPCs.
+The first is a pure Python implementation available in the [`hetnetpy.pathtools.DWPC`](https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/pathtools.py#L8-L21) function [@hetio-dag].
+The second uses a Cypher query, prepared by [`hetnetpy.neo4j.construct_dwpc_query`](https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/neo4j.py#L363-L393), that is executed by the Neo4j database [@rephetio; @doi:10.15363/thinklab.d112].
+Both of these implementations require traversing all paths between the source and target node.
+Hence, they are computationally cumbersome despite optimizations [@doi:10.15363/thinklab.d187].
+
+An alternative approach counts paths by multiplying adjacency matrixes.
+However, this approach actually counts walks,
+since it includes sequences of edges that traverse a single node (i.e trail) or edge (i.e. walk) multiple times.
+When computing network-based features to quantify the relationship between a source and target node,
+we would like to exclude traversing duplicate nodes (i.e. paths, not trails nor walks) [@doi:10.15363/thinklab.d134].
+Therefore, we invented a suite of algorithms to compute true path counts and DWPCs using matrix multiplication. 
+
+TODO: Describe the suite of DWPC algorithms. From the categorize function, there are:
+
+- no_repeats
+- disjoint
+- short_repeat
+- long_repeat
+- BAAB
+- BABA
+- repeat_around
+- interior_complete_group
+- disjoint_groups
+- other
+
+Include information on what lengths of metapath we have completely solved this for. Mention testing against existing methods.
+
+Mention approximations. Also note independent approximation work at https://github.com/mmayers12/hetnet_ml
+
+Discuss caching strategies, sequential versus recursive
+
+Runtime comparison to show the speedup.
+Rephetio computed a portion of in XX time
+
+
+From [@vagelos-2017]:
+
+> We reduced the time to compute DWPC over nearly 1200 metapaths from roughly four-and-a-half days to roughly one hour and thirty-seven minutes
+
+175-fold, which underestimates since Rephetio did not compute the full DWPC matrix and benefited from concurrency.
+
+<!-- references
+  https://github.com/greenelab/hetmech/issues/20
+  https://github.com/greenelab/hetmech/pull/70
+  https://github.com/greenelab/hetmech/issues/53
+  https://github.com/greenelab/hetmech/pull/67
+  https://github.com/hetio/hetmatpy/blob/bc36aa9859c43a1a5fb22808cd6eb952ef9d497c/hetmatpy/degree_weight.py#L210-L239
+  https://github.com/mmayers12/hetnet_ml
+  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/7.rephetio-times.ipynb
+  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/recursive-chain/dwwc-chain-recursive.ipynb
+  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/cache-speeds.ipynb
+-->
+
 ### Permuted hetnets
 
 In order to generate a null distribution for a DWPC, we rely on DWPCs computed from permuted hetnets.
-We derive permuted hetnets from the unpermuted network using the XSwap algorithm [@10.1137/1.9781611972795.67].
+We derive permuted hetnets from the unpermuted network using the XSwap algorithm [@doi:10.1137/1.9781611972795.67].
 XSwap randomizes edges while preserving node degree.
 Therefore, it's ideal for generating null distributions that retain general degree effects,
 but destroy the actual meaning of edges.
@@ -455,13 +509,40 @@ TODO: somewhere link to notebook https://github.com/greenelab/hetmech/blob/04206
 
 Columns stored in degree-perm summary files:
 source_degree target_degree n nnz sum sum_of_squares n_perms
+
+Cite data @doi:10.5281/zenodo.1435834
 -->
 
 ### Gamma-hurdle distribution
 
+<!-- references
+  https://nbviewer.jupyter.org/github/zietzm/hetmech/blob/afde1c6c2a7dea7db370ab543e0abcb992d34b0b/explore/gamma-hurdle-heatmaps/gamma-heatmaps.ipynb
+  https://github.com/greenelab/hetmech/pull/157
+  https://github.com/greenelab/hetmech/blob/088dc3c0852387b58880c145f265fd704eb5e5d1/explore/gamma-hurdle/parameter_estimates.ipynb
+  https://github.com/greenelab/hetmech/issues/123
+-->
+
+### Empirical DWPC p-values
+
+We [caclulate](https://github.com/hetio/hetmatpy/blob/bc36aa9859c43a1a5fb22808cd6eb952ef9d497c/hetmatpy/pipeline.py#L92-L113 "hetmatpy.pipeline.calculate_empirical_p_value source code") an empirical p-value for special cases where the gamma-hurdle model cannot be applied.
+These cases include when the observed DWPC is zero or when the null DWPC distribution is all zeroes or has only a single distinct nonzero value.
+The emperical _p_-value (_p~empiric~_) equals the proportion of null DPWCs ≥ the observed DWPC.
+
+Since we don't store all null DWPC values,
+we apply the following criteria to calculate _p~empiric~_ from summary statistics:
+
+1. When the observed DWPC = 0 (no paths of the specified metapath existed between the source and target node),
+   _p~empiric~_ = 1.
+2. When all null DWPCs are zero but the observed DWPC is positive,
+   _p~empiric~_ = 0.
+3. When all nonzero null DWPCs have the same positive value (standard deviation = 0),
+   _p~empiric~_ = 0 if the observed DWPC > the null DWPC else _p~empiric~_ = proportion of nonzero null DWPCs.
+
 ### Prioritizing metapaths for database storage
 
 ### Rest API & backend
+
+<https://search-api.het.io/v1/>
 
 ### Webapp & Frontend
 
@@ -470,6 +551,7 @@ source_degree target_degree n nnz sum sum_of_squares n_perms
 ### Software & data availability
 
 
+[@vagelos-2017]: doi:10.6084/m9.figshare.5346577
 [@hetio-dag]: doi:10.1371/journal.pcbi.1004259
 [@rephetio]: doi:10.7554/eLife.26726
 [@xwap]: https://greenelab.github.io/xswap-manuscript/
