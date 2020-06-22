@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Daniel S. Himmelstein" />
-  <meta name="dcterms.date" content="2020-06-21" />
+  <meta name="dcterms.date" content="2020-06-22" />
   <meta name="keywords" content="hetnets, networks, connectivity, search, hetionet, knowledge graphs, algorithms, nodes, bioinformatics, biomedical informatics" />
   <title>Hetnet connectivity search provides rapid insights into how two biomedical entities are related</title>
   <style>
@@ -28,8 +28,8 @@
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2020-06-21" />
-  <meta name="citation_publication_date" content="2020-06-21" />
+  <meta name="dc.date" content="2020-06-22" />
+  <meta name="citation_publication_date" content="2020-06-22" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -46,9 +46,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/6ac122b30b9b92ae99ebf6dc61768fdd6647d573/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6ac122b30b9b92ae99ebf6dc61768fdd6647d573/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6ac122b30b9b92ae99ebf6dc61768fdd6647d573/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -62,10 +62,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/6ac122b30b9b92ae99ebf6dc61768fdd6647d573/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/6ac122b30b9b92ae99ebf6dc61768fdd6647d573">greenelab/connectivity-search-manuscript@6ac122b</a>
-on June 21, 2020.
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9">greenelab/connectivity-search-manuscript@8b6be74</a>
+on June 22, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <!-- include the Font Awesome library, per: https://fontawesome.com/start -->
@@ -383,7 +383,43 @@ A <code>hetmat_from_graph</code> function creates a HetMat object and directory 
 <p>We converted Hetionet v1.0 to HetMat format and uploaded the <code>hetionet-v1.0.hetmat.zip</code> archive to the <a href="https://github.com/hetio/hetionet/tree/master/hetnet/matrix">Hetionet data repository</a>.</p>
 <h3 id="computing-dwpcs-with-matrix-multiplication">Computing DWPCs with matrix multiplication</h3>
 <h3 id="permuted-hetnets">Permuted hetnets</h3>
+<p>In order to generate a null distribution for a DWPC, we rely on DWPCs computed from permuted hetnets.
+We derive permuted hetnets from the unpermuted network using the XSwap algorithm <span class="citation" data-cites="10.1137/1.9781611972795.67">[<span class="citeproc-not-found" data-reference-id="10.1137/1.9781611972795.67"><strong>???</strong></span>]</span>.
+XSwap randomizes edges while preserving node degree.
+Therefore, it’s ideal for generating null distributions that retain general degree effects,
+but destroy the actual meaning of edges.
+We adapt XSwap to hetnets by applying it separately to each metaedge <span class="citation" data-cites="O21tn8vf GE6jhWnt xswap">[<span class="citeproc-not-found" data-reference-id="xswap"><strong>???</strong></span>,<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">18</a>]</span>.</p>
+<p>Project Rephetio created 5 permuted hetnets <span class="citation" data-cites="O21tn8vf GE6jhWnt">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">18</a>]</span>,
+which were used to generate a null distribution of classifier performance for each metapath-based feature.
+Here, we aim to create a null distribution for individual DWPCs, which requires vastly more permuted values to estimate with accuracy.
+Therefore, we generated 200 permuted hetnets (<a href="https://github.com/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/data/hetionet-v1.0-permutations.zip">archive</a>).
+More recently, we also developed the <code>xswap</code> Python <a href="https://github.com/greenelab/xswap">package</a>, whose optimized C/C++ implementation will enable future research to generate even larger sets of permuted networks <span class="citation" data-cites="xswap">[<span class="citeproc-not-found" data-reference-id="xswap"><strong>???</strong></span>]</span>.</p>
 <h3 id="degree-grouping-of-node-pairs">Degree-grouping of node pairs</h3>
+<p>For each of the 200 permuted networks and each of the 2,205 metapaths, we computed the entire DWPC matrix (i.e. all source nodes × target nodes).
+Therefore, for each actual DWPC value, we computed 200 permuted DWPC values.
+Because permutation preserves only node degree, DWPC values among nodes with the same source and target degrees are equivalent to additional permutations.
+We greatly increased the effective number of permutations by grouping DWPC values according to node degree, affording us a superior estimation of the DWPC null distribution.</p>
+<p>We have applied this <em>degree-grouping</em> approach previously when calculating the prior probability of edge existence based on the source and target node degrees <span class="citation" data-cites="19OyKPQ4M xswap">[<span class="citeproc-not-found" data-reference-id="xswap"><strong>???</strong></span>,<a href="#ref-19OyKPQ4M" role="doc-biblioref">19</a>]</span>.
+But here, we apply <em>degree-grouping</em> to null DWPCs.
+The result is that the null distribution for a DWPC is based not only on permuted DWPCs for the corresponding source–metapath–target combination,
+but instead on all permuted DWPCs for the source-degree–metapath–target-degree combination.</p>
+<p>The “# DWPCs” column in Figure <a href="#fig:webapp-metapaths">3</a> illustrates how degree-grouping inflates the sample size of null DWPCs.
+The <em>p</em>-value for the <em>DaGiGpPW</em> metapath relies on the minimum number of null DWPCs (200),
+since no other disease besides Alzheimer’s had 196 <em>associates</em> edges (source degree) and no other pathway besides circadian rhythm had 201 <em>participates</em> edges (target degree).
+However, for other metapaths with over 5,000 null DWPCs, degree-grouping increased the size of the null distribution by a factor of 25.
+In general, source–target node pairs with lower degrees receive the largest sample size multiplier from degree-grouping.
+This is convenient since low degree nodes also tend to produce the highest proportion of zero DWPCs, by virtue of low connectivity.
+Consequently, degree-grouping excels where it is needed most.</p>
+<p>One final benefit of degree-grouping is that reduces the disk space required to store null DWPC summary statistics.
+For example, with 20,945 genes in Hetionet v1.0, there exists 438,693,025 gene pairs.
+Gene nodes have 302 distinct degrees for <em>interacts</em> edges, resulting in 91,204 degree pairs.
+This equates to an 4810-fold reduction in the number of summary statistics that need to be stored to represent the null DWPC distribution for a metapath starting and ending with a <em>Gene–interacts–Gene</em> metaedge.</p>
+<!--
+TODO: somewhere link to notebook https://github.com/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/bulk.ipynb
+
+Columns stored in degree-perm summary files:
+source_degree target_degree n nnz sum sum_of_squares n_perms
+-->
 <h3 id="gamma-hurdle-distribution">Gamma-hurdle distribution</h3>
 <h3 id="prioritizing-metapaths-for-database-storage">Prioritizing metapaths for database storage</h3>
 <h3 id="rest-api-backend">Rest API &amp; backend</h3>
@@ -495,6 +531,18 @@ DOI: <a href="https://doi.org/10.15363/thinklab.d193">10.15363/thinklab.d193</a>
 Daniel S. Himmelstein, Sergio E. Baranzini<br />
 <em>PLOS Computational Biology</em> (2015-07-09) <a href="https://doi.org/98q">https://doi.org/98q</a><br />
 DOI: <a href="https://doi.org/10.1371/journal.pcbi.1004259">10.1371/journal.pcbi.1004259</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26158728">26158728</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4497619">PMC4497619</a></p>
+</div>
+<div id="ref-GE6jhWnt">
+<p>18. <strong>Assessing the effectiveness of our hetnet permutations</strong><br />
+Daniel Himmelstein<br />
+<em>ThinkLab</em> (2016-02-25) <a href="https://doi.org/f3mqt5">https://doi.org/f3mqt5</a><br />
+DOI: <a href="https://doi.org/10.15363/thinklab.d178">10.15363/thinklab.d178</a></p>
+</div>
+<div id="ref-19OyKPQ4M">
+<p>19. <strong>Network Edge Prediction: Estimating the prior</strong><br />
+Antoine Lizee, Daniel Himmelstein<br />
+<em>ThinkLab</em> (2016-04-14) <a href="https://doi.org/f3qbmg">https://doi.org/f3qbmg</a><br />
+DOI: <a href="https://doi.org/10.15363/thinklab.d201">10.15363/thinklab.d201</a></p>
 </div>
 </div>
 <!-- default theme -->

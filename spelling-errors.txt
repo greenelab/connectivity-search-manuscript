@@ -4,6 +4,7 @@ biomedicine
 Bonferroni
 Creutzfeldt
 Cypher
+DaGiGpPW
 dhimmel
 downweights
 DRKG
@@ -26,7 +27,7 @@ Hetmatpy
 HetMats
 hetnet
 Hetnetpy
-hetnets
+Hetnets
 Himmelstein
 HINE
 Jakob
@@ -52,7 +53,7 @@ py
 PyPI
 Reactome
 Realtime
-rephetio
+Rephetio
 repurpose
 repurposing
 SciPy
@@ -66,7 +67,9 @@ Translational
 Uberon
 UMLS
 unchecks
+unpermuted
 upregulation
 vec
 webapp
 WikiPathways
+XSwap
