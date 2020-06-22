@@ -31,7 +31,7 @@ HetMat
 Hetmatpy
 HetMats
 hetnet
-hetnetpy
+Hetnetpy
 hetnets
 Himmelstein
 HINE
@@ -58,8 +58,8 @@ precomputed
 py
 PyPI
 Reactome
-Realtime
-rephetio
+realtime
+Rephetio
 repurpose
 repurposing
 Runtime
@@ -69,6 +69,7 @@ SIDER
 Stagewise
 subdirectories
 subgraph
+subgraphs
 TODO
 Translational
 Uberon

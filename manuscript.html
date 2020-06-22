@@ -46,9 +46,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -62,9 +62,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/4a9e9c7424d769b6212a16110dcb870a6a290370">greenelab/connectivity-search-manuscript@4a9e9c7</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/c11dfd59926b85ca61937a1e61d072e0927fe7dd">greenelab/connectivity-search-manuscript@c11dfd5</a>
 on June 22, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -353,6 +353,21 @@ A Cypher query that users can run in the <a href="https://neo4j.het.io/browser/"
 <p>Assess ability to predict paths in <a href="https://github.com/SuLab/DrugMechDB" class="uri">https://github.com/SuLab/DrugMechDB</a></p>
 <h3 id="use-cases">Use cases</h3>
 <h2 class="page_break_before" id="discussion">Discussion</h2>
+<p>STUB: Contributions of this work:</p>
+<ul>
+<li>search engine for hetnet connectivity between two nodes, realtime results</li>
+<li>interactive webapp and user interface for displaying metapaths, paths, and subgraphs.</li>
+<li>optimized methods for computing DWPCs using matrix multiplication</li>
+<li>method for estimating <em>p</em>-values for a DWPC, based on null DWPCs computed from permuted hetnets.</li>
+<li>the hetmatpy Python package and HetMat data structure that provide a highly-optimized computational infrastructure to make this possible.</li>
+</ul>
+<p>STUB: Future work:</p>
+<ul>
+<li>node set transformations</li>
+<li><a href="https://github.com/hetio/hetmatpy/issues/11">improved DWPC scaling</a></li>
+<li>longer metapaths</li>
+<li>auto-detection of informative metapaths</li>
+</ul>
 <h2 class="page_break_before" id="methods">Methods</h2>
 <h3 id="the-hetmat-awakens">The HetMat awakens</h3>
 <p>At the core of the hetmatpy package is the HetMat data structure for storing and accessing the network.

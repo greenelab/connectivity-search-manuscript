@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@4a9e9c7](https://github.com/greenelab/connectivity-search-manuscript/tree/4a9e9c7424d769b6212a16110dcb870a6a290370)
+from [greenelab/connectivity-search-manuscript@c11dfd5](https://github.com/greenelab/connectivity-search-manuscript/tree/c11dfd59926b85ca61937a1e61d072e0927fe7dd)
 on June 22, 2020.
 </em></small>
 
@@ -372,7 +372,20 @@ Assess ability to predict paths in <https://github.com/SuLab/DrugMechDB>
 
 ## Discussion {.page_break_before}
 
+STUB: Contributions of this work:
 
+- search engine for hetnet connectivity between two nodes, realtime results
+- interactive webapp and user interface for displaying metapaths, paths, and subgraphs.
+- optimized methods for computing DWPCs using matrix multiplication
+- method for estimating _p_-values for a DWPC, based on null DWPCs computed from permuted hetnets.
+- the hetmatpy Python package and HetMat data structure that provide a highly-optimized computational infrastructure to make this possible.
+
+STUB: Future work:
+
+- node set transformations
+- [improved DWPC scaling](https://github.com/hetio/hetmatpy/issues/11)
+- longer metapaths
+- auto-detection of informative metapaths
 
 ## Methods {.page_break_before}
 
