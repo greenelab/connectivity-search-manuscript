@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/32c989ce9cca0163214ff6a9c6c69031518de77c/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/32c989ce9cca0163214ff6a9c6c69031518de77c/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/32c989ce9cca0163214ff6a9c6c69031518de77c/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/c11dfd59926b85ca61937a1e61d072e0927fe7dd/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/32c989ce9cca0163214ff6a9c6c69031518de77c/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@c11dfd5](https://github.com/greenelab/connectivity-search-manuscript/tree/c11dfd59926b85ca61937a1e61d072e0927fe7dd)
+from [greenelab/connectivity-search-manuscript@32c989c](https://github.com/greenelab/connectivity-search-manuscript/tree/32c989ce9cca0163214ff6a9c6c69031518de77c)
 on June 22, 2020.
 </em></small>
 
@@ -515,15 +515,27 @@ Consequently, degree-grouping excels where it is needed most.
 One final benefit of degree-grouping is that reduces the disk space required to store null DWPC summary statistics.
 For example, with 20,945 genes in Hetionet v1.0, there exists 438,693,025 gene pairs.
 Gene nodes have 302 distinct degrees for _interacts_ edges, resulting in 91,204 degree pairs.
-This equates to an 4810-fold reduction in the number of summary statistics that need to be stored to represent the null DWPC distribution for a metapath starting and ending with a _Gene--interacts--Gene_ metaedge.
+This equates to an 4,810-fold reduction in the number of summary statistics that need to be stored to represent the null DWPC distribution for a metapath starting and ending with a _Gene--interacts--Gene_ metaedge.
+
+We store the following null DWPC summary statistics for each metapath--source-degree--target-degree combination:
+total number of null DWPCs,
+total number of nonzero null DWPCs,
+sum of null DWPCs,
+sum of squaured null DWPCs,
+and number of permuted hetnets.
+These values are sufficient to estimate the _p_-value for a DWPC, by either fitting a gamma-hurdle null distribution or generating an empiric _p_-value.
+Furthermore, these statistics are additive accross permuted hetners.
+Their values are always a running total and can be updated incrementally as statistics from each additional permuted hetnet become available.
+
+We generated null DWPC summary statistics for all Hetionet metapaths with length ≤ 3, and bundled them into HetMat archives by metapath length [@doi:10.5281/zenodo.1435834].
+There are 24 metapaths of length 1, 242 metapaths of length 2, and 1,939 metapaths of length 3.
 
 <!--
+Should note:
+Permuted DWPCs were scaled by dividing by the mean of all unpermuted DWPCs for the metapath and then applying the inverse hyperbolic sine transformation.
+Every degree pair for a given metapath has corresponding statistics that summarize its values across permuted hetnets.
+
 TODO: somewhere link to notebook https://github.com/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/bulk.ipynb
-
-Columns stored in degree-perm summary files:
-source_degree target_degree n nnz sum sum_of_squares n_perms
-
-Cite data @doi:10.5281/zenodo.1435834
 -->
 
 ### Gamma-hurdle distribution

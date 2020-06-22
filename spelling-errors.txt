@@ -1,3 +1,4 @@
+accross
 ARNT
 BAAB
 BABA
@@ -30,8 +31,9 @@ Hetionet
 HetMat
 Hetmatpy
 HetMats
+hetners
 hetnet
-Hetnetpy
+hetnetpy
 hetnets
 Himmelstein
 HINE
@@ -58,7 +60,7 @@ precomputed
 py
 PyPI
 Reactome
-realtime
+Realtime
 Rephetio
 repurpose
 repurposing
@@ -66,6 +68,7 @@ Runtime
 SciPy
 SemMedDB
 SIDER
+squaured
 Stagewise
 subdirectories
 subgraph
@@ -78,6 +81,6 @@ unchecks
 unpermuted
 upregulation
 vec
-webapp
+Webapp
 WikiPathways
 xswap
