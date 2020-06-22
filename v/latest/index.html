@@ -46,9 +46,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -62,9 +62,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/4a9e9c7424d769b6212a16110dcb870a6a290370/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/8b6be747d8f10c7dc77baeed5aab79a15a8adfd9">greenelab/connectivity-search-manuscript@8b6be74</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/4a9e9c7424d769b6212a16110dcb870a6a290370">greenelab/connectivity-search-manuscript@4a9e9c7</a>
 on June 22, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -382,14 +382,59 @@ Since the primary application of HetMats is to generate computationally demandin
 A <code>hetmat_from_graph</code> function creates a HetMat object and directory on disk from the pre-existing <code>hetnetpy.hetnet.Graph</code> format.</p>
 <p>We converted Hetionet v1.0 to HetMat format and uploaded the <code>hetionet-v1.0.hetmat.zip</code> archive to the <a href="https://github.com/hetio/hetionet/tree/master/hetnet/matrix">Hetionet data repository</a>.</p>
 <h3 id="computing-dwpcs-with-matrix-multiplication">Computing DWPCs with matrix multiplication</h3>
+<p>Prior to this study, we used two implementations for computing DWPCs.
+The first is a pure Python implementation available in the <a href="https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/pathtools.py#L8-L21"><code>hetnetpy.pathtools.DWPC</code></a> function <span class="citation" data-cites="WkPlH1ds">[<a href="#ref-WkPlH1ds" role="doc-biblioref">17</a>]</span>.
+The second uses a Cypher query, prepared by <a href="https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/neo4j.py#L363-L393"><code>hetnetpy.neo4j.construct_dwpc_query</code></a>, that is executed by the Neo4j database <span class="citation" data-cites="O21tn8vf kNYoxBiQ">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-kNYoxBiQ" role="doc-biblioref">18</a>]</span>.
+Both of these implementations require traversing all paths between the source and target node.
+Hence, they are computationally cumbersome despite optimizations <span class="citation" data-cites="xWWaK51z">[<a href="#ref-xWWaK51z" role="doc-biblioref">19</a>]</span>.</p>
+<p>An alternative approach counts paths by multiplying adjacency matrixes.
+However, this approach actually counts walks,
+since it includes sequences of edges that traverse a single node (i.e trail) or edge (i.e. walk) multiple times.
+When computing network-based features to quantify the relationship between a source and target node,
+we would like to exclude traversing duplicate nodes (i.e. paths, not trails nor walks) <span class="citation" data-cites="w6rL3OYz">[<a href="#ref-w6rL3OYz" role="doc-biblioref">20</a>]</span>.
+Therefore, we invented a suite of algorithms to compute true path counts and DWPCs using matrix multiplication.</p>
+<p>TODO: Describe the suite of DWPC algorithms. From the categorize function, there are:</p>
+<ul>
+<li>no_repeats</li>
+<li>disjoint</li>
+<li>short_repeat</li>
+<li>long_repeat</li>
+<li>BAAB</li>
+<li>BABA</li>
+<li>repeat_around</li>
+<li>interior_complete_group</li>
+<li>disjoint_groups</li>
+<li>other</li>
+</ul>
+<p>Include information on what lengths of metapath we have completely solved this for. Mention testing against existing methods.</p>
+<p>Mention approximations. Also note independent approximation work at https://github.com/mmayers12/hetnet_ml</p>
+<p>Discuss caching strategies, sequential versus recursive</p>
+<p>Runtime comparison to show the speedup.
+Rephetio computed a portion of in XX time</p>
+<p>From <span class="citation" data-cites="15nwuvjrA">[<a href="#ref-15nwuvjrA" role="doc-biblioref">21</a>]</span>:</p>
+<blockquote>
+<p>We reduced the time to compute DWPC over nearly 1200 metapaths from roughly four-and-a-half days to roughly one hour and thirty-seven minutes</p>
+</blockquote>
+<p>175-fold, which underestimates since Rephetio did not compute the full DWPC matrix and benefited from concurrency.</p>
+<!-- references
+  https://github.com/greenelab/hetmech/issues/20
+  https://github.com/greenelab/hetmech/pull/70
+  https://github.com/greenelab/hetmech/issues/53
+  https://github.com/greenelab/hetmech/pull/67
+  https://github.com/hetio/hetmatpy/blob/bc36aa9859c43a1a5fb22808cd6eb952ef9d497c/hetmatpy/degree_weight.py#L210-L239
+  https://github.com/mmayers12/hetnet_ml
+  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/7.rephetio-times.ipynb
+  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/recursive-chain/dwwc-chain-recursive.ipynb
+  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/cache-speeds.ipynb
+-->
 <h3 id="permuted-hetnets">Permuted hetnets</h3>
 <p>In order to generate a null distribution for a DWPC, we rely on DWPCs computed from permuted hetnets.
-We derive permuted hetnets from the unpermuted network using the XSwap algorithm <span class="citation" data-cites="10.1137/1.9781611972795.67">[<span class="citeproc-not-found" data-reference-id="10.1137/1.9781611972795.67"><strong>???</strong></span>]</span>.
+We derive permuted hetnets from the unpermuted network using the XSwap algorithm <span class="citation" data-cites="iKOIEzQ9">[<a href="#ref-iKOIEzQ9" role="doc-biblioref">22</a>]</span>.
 XSwap randomizes edges while preserving node degree.
 Therefore, it’s ideal for generating null distributions that retain general degree effects,
 but destroy the actual meaning of edges.
-We adapt XSwap to hetnets by applying it separately to each metaedge <span class="citation" data-cites="O21tn8vf GE6jhWnt xswap">[<span class="citeproc-not-found" data-reference-id="xswap"><strong>???</strong></span>,<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">18</a>]</span>.</p>
-<p>Project Rephetio created 5 permuted hetnets <span class="citation" data-cites="O21tn8vf GE6jhWnt">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">18</a>]</span>,
+We adapt XSwap to hetnets by applying it separately to each metaedge <span class="citation" data-cites="O21tn8vf GE6jhWnt xswap">[<span class="citeproc-not-found" data-reference-id="xswap"><strong>???</strong></span>,<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">23</a>]</span>.</p>
+<p>Project Rephetio created 5 permuted hetnets <span class="citation" data-cites="O21tn8vf GE6jhWnt">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">23</a>]</span>,
 which were used to generate a null distribution of classifier performance for each metapath-based feature.
 Here, we aim to create a null distribution for individual DWPCs, which requires vastly more permuted values to estimate with accuracy.
 Therefore, we generated 200 permuted hetnets (<a href="https://github.com/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/data/hetionet-v1.0-permutations.zip">archive</a>).
@@ -399,7 +444,7 @@ More recently, we also developed the <code>xswap</code> Python <a href="https://
 Therefore, for each actual DWPC value, we computed 200 permuted DWPC values.
 Because permutation preserves only node degree, DWPC values among nodes with the same source and target degrees are equivalent to additional permutations.
 We greatly increased the effective number of permutations by grouping DWPC values according to node degree, affording us a superior estimation of the DWPC null distribution.</p>
-<p>We have applied this <em>degree-grouping</em> approach previously when calculating the prior probability of edge existence based on the source and target node degrees <span class="citation" data-cites="19OyKPQ4M xswap">[<span class="citeproc-not-found" data-reference-id="xswap"><strong>???</strong></span>,<a href="#ref-19OyKPQ4M" role="doc-biblioref">19</a>]</span>.
+<p>We have applied this <em>degree-grouping</em> approach previously when calculating the prior probability of edge existence based on the source and target node degrees <span class="citation" data-cites="19OyKPQ4M xswap">[<span class="citeproc-not-found" data-reference-id="xswap"><strong>???</strong></span>,<a href="#ref-19OyKPQ4M" role="doc-biblioref">24</a>]</span>.
 But here, we apply <em>degree-grouping</em> to null DWPCs.
 The result is that the null distribution for a DWPC is based not only on permuted DWPCs for the corresponding source–metapath–target combination,
 but instead on all permuted DWPCs for the source-degree–metapath–target-degree combination.</p>
@@ -419,10 +464,33 @@ TODO: somewhere link to notebook https://github.com/greenelab/hetmech/blob/04206
 
 Columns stored in degree-perm summary files:
 source_degree target_degree n nnz sum sum_of_squares n_perms
+
+Cite data @doi:10.5281/zenodo.1435834
 -->
 <h3 id="gamma-hurdle-distribution">Gamma-hurdle distribution</h3>
+<!-- references
+  https://nbviewer.jupyter.org/github/zietzm/hetmech/blob/afde1c6c2a7dea7db370ab543e0abcb992d34b0b/explore/gamma-hurdle-heatmaps/gamma-heatmaps.ipynb
+  https://github.com/greenelab/hetmech/pull/157
+  https://github.com/greenelab/hetmech/blob/088dc3c0852387b58880c145f265fd704eb5e5d1/explore/gamma-hurdle/parameter_estimates.ipynb
+  https://github.com/greenelab/hetmech/issues/123
+-->
+<h3 id="empirical-dwpc-p-values">Empirical DWPC p-values</h3>
+<p>We <a href="https://github.com/hetio/hetmatpy/blob/bc36aa9859c43a1a5fb22808cd6eb952ef9d497c/hetmatpy/pipeline.py#L92-L113" title="hetmatpy.pipeline.calculate_empirical_p_value source code">caclulate</a> an empirical p-value for special cases where the gamma-hurdle model cannot be applied.
+These cases include when the observed DWPC is zero or when the null DWPC distribution is all zeroes or has only a single distinct nonzero value.
+The emperical <em>p</em>-value (<em>p<sub>empiric</sub></em>) equals the proportion of null DPWCs ≥ the observed DWPC.</p>
+<p>Since we don’t store all null DWPC values,
+we apply the following criteria to calculate <em>p<sub>empiric</sub></em> from summary statistics:</p>
+<ol type="1">
+<li>When the observed DWPC = 0 (no paths of the specified metapath existed between the source and target node),
+<em>p<sub>empiric</sub></em> = 1.</li>
+<li>When all null DWPCs are zero but the observed DWPC is positive,
+<em>p<sub>empiric</sub></em> = 0.</li>
+<li>When all nonzero null DWPCs have the same positive value (standard deviation = 0),
+<em>p<sub>empiric</sub></em> = 0 if the observed DWPC &gt; the null DWPC else <em>p<sub>empiric</sub></em> = proportion of nonzero null DWPCs.</li>
+</ol>
 <h3 id="prioritizing-metapaths-for-database-storage">Prioritizing metapaths for database storage</h3>
 <h3 id="rest-api-backend">Rest API &amp; backend</h3>
+<p><a href="https://search-api.het.io/v1/" class="uri">https://search-api.het.io/v1/</a></p>
 <h3 id="webapp-frontend">Webapp &amp; Frontend</h3>
 <h3 id="realtime-open-science">Realtime open science</h3>
 <h3 id="software-data-availability">Software &amp; data availability</h3>
@@ -532,14 +600,44 @@ Daniel S. Himmelstein, Sergio E. Baranzini<br />
 <em>PLOS Computational Biology</em> (2015-07-09) <a href="https://doi.org/98q">https://doi.org/98q</a><br />
 DOI: <a href="https://doi.org/10.1371/journal.pcbi.1004259">10.1371/journal.pcbi.1004259</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26158728">26158728</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4497619">PMC4497619</a></p>
 </div>
+<div id="ref-kNYoxBiQ">
+<p>18. <strong>Using the neo4j graph database for hetnets</strong><br />
+Daniel Himmelstein<br />
+<em>ThinkLab</em> (2015-10-02) <a href="https://doi.org/f3mqvk">https://doi.org/f3mqvk</a><br />
+DOI: <a href="https://doi.org/10.15363/thinklab.d112">10.15363/thinklab.d112</a></p>
+</div>
+<div id="ref-xWWaK51z">
+<p>19. <strong>Estimating the complexity of hetnet traversal</strong><br />
+Daniel Himmelstein, Antoine Lizee<br />
+<em>ThinkLab</em> (2016-03-22) <a href="https://doi.org/gbr42x">https://doi.org/gbr42x</a><br />
+DOI: <a href="https://doi.org/10.15363/thinklab.d187">10.15363/thinklab.d187</a></p>
+</div>
+<div id="ref-w6rL3OYz">
+<p>20. <strong>Path exclusion conditions</strong><br />
+Daniel Himmelstein<br />
+<em>ThinkLab</em> (2015-12-08) <a href="https://doi.org/gg2rw2">https://doi.org/gg2rw2</a><br />
+DOI: <a href="https://doi.org/10.15363/thinklab.d134">10.15363/thinklab.d134</a></p>
+</div>
+<div id="ref-15nwuvjrA">
+<p>21. <strong>Vagelos Report Summer 2017</strong><br />
+Michael Zietz<br />
+<em>Figshare</em> (2017) <a href="https://doi.org/gbr3pf">https://doi.org/gbr3pf</a><br />
+DOI: <a href="https://doi.org/10.6084/m9.figshare.5346577">10.6084/m9.figshare.5346577</a></p>
+</div>
+<div id="ref-iKOIEzQ9">
+<p>22. <strong>Randomization Techniques for Graphs</strong><br />
+Sami Hanhijärvi, Gemma C. Garriga, Kai Puolamäki<br />
+<em>Society for Industrial &amp; Applied Mathematics (SIAM)</em> (2009-04-30) <a href="https://doi.org/f3mn58">https://doi.org/f3mn58</a><br />
+DOI: <a href="https://doi.org/10.1137/1.9781611972795.67">10.1137/1.9781611972795.67</a></p>
+</div>
 <div id="ref-GE6jhWnt">
-<p>18. <strong>Assessing the effectiveness of our hetnet permutations</strong><br />
+<p>23. <strong>Assessing the effectiveness of our hetnet permutations</strong><br />
 Daniel Himmelstein<br />
 <em>ThinkLab</em> (2016-02-25) <a href="https://doi.org/f3mqt5">https://doi.org/f3mqt5</a><br />
 DOI: <a href="https://doi.org/10.15363/thinklab.d178">10.15363/thinklab.d178</a></p>
 </div>
 <div id="ref-19OyKPQ4M">
-<p>19. <strong>Network Edge Prediction: Estimating the prior</strong><br />
+<p>24. <strong>Network Edge Prediction: Estimating the prior</strong><br />
 Antoine Lizee, Daniel Himmelstein<br />
 <em>ThinkLab</em> (2016-04-14) <a href="https://doi.org/f3qbmg">https://doi.org/f3qbmg</a><br />
 DOI: <a href="https://doi.org/10.15363/thinklab.d201">10.15363/thinklab.d201</a></p>
