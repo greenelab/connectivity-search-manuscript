@@ -24,7 +24,7 @@ embeddings
 emperical
 Entrez
 erogeneous
-Frontend
+frontend
 GBMF
 GJA
 GWAS
@@ -65,7 +65,7 @@ precomputed
 py
 PyPI
 Reactome
-Realtime
+realtime
 rephetio
 repurpose
 repurposing
@@ -86,6 +86,6 @@ unchecks
 unpermuted
 upregulation
 vec
-webapp
+Webapp
 WikiPathways
 xswap

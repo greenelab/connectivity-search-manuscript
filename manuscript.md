@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/37f843320115771b1b172d8012634271a2ebde96/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/df074d7c9bb8c631c12709610351456b56c8a83d/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/37f843320115771b1b172d8012634271a2ebde96/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/df074d7c9bb8c631c12709610351456b56c8a83d/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/37f843320115771b1b172d8012634271a2ebde96/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/df074d7c9bb8c631c12709610351456b56c8a83d/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,9 +101,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/37f843320115771b1b172d8012634271a2ebde96/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/df074d7c9bb8c631c12709610351456b56c8a83d/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@37f8433](https://github.com/greenelab/connectivity-search-manuscript/tree/37f843320115771b1b172d8012634271a2ebde96)
+from [greenelab/connectivity-search-manuscript@df074d7](https://github.com/greenelab/connectivity-search-manuscript/tree/df074d7c9bb8c631c12709610351456b56c8a83d)
 on June 23, 2020.
 </em></small>
 
@@ -278,7 +278,7 @@ The user sorts by adjusted _p_-value and [selects](alzheimer-metapaths) 7 of the
 \
 **C.**
 Paths for the selected metapaths are ordered by their path score.
-The user selects 7 paths to show in the graph visualization and highlights a single path involving _ARNT2_ for emphasis.
+The user selects 8 paths (1 from a subsequent page of results) to show in the graph visualization and highlights a single path involving _ARNT2_ for emphasis.
 \
 **D.**
 A subgraph displays the previously selected paths.
@@ -288,7 +288,7 @@ Clicking an edge displays its properties, informing the user that association be
   This example is also used at https://slides.com/dhimmel/rocky2019#/4
   More info at https://github.com/greenelab/connectivity-search-manuscript/issues/7
 -->
-](https://github.com/greenelab/connectivity-search-manuscript/raw/9f0f132551eeab94b3ba89ad12b5d5a2c9671420/content/media/webapp/v2/webapp.png){#fig:webapp width="5in"}
+](https://github.com/greenelab/connectivity-search-manuscript/raw/b290b4ad435553c7126867e0720f3112b4692809/content/media/webapp/v3/webapp.png){#fig:webapp width="100%" .white}
 
 [alzheimer-metapaths]: https://het.io/search/?source=17287&target=7607&metapaths=DaGiGpPW%2CDdGiGpPW%2CDdGpPW%2CDlAeGpPW%2CDrDaGpPW%2CDrDuGpPW%2CDuGiGpPW&complete=
 
@@ -322,7 +322,7 @@ By tailoring the null distribution for a DWPC to the degree of its source and ta
 ![
 **Expanded metapath details from the connectivity search webapp.**
 This is the expanded view of the [metapath table](alzheimer-metapaths) in {@fig:webapp}B.
-](https://github.com/greenelab/connectivity-search-manuscript/raw/9f0f132551eeab94b3ba89ad12b5d5a2c9671420/content/media/webapp/v2/b.metapaths-expanded.png){#fig:webapp-metapaths width="100%}
+](https://github.com/greenelab/connectivity-search-manuscript/raw/b290b4ad435553c7126867e0720f3112b4692809/content/media/webapp/v3/b.metapaths-expanded.png){#fig:webapp-metapaths width="100%}
 
 Figure @fig:webapp-metapaths shows the information used to compute _p_-value for enriched metapaths.
 The table includes the following columns:
