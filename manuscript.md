@@ -3,7 +3,7 @@ author-meta:
 - Daniel S. Himmelstein
 bibliography:
 - content/manual-references.json
-date-meta: '2020-06-22'
+date-meta: '2020-06-23'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
 
-  <meta name="dc.date" content="2020-06-22" />
+  <meta name="dc.date" content="2020-06-23" />
 
-  <meta name="citation_publication_date" content="2020-06-22" />
+  <meta name="citation_publication_date" content="2020-06-23" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/32c989ce9cca0163214ff6a9c6c69031518de77c/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/37f843320115771b1b172d8012634271a2ebde96/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/32c989ce9cca0163214ff6a9c6c69031518de77c/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/37f843320115771b1b172d8012634271a2ebde96/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/32c989ce9cca0163214ff6a9c6c69031518de77c/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/37f843320115771b1b172d8012634271a2ebde96/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -101,10 +101,10 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/32c989ce9cca0163214ff6a9c6c69031518de77c/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/37f843320115771b1b172d8012634271a2ebde96/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@32c989c](https://github.com/greenelab/connectivity-search-manuscript/tree/32c989ce9cca0163214ff6a9c6c69031518de77c)
-on June 22, 2020.
+from [greenelab/connectivity-search-manuscript@37f8433](https://github.com/greenelab/connectivity-search-manuscript/tree/37f843320115771b1b172d8012634271a2ebde96)
+on June 23, 2020.
 </em></small>
 
 ## Authors
@@ -231,7 +231,7 @@ whereas blue values indicate below average connectivity.
 In general, positives have greater connectivity for the selected metapaths than negatives.
 Rephetio used a logistic regression model to learn the effect of each type of connectivity (feature) on the likelihood that a compound treats a disease.
 The model predicts whether a compound–disease pair is a treatment based on its features, but requires supervision in the form of known treatments.
-<!-- note we might want to manually improve this figure as per https://slides.com/dhimmel/rocky2019#/11/1/3 -->
+<!-- note we might want to manually improve this figure as per https://github.com/greenelab/connectivity-search-manuscript/issues/11 -->
 ](https://github.com/dhimmel/learn/raw/7668c97b2a6f348479b70fa40c3d7db424584315/prediction/figure/example-feature-matrix.svg?sanitize=1){#fig:rephetio width="4.5in"}
 
 ### TODO: Other works
@@ -567,7 +567,34 @@ we apply the following criteria to calculate _p~empiric~_ from summary statistic
 
 ### Rest API & backend
 
-<https://search-api.het.io/v1/>
+We created a backend application using Python's Django web framework.
+The source code is available in the [`connectivity-search-backend`](https://github.com/greenelab/connectivity-search-backend) repository.
+The primary role of the backend is manage a relational database and provide an API for requesting data.
+
+We define the database schema [using](https://github.com/greenelab/connectivity-search-backend/blob/af12f8cf2ad47d9a25ce8d1b7889390654eb3bb9/dj_hetmech_app/models.py "models.py for the dj_hetmech_app") Django's object-relational mapping framework (Figure @fig:database).
+We [import](https://github.com/greenelab/connectivity-search-backend/blob/af12f8cf2ad47d9a25ce8d1b7889390654eb3bb9/dj_hetmech_app/management/commands/populate_database.py "dj_hetmech_app populate_database management command") the data into a PostgreSQL database.
+Populating the database for all 2,205 metapaths up to length 3 was a prolonged operation, [taking](https://github.com/greenelab/connectivity-search-backend/pull/41#issuecomment-488054789) over 3 days.
+The majority of the time is spent populating the `DegreeGroupedPermutation` (37,905,389 rows) and `PathCount` (174,986,768 rows) tables.
+
+![
+**Schema for the connectivity search backend relational database models.**
+Each Django model is represented as a table,
+whose rows list the model's field names and types.
+Each model corresponds to a database table.
+Arrows denote foreign key relationships.
+The arrow labels indicate the foreign key field name followed by reverse relation names generated by Django (in parentheses).
+](https://github.com/greenelab/connectivity-search-backend/raw/752b423a4b7b57575d66ce0b797b0a84c23267a6/media/models-schema.png){#fig:database width="100%"}
+
+We host a public API instance at <https://search-api.het.io>.
+Version 1 of the API exposes several endpoints that are used by the connectivity search frontend including queries for
+node details (`/v1/node`),
+node lookup (`/v1/nodes`),
+metapath information (`/v1/metapaths`),
+and path information (`/v1/paths`).
+The endpoints return JSON payloads.
+Producing results for these queries relies on internal calls to the PostgreSQL relational database as well as the pre-existing Hetionet v1.0 Neo4j graph database.
+They were designed to power the hetnet connecitivity search webapp,
+but are also available for general research use.
 
 ### Webapp & Frontend
 
