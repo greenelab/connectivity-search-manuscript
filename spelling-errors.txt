@@ -32,7 +32,7 @@ het
 hetio
 Hetionet
 HetMat
-Hetmatpy
+hetmatpy
 HetMats
 hetners
 hetnet
@@ -47,7 +47,7 @@ metaedge
 metaedges
 MetaExp
 metagraph
-Metanode
+metanode
 metanodes
 metapath
 metapaths
@@ -65,7 +65,7 @@ precomputed
 py
 PyPI
 Reactome
-realtime
+Realtime
 rephetio
 repurpose
 repurposing

@@ -58,15 +58,19 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/df074d7c9bb8c631c12709610351456b56c8a83d/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/df074d7c9bb8c631c12709610351456b56c8a83d/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/df074d7c9bb8c631c12709610351456b56c8a83d/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
   <meta property="twitter:card" content="summary_large_image" />
+
+  <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
+
+  <meta property="twitter:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
 
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
 
@@ -101,9 +105,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/df074d7c9bb8c631c12709610351456b56c8a83d/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@df074d7](https://github.com/greenelab/connectivity-search-manuscript/tree/df074d7c9bb8c631c12709610351456b56c8a83d)
+from [greenelab/connectivity-search-manuscript@4656683](https://github.com/greenelab/connectivity-search-manuscript/tree/46566831a115f05f3798873f73518ef7db29789c)
 on June 23, 2020.
 </em></small>
 
