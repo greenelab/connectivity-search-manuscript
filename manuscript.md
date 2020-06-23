@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/757af4f38eaf16db303dd8a3a93e2907bb962c9f/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/757af4f38eaf16db303dd8a3a93e2907bb962c9f/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/757af4f38eaf16db303dd8a3a93e2907bb962c9f/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,9 +105,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/757af4f38eaf16db303dd8a3a93e2907bb962c9f/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@4656683](https://github.com/greenelab/connectivity-search-manuscript/tree/46566831a115f05f3798873f73518ef7db29789c)
+from [greenelab/connectivity-search-manuscript@757af4f](https://github.com/greenelab/connectivity-search-manuscript/tree/757af4f38eaf16db303dd8a3a93e2907bb962c9f)
 on June 23, 2020.
 </em></small>
 
@@ -433,7 +433,7 @@ The second uses a Cypher query, prepared by [`hetnetpy.neo4j.construct_dwpc_quer
 Both of these implementations require traversing all paths between the source and target node.
 Hence, they are computationally cumbersome despite optimizations [@doi:10.15363/thinklab.d187].
 
-An alternative approach counts paths by multiplying adjacency matrixes.
+An alternative approach counts paths by multiplying adjacency matrices.
 However, this approach actually counts walks,
 since it includes sequences of edges that traverse a single node (i.e trail) or edge (i.e. walk) multiple times.
 When computing network-based features to quantify the relationship between a source and target node,
@@ -525,10 +525,10 @@ We store the following null DWPC summary statistics for each metapath--source-de
 total number of null DWPCs,
 total number of nonzero null DWPCs,
 sum of null DWPCs,
-sum of squaured null DWPCs,
+sum of squared null DWPCs,
 and number of permuted hetnets.
 These values are sufficient to estimate the _p_-value for a DWPC, by either fitting a gamma-hurdle null distribution or generating an empiric _p_-value.
-Furthermore, these statistics are additive accross permuted hetners.
+Furthermore, these statistics are additive across permuted hetnets.
 Their values are always a running total and can be updated incrementally as statistics from each additional permuted hetnet become available.
 
 We generated null DWPC summary statistics for all Hetionet metapaths with length ≤ 3, and bundled them into HetMat archives by metapath length [@doi:10.5281/zenodo.1435834].
@@ -553,9 +553,9 @@ TODO: somewhere link to notebook https://github.com/greenelab/hetmech/blob/04206
 
 ### Empirical DWPC p-values
 
-We [caclulate](https://github.com/hetio/hetmatpy/blob/bc36aa9859c43a1a5fb22808cd6eb952ef9d497c/hetmatpy/pipeline.py#L92-L113 "hetmatpy.pipeline.calculate_empirical_p_value source code") an empirical p-value for special cases where the gamma-hurdle model cannot be applied.
+We [calculate](https://github.com/hetio/hetmatpy/blob/bc36aa9859c43a1a5fb22808cd6eb952ef9d497c/hetmatpy/pipeline.py#L92-L113 "hetmatpy.pipeline.calculate_empirical_p_value source code") an empirical p-value for special cases where the gamma-hurdle model cannot be applied.
 These cases include when the observed DWPC is zero or when the null DWPC distribution is all zeroes or has only a single distinct nonzero value.
-The emperical _p_-value (_p~empiric~_) equals the proportion of null DPWCs ≥ the observed DWPC.
+The empirical _p_-value (_p~empiric~_) equals the proportion of null DPWCs ≥ the observed DWPC.
 
 Since we don't store all null DWPC values,
 we apply the following criteria to calculate _p~empiric~_ from summary statistics:
@@ -597,7 +597,7 @@ metapath information (`/v1/metapaths`),
 and path information (`/v1/paths`).
 The endpoints return JSON payloads.
 Producing results for these queries relies on internal calls to the PostgreSQL relational database as well as the pre-existing Hetionet v1.0 Neo4j graph database.
-They were designed to power the hetnet connecitivity search webapp,
+They were designed to power the hetnet connectivity search webapp,
 but are also available for general research use.
 
 ### Webapp & Frontend
@@ -607,10 +607,10 @@ but are also available for general research use.
 ### Software & data availability
 
 
-[@vagelos-2017]: doi:10.6084/m9.figshare.5346577
 [@hetio-dag]: doi:10.1371/journal.pcbi.1004259
 [@rephetio]: doi:10.7554/eLife.26726
-[@xwap]: https://greenelab.github.io/xswap-manuscript/
+[@vagelos-2017]: doi:10.6084/m9.figshare.5346577
+[@xswap]: https://greenelab.github.io/xswap-manuscript/
 
 
 ## References {.page_break_before}

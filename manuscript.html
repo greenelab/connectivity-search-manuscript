@@ -46,9 +46,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/757af4f38eaf16db303dd8a3a93e2907bb962c9f/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/757af4f38eaf16db303dd8a3a93e2907bb962c9f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/757af4f38eaf16db303dd8a3a93e2907bb962c9f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -64,9 +64,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/46566831a115f05f3798873f73518ef7db29789c/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/757af4f38eaf16db303dd8a3a93e2907bb962c9f/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/46566831a115f05f3798873f73518ef7db29789c">greenelab/connectivity-search-manuscript@4656683</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/757af4f38eaf16db303dd8a3a93e2907bb962c9f">greenelab/connectivity-search-manuscript@757af4f</a>
 on June 23, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -404,7 +404,7 @@ The first is a pure Python implementation available in the <a href="https://gith
 The second uses a Cypher query, prepared by <a href="https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/neo4j.py#L363-L393"><code>hetnetpy.neo4j.construct_dwpc_query</code></a>, that is executed by the Neo4j database <span class="citation" data-cites="O21tn8vf kNYoxBiQ">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-kNYoxBiQ" role="doc-biblioref">18</a>]</span>.
 Both of these implementations require traversing all paths between the source and target node.
 Hence, they are computationally cumbersome despite optimizations <span class="citation" data-cites="xWWaK51z">[<a href="#ref-xWWaK51z" role="doc-biblioref">19</a>]</span>.</p>
-<p>An alternative approach counts paths by multiplying adjacency matrixes.
+<p>An alternative approach counts paths by multiplying adjacency matrices.
 However, this approach actually counts walks,
 since it includes sequences of edges that traverse a single node (i.e trail) or edge (i.e. walk) multiple times.
 When computing network-based features to quantify the relationship between a source and target node,
@@ -450,18 +450,18 @@ We derive permuted hetnets from the unpermuted network using the XSwap algorithm
 XSwap randomizes edges while preserving node degree.
 Therefore, it’s ideal for generating null distributions that retain general degree effects,
 but destroy the actual meaning of edges.
-We adapt XSwap to hetnets by applying it separately to each metaedge <span class="citation" data-cites="O21tn8vf GE6jhWnt xswap">[<span class="citeproc-not-found" data-reference-id="xswap"><strong>???</strong></span>,<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">23</a>]</span>.</p>
+We adapt XSwap to hetnets by applying it separately to each metaedge <span class="citation" data-cites="O21tn8vf GE6jhWnt 17QDcGqUi">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">23</a>,<a href="#ref-17QDcGqUi" role="doc-biblioref">24</a>]</span>.</p>
 <p>Project Rephetio created 5 permuted hetnets <span class="citation" data-cites="O21tn8vf GE6jhWnt">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">23</a>]</span>,
 which were used to generate a null distribution of classifier performance for each metapath-based feature.
 Here, we aim to create a null distribution for individual DWPCs, which requires vastly more permuted values to estimate with accuracy.
 Therefore, we generated 200 permuted hetnets (<a href="https://github.com/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/data/hetionet-v1.0-permutations.zip">archive</a>).
-More recently, we also developed the <code>xswap</code> Python <a href="https://github.com/greenelab/xswap">package</a>, whose optimized C/C++ implementation will enable future research to generate even larger sets of permuted networks <span class="citation" data-cites="xswap">[<span class="citeproc-not-found" data-reference-id="xswap"><strong>???</strong></span>]</span>.</p>
+More recently, we also developed the <code>xswap</code> Python <a href="https://github.com/greenelab/xswap">package</a>, whose optimized C/C++ implementation will enable future research to generate even larger sets of permuted networks <span class="citation" data-cites="17QDcGqUi">[<a href="#ref-17QDcGqUi" role="doc-biblioref">24</a>]</span>.</p>
 <h3 id="degree-grouping-of-node-pairs">Degree-grouping of node pairs</h3>
 <p>For each of the 200 permuted networks and each of the 2,205 metapaths, we computed the entire DWPC matrix (i.e. all source nodes × target nodes).
 Therefore, for each actual DWPC value, we computed 200 permuted DWPC values.
 Because permutation preserves only node degree, DWPC values among nodes with the same source and target degrees are equivalent to additional permutations.
 We greatly increased the effective number of permutations by grouping DWPC values according to node degree, affording us a superior estimation of the DWPC null distribution.</p>
-<p>We have applied this <em>degree-grouping</em> approach previously when calculating the prior probability of edge existence based on the source and target node degrees <span class="citation" data-cites="19OyKPQ4M xswap">[<span class="citeproc-not-found" data-reference-id="xswap"><strong>???</strong></span>,<a href="#ref-19OyKPQ4M" role="doc-biblioref">24</a>]</span>.
+<p>We have applied this <em>degree-grouping</em> approach previously when calculating the prior probability of edge existence based on the source and target node degrees <span class="citation" data-cites="19OyKPQ4M 17QDcGqUi">[<a href="#ref-17QDcGqUi" role="doc-biblioref">24</a>,<a href="#ref-19OyKPQ4M" role="doc-biblioref">25</a>]</span>.
 But here, we apply <em>degree-grouping</em> to null DWPCs.
 The result is that the null distribution for a DWPC is based not only on permuted DWPCs for the corresponding source–metapath–target combination,
 but instead on all permuted DWPCs for the source-degree–metapath–target-degree combination.</p>
@@ -480,12 +480,12 @@ This equates to an 4,810-fold reduction in the number of summary statistics that
 total number of null DWPCs,
 total number of nonzero null DWPCs,
 sum of null DWPCs,
-sum of squaured null DWPCs,
+sum of squared null DWPCs,
 and number of permuted hetnets.
 These values are sufficient to estimate the <em>p</em>-value for a DWPC, by either fitting a gamma-hurdle null distribution or generating an empiric <em>p</em>-value.
-Furthermore, these statistics are additive accross permuted hetners.
+Furthermore, these statistics are additive across permuted hetnets.
 Their values are always a running total and can be updated incrementally as statistics from each additional permuted hetnet become available.</p>
-<p>We generated null DWPC summary statistics for all Hetionet metapaths with length ≤ 3, and bundled them into HetMat archives by metapath length <span class="citation" data-cites="IpB0teri">[<a href="#ref-IpB0teri" role="doc-biblioref">25</a>]</span>.
+<p>We generated null DWPC summary statistics for all Hetionet metapaths with length ≤ 3, and bundled them into HetMat archives by metapath length <span class="citation" data-cites="IpB0teri">[<a href="#ref-IpB0teri" role="doc-biblioref">26</a>]</span>.
 There are 24 metapaths of length 1, 242 metapaths of length 2, and 1,939 metapaths of length 3.</p>
 <!--
 Should note:
@@ -502,9 +502,9 @@ TODO: somewhere link to notebook https://github.com/greenelab/hetmech/blob/04206
   https://github.com/greenelab/hetmech/issues/123
 -->
 <h3 id="empirical-dwpc-p-values">Empirical DWPC p-values</h3>
-<p>We <a href="https://github.com/hetio/hetmatpy/blob/bc36aa9859c43a1a5fb22808cd6eb952ef9d497c/hetmatpy/pipeline.py#L92-L113" title="hetmatpy.pipeline.calculate_empirical_p_value source code">caclulate</a> an empirical p-value for special cases where the gamma-hurdle model cannot be applied.
+<p>We <a href="https://github.com/hetio/hetmatpy/blob/bc36aa9859c43a1a5fb22808cd6eb952ef9d497c/hetmatpy/pipeline.py#L92-L113" title="hetmatpy.pipeline.calculate_empirical_p_value source code">calculate</a> an empirical p-value for special cases where the gamma-hurdle model cannot be applied.
 These cases include when the observed DWPC is zero or when the null DWPC distribution is all zeroes or has only a single distinct nonzero value.
-The emperical <em>p</em>-value (<em>p<sub>empiric</sub></em>) equals the proportion of null DPWCs ≥ the observed DWPC.</p>
+The empirical <em>p</em>-value (<em>p<sub>empiric</sub></em>) equals the proportion of null DPWCs ≥ the observed DWPC.</p>
 <p>Since we don’t store all null DWPC values,
 we apply the following criteria to calculate <em>p<sub>empiric</sub></em> from summary statistics:</p>
 <ol type="1">
@@ -542,7 +542,7 @@ metapath information (<code>/v1/metapaths</code>),
 and path information (<code>/v1/paths</code>).
 The endpoints return JSON payloads.
 Producing results for these queries relies on internal calls to the PostgreSQL relational database as well as the pre-existing Hetionet v1.0 Neo4j graph database.
-They were designed to power the hetnet connecitivity search webapp,
+They were designed to power the hetnet connectivity search webapp,
 but are also available for general research use.</p>
 <h3 id="webapp-frontend">Webapp &amp; Frontend</h3>
 <h3 id="realtime-open-science">Realtime open science</h3>
@@ -689,14 +689,19 @@ Daniel Himmelstein<br />
 <em>ThinkLab</em> (2016-02-25) <a href="https://doi.org/f3mqt5">https://doi.org/f3mqt5</a><br />
 DOI: <a href="https://doi.org/10.15363/thinklab.d178">10.15363/thinklab.d178</a></p>
 </div>
+<div id="ref-17QDcGqUi">
+<p>24. <strong>The probability of edge existence due to node degree: a baseline for network-based predictions</strong><br />
+Michael Zietz, Daniel S. Himmelstein, Kyle Kloster, Christopher Williams, Michael W. Nagle, Blair D. Sullivan, Casey S. Greene<br />
+<em>Manubot</em> (2020-03-05) <a href="https://greenelab.github.io/xswap-manuscript/">https://greenelab.github.io/xswap-manuscript/</a></p>
+</div>
 <div id="ref-19OyKPQ4M">
-<p>24. <strong>Network Edge Prediction: Estimating the prior</strong><br />
+<p>25. <strong>Network Edge Prediction: Estimating the prior</strong><br />
 Antoine Lizee, Daniel Himmelstein<br />
 <em>ThinkLab</em> (2016-04-14) <a href="https://doi.org/f3qbmg">https://doi.org/f3qbmg</a><br />
 DOI: <a href="https://doi.org/10.15363/thinklab.d201">10.15363/thinklab.d201</a></p>
 </div>
 <div id="ref-IpB0teri">
-<p>25. <strong>Node Connectivity Measurements For Hetionet V1.0 Metapaths</strong><br />
+<p>26. <strong>Node Connectivity Measurements For Hetionet V1.0 Metapaths</strong><br />
 Daniel Himmelstein, Michael Zietz, Kyle Kloster, Michael Nagle, Blair Sullivan, Casey Greene<br />
 <em>Zenodo</em> (2018-11-06) <a href="https://doi.org/gg2wr7">https://doi.org/gg2wr7</a><br />
 DOI: <a href="https://doi.org/10.5281/zenodo.1435834">10.5281/zenodo.1435834</a></p>
