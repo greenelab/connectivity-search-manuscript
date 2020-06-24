@@ -1,0 +1,568 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="420px"
+  height="460px"
+  viewBox="-20 -18 420 460"
+>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lato");
+    text {
+      font-family: Lato, sans-serif;
+      font-size: 13px;
+      fill: white;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    #axes text {
+      font-size: 13px;
+    }
+    #nodes text {
+      font-size: 11px;
+      letter-spacing: -0.25px;
+      fill: #fafafa;
+    }
+    #nodes text:nth-child(2n) {
+      text-anchor: start;
+    }
+    #nodes text:nth-child(2n + 1) {
+      text-anchor: end;
+    }
+    #dots text {
+      font-size: 11px;
+      letter-spacing: -0.25px;
+    }
+    #node_backgrounds {
+      fill: currentColor;
+    }
+    .compound {
+      color: #e91e63;
+    }
+    .disease {
+      color: #875442;
+    }
+    #metapaths text {
+      fill: white;
+      font-size: 10px;
+    }
+  </style>
+
+  <g id="axes">
+    <text transform="translate(85,-10)">
+      features = types of paths
+    </text>
+    <text transform="translate(-10,150) rotate(-90)">
+      observations = compound–disease pairs
+    </text>
+  </g>
+
+  <g id="labels">
+    <text x="280" y="-10">non-treatments</text>
+    <text x="280" y="310">treatments</text>
+  </g>
+
+  <g id="node_backgrounds" transform="translate(0,5)">
+    <rect x="214" y="0" width="51" height="15" class="compound" />
+    <rect x="280" y="0" width="117" height="15" class="disease" />
+
+    <rect x="204" y="25" width="61" height="15" class="compound" />
+    <rect x="280" y="25" width="113" height="15" class="disease" />
+
+    <rect x="193" y="50" width="72" height="15" class="compound" />
+    <rect x="280" y="50" width="113" height="15" class="disease" />
+
+    <rect x="212" y="75" width="53" height="15" class="compound" />
+    <rect x="280" y="75" width="78" height="15" class="disease" />
+
+    <rect x="207" y="100" width="58" height="15" class="compound" />
+    <rect x="280" y="100" width="63" height="15" class="disease" />
+
+    <rect x="215" y="125" width="50" height="15" class="compound" />
+    <rect x="280" y="125" width="85" height="15" class="disease" />
+
+    <rect x="205" y="150" width="60" height="15" class="compound" />
+    <rect x="280" y="150" width="97" height="15" class="disease" />
+
+    <rect x="205" y="175" width="60" height="15" class="compound" />
+    <rect x="280" y="175" width="45" height="15" class="disease" />
+
+    <rect x="203" y="200" width="62" height="15" class="compound" />
+    <rect x="280" y="200" width="85" height="15" class="disease" />
+
+    <rect x="200" y="225" width="65" height="15" class="compound" />
+    <rect x="280" y="225" width="67" height="15" class="disease" />
+
+    <rect x="180" y="250" width="85" height="15" class="compound" />
+    <rect x="280" y="250" width="90" height="15" class="disease" />
+
+    <rect x="202" y="275" width="63" height="15" class="compound" />
+    <rect x="280" y="275" width="90" height="15" class="disease" />
+  </g>
+
+  <g id="nodes" transform="translate(260,13.5)">
+    <text x="0" y="0">Calcitriol</text>
+    <text x="25" y="0">dilated cardiomyopathy</text>
+
+    <text x="0" y="25">Nilutamide</text>
+    <text x="25" y="25">metabolic syndrome X</text>
+
+    <text x="0" y="50">Orciprenaline</text>
+    <text x="25" y="50">urinary bladder cancer</text>
+
+    <text x="0" y="75">Carteolol</text>
+    <text x="25" y="75">thyroid cancer</text>
+
+    <text x="0" y="100">Lovastatin</text>
+    <text x="25" y="100">lung cancer</text>
+
+    <text x="0" y="125">Gefitinib</text>
+    <text x="25" y="125">germ cell cancer</text>
+
+    <text x="0" y="150">Midazolam</text>
+    <text x="25" y="150">epilepsy syndrome</text>
+
+    <text x="0" y="175">Cimetidine</text>
+    <text x="25" y="175">obesity</text>
+
+    <text x="0" y="200">Mesalazine</text>
+    <text x="25" y="200">ulcerative colitis</text>
+
+    <text x="0" y="225">Doxorubicin</text>
+    <text x="25" y="225">bone cancer</text>
+
+    <text x="0" y="250">Dexamethasone</text>
+    <text x="25" y="250">multiple sclerosis</text>
+
+    <text x="0" y="275">Carmustine</text>
+    <text x="25" y="275">malignant glioma</text>
+  </g>
+
+  <g id="dots" transform="translate(260,13.5)">
+    <text x="12.5" y="0">···</text>
+    <text x="12.5" y="25">···</text>
+    <text x="12.5" y="50">···</text>
+    <text x="12.5" y="75">···</text>
+    <text x="12.5" y="100">···</text>
+    <text x="12.5" y="125">···</text>
+    <text x="12.5" y="150">···</text>
+    <text x="12.5" y="175">···</text>
+    <text x="12.5" y="200">···</text>
+    <text x="12.5" y="225">···</text>
+    <text x="12.5" y="250">···</text>
+    <text x="12.5" y="275">···</text>
+  </g>
+
+  <g id="metapaths" transform="translate(5,305) rotate(-90)">
+    <use x="-75" y="0" width="15" height="15" href="#compound" />
+    <use x="-60" y="0" width="15" height="15" href="#arrow" />
+    <text x="-60" y="0" dx="7.5" dy="2.5">b</text>
+    <use x="-45" y="0" width="15" height="15" href="#gene" />
+    <use x="-30" y="0" width="15" height="15" href="#arrow" />
+    <text x="-30" y="0" dx="7.5" dy="2.5">a</text>
+    <use x="-15" y="0" width="15" height="15" href="#disease" />
+
+    <use x="-105" y="25" width="15" height="15" href="#compound" />
+    <use x="-90" y="25" width="15" height="15" href="#arrow" />
+    <text x="-90" y="25" dx="7.5" dy="2.5">b</text>
+    <use x="-75" y="25" width="15" height="15" href="#gene" />
+    <use x="-60" y="25" width="15" height="15" href="#arrow" />
+    <text x="-60" y="25" dx="7.5" dy="2.5">i</text>
+    <use x="-45" y="25" width="15" height="15" href="#gene" />
+    <use x="-30" y="25" width="15" height="15" href="#arrow" />
+    <text x="-30" y="25" dx="7.5" dy="2.5">a</text>
+    <use x="-15" y="25" width="15" height="15" href="#disease" />
+
+    <use x="-135" y="50" width="15" height="15" href="#compound" />
+    <use x="-120" y="50" width="15" height="15" href="#arrow" />
+    <text x="-120" y="50" dx="7.5" dy="2.5">b</text>
+    <use x="-105" y="50" width="15" height="15" href="#gene" />
+    <use x="-90" y="50" width="15" height="15" href="#arrow" />
+    <text x="-90" y="50" dx="7.5" dy="2.5">p</text>
+    <use x="-75" y="50" width="15" height="15" href="#pathway" />
+    <use x="-60" y="50" width="15" height="15" href="#arrow" />
+    <text x="-60" y="50" dx="7.5" dy="2.5">p</text>
+    <use x="-45" y="50" width="15" height="15" href="#gene" />
+    <use x="-30" y="50" width="15" height="15" href="#arrow" />
+    <text x="-30" y="50" dx="7.5" dy="2.5">a</text>
+    <use x="-15" y="50" width="15" height="15" href="#disease" />
+
+    <use x="-105" y="75" width="15" height="15" href="#compound" />
+    <use x="-90" y="75" width="15" height="15" href="#arrow" />
+    <text x="-90" y="75" dx="7.5" dy="2.5">b</text>
+    <use x="-75" y="75" width="15" height="15" href="#gene" />
+    <use x="-60" y="75" width="15" height="15" href="#arrow" />
+    <text x="-60" y="75" dx="7.5" dy="2.5">e</text>
+    <use x="-45" y="75" width="15" height="15" href="#anatomy" />
+    <use x="-30" y="75" width="15" height="15" href="#arrow" />
+    <text x="-30" y="75" dx="7.5" dy="2.5">l</text>
+    <use x="-15" y="75" width="15" height="15" href="#disease" />
+
+    <use x="-105" y="100" width="15" height="15" href="#compound" />
+    <use x="-90" y="100" width="15" height="15" href="#arrow" />
+    <text x="-90" y="100" dx="7.5" dy="2.5">c</text>
+    <use x="-75" y="100" width="15" height="15" href="#side_effect" />
+    <use x="-60" y="100" width="15" height="15" href="#arrow" />
+    <text x="-60" y="100" dx="7.5" dy="2.5">c</text>
+    <use x="-45" y="100" width="15" height="15" href="#compound" />
+    <use x="-30" y="100" width="15" height="15" href="#arrow" />
+    <text x="-30" y="100" dx="7.5" dy="2.5">t</text>
+    <use x="-15" y="100" width="15" height="15" href="#disease" />
+
+    <use x="-105" y="125" width="15" height="15" href="#compound" />
+    <use x="-90" y="125" width="15" height="15" href="#arrow" />
+    <text x="-90" y="125" dx="7.5" dy="2.5">u</text>
+    <use x="-75" y="125" width="15" height="15" href="#gene" />
+    <use x="-60" y="125" width="15" height="15" href="#arrow" />
+    <text x="-60" y="125" dx="7.5" dy="2.5">u</text>
+    <use x="-45" y="125" width="15" height="15" href="#compound" />
+    <use x="-30" y="125" width="15" height="15" href="#arrow" />
+    <text x="-30" y="125" dx="7.5" dy="2.5">t</text>
+    <use x="-15" y="125" width="15" height="15" href="#disease" />
+
+    <use x="-105" y="150" width="15" height="15" href="#compound" />
+    <use x="-90" y="150" width="15" height="15" href="#arrow" />
+    <text x="-90" y="150" dx="7.5" dy="2.5">d</text>
+    <use x="-75" y="150" width="15" height="15" href="#gene" />
+    <use x="-60" y="150" width="15" height="15" href="#arrow" />
+    <text x="-60" y="150" dx="7.5" dy="2.5">d</text>
+    <use x="-45" y="150" width="15" height="15" href="#compound" />
+    <use x="-30" y="150" width="15" height="15" href="#arrow" />
+    <text x="-30" y="150" dx="7.5" dy="2.5">t</text>
+    <use x="-15" y="150" width="15" height="15" href="#disease" />
+  </g>
+
+  <g id="cells">
+    <rect x="0" y="25" width="25" height="25" fill="#e3fafa" />
+    <rect x="25" y="25" width="25" height="25" fill="#c6e3b5" />
+    <rect x="50" y="25" width="25" height="25" fill="#e8fdfd" />
+    <rect x="75" y="25" width="25" height="25" fill="#d6f3f3" />
+    <rect x="100" y="25" width="25" height="25" fill="#dff3d3" />
+    <rect x="125" y="25" width="25" height="25" fill="#e3fafa" />
+    <rect x="150" y="25" width="25" height="25" fill="#d3ebc5" />
+
+    <rect x="0" y="0" width="25" height="25" fill="#e3fafa" />
+    <rect x="25" y="0" width="25" height="25" fill="#e2f5d8" />
+    <rect x="50" y="0" width="25" height="25" fill="#dff3d3" />
+    <rect x="75" y="0" width="25" height="25" fill="#f2f2f2" />
+    <rect x="100" y="0" width="25" height="25" fill="#f2f2f2" />
+    <rect x="125" y="0" width="25" height="25" fill="#e3fafa" />
+    <rect x="150" y="0" width="25" height="25" fill="#e3fafa" />
+
+    <rect x="0" y="50" width="25" height="25" fill="#e3fafa" />
+    <rect x="25" y="50" width="25" height="25" fill="#e6fcfc" />
+    <rect x="50" y="50" width="25" height="25" fill="#d2f1f1" />
+    <rect x="75" y="50" width="25" height="25" fill="#cbeded" />
+    <rect x="100" y="50" width="25" height="25" fill="#dff3d3" />
+    <rect x="125" y="50" width="25" height="25" fill="#c9e4b8" />
+    <rect x="150" y="50" width="25" height="25" fill="#e3fafa" />
+
+    <rect x="0" y="75" width="25" height="25" fill="#e3fafa" />
+    <rect x="25" y="75" width="25" height="25" fill="#dcf6f6" />
+    <rect x="50" y="75" width="25" height="25" fill="#e4fbfb" />
+    <rect x="75" y="75" width="25" height="25" fill="#cfefef" />
+    <rect x="100" y="75" width="25" height="25" fill="#ebfae2" />
+    <rect x="125" y="75" width="25" height="25" fill="#e3fafa" />
+    <rect x="150" y="75" width="25" height="25" fill="#dbf0ce" />
+
+    <rect x="0" y="100" width="25" height="25" fill="#afd499" />
+    <rect x="25" y="100" width="25" height="25" fill="#c3e1b2" />
+    <rect x="50" y="100" width="25" height="25" fill="#a5cd8d" />
+    <rect x="75" y="100" width="25" height="25" fill="#d6edc9" />
+    <rect x="100" y="100" width="25" height="25" fill="#c3e1b2" />
+    <rect x="125" y="100" width="25" height="25" fill="#67a643" />
+    <rect x="150" y="100" width="25" height="25" fill="#599d32" />
+
+    <rect x="0" y="125" width="25" height="25" fill="#e3fafa" />
+    <rect x="25" y="125" width="25" height="25" fill="#effde7" />
+    <rect x="50" y="125" width="25" height="25" fill="#d0e9c1" />
+    <rect x="75" y="125" width="25" height="25" fill="#aad194" />
+    <rect x="100" y="125" width="25" height="25" fill="#cbe6bc" />
+    <rect x="125" y="125" width="25" height="25" fill="#a1cb89" />
+    <rect x="150" y="125" width="25" height="25" fill="#97c57d" />
+
+    <rect x="0" y="150" width="25" height="25" fill="#78b056" />
+    <rect x="25" y="150" width="25" height="25" fill="#80b661" />
+    <rect x="50" y="150" width="25" height="25" fill="#7fb55f" />
+    <rect x="75" y="150" width="25" height="25" fill="#b7d9a3" />
+    <rect x="100" y="150" width="25" height="25" fill="#87ba69" />
+    <rect x="125" y="150" width="25" height="25" fill="#e3fafa" />
+    <rect x="150" y="150" width="25" height="25" fill="#add397" />
+
+    <rect x="0" y="175" width="25" height="25" fill="#badba6" />
+    <rect x="25" y="175" width="25" height="25" fill="#d6edc9" />
+    <rect x="50" y="175" width="25" height="25" fill="#a5cd8d" />
+    <rect x="75" y="175" width="25" height="25" fill="#c7e3b7" />
+    <rect x="100" y="175" width="25" height="25" fill="#c9e4b8" />
+    <rect x="125" y="175" width="25" height="25" fill="#e3fafa" />
+    <rect x="150" y="175" width="25" height="25" fill="#e3fafa" />
+
+    <rect x="0" y="200" width="25" height="25" fill="#80b661" />
+    <rect x="25" y="200" width="25" height="25" fill="#bcddaa" />
+    <rect x="50" y="200" width="25" height="25" fill="#a3cc8a" />
+    <rect x="75" y="200" width="25" height="25" fill="#beddab" />
+    <rect x="100" y="200" width="25" height="25" fill="#beddab" />
+    <rect x="125" y="200" width="25" height="25" fill="#dff3d3" />
+    <rect x="150" y="200" width="25" height="25" fill="#beddab" />
+
+    <rect x="0" y="225" width="25" height="25" fill="#dbf0ce" />
+    <rect x="25" y="225" width="25" height="25" fill="#b2d69d" />
+    <rect x="50" y="225" width="25" height="25" fill="#add397" />
+    <rect x="75" y="225" width="25" height="25" fill="#ddf2d2" />
+    <rect x="100" y="225" width="25" height="25" fill="#9ec985" />
+    <rect x="125" y="225" width="25" height="25" fill="#45901a" />
+    <rect x="150" y="225" width="25" height="25" fill="#589c30" />
+
+    <rect x="0" y="250" width="25" height="25" fill="#bcddaa" />
+    <rect x="25" y="250" width="25" height="25" fill="#c6e3b5" />
+    <rect x="50" y="250" width="25" height="25" fill="#b4d79f" />
+    <rect x="75" y="250" width="25" height="25" fill="#dff3d3" />
+    <rect x="100" y="250" width="25" height="25" fill="#82b763" />
+    <rect x="125" y="250" width="25" height="25" fill="#38880a" />
+    <rect x="150" y="250" width="25" height="25" fill="#428e16" />
+
+    <rect x="0" y="275" width="25" height="25" fill="#e3fafa" />
+    <rect x="25" y="275" width="25" height="25" fill="#d6edc9" />
+    <rect x="50" y="275" width="25" height="25" fill="#e4f6d9" />
+    <rect x="75" y="275" width="25" height="25" fill="#eefce6" />
+    <rect x="100" y="275" width="25" height="25" fill="#ddf2d2" />
+    <rect x="125" y="275" width="25" height="25" fill="#e3fafa" />
+    <rect x="150" y="275" width="25" height="25" fill="#e3fafa" />
+  </g>
+
+  <line
+    x1="0"
+    x2="400"
+    y1="150"
+    y2="150"
+    stroke="white"
+    stroke-width="2"
+    stroke-dasharray="4 2"
+  />
+
+  <symbol id="gene" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#02b3e4" />
+    <path
+      fill="#fafafa"
+      d="
+        M 51.270508 25.037109
+        C 47.633235 24.849826 43.930787 25.454275 40.432617 26.90332
+        C 31.104175 30.767437 25.000976 39.903081 25.000977 50
+        C 25.000977 60.096919 31.104175 69.232564 40.432617 73.096679
+        C 49.761071 76.9608 60.537936 74.817535 67.677734 67.677734
+        L 69.142578 66.21289
+        V 45
+        H 50
+        V 55
+        H 59.142578
+        V 61.867187
+        C 54.92626 65.121583 49.275338 65.935996 44.259765 63.858398
+        C 38.641715 61.531236 35.000977 56.081484 35.000976 50
+        C 35.000976 43.918516 38.641716 38.468764 44.259765 36.141601
+        C 49.877835 33.81443 56.306337 35.093446 60.606445 39.393554
+        L 67.677734 32.322265
+        C 63.215359 27.859891 57.332628 25.349249 51.270508 25.037109
+        Z
+      "
+    />
+  </symbol>
+
+  <symbol id="compound" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#e91e63" />
+    <path
+      fill="#fafafa"
+      d="
+        M 51.270508 25.037109
+        C 47.633235 24.849826 43.930787 25.454275 40.432617 26.90332
+        C 31.104175 30.767437 25.000976 39.903081 25.000977 50
+        C 25.000977 60.096919 31.104175 69.232564 40.432617 73.096679
+        C 49.761071 76.9608 60.537936 74.817535 67.677734 67.677734
+        L 60.606445 60.606445
+        C 56.306337 64.906554 49.877836 66.185569 44.259765 63.858398
+        C 38.641715 61.531236 35.000977 56.081484 35.000976 50
+        C 35.000976 43.918516 38.641716 38.468764 44.259765 36.141601
+        C 49.877835 33.81443 56.306337 35.093446 60.606445 39.393554
+        L 67.677734 32.322265
+        C 63.215359 27.859891 57.332628 25.349249 51.270508 25.037109
+        Z
+      "
+    />
+  </symbol>
+
+  <symbol id="compound" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#e91e63" />
+    <path
+      fill="#fafafa"
+      d="
+        M 51.270508 25.037109
+        C 47.633235 24.849826 43.930787 25.454275 40.432617 26.90332
+        C 31.104175 30.767437 25.000976 39.903081 25.000977 50
+        C 25.000977 60.096919 31.104175 69.232564 40.432617 73.096679
+        C 49.761071 76.9608 60.537936 74.817535 67.677734 67.677734
+        L 60.606445 60.606445
+        C 56.306337 64.906554 49.877836 66.185569 44.259765 63.858398
+        C 38.641715 61.531236 35.000977 56.081484 35.000976 50
+        C 35.000976 43.918516 38.641716 38.468764 44.259765 36.141601
+        C 49.877835 33.81443 56.306337 35.093446 60.606445 39.393554
+        L 67.677734 32.322265
+        C 63.215359 27.859891 57.332628 25.349249 51.270508 25.037109
+        Z
+      "
+    />
+  </symbol>
+
+  <symbol id="anatomy" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#4caf50" />
+    <path
+      fill="#fafafa"
+      d="
+        M 44.679611 25
+        L 26.497531 75
+        H 37.138921
+        L 40.77539 65
+        H 59.224609
+        L 62.861079 75
+        L 73.502469 75
+        L 55.319125 24.996525
+        Z
+        M 50 39.631836
+        L 55.588867 55
+        H 44.411133
+        Z
+      "
+    />
+  </symbol>
+
+  <symbol id="disease" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#875442" />
+    <path
+      fill="#fafafa"
+      d="
+        M 32.5 25
+        V 30
+        V 75
+        H 50
+        C 63.747901 75 75 63.74789 75 50
+        C 75 36.25211 63.747901 25 50 25
+        Z
+        M 42.5 35
+        H 50
+        C 58.343503 35 65 41.656501 65 50
+        C 65 58.343499 58.343503 65 50 65
+        H 42.5
+        Z
+      "
+    />
+  </symbol>
+
+  <symbol id="side_effect" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#ffeb3b" />
+    <path
+      fill="#424242"
+      d="
+        M 33.2 30
+        C 30.933333 30 27.805984 30.425133 24.610938 32.022656
+        C 21.415891 33.620179 18 37.133333 18 42
+        C 18 46.533333 20.905457 50.157153 23.985156 51.725
+        C 27.064855 53.292847 30.242237 53.640996 32.671094 53.964844
+        C 35.042237 54.280996 37.464855 54.732534 38.785156 55.404688
+        C 40.105457 56.076841 40.4 56.133333 40.4 58
+        C 40.4 59.616667 39.855774 60.059019 38.33125 60.8375
+        C 36.806726 61.615981 34.407408 62 33.2 62
+        C 29.288889 62 26.856692 60.754239 22.685938 59.085938
+        L 19.714062 66.514062
+        C 23.543308 68.045761 27.511111 70 33.2 70
+        C 35.592592 70 38.793274 69.584019 41.96875 67.9625
+        C 45.144226 66.340981 48.4 62.783333 48.4 58
+        C 48.4 53.466667 45.494543 49.842847 42.414844 48.275
+        C 39.335145 46.707153 36.157763 46.359004 33.728906 46.035156
+        C 31.357763 45.719004 28.935145 45.267466 27.614844 44.595312
+        C 26.294543 43.923159 26 43.866667 26 42
+        C 26 40.466667 26.584109 39.97982 28.189062 39.177344
+        C 29.794016 38.374867 32.266667 38 33.2 38
+        C 37.111111 38 39.543308 39.245761 43.714062 40.914062
+        L 46.685938 33.485938
+        C 42.856692 31.954239 38.888889 30 33.2 30
+        Z
+      "
+    />
+    <path
+      fill="#424242"
+      d="
+        M 52.8 30
+        V 70
+        H 76.8
+        H 80.8
+        V 62
+        H 76.8
+        H 60.8
+        V 54
+        H 72.8
+        H 76.8
+        V 46
+        H 72.8
+        H 60.8
+        V 38
+        H 76.8
+        H 80.8
+        V 30
+        H 76.8
+        Z
+      "
+    />
+  </symbol>
+
+  <symbol id="pathway" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="50" fill="#fa750f" />
+    <path
+      fill="#fafafa"
+      d="
+        M 15.2 30
+        V 66
+        V 70
+        H 23.2
+        V 66
+        V 54
+        H 33.2
+        C 39.78004 54 45.2 48.580034 45.2 42
+        C 45.2 35.419966 39.78004 30 33.2 30
+        Z
+        M 23.2 38
+        H 33.2
+        C 35.456522 38 37.2 39.743479 37.2 42
+        C 37.2 44.256521 35.456522 46 33.2 46
+        H 23.2
+        Z
+      "
+    />
+    <path
+      fill="#fafafa"
+      d="
+        M 48.508452 30
+        L 53.962998 70
+        H 62.285867
+        L 68 55.142969
+        L 73.714133 70
+        H 82.037002
+        L 87.491548 30
+        H 79.417526
+        L 76.141406 54.024219
+        L 71.733594 42.564062
+        H 64.266406
+        L 59.858594 54.024219
+        L 56.582474 30
+        Z
+      "
+    />
+  </symbol>
+
+  <symbol id="arrow" viewBox="0 0 100 100">
+    <path
+      fill="none"
+      stroke="white"
+      stroke-width="10"
+      d="
+        M 90 50
+        L 10 50
+      "
+    />
+  </symbol>
+</svg>
