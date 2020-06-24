@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/df33f3f4a0d20a29cbc49dda168f3cf974f1c327/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/a8e6b35298c4011dc06ae73fe6268ff97c89d3d0/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/df33f3f4a0d20a29cbc49dda168f3cf974f1c327/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a8e6b35298c4011dc06ae73fe6268ff97c89d3d0/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/df33f3f4a0d20a29cbc49dda168f3cf974f1c327/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a8e6b35298c4011dc06ae73fe6268ff97c89d3d0/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,9 +105,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/df33f3f4a0d20a29cbc49dda168f3cf974f1c327/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/a8e6b35298c4011dc06ae73fe6268ff97c89d3d0/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@df33f3f](https://github.com/greenelab/connectivity-search-manuscript/tree/df33f3f4a0d20a29cbc49dda168f3cf974f1c327)
+from [greenelab/connectivity-search-manuscript@a8e6b35](https://github.com/greenelab/connectivity-search-manuscript/tree/a8e6b35298c4011dc06ae73fe6268ff97c89d3d0)
 on June 24, 2020.
 </em></small>
 
@@ -230,13 +230,13 @@ Project Rephetio scaled models to assume a positive prevalence of 0.36% [@rephet
 Each column represents a metapath, labeled with its abbreviation.
 <br><br>
 Feature values are DWPCs (transformed and standardized), which assess the connectivity along the specified metapath between the specific compound and disease.
-Maroon colored values indicate above-average connectivity,
+Green colored values indicate above-average connectivity,
 whereas blue values indicate below average connectivity.
 In general, positives have greater connectivity for the selected metapaths than negatives.
 Rephetio used a logistic regression model to learn the effect of each type of connectivity (feature) on the likelihood that a compound treats a disease.
 The model predicts whether a compound–disease pair is a treatment based on its features, but requires supervision in the form of known treatments.
-<!-- note we might want to manually improve this figure as per https://github.com/greenelab/connectivity-search-manuscript/issues/11 -->
-](https://github.com/dhimmel/learn/raw/7668c97b2a6f348479b70fa40c3d7db424584315/prediction/figure/example-feature-matrix.svg?sanitize=1){#fig:rephetio width="4.5in"}
+<!-- possibly switching to two panel figure as per https://github.com/greenelab/connectivity-search-manuscript/issues/11 -->
+](https://github.com/greenelab/connectivity-search-manuscript/raw/df33f3f4a0d20a29cbc49dda168f3cf974f1c327/content/media/rephetio/example-feature-matrix.png){#fig:rephetio width="4.5in"}
 
 ### TODO: Other works
 
