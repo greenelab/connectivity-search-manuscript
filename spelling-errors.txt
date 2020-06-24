@@ -4,6 +4,7 @@ BABA
 DaGiGpPW
 dhimmel
 Django’s
+downweighted
 DRKG
 DrugBank
 DrugCentral
@@ -12,3 +13,4 @@ erogeneous
 GBMF
 GJA
 MF
+Numpy’s
