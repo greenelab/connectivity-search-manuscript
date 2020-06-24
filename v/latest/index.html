@@ -46,9 +46,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/df33f3f4a0d20a29cbc49dda168f3cf974f1c327/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/df33f3f4a0d20a29cbc49dda168f3cf974f1c327/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/df33f3f4a0d20a29cbc49dda168f3cf974f1c327/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/a8e6b35298c4011dc06ae73fe6268ff97c89d3d0/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a8e6b35298c4011dc06ae73fe6268ff97c89d3d0/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a8e6b35298c4011dc06ae73fe6268ff97c89d3d0/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -64,9 +64,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/df33f3f4a0d20a29cbc49dda168f3cf974f1c327/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/a8e6b35298c4011dc06ae73fe6268ff97c89d3d0/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/df33f3f4a0d20a29cbc49dda168f3cf974f1c327">greenelab/connectivity-search-manuscript@df33f3f</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/a8e6b35298c4011dc06ae73fe6268ff97c89d3d0">greenelab/connectivity-search-manuscript@a8e6b35</a>
 on June 24, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -227,7 +227,7 @@ The approach learned which types of paths occur more or less frequently between 
 To train the model, Rephetio created <a href="https://doi.org/10.6084/m9.figshare.3103054">PharmacotherapyDB</a>, a physician-curated catalog of 755 disease-modifying treatments <span class="citation" data-cites="5t7pfaPv">[<a href="#ref-5t7pfaPv" role="doc-biblioref">9</a>]</span>.</p>
 <div id="fig:rephetio" class="fignos">
 <figure>
-<img src="https://github.com/dhimmel/learn/raw/7668c97b2a6f348479b70fa40c3d7db424584315/prediction/figure/example-feature-matrix.svg?sanitize=1" style="width:4.5in" alt="" /><figcaption><span>Figure 1:</span> <strong>Supervised machine learning approach from Project Rephetio.</strong>
+<img src="https://github.com/greenelab/connectivity-search-manuscript/raw/df33f3f4a0d20a29cbc49dda168f3cf974f1c327/content/media/rephetio/example-feature-matrix.png" style="width:4.5in" alt="" /><figcaption><span>Figure 1:</span> <strong>Supervised machine learning approach from Project Rephetio.</strong>
 This figure visualizes the feature matrix used by Project Rephetio to make supervised predictions.
 Each row represents a compound–disease pair.
 The top half of rows correspond to known treatments (i.e. positives), while the bottom half correspond to non-treatments (i.e. negatives, not known to be treatments in PharmacotherapyDB).
@@ -236,12 +236,12 @@ Project Rephetio scaled models to assume a positive prevalence of 0.36% <span cl
 Each column represents a metapath, labeled with its abbreviation.
 <br><br>
 Feature values are DWPCs (transformed and standardized), which assess the connectivity along the specified metapath between the specific compound and disease.
-Maroon colored values indicate above-average connectivity,
+Green colored values indicate above-average connectivity,
 whereas blue values indicate below average connectivity.
 In general, positives have greater connectivity for the selected metapaths than negatives.
 Rephetio used a logistic regression model to learn the effect of each type of connectivity (feature) on the likelihood that a compound treats a disease.
 The model predicts whether a compound–disease pair is a treatment based on its features, but requires supervision in the form of known treatments.
-<!-- note we might want to manually improve this figure as per https://github.com/greenelab/connectivity-search-manuscript/issues/11 --></figcaption>
+<!-- possibly switching to two panel figure as per https://github.com/greenelab/connectivity-search-manuscript/issues/11 --></figcaption>
 </figure>
 </div>
 <h3 id="todo-other-works">TODO: Other works</h3>
