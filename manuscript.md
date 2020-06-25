@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/f98c3470a8bf8f40f5f6aed2794c6ea66b93b14b/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f98c3470a8bf8f40f5f6aed2794c6ea66b93b14b/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f98c3470a8bf8f40f5f6aed2794c6ea66b93b14b/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,9 +105,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/f98c3470a8bf8f40f5f6aed2794c6ea66b93b14b/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@f98c347](https://github.com/greenelab/connectivity-search-manuscript/tree/f98c3470a8bf8f40f5f6aed2794c6ea66b93b14b)
+from [greenelab/connectivity-search-manuscript@2615563](https://github.com/greenelab/connectivity-search-manuscript/tree/2615563a45319a00f213b1e148caad241b5064eb)
 on June 25, 2020.
 </em></small>
 
@@ -179,7 +179,7 @@ as opposed to a specific node/edge/path itself (e.g. acetaminophen).
 
 [Hetionet](https://het.io/about/) is a knowledge graph of human biology, disease, and medicine, integrating information from millions of studies and decades of research.
 Hetionet v1.0 combines information from [29 public databases](https://git.dhimmel.com/rephetio-manuscript/#tbl:resources).
-The network contains 47,031 nodes of [11 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metanodes) (Table @tbl:metanodes) and 2,250,197 edges of [24 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metaedges).
+The network contains 47,031 nodes of [11 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metanodes) (Table @tbl:metanodes) and 2,250,197 edges of [24 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metaedges) (Figure {@fig:rephetio}A).
 
 | Metanode | Abbr | Nodes | Description |
 | --- | --- | --- | --- |
@@ -217,26 +217,29 @@ Other integrative resources, some still under development, include [Wikidata](ht
 
 Project Rephetio is the name of the [study](https://git.dhimmel.com/rephetio-manuscript/) that created Hetionet and applied it repurpose drugs [@rephetio].
 This project [predicted](https://het.io/repurpose/) the probability of drug efficacy for 209,168 compound–disease pairs.
-The approach learned which types of paths occur more or less frequently between known treatments than non-treatments (Figure @fig:rephetio).
+The approach learned which types of paths occur more or less frequently between known treatments than non-treatments (Figure {@fig:rephetio}B).
 To train the model, Rephetio created [PharmacotherapyDB](https://doi.org/10.6084/m9.figshare.3103054), a physician-curated catalog of 755 disease-modifying treatments [@doi:10.15363/thinklab.d182].
 
 ![
-**Supervised machine learning approach from Project Rephetio.**
+**A. Hetionet v1.0 metagraph.**
+The types of nodes and edges in Hetionet.
+\
+**B. Supervised machine learning approach from Project Rephetio.**
 This figure visualizes the feature matrix used by Project Rephetio to make supervised predictions.
 Each row represents a compound–disease pair.
 The top half of rows correspond to known treatments (i.e. positives), while the bottom half correspond to non-treatments (i.e. negatives, not known to be treatments in PharmacotherapyDB).
 Here, an equal number of treatments and non-treatments are shown, but in reality the problem is heavily imbalanced.
 Project Rephetio scaled models to assume a positive prevalence of 0.36% [@rephetio; @doi:10.15363/thinklab.d210].
 Each column represents a metapath, labeled with its abbreviation.
-<br><br>
+\
 Feature values are DWPCs (transformed and standardized), which assess the connectivity along the specified metapath between the specific compound and disease.
 Green colored values indicate above-average connectivity,
 whereas blue values indicate below average connectivity.
 In general, positives have greater connectivity for the selected metapaths than negatives.
 Rephetio used a logistic regression model to learn the effect of each type of connectivity (feature) on the likelihood that a compound treats a disease.
 The model predicts whether a compound–disease pair is a treatment based on its features, but requires supervision in the form of known treatments.
-<!-- possibly switching to two panel figure as per https://github.com/greenelab/connectivity-search-manuscript/issues/11 -->
-](https://github.com/greenelab/connectivity-search-manuscript/raw/df33f3f4a0d20a29cbc49dda168f3cf974f1c327/content/media/rephetio/example-feature-matrix.png){#fig:rephetio width="4.5in"}
+<!-- info on this figure's creation in https://github.com/greenelab/connectivity-search-manuscript/issues/11 -->
+](https://github.com/greenelab/connectivity-search-manuscript/raw/f98c3470a8bf8f40f5f6aed2794c6ea66b93b14b/content/media/rephetio/metagraph-and-features.png){#fig:rephetio width="100%" .white}
 
 ### TODO: Other works
 
@@ -335,7 +338,8 @@ The table includes the following columns:
   The number of paths between the source and target node of the specified metapath
 - **adjusted _p_-value**:
   A measure of the significance of the DWPC that indicates whether more paths were observed than expected due to random chance.
-  Compares the DWPC to a null distribution of DWPCs generated from degree-preserving permuted networks.Bonferroni-adjusted for the number of metapaths with the same source metanode, target metanode, and length.
+  Compares the DWPC to a null distribution of DWPCs generated from degree-preserving permuted networks.
+  Bonferroni-adjusted for the number of metapaths with the same source metanode, target metanode, and length.
 - **_p_-value**:
   A measure of the significance of the DWPC that indicates whether more paths were observed than expected due to random chance.
   Compares the DWPC to a null distribution of DWPCs generated from degree-preserving permuted networks.
