@@ -46,9 +46,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/a2b6cb98eada7ff368d095795ba12d7fea6fe44e/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a2b6cb98eada7ff368d095795ba12d7fea6fe44e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a2b6cb98eada7ff368d095795ba12d7fea6fe44e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/4b15144106f9294e93756572d69df4f39f5768ab/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4b15144106f9294e93756572d69df4f39f5768ab/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4b15144106f9294e93756572d69df4f39f5768ab/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -64,9 +64,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/a2b6cb98eada7ff368d095795ba12d7fea6fe44e/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/4b15144106f9294e93756572d69df4f39f5768ab/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/a2b6cb98eada7ff368d095795ba12d7fea6fe44e">greenelab/connectivity-search-manuscript@a2b6cb9</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/4b15144106f9294e93756572d69df4f39f5768ab">greenelab/connectivity-search-manuscript@4b15144</a>
 on June 28, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -597,16 +597,57 @@ However, the compute required to generate null DWPCs is far greater, because the
 As a result, computing and saving all DWPCs took 6 hours,
 whereas computing and saving the null DWPC summary statistics took 361 hours.</p>
 <p>Including null DWPCs and path counts, the Zenodo deposit totals 185.1 GB and contains the results of computing ~28 trillion DWPCs — 27,832,927,128,728 to be exact.</p>
+<h3 id="adjusting-dwpc-p-values">Adjusting DWPC <em>p</em>-values</h3>
+<p>When a user applies hetnet connecitivity search to identify enriched metapaths between two nodes,
+many metapaths are evaluated for significance.
+Due to multiple testing of many DWPCs, low <em>p</em>-values are likely to arise by chance.
+Therefore, we devised a multiple testing correction.</p>
+<p>For each combination of source metanode, target metanode, and length, we counted the number of metapaths.
+For Disease…Pathway metapaths, there are 0 metapaths of length 1, 3 metapaths of length 2, and 24 metapaths of length 3.
+We calculated adjusted p-values by applying a Bonferroni correction based on the number of metapaths of the same length between the source and target metanode.
+Using Figure ?? as an example, the <a href="https://het.io/search/?source=17287&amp;target=7607&amp;metapaths=DdGpPW&amp;complete=">DdGpPW</a> p-value of 5.9% was adjusted to 17.8% (multiplied by a factor of 3).</p>
+<p>Bonferroni controls familywise error rate,
+which corresponds here to incorrectly finding that <em>any</em> metapath of a given length is enriched.
+As a result, our adjusted p-values are conservative.
+We would prefer to adjust <em>p</em>-values for false discovery rate <span class="citation" data-cites="q6QyrHEZ">[<a href="#ref-q6QyrHEZ" role="doc-biblioref">28</a>]</span>,
+but these methods often require access to all <em>p</em>-values at once (impractical here) and assume a uniform distribution of <em>p</em>-values when there is no signal (not the case here when most DWPCs are zero).</p>
 <h3 id="prioritizing-enriched-metapaths-for-database-storage">Prioritizing enriched metapaths for database storage</h3>
+<p>Storing DWPCs and their significance in the database (as part of the <code>PathCount</code> table in Figure <a href="#fig:database">4</a>) enables the connectivity search webapp to provide users with enriched metapaths between query nodes in realtime.
+However, storing ~15.9 billion rows (the total number of nonzero DWPCs) in the database’s <code>PathCount</code> table would exceed a reasonable disk quota.
 <!--
+# python code to estimate the total number of nonzero DWPCs
 url ="https://github.com/greenelab/hetmech/raw/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/archives/metapath-dwpc-stats.tsv"
 metapath_df = pandas.read_table(url)
-sum(metapath_df.n_pairs * metapath_df.pc_density)
 (metapath_df.n_pairs * metapath_df.pc_density).round().sum()
-15935147850 / 137786767964
 -->
-<p>Storing ~15.9 billion rows in the database’s <code>PathCount</code> table would exceed a reasonable disk quota.</p>
-<h3 id="rest-api-backend">Rest API &amp; backend</h3>
+An alternative would be to store all DWPCs in the database whose adjusted p-value exceeded a universal threshold (e.g. <em>p</em> &lt; 5%).
+But we estimated this would still be prohibitively expensive.
+Therefore, we devised a metapath-specific threshold.
+For metapaths with length 1, we stored all nonzero DWPCs,
+assuming users always want to be informed about direct edges between the query nodes, regardless of significance.
+For metapaths with length ≥ 2, we chose an adjusted <em>p</em>-value threshold of
+5 × (<em>n<sub>source</sub></em> × <em>n<sub>target</sub></em>)<sup>−0.3</sup>,
+where <em>n<sub>source</sub></em> and <em>n<sub>target</sub></em> are the node counts for the source and target metanodes (i.e. “Nodes” column in Table <a href="#tbl:metanodes">1</a>).
+Notice that metapaths with large number of possible source–target pairs (large DWPC matrices) are penalized.
+This decision is based on practicality, since otherwise the majority of the database quota would be consumed by a minority of metapaths between plentiful metanodes (e.g. Gene…Gene metapaths).
+Also we assume that users will search nodes at a similar rate by metanode (e.g. they’re more likely to search for a specific disease than a specific gene).
+The constants in the threshold formula help scale it.
+The multiplier of 5 relaxes the threshold to saturate the available database capacity.
+The −0.3 exponent applies the large DWPC-matrix penalty.</p>
+<p>Users can still evaluate DWPCs that are not stored in the database, using either the webapp or API.
+These are calculated on-the-fly, delegating DWPC computation to the Neo4j database.
+Unchecking “precomputed only” on the webapp shows all possible metapaths for two query nodes.
+For some node pairs, the on-the-fly computation is quick (less than a second).
+Othertimes, computing DWPCs for all metapaths might take more than a minute.</p>
+<!--
+https://github.com/greenelab/hetmech/blob/cad458b29f508c66b4b14cdd641db6855426221b/explore/metapath-thresholds/metapath-thresholds.ipynb
+
+https://github.com/greenelab/connectivity-search-backend/blob/af12f8cf2ad47d9a25ce8d1b7889390654eb3bb9/dj_hetmech_app/management/commands/populate_database.py#L139-L146
+p-value threshold:
+
+        p_threshold = 5 * row.n_pairs ** -0.3 / row.n_similar
+-->
+<h3 id="backend-database-api">Backend Database &amp; API</h3>
 <p>We created a backend application using Python’s Django web framework.
 The source code is available in the <a href="https://github.com/greenelab/connectivity-search-backend"><code>connectivity-search-backend</code></a> repository.
 The primary role of the backend is manage a relational database and provide an API for requesting data.</p>
@@ -634,6 +675,10 @@ The endpoints return JSON payloads.
 Producing results for these queries relies on internal calls to the PostgreSQL relational database as well as the pre-existing Hetionet v1.0 Neo4j graph database.
 They were designed to power the hetnet connectivity search webapp,
 but are also available for general research use.</p>
+<p>Todo:</p>
+<blockquote>
+<p>The database only stores a single orientation of a metapath. For example, if GpPpGaD is stored between the given source and target node, DaGpPpG would not also be stored. Therefore, both orientations of a metapath are searched against the PathCount table.</p>
+</blockquote>
 <h3 id="webapp-frontend">Webapp &amp; Frontend</h3>
 <h3 id="realtime-open-science">Realtime open science</h3>
 <h3 id="software-data-availability">Software &amp; data availability</h3>
@@ -800,6 +845,12 @@ DOI: <a href="https://doi.org/10.15363/thinklab.d201">10.15363/thinklab.d201</a>
 Daniel Himmelstein, Michael Zietz, Kyle Kloster, Michael Nagle, Blair Sullivan, Casey Greene<br />
 <em>Zenodo</em> (2018-11-06) <a href="https://doi.org/gg2wr7">https://doi.org/gg2wr7</a><br />
 DOI: <a href="https://doi.org/10.5281/zenodo.1435834">10.5281/zenodo.1435834</a></p>
+</div>
+<div id="ref-q6QyrHEZ">
+<p>28. <strong>A practical guide to methods controlling false discoveries in computational biology</strong><br />
+Keegan Korthauer, Patrick K. Kimes, Claire Duvallet, Alejandro Reyes, Ayshwarya Subramanian, Mingxiang Teng, Chinmay Shukla, Eric J. Alm, Stephanie C. Hicks<br />
+<em>Genome Biology</em> (2019-06-04) <a href="https://doi.org/gf3ncd">https://doi.org/gf3ncd</a><br />
+DOI: <a href="https://doi.org/10.1186/s13059-019-1716-1">10.1186/s13059-019-1716-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31164141">31164141</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6547503">PMC6547503</a></p>
 </div>
 </div>
 <!-- default theme -->
