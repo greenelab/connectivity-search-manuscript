@@ -3,7 +3,7 @@ author-meta:
 - Daniel S. Himmelstein
 bibliography:
 - content/manual-references.json
-date-meta: '2020-06-25'
+date-meta: '2020-06-28'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
 
-  <meta name="dc.date" content="2020-06-25" />
+  <meta name="dc.date" content="2020-06-28" />
 
-  <meta name="citation_publication_date" content="2020-06-25" />
+  <meta name="citation_publication_date" content="2020-06-28" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,10 +105,10 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@2615563](https://github.com/greenelab/connectivity-search-manuscript/tree/2615563a45319a00f213b1e148caad241b5064eb)
-on June 25, 2020.
+from [greenelab/connectivity-search-manuscript@109ad62](https://github.com/greenelab/connectivity-search-manuscript/tree/109ad62ea2781be7bcfce0787b2a18ffd44384df)
+on June 28, 2020.
 </em></small>
 
 ## Authors
@@ -410,7 +410,7 @@ A HetMat directory stores a single heterogeneous network, whose data resides in 
    but we [renamed](https://github.com/hetio/hetnetpy/issues/40) it to het**net**py for better disambiguation from het**mat**py.
 2. A `nodes` directory containing one file per node type (metanode) that defines each node.
    Currently, `.tsv` files where each row represents a node are supported.
-3. An `edges` directory containing one file per edge type (metadata) that encodes the adjacency matrix. 
+3. An `edges` directory containing one file per edge type (metadata) that encodes the adjacency matrix.
    The matrix can be serialized using either the Numpy dense format (`.npy`) or SciPy sparse format (`.sparse.npz`).
 
 For node and edge files, compression is supported as detected from `.gz`, `.bz2`, `.zip`, and `.xz` extensions.
@@ -442,7 +442,7 @@ However, this approach actually counts walks,
 since it includes sequences of edges that traverse a single node (i.e trail) or edge (i.e. walk) multiple times.
 When computing network-based features to quantify the relationship between a source and target node,
 we would like to exclude traversing duplicate nodes (i.e. paths, not trails nor walks) [@doi:10.15363/thinklab.d134].
-Therefore, we invented a suite of algorithms to compute true path counts and DWPCs using matrix multiplication. 
+Therefore, we invented a suite of algorithms to compute true path counts and DWPCs using matrix multiplication.
 
 TODO: Describe the suite of DWPC algorithms. From the categorize function, there are:
 
@@ -545,10 +545,55 @@ TODO: somewhere link to notebook https://github.com/greenelab/hetmech/blob/04206
 
 ### Gamma-hurdle distribution
 
+We are interested in identifying source and target nodes whose connectivity exceeds what typically arises at random.
+To identify such especially-connected nodes, we compare DWPC values to the distribution of permuted network DWPC values for the same source and target nodes.
+While a single DWPC value is not actually a test statistic, we use a framework akin to classical hypothesis testing to identify outliers.
+
+Two observations led us to the quasi significance testing framework we developed.
+First, a sizable fraction of permuted DWPC values are often zero, indicating that the source and target nodes are not connected along the metapath in the permuted network.
+Second, we observed that non-zero DWPC values for any given source and target nodes are reasonably approximated as following a gamma distribution.
+Motivated by these observations, we parametrized permuted DWPC values using a zero-inflated gamma distribution, which we termed the gamma-hurdle distribution.
+We fit a gamma-hurdle distribution to each combination of source node, target node, and metapath.
+Finally, we estimate the probability of observing a permuted DWPC value greater than DWPC computed in the unpermuted network, akin to a one-tailed p-value.
+These quasi significance scores ('p-values') allow us to identify outlier node pairs at the metapath level.
+
+#### Details of the gamma-hurdle distribution
+
+Let _X_ be a gamma-hurdle random variable with parameters _λ_, _α_, and _β_.
+
+$$
+X \sim \Gamma_H(\lambda, \alpha, \beta)
+$$
+
+The probability of a draw from the distribution is
+
+\begin{align}
+  P(X = 0) &= 1 - \lambda \\
+  P(X \in A; A \subseteq (0, \infty)) &= \frac{\lambda \beta^\alpha}{\Gamma(\alpha)}  \int  _{x \in A} \bigg( x^{\alpha - 1} e^{-\beta x} \bigg)
+\end{align}
+
+We estimate all three parameters using the method of moments (using Bessel's correction to estimate the second moment).
+As a validation of our method,
+we [compared](https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/parameter_estimates.ipynb) our method of moments parameter estimates to approximate maximum likelihood estimates
+(gamma distribution parameters do not have closed-form maximum likelihood estimates)
+and found excellent concordance between the methods.
+Let *N* be the number of permuted DWPC values, and *n* the number of nonzero values.
+
+\begin{align}
+  \hat{\lambda} &= \frac{n}{N} \\
+  \hat{\alpha} &= \frac{(n - 1) \sum x_i}{n \sum (x_i^2) - (\sum x_i)^2} \\
+  \hat{\beta} &= \frac{n - 1}{n} \frac{(\sum x_i)^2}{n \sum (x_i)^2 - (\sum x_i)^2}
+\end{align}
+
+Finally, we compute a p-value for each DWPC value, *t*.
+
+$$
+p = P(X ≥ t) = \frac{\beta^\alpha}{\Gamma(\alpha)} \int_t^\infty x^{\alpha - 1} \exp(-\beta x) dx
+$$
+
 <!-- references
-  https://nbviewer.jupyter.org/github/zietzm/hetmech/blob/afde1c6c2a7dea7db370ab543e0abcb992d34b0b/explore/gamma-hurdle-heatmaps/gamma-heatmaps.ipynb
+  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/gamma-heatmaps.ipynb
   https://github.com/greenelab/hetmech/pull/157
-  https://github.com/greenelab/hetmech/blob/088dc3c0852387b58880c145f265fd704eb5e5d1/explore/gamma-hurdle/parameter_estimates.ipynb
   https://github.com/greenelab/hetmech/issues/123
 -->
 

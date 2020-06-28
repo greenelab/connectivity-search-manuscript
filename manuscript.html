@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Daniel S. Himmelstein" />
-  <meta name="dcterms.date" content="2020-06-25" />
+  <meta name="dcterms.date" content="2020-06-28" />
   <meta name="keywords" content="hetnets, networks, connectivity, search, hetionet, knowledge graphs, algorithms, nodes, bioinformatics, biomedical informatics" />
   <title>Hetnet connectivity search provides rapid insights into how two biomedical entities are related</title>
   <style>
@@ -28,8 +28,8 @@
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2020-06-25" />
-  <meta name="citation_publication_date" content="2020-06-25" />
+  <meta name="dc.date" content="2020-06-28" />
+  <meta name="citation_publication_date" content="2020-06-28" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -46,9 +46,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -64,10 +64,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/2615563a45319a00f213b1e148caad241b5064eb/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/2615563a45319a00f213b1e148caad241b5064eb">greenelab/connectivity-search-manuscript@2615563</a>
-on June 25, 2020.
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/109ad62ea2781be7bcfce0787b2a18ffd44384df">greenelab/connectivity-search-manuscript@109ad62</a>
+on June 28, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <!-- include the Font Awesome library, per: https://fontawesome.com/start -->
@@ -495,10 +495,44 @@ Every degree pair for a given metapath has corresponding statistics that summari
 TODO: somewhere link to notebook https://github.com/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/bulk.ipynb
 -->
 <h3 id="gamma-hurdle-distribution">Gamma-hurdle distribution</h3>
+<p>We are interested in identifying source and target nodes whose connectivity exceeds what typically arises at random.
+To identify such especially-connected nodes, we compare DWPC values to the distribution of permuted network DWPC values for the same source and target nodes.
+While a single DWPC value is not actually a test statistic, we use a framework akin to classical hypothesis testing to identify outliers.</p>
+<p>Two observations led us to the quasi significance testing framework we developed.
+First, a sizable fraction of permuted DWPC values are often zero, indicating that the source and target nodes are not connected along the metapath in the permuted network.
+Second, we observed that non-zero DWPC values for any given source and target nodes are reasonably approximated as following a gamma distribution.
+Motivated by these observations, we parametrized permuted DWPC values using a zero-inflated gamma distribution, which we termed the gamma-hurdle distribution.
+We fit a gamma-hurdle distribution to each combination of source node, target node, and metapath.
+Finally, we estimate the probability of observing a permuted DWPC value greater than DWPC computed in the unpermuted network, akin to a one-tailed p-value.
+These quasi significance scores (‘p-values’) allow us to identify outlier node pairs at the metapath level.</p>
+<h4 id="details-of-the-gamma-hurdle-distribution">Details of the gamma-hurdle distribution</h4>
+<p>Let <em>X</em> be a gamma-hurdle random variable with parameters <em>λ</em>, <em>α</em>, and <em>β</em>.</p>
+<p><span class="math display">\[
+X \sim \Gamma_H(\lambda, \alpha, \beta)
+\]</span></p>
+<p>The probability of a draw from the distribution is</p>
+<p><span class="math display">\[\begin{align}
+  P(X = 0) &amp;= 1 - \lambda \\
+  P(X \in A; A \subseteq (0, \infty)) &amp;= \frac{\lambda \beta^\alpha}{\Gamma(\alpha)}  \int  _{x \in A} \bigg( x^{\alpha - 1} e^{-\beta x} \bigg)
+\end{align}\]</span></p>
+<p>We estimate all three parameters using the method of moments (using Bessel’s correction to estimate the second moment).
+As a validation of our method,
+we <a href="https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/parameter_estimates.ipynb">compared</a> our method of moments parameter estimates to approximate maximum likelihood estimates
+(gamma distribution parameters do not have closed-form maximum likelihood estimates)
+and found excellent concordance between the methods.
+Let <em>N</em> be the number of permuted DWPC values, and <em>n</em> the number of nonzero values.</p>
+<p><span class="math display">\[\begin{align}
+  \hat{\lambda} &amp;= \frac{n}{N} \\
+  \hat{\alpha} &amp;= \frac{(n - 1) \sum x_i}{n \sum (x_i^2) - (\sum x_i)^2} \\
+  \hat{\beta} &amp;= \frac{n - 1}{n} \frac{(\sum x_i)^2}{n \sum (x_i)^2 - (\sum x_i)^2}
+\end{align}\]</span></p>
+<p>Finally, we compute a p-value for each DWPC value, <em>t</em>.</p>
+<p><span class="math display">\[
+p = P(X ≥ t) = \frac{\beta^\alpha}{\Gamma(\alpha)} \int_t^\infty x^{\alpha - 1} \exp(-\beta x) dx
+\]</span></p>
 <!-- references
-  https://nbviewer.jupyter.org/github/zietzm/hetmech/blob/afde1c6c2a7dea7db370ab543e0abcb992d34b0b/explore/gamma-hurdle-heatmaps/gamma-heatmaps.ipynb
+  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/gamma-heatmaps.ipynb
   https://github.com/greenelab/hetmech/pull/157
-  https://github.com/greenelab/hetmech/blob/088dc3c0852387b58880c145f265fd704eb5e5d1/explore/gamma-hurdle/parameter_estimates.ipynb
   https://github.com/greenelab/hetmech/issues/123
 -->
 <h3 id="empirical-dwpc-p-values">Empirical DWPC p-values</h3>
