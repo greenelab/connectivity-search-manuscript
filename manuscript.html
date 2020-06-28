@@ -46,9 +46,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/a2b6cb98eada7ff368d095795ba12d7fea6fe44e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a2b6cb98eada7ff368d095795ba12d7fea6fe44e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a2b6cb98eada7ff368d095795ba12d7fea6fe44e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -64,9 +64,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/109ad62ea2781be7bcfce0787b2a18ffd44384df/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/a2b6cb98eada7ff368d095795ba12d7fea6fe44e/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/109ad62ea2781be7bcfce0787b2a18ffd44384df">greenelab/connectivity-search-manuscript@109ad62</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/a2b6cb98eada7ff368d095795ba12d7fea6fe44e">greenelab/connectivity-search-manuscript@a2b6cb9</a>
 on June 28, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -406,35 +406,53 @@ The first is a pure Python implementation available in the <a href="https://gith
 The second uses a Cypher query, prepared by <a href="https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/neo4j.py#L363-L393"><code>hetnetpy.neo4j.construct_dwpc_query</code></a>, that is executed by the Neo4j database <span class="citation" data-cites="O21tn8vf kNYoxBiQ">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-kNYoxBiQ" role="doc-biblioref">18</a>]</span>.
 Both of these implementations require traversing all paths between the source and target node.
 Hence, they are computationally cumbersome despite optimizations <span class="citation" data-cites="xWWaK51z">[<a href="#ref-xWWaK51z" role="doc-biblioref">19</a>]</span>.</p>
-<p>An alternative approach counts paths by multiplying adjacency matrices.
-However, this approach actually counts walks,
-since it includes sequences of edges that traverse a single node (i.e trail) or edge (i.e. walk) multiple times.
+<p>Since our methods only require degree-weighted counts, not fully enumerated paths, adjacency matrix multiplication presents an alternative approach.
+Multiplication alone, however, counts walks rather than paths, meaning paths traversing a single node multiple times are counted.
 When computing network-based features to quantify the relationship between a source and target node,
 we would like to exclude traversing duplicate nodes (i.e. paths, not trails nor walks) <span class="citation" data-cites="w6rL3OYz">[<a href="#ref-w6rL3OYz" role="doc-biblioref">20</a>]</span>.
-Therefore, we invented a suite of algorithms to compute true path counts and DWPCs using matrix multiplication.</p>
-<p>TODO: Describe the suite of DWPC algorithms. From the categorize function, there are:</p>
-<ul>
-<li>no_repeats</li>
-<li>disjoint</li>
-<li>short_repeat</li>
-<li>long_repeat</li>
-<li>BAAB</li>
-<li>BABA</li>
-<li>repeat_around</li>
-<li>interior_complete_group</li>
-<li>disjoint_groups</li>
-<li>other</li>
-</ul>
-<p>Include information on what lengths of metapath we have completely solved this for. Mention testing against existing methods.</p>
-<p>Mention approximations. Also note independent approximation work at https://github.com/mmayers12/hetnet_ml</p>
-<p>Discuss caching strategies, sequential versus recursive</p>
-<p>Runtime comparison to show the speedup.
-Rephetio computed a portion of in XX time</p>
-<p>From <span class="citation" data-cites="15nwuvjrA">[<a href="#ref-15nwuvjrA" role="doc-biblioref">21</a>]</span>:</p>
-<blockquote>
-<p>We reduced the time to compute DWPC over nearly 1200 metapaths from roughly four-and-a-half days to roughly one hour and thirty-seven minutes</p>
-</blockquote>
-<p>175-fold, which underestimates since Rephetio did not compute the full DWPC matrix and benefited from concurrency.</p>
+To benefit from the speed advantages of only counting paths, we developed a suite of algorithms to compute true path counts and DWPCs using matrix multiplication.</p>
+<p>Our implementation begins by categorizing a metapath according to the pattern of its repeated metanodes, allowing DWPC computation using a specialized order of operations.
+For example, the metapath <em>DrDtCrC</em> is categorized as a set of disjoint repeats, while <em>DtCtDpC</em> is categorized as repeats of the form BABA.
+Many complex repeat patterns can be represented piecewise as simpler patterns, allowing us to compute DWPC for most metapaths up to length 5 and many of length 6 and beyond without enumerating individual paths.
+For example, disjoint groups of repeats like <em>DrDtCrC</em> can be computed as the matrix product of DWPC matrices for <em>DrD</em> and <em>CrC</em>.
+Randomly-inserted non-repeated metanodes (e.g. <em>G</em> in <em>DrDaGaDrD</em>) require no special treatment, and are included in DWPC with a simple matrix multiplication.</p>
+<p>After metapath categorization, we segment metapaths according to their repeat pattern, following our order of operations.
+By segmenting and computing recursively, we can evalute DWPC efficiently on highly complex metapaths, using simple patterns as building-blocks for higher-level patterns.
+Finally, our specialized DWPC functions are applied to individual segments, the results are combined, and final corrections are made to ensure no repeated nodes are counted.
+The recursive, segmented approach we developed allowed us additionally to implement a caching strategy that improved speed by avoiding duplicate DWPC computations.
+In summary, the functionality we developed resulted in greater than a 175-fold reduction in compute time, allowing us to compute millions of DWPC values across Hetionet <span class="citation" data-cites="15nwuvjrA">[<a href="#ref-15nwuvjrA" role="doc-biblioref">21</a>]</span>.</p>
+<h4 id="details-of-matrix-dwpc-implementation">Details of matrix DWPC implementation</h4>
+<p>DWPC computation requires us to remove all duplicate nodes from paths.
+We used three repeat patterns as the building blocks for DWPC computation: short repeats (AAA), nested repeats (BAAB), and overlapping repeats (BABA).
+Let <span class="math inline">\(\mathrm{D}(\mathit{XwXyZ})\)</span> denote the DWPC matrix for metapath <em>XwXyZ</em>.
+Under this notation, <span class="math inline">\(\mathrm{D}(\mathit{XyZ})\)</span> is the degree-weighted (bi)adjacency matrix for metaedge <em>XyZ</em>.
+Additionally, let <span class="math inline">\(\mathrm{diag}(A)\)</span> represent a diagonal matrix whose entries are the diagonal elements of <span class="math inline">\(A\)</span>.</p>
+<p>For the case of short (&lt; 4) repeats for a single metanode, <em>XaXbX</em> (e.g. <em>GiGdG</em>), we simply subtract the main diagonal.</p>
+<p><span class="math display">\[\mathrm{D}(\mathit{XaXbX}) = \mathrm{D}(\mathit{XaX}) \mathrm{D}(\mathit{XbX}) - \mathrm{diag}(\mathrm{D}(\mathit{XaX}) \mathrm{D}(\mathit{XbX}))\]</span></p>
+<p>Nested repeats <em>XaYbYcX</em> (e.g. <em>CtDrDtC</em>), are treated recursively, with both inner (YY) and outer (XX) repeats treated as separate short repeats.</p>
+<p><span class="math display">\[
+\mathrm{D}(\mathit{XaYbYcX}) = \mathrm{D}(\mathit{XaY}) \mathrm{D}(\mathit{YbY}) \mathrm{D}(\mathit{YcX}) - \mathrm{diag}(\mathrm{D}(\mathit{XaY}) (\mathrm{D}(\mathit{YbY}) \mathrm{D}(\mathit{YcX}))
+\]</span></p>
+<p>Overlapping repeats <em>XaYbXcY</em> (e.g. <em>CtDtCtD</em>) require several corrections (<span class="math inline">\(\odot\)</span> denotes the Hadamard product).</p>
+<p><span class="math display">\[\begin{align}
+\mathrm{D}(\mathit{XaYbXcY}) =\ &amp;\mathrm{D}(\mathit{XaY})\  \mathrm{D}(\mathit{YbX})\  \mathrm{D}(\mathit{XcY}) \\
+&amp;- \mathrm{diag}(\mathrm{D}(\mathit{XaY})\  \mathrm{D}(\mathit{YbX}))\  \mathrm{D}(\mathit{XcY}) \\
+&amp;- \mathrm{D}(\mathit{XaY})\  \mathrm{diag}(\mathrm{D}(\mathit{YbX})\  \mathrm{D}(\mathit{XcY})) \\
+&amp;+ \mathrm{D}(\mathit{XaY})\  \odot \mathrm{D}(\mathit{YbX})^T\  \odot \mathrm{D}(\mathit{XcY})
+\end{align}\]</span></p>
+<p>Most paths of length six—and many even longer paths—can be represented hierarchically using these patterns.
+For example, a long metapath pattern of the form CBABACXYZ can be segmented as (C(BABA)C)XYZ using patterns for short and overlapping repeats and can be computed using the tools we developed.
+In addition to these matrix routines—which advantageously count rather than enumerate paths—we implemented a general matrix method for any metapath type.
+The general method is important for patterns such as long (≥ 4) repeats, or complex repeat patterns (e.g. of the form ABCABC), but it requires path enumeration and is therefore slower.
+As an alternative approach for complex paths, we developed an approximate DWPC method that corrects repeats in disjoint simple patterns but only corrects the first repeat in complex patterns (e.g. ≥ length four repeat).
+Mayers et al. developed an alternative approximation, which subtracts the main diagonal at every occurrence of the first repeated metanode <span class="citation" data-cites="IJWsN67g">[<a href="#ref-IJWsN67g" role="doc-biblioref">22</a>]</span>.
+All our matrix methods were validated against existing implementations involving explicit path enumeration to ensure consistent results.</p>
+<!-- Discuss caching strategies, sequential versus recursive
+Runtime comparison to show the speedup.
+Rephetio computed a portion of in XX time -->
+<!-- From [@vagelos-2017]:
+> We reduced the time to compute DWPC over nearly 1200 metapaths from roughly four-and-a-half days to roughly one hour and thirty-seven minutes
+175-fold, which underestimates since Rephetio did not compute the full DWPC matrix and benefited from concurrency. -->
 <!-- references
   https://github.com/greenelab/hetmech/issues/20
   https://github.com/greenelab/hetmech/pull/70
@@ -448,22 +466,22 @@ Rephetio computed a portion of in XX time</p>
 -->
 <h3 id="permuted-hetnets">Permuted hetnets</h3>
 <p>In order to generate a null distribution for a DWPC, we rely on DWPCs computed from permuted hetnets.
-We derive permuted hetnets from the unpermuted network using the XSwap algorithm <span class="citation" data-cites="iKOIEzQ9">[<a href="#ref-iKOIEzQ9" role="doc-biblioref">22</a>]</span>.
+We derive permuted hetnets from the unpermuted network using the XSwap algorithm <span class="citation" data-cites="iKOIEzQ9">[<a href="#ref-iKOIEzQ9" role="doc-biblioref">23</a>]</span>.
 XSwap randomizes edges while preserving node degree.
 Therefore, it’s ideal for generating null distributions that retain general degree effects,
 but destroy the actual meaning of edges.
-We adapt XSwap to hetnets by applying it separately to each metaedge <span class="citation" data-cites="O21tn8vf GE6jhWnt 17QDcGqUi">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">23</a>,<a href="#ref-17QDcGqUi" role="doc-biblioref">24</a>]</span>.</p>
-<p>Project Rephetio created 5 permuted hetnets <span class="citation" data-cites="O21tn8vf GE6jhWnt">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">23</a>]</span>,
+We adapt XSwap to hetnets by applying it separately to each metaedge <span class="citation" data-cites="O21tn8vf GE6jhWnt 17QDcGqUi">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">24</a>,<a href="#ref-17QDcGqUi" role="doc-biblioref">25</a>]</span>.</p>
+<p>Project Rephetio created 5 permuted hetnets <span class="citation" data-cites="O21tn8vf GE6jhWnt">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">24</a>]</span>,
 which were used to generate a null distribution of classifier performance for each metapath-based feature.
 Here, we aim to create a null distribution for individual DWPCs, which requires vastly more permuted values to estimate with accuracy.
 Therefore, we generated 200 permuted hetnets (<a href="https://github.com/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/data/hetionet-v1.0-permutations.zip">archive</a>).
-More recently, we also developed the <code>xswap</code> Python <a href="https://github.com/greenelab/xswap">package</a>, whose optimized C/C++ implementation will enable future research to generate even larger sets of permuted networks <span class="citation" data-cites="17QDcGqUi">[<a href="#ref-17QDcGqUi" role="doc-biblioref">24</a>]</span>.</p>
+More recently, we also developed the <code>xswap</code> Python <a href="https://github.com/greenelab/xswap">package</a>, whose optimized C/C++ implementation will enable future research to generate even larger sets of permuted networks <span class="citation" data-cites="17QDcGqUi">[<a href="#ref-17QDcGqUi" role="doc-biblioref">25</a>]</span>.</p>
 <h3 id="degree-grouping-of-node-pairs">Degree-grouping of node pairs</h3>
 <p>For each of the 200 permuted networks and each of the 2,205 metapaths, we computed the entire DWPC matrix (i.e. all source nodes × target nodes).
 Therefore, for each actual DWPC value, we computed 200 permuted DWPC values.
 Because permutation preserves only node degree, DWPC values among nodes with the same source and target degrees are equivalent to additional permutations.
 We greatly increased the effective number of permutations by grouping DWPC values according to node degree, affording us a superior estimation of the DWPC null distribution.</p>
-<p>We have applied this <em>degree-grouping</em> approach previously when calculating the prior probability of edge existence based on the source and target node degrees <span class="citation" data-cites="19OyKPQ4M 17QDcGqUi">[<a href="#ref-17QDcGqUi" role="doc-biblioref">24</a>,<a href="#ref-19OyKPQ4M" role="doc-biblioref">25</a>]</span>.
+<p>We have applied this <em>degree-grouping</em> approach previously when calculating the prior probability of edge existence based on the source and target node degrees <span class="citation" data-cites="19OyKPQ4M 17QDcGqUi">[<a href="#ref-17QDcGqUi" role="doc-biblioref">25</a>,<a href="#ref-19OyKPQ4M" role="doc-biblioref">26</a>]</span>.
 But here, we apply <em>degree-grouping</em> to null DWPCs.
 The result is that the null distribution for a DWPC is based not only on permuted DWPCs for the corresponding source–metapath–target combination,
 but instead on all permuted DWPCs for the source-degree–metapath–target-degree combination.</p>
@@ -569,10 +587,10 @@ but decided against it in case certain applications required greater precision.<
 <p>We used SciPy sparse for path count and DWPC matrices with density &lt; 0.7, serialized to disk with compression and a <code>.sparse.npz</code> extension.
 This format minimizes the space on disk and load time for the entire matrix, but does not offer read access to slices.
 We used Numpy 2D arrays for DWPC matrices with density ≥ 0.7, serialized to disk using Numpy’s <code>.npy</code> format.
-We bundled the path count and DWPC matrix files into HetMat archives by metapath length and deposited the archives to Zenodo <span class="citation" data-cites="IpB0teri">[<a href="#ref-IpB0teri" role="doc-biblioref">26</a>]</span>.
+We bundled the path count and DWPC matrix files into HetMat archives by metapath length and deposited the archives to Zenodo <span class="citation" data-cites="IpB0teri">[<a href="#ref-IpB0teri" role="doc-biblioref">27</a>]</span>.
 The archive for length 3 DWPCs was the largest at 131.7 GB.</p>
 <p>We also generated null DWPC summary statistics for the 2,205 metapaths,
-which are also available by metapath length from Zenodo as HetMat archives consisting of <code>.tsv.gz</code> files <span class="citation" data-cites="IpB0teri">[<a href="#ref-IpB0teri" role="doc-biblioref">26</a>]</span>.
+which are also available by metapath length from Zenodo as HetMat archives consisting of <code>.tsv.gz</code> files <span class="citation" data-cites="IpB0teri">[<a href="#ref-IpB0teri" role="doc-biblioref">27</a>]</span>.
 Due to degree-grouping, null DWPCs summary statistic archives are much smaller than the DWPC archives.
 The archive for length 3 null DWPCs summary statistics was 733.1 MB.
 However, the compute required to generate null DWPCs is far greater, because there are multiple permuted hetnets (in our case 200).
@@ -749,31 +767,36 @@ Michael Zietz<br />
 <em>Figshare</em> (2017) <a href="https://doi.org/gbr3pf">https://doi.org/gbr3pf</a><br />
 DOI: <a href="https://doi.org/10.6084/m9.figshare.5346577">10.6084/m9.figshare.5346577</a></p>
 </div>
+<div id="ref-IJWsN67g">
+<p>22. <strong>mmayers12/hetnet_ml</strong><br />
+Mike Mayers<br />
+(2019-10-24) <a href="https://github.com/mmayers12/hetnet_ml">https://github.com/mmayers12/hetnet_ml</a></p>
+</div>
 <div id="ref-iKOIEzQ9">
-<p>22. <strong>Randomization Techniques for Graphs</strong><br />
+<p>23. <strong>Randomization Techniques for Graphs</strong><br />
 Sami Hanhijärvi, Gemma C. Garriga, Kai Puolamäki<br />
 <em>Society for Industrial &amp; Applied Mathematics (SIAM)</em> (2009-04-30) <a href="https://doi.org/f3mn58">https://doi.org/f3mn58</a><br />
 DOI: <a href="https://doi.org/10.1137/1.9781611972795.67">10.1137/1.9781611972795.67</a></p>
 </div>
 <div id="ref-GE6jhWnt">
-<p>23. <strong>Assessing the effectiveness of our hetnet permutations</strong><br />
+<p>24. <strong>Assessing the effectiveness of our hetnet permutations</strong><br />
 Daniel Himmelstein<br />
 <em>ThinkLab</em> (2016-02-25) <a href="https://doi.org/f3mqt5">https://doi.org/f3mqt5</a><br />
 DOI: <a href="https://doi.org/10.15363/thinklab.d178">10.15363/thinklab.d178</a></p>
 </div>
 <div id="ref-17QDcGqUi">
-<p>24. <strong>The probability of edge existence due to node degree: a baseline for network-based predictions</strong><br />
+<p>25. <strong>The probability of edge existence due to node degree: a baseline for network-based predictions</strong><br />
 Michael Zietz, Daniel S. Himmelstein, Kyle Kloster, Christopher Williams, Michael W. Nagle, Blair D. Sullivan, Casey S. Greene<br />
 <em>Manubot</em> (2020-03-05) <a href="https://greenelab.github.io/xswap-manuscript/">https://greenelab.github.io/xswap-manuscript/</a></p>
 </div>
 <div id="ref-19OyKPQ4M">
-<p>25. <strong>Network Edge Prediction: Estimating the prior</strong><br />
+<p>26. <strong>Network Edge Prediction: Estimating the prior</strong><br />
 Antoine Lizee, Daniel Himmelstein<br />
 <em>ThinkLab</em> (2016-04-14) <a href="https://doi.org/f3qbmg">https://doi.org/f3qbmg</a><br />
 DOI: <a href="https://doi.org/10.15363/thinklab.d201">10.15363/thinklab.d201</a></p>
 </div>
 <div id="ref-IpB0teri">
-<p>26. <strong>Node Connectivity Measurements For Hetionet V1.0 Metapaths</strong><br />
+<p>27. <strong>Node Connectivity Measurements For Hetionet V1.0 Metapaths</strong><br />
 Daniel Himmelstein, Michael Zietz, Kyle Kloster, Michael Nagle, Blair Sullivan, Casey Greene<br />
 <em>Zenodo</em> (2018-11-06) <a href="https://doi.org/gg2wr7">https://doi.org/gg2wr7</a><br />
 DOI: <a href="https://doi.org/10.5281/zenodo.1435834">10.5281/zenodo.1435834</a></p>
