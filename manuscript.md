@@ -3,7 +3,7 @@ author-meta:
 - Daniel S. Himmelstein
 bibliography:
 - content/manual-references.json
-date-meta: '2020-06-28'
+date-meta: '2020-07-12'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
 
-  <meta name="dc.date" content="2020-06-28" />
+  <meta name="dc.date" content="2020-07-12" />
 
-  <meta name="citation_publication_date" content="2020-06-28" />
+  <meta name="citation_publication_date" content="2020-07-12" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/4b15144106f9294e93756572d69df4f39f5768ab/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2c9fb72dd7c382a1afeb0ac3d6a13ab6715b3565/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4b15144106f9294e93756572d69df4f39f5768ab/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2c9fb72dd7c382a1afeb0ac3d6a13ab6715b3565/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4b15144106f9294e93756572d69df4f39f5768ab/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2c9fb72dd7c382a1afeb0ac3d6a13ab6715b3565/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,10 +105,10 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/4b15144106f9294e93756572d69df4f39f5768ab/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/2c9fb72dd7c382a1afeb0ac3d6a13ab6715b3565/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@4b15144](https://github.com/greenelab/connectivity-search-manuscript/tree/4b15144106f9294e93756572d69df4f39f5768ab)
-on June 28, 2020.
+from [greenelab/connectivity-search-manuscript@2c9fb72](https://github.com/greenelab/connectivity-search-manuscript/tree/2c9fb72dd7c382a1afeb0ac3d6a13ab6715b3565)
+on July 12, 2020.
 </em></small>
 
 ## Authors
@@ -281,7 +281,7 @@ Here, the user becomes interested in how the circadian rhythm might relate to Al
 **B.**
 The webapp returns metapaths between Alzheimer's disease and the circadian rhythm pathway.
 The user unchecks "precomputed only" to compute results for all metapaths with length ≤ 3, not just those that surpass the database inclusion threshold.
-The user sorts by adjusted _p_-value and [selects](alzheimer-metapaths) 7 of the top 10 metapaths.
+The user sorts by adjusted _p_-value and [selects][alzheimer-metapaths] 7 of the top 10 metapaths.
 \
 **C.**
 Paths for the selected metapaths are ordered by their path score.
@@ -328,7 +328,7 @@ By tailoring the null distribution for a DWPC to the degree of its source and ta
 
 ![
 **Expanded metapath details from the connectivity search webapp.**
-This is the expanded view of the [metapath table](alzheimer-metapaths) in {@fig:webapp}B.
+This is the expanded view of the [metapath table][alzheimer-metapaths] in {@fig:webapp}B.
 ](https://github.com/greenelab/connectivity-search-manuscript/raw/b290b4ad435553c7126867e0720f3112b4692809/content/media/webapp/v3/b.metapaths-expanded.png){#fig:webapp-metapaths width="100%}
 
 Figure @fig:webapp-metapaths shows the information used to compute _p_-value for enriched metapaths.
@@ -620,6 +620,7 @@ $$
 
 <!-- references
   https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/gamma-heatmaps.ipynb
+  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/0d83ec6063001d7b5cfcfa6a9fe3765bbe109aea/explore/gamma-hurdle/gamma-fit.ipynb
   https://github.com/greenelab/hetmech/pull/157
   https://github.com/greenelab/hetmech/issues/123
 -->
@@ -688,7 +689,7 @@ Therefore, we devised a multiple testing correction.
 For each combination of source metanode, target metanode, and length, we counted the number of metapaths.
 For Disease...Pathway metapaths, there are 0 metapaths of length 1, 3 metapaths of length 2, and 24 metapaths of length 3.
 We calculated adjusted p-values by applying a Bonferroni correction based on the number of metapaths of the same length between the source and target metanode.
-Using Figure @fig:metapaths-expanded as an example, the [DdGpPW](https://het.io/search/?source=17287&target=7607&metapaths=DdGpPW&complete=) p-value of 5.9% was adjusted to 17.8% (multiplied by a factor of 3).
+Using Figure @fig:webapp-metapaths as an example, the [DdGpPW](https://het.io/search/?source=17287&target=7607&metapaths=DdGpPW&complete=) p-value of 5.9% was adjusted to 17.8% (multiplied by a factor of 3).
 
 Bonferroni controls familywise error rate,
 which corresponds here to incorrectly finding that _any_ metapath of a given length is enriched.
