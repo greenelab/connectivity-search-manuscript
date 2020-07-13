@@ -3,7 +3,7 @@ author-meta:
 - Daniel S. Himmelstein
 bibliography:
 - content/manual-references.json
-date-meta: '2020-07-12'
+date-meta: '2020-07-13'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
 
-  <meta name="dc.date" content="2020-07-12" />
+  <meta name="dc.date" content="2020-07-13" />
 
-  <meta name="citation_publication_date" content="2020-07-12" />
+  <meta name="citation_publication_date" content="2020-07-13" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2c9fb72dd7c382a1afeb0ac3d6a13ab6715b3565/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2c9fb72dd7c382a1afeb0ac3d6a13ab6715b3565/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2c9fb72dd7c382a1afeb0ac3d6a13ab6715b3565/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,10 +105,10 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/2c9fb72dd7c382a1afeb0ac3d6a13ab6715b3565/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@2c9fb72](https://github.com/greenelab/connectivity-search-manuscript/tree/2c9fb72dd7c382a1afeb0ac3d6a13ab6715b3565)
-on July 12, 2020.
+from [greenelab/connectivity-search-manuscript@80b0589](https://github.com/greenelab/connectivity-search-manuscript/tree/80b0589a92270b23492aad6bf832cd863e7c6317)
+on July 13, 2020.
 </em></small>
 
 ## Authors
@@ -524,7 +524,8 @@ We adapt XSwap to hetnets by applying it separately to each metaedge [@rephetio;
 Project Rephetio created 5 permuted hetnets [@rephetio; @doi:10.15363/thinklab.d178],
 which were used to generate a null distribution of classifier performance for each metapath-based feature.
 Here, we aim to create a null distribution for individual DWPCs, which requires vastly more permuted values to estimate with accuracy.
-Therefore, we generated 200 permuted hetnets ([archive](https://github.com/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/data/hetionet-v1.0-permutations.zip)).
+Therefore, we generated 200 permuted hetnets ([archive](https://github.com/hetio/hetionet/tree/a95ae76581af604e91d744680aee3f888fa18887/hetnet/permuted/matrix)).
+<!-- Permuted hetmats generated in PR https://github.com/greenelab/hetmech/pull/127 -->
 More recently, we also developed the `xswap` Python [package](https://github.com/greenelab/xswap), whose optimized C/C++ implementation will enable future research to generate even larger sets of permuted networks [@xswap].
 
 ### Degree-grouping of node pairs

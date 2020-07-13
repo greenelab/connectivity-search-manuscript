@@ -41,5 +41,5 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 YY
