@@ -46,9 +46,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -64,9 +64,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/80b0589a92270b23492aad6bf832cd863e7c6317">greenelab/connectivity-search-manuscript@80b0589</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8">greenelab/connectivity-search-manuscript@d2cf9d5</a>
 on July 13, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -523,7 +523,19 @@ Second, we observed that non-zero DWPC values for any given source and target no
 Motivated by these observations, we parametrized permuted DWPC values using a zero-inflated gamma distribution, which we termed the gamma-hurdle distribution.
 We fit a gamma-hurdle distribution to each combination of source node, target node, and metapath.
 Finally, we estimate the probability of observing a permuted DWPC value greater than DWPC computed in the unpermuted network, akin to a one-tailed p-value.
-These quasi significance scores (‘p-values’) allow us to identify outlier node pairs at the metapath level.</p>
+These quasi significance scores (‘<em>p</em>-values’) allow us to identify outlier node pairs at the metapath level (see examples in Figure <a href="#fig:null-dwpc-distributions">4</a>).</p>
+<div id="fig:null-dwpc-distributions" class="fignos">
+<figure>
+<img src="https://github.com/greenelab/hetmech/raw/9287986f331607cfdbc1ac197b52f36085723c6e/explore/gamma-hurdle/gamma-hurdle-distributions.png" alt="" /><figcaption><span>Figure 4:</span> <strong>From null distribution to <em>p</em>-value for DWPCs.</strong>
+Null DWPC distributions are shown for 3 metapaths between Alzheimer’s disease and the circadian rhythm pathway, selected from Figure ??.
+For each metapath, null DWPCs are computed on 200 permuted hetnets and grouped according to source–target degree.
+Histograms show the null DWPCs for the degree group corresponding to Alzheimer’s disease and the circadian rhythm pathway (as noted in the plot titles by deg.)
+The proportion of null DWPCs that were zero is calculated, forming the “hurdle” of the null distribution model.
+The nonzero null DWPCs are modeled using a gamma distribution, which can be fit solely from a sample mean and standard deviation.
+The mean of nonzero null DWPCs is denoted with a diamond, with the standard deviation plotted twice as a line in either direction.
+Actual DWPCs are compared to the gamma-hurdle null distribution to yield a <em>p</em>-value.</figcaption>
+</figure>
+</div>
 <h4 id="details-of-the-gamma-hurdle-distribution">Details of the gamma-hurdle distribution</h4>
 <p>Let <em>X</em> be a gamma-hurdle random variable with parameters <em>λ</em>, <em>α</em>, and <em>β</em>.</p>
 <p><span class="math display">\[
@@ -614,7 +626,7 @@ As a result, our adjusted p-values are conservative.
 We would prefer to adjust <em>p</em>-values for false discovery rate <span class="citation" data-cites="q6QyrHEZ">[<a href="#ref-q6QyrHEZ" role="doc-biblioref">28</a>]</span>,
 but these methods often require access to all <em>p</em>-values at once (impractical here) and assume a uniform distribution of <em>p</em>-values when there is no signal (not the case here when most DWPCs are zero).</p>
 <h3 id="prioritizing-enriched-metapaths-for-database-storage">Prioritizing enriched metapaths for database storage</h3>
-<p>Storing DWPCs and their significance in the database (as part of the <code>PathCount</code> table in Figure <a href="#fig:database">4</a>) enables the connectivity search webapp to provide users with enriched metapaths between query nodes in realtime.
+<p>Storing DWPCs and their significance in the database (as part of the <code>PathCount</code> table in Figure <a href="#fig:database">5</a>) enables the connectivity search webapp to provide users with enriched metapaths between query nodes in realtime.
 However, storing ~15.9 billion rows (the total number of nonzero DWPCs) in the database’s <code>PathCount</code> table would exceed a reasonable disk quota.
 <!--
 # python code to estimate the total number of nonzero DWPCs
@@ -653,13 +665,13 @@ p-value threshold:
 <p>We created a backend application using Python’s Django web framework.
 The source code is available in the <a href="https://github.com/greenelab/connectivity-search-backend"><code>connectivity-search-backend</code></a> repository.
 The primary role of the backend is manage a relational database and provide an API for requesting data.</p>
-<p>We define the database schema <a href="https://github.com/greenelab/connectivity-search-backend/blob/af12f8cf2ad47d9a25ce8d1b7889390654eb3bb9/dj_hetmech_app/models.py" title="models.py for the dj_hetmech_app">using</a> Django’s object-relational mapping framework (Figure <a href="#fig:database">4</a>).
+<p>We define the database schema <a href="https://github.com/greenelab/connectivity-search-backend/blob/af12f8cf2ad47d9a25ce8d1b7889390654eb3bb9/dj_hetmech_app/models.py" title="models.py for the dj_hetmech_app">using</a> Django’s object-relational mapping framework (Figure <a href="#fig:database">5</a>).
 We <a href="https://github.com/greenelab/connectivity-search-backend/blob/af12f8cf2ad47d9a25ce8d1b7889390654eb3bb9/dj_hetmech_app/management/commands/populate_database.py" title="dj_hetmech_app populate_database management command">import</a> the data into a PostgreSQL database.
 Populating the database for all 2,205 metapaths up to length 3 was a prolonged operation, <a href="https://github.com/greenelab/connectivity-search-backend/pull/41#issuecomment-488054789">taking</a> over 3 days.
 The majority of the time is spent populating the <code>DegreeGroupedPermutation</code> (37,905,389 rows) and <code>PathCount</code> (174,986,768 rows) tables.</p>
 <div id="fig:database" class="fignos">
 <figure>
-<img src="https://github.com/greenelab/connectivity-search-backend/raw/752b423a4b7b57575d66ce0b797b0a84c23267a6/media/models-schema.png" style="width:100.0%" alt="" /><figcaption><span>Figure 4:</span> <strong>Schema for the connectivity search backend relational database models.</strong>
+<img src="https://github.com/greenelab/connectivity-search-backend/raw/752b423a4b7b57575d66ce0b797b0a84c23267a6/media/models-schema.png" style="width:100.0%" alt="" /><figcaption><span>Figure 5:</span> <strong>Schema for the connectivity search backend relational database models.</strong>
 Each Django model is represented as a table,
 whose rows list the model’s field names and types.
 Each model corresponds to a database table.
