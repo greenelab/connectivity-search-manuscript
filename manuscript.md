@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,9 +105,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/80b0589a92270b23492aad6bf832cd863e7c6317/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@80b0589](https://github.com/greenelab/connectivity-search-manuscript/tree/80b0589a92270b23492aad6bf832cd863e7c6317)
+from [greenelab/connectivity-search-manuscript@d2cf9d5](https://github.com/greenelab/connectivity-search-manuscript/tree/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8)
 on July 13, 2020.
 </em></small>
 
@@ -583,7 +583,18 @@ Second, we observed that non-zero DWPC values for any given source and target no
 Motivated by these observations, we parametrized permuted DWPC values using a zero-inflated gamma distribution, which we termed the gamma-hurdle distribution.
 We fit a gamma-hurdle distribution to each combination of source node, target node, and metapath.
 Finally, we estimate the probability of observing a permuted DWPC value greater than DWPC computed in the unpermuted network, akin to a one-tailed p-value.
-These quasi significance scores ('p-values') allow us to identify outlier node pairs at the metapath level.
+These quasi significance scores ('_p_-values') allow us to identify outlier node pairs at the metapath level (see examples in Figure @fig:null-dwpc-distributions).
+
+![
+**From null distribution to _p_-value for DWPCs.**
+Null DWPC distributions are shown for 3 metapaths between Alzheimer's disease and the circadian rhythm pathway, selected from Figure @fig:fig:webapp-metapaths.
+For each metapath, null DWPCs are computed on 200 permuted hetnets and grouped according to source--target degree.
+Histograms show the null DWPCs for the degree group corresponding to Alzheimer's disease and the circadian rhythm pathway (as noted in the plot titles by deg.)
+The proportion of null DWPCs that were zero is calculated, forming the "hurdle" of the null distribution model.
+The nonzero null DWPCs are modeled using a gamma distribution, which can be fit solely from a sample mean and standard deviation.
+The mean of nonzero null DWPCs is denoted with a diamond, with the standard deviation plotted twice as a line in either direction.
+Actual DWPCs are compared to the gamma-hurdle null distribution to yield a _p_-value.
+](https://github.com/greenelab/hetmech/raw/9287986f331607cfdbc1ac197b52f36085723c6e/explore/gamma-hurdle/gamma-hurdle-distributions.png){#fig:null-dwpc-distributions}
 
 #### Details of the gamma-hurdle distribution
 
