@@ -3,7 +3,7 @@ author-meta:
 - Daniel S. Himmelstein
 bibliography:
 - content/manual-references.json
-date-meta: '2020-07-13'
+date-meta: '2020-07-19'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -22,9 +22,9 @@ header-includes: '<!--
 
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
 
-  <meta name="dc.date" content="2020-07-13" />
+  <meta name="dc.date" content="2020-07-19" />
 
-  <meta name="citation_publication_date" content="2020-07-13" />
+  <meta name="citation_publication_date" content="2020-07-19" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/abe23d17232561af864cb77ed7bfd571d49d1ca7/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/abe23d17232561af864cb77ed7bfd571d49d1ca7/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/abe23d17232561af864cb77ed7bfd571d49d1ca7/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,10 +105,10 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/abe23d17232561af864cb77ed7bfd571d49d1ca7/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@d2cf9d5](https://github.com/greenelab/connectivity-search-manuscript/tree/d2cf9d51348f1d9bc8d9e81c95d59f6696b90fa8)
-on July 13, 2020.
+from [greenelab/connectivity-search-manuscript@abe23d1](https://github.com/greenelab/connectivity-search-manuscript/tree/abe23d17232561af864cb77ed7bfd571d49d1ca7)
+on July 19, 2020.
 </em></small>
 
 ## Authors
@@ -587,7 +587,7 @@ These quasi significance scores ('_p_-values') allow us to identify outlier node
 
 ![
 **From null distribution to _p_-value for DWPCs.**
-Null DWPC distributions are shown for 3 metapaths between Alzheimer's disease and the circadian rhythm pathway, selected from Figure @fig:fig:webapp-metapaths.
+Null DWPC distributions are shown for 3 metapaths between Alzheimer's disease and the circadian rhythm pathway, selected from Figure @fig:webapp-metapaths.
 For each metapath, null DWPCs are computed on 200 permuted hetnets and grouped according to source--target degree.
 Histograms show the null DWPCs for the degree group corresponding to Alzheimer's disease and the circadian rhythm pathway (as noted in the plot titles by deg.)
 The proportion of null DWPCs that were zero is calculated, forming the "hurdle" of the null distribution model.
