@@ -149,6 +149,7 @@
     "URL": "https://doi.org/ggzb26"
   },
   {
+    "id": "transe",
     "author": [
       {
         "family": "Bordes",
@@ -172,12 +173,12 @@
       }
     ],
     "collection-title": "NIPS’13",
-    "container-title": "Proceedings of the 26th international conference on neural information processing systems - volume 2",
-    "id": "10.5555/2999792.2999923",
+    "container-title": "Proceedings of the 26th International Conference on Neural Information Processing Systems",
     "issued": {
       "date-parts": [
         [
-          2013
+          2013,
+          12
         ]
       ]
     },
@@ -185,6 +186,7 @@
     "publisher": "Curran Associates Inc.",
     "publisher-place": "Red Hook, NY, USA",
     "title": "Translating embeddings for modeling multi-relational data",
+    "URL": "https://dl.acm.org/doi/10.5555/2999792.2999923",
     "type": "paper-conference"
   }
 ]
