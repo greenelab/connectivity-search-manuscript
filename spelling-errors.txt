@@ -1,5 +1,6 @@
 ABCABC
 ARNT
+arxiv
 BAAB
 BABA
 CBABACXYZ
@@ -25,10 +26,12 @@ erogeneous
 evalute
 familywise
 GBMF
+Ghazimatin
 GiGdG
 GJA
 GpPpGaD
 Hadamard
+heterogenous
 Mayers
 MF
 Numpy’s
