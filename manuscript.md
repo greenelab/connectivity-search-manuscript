@@ -58,11 +58,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/0e02ce335579d626737a1ba31368ebb3b2dca47e/" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/705524a43359a71e8d55fe280b5859e9d4696bc8/" />
 
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/0e02ce335579d626737a1ba31368ebb3b2dca47e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/705524a43359a71e8d55fe280b5859e9d4696bc8/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/0e02ce335579d626737a1ba31368ebb3b2dca47e/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/705524a43359a71e8d55fe280b5859e9d4696bc8/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -105,9 +105,9 @@ title: Hetnet connectivity search provides rapid insights into how two biomedica
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/0e02ce335579d626737a1ba31368ebb3b2dca47e/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/705524a43359a71e8d55fe280b5859e9d4696bc8/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@0e02ce3](https://github.com/greenelab/connectivity-search-manuscript/tree/0e02ce335579d626737a1ba31368ebb3b2dca47e)
+from [greenelab/connectivity-search-manuscript@705524a](https://github.com/greenelab/connectivity-search-manuscript/tree/705524a43359a71e8d55fe280b5859e9d4696bc8)
 on September 11, 2020.
 </em></small>
 
@@ -250,7 +250,7 @@ however, these methods are difficult to scale as a network grows in size and ign
 
 Recently, focus has shifted to using graph embeddings to determine if two nodes are related [@doi:10.1093/jamia/ocy117; @doi:10.1016/j.websem.2017.06.002; @arxiv:1710.05980].
 These types of methods involve mapping nodes and sometimes edges to dense vectors via a neural network model [@arxiv:1607.00653; @doi:10.1145/3097983.3098036; @doi:10.1186/s12859-019-2914-2], matrix factorization [@doi:10.1007/bf02288367] or by translational distance models [@transe].
-Once these dense vectors have been produced, quantitative scores that measure node relatedness can be generated via a machine learning model [@doi:10.1016/j.websem.2017.06.002;@arxiv:1909.00672; @doi:10.1109/BIBM47256.2019.8983134; @arxiv:1909.00672] or by selected similarity metrics [@doi:10.1093/jamia/ocy117; @doi:10.1093/bioinformatics/bty559; @doi:10.1186/s12920-019-0627-z; @arxiv:1710.05980; @doi:10.1093/bioinformatics/btx160].
+Once these dense vectors have been produced, quantitative scores that measure node relatedness can be generated via a machine learning model [@doi:10.1016/j.websem.2017.06.002; @doi:10.1109/BIBM47256.2019.8983134; @arxiv:1909.00672] or by selected similarity metrics [@doi:10.1093/jamia/ocy117; @doi:10.1093/bioinformatics/bty559; @doi:10.1186/s12920-019-0627-z; @arxiv:1710.05980; @doi:10.1093/bioinformatics/btx160].
 These approaches have been quite successful in determining node relatedness.
 Yet, they only state _whether_ two nodes are related and fail to provide an explanation on _why_ two nodes are related.
 
