@@ -36,6 +36,7 @@ header-includes: |-
   <meta name="citation_technical_report_institution" content="Manubot" />
   <meta name="citation_author" content="Daniel S. Himmelstein" />
   <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
+  <meta name="citation_author_institution" content="Related Sciences" />
   <meta name="citation_author_orcid" content="0000-0002-3012-7446" />
   <meta name="twitter:creator" content="@dhimmel" />
   <link rel="canonical" href="https://greenelab.github.io/connectivity-search-manuscript/" />
@@ -44,9 +45,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/5d0aeaef30b20ffc14a0ce0db12bcb173525d240/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/5d0aeaef30b20ffc14a0ce0db12bcb173525d240/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/5d0aeaef30b20ffc14a0ce0db12bcb173525d240/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/d7a12043f21a60f3e196bdfd62963e4ece9f0e34/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d7a12043f21a60f3e196bdfd62963e4ece9f0e34/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d7a12043f21a60f3e196bdfd62963e4ece9f0e34/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -70,9 +71,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/5d0aeaef30b20ffc14a0ce0db12bcb173525d240/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/d7a12043f21a60f3e196bdfd62963e4ece9f0e34/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@5d0aeae](https://github.com/greenelab/connectivity-search-manuscript/tree/5d0aeaef30b20ffc14a0ce0db12bcb173525d240)
+from [greenelab/connectivity-search-manuscript@d7a1204](https://github.com/greenelab/connectivity-search-manuscript/tree/d7a12043f21a60f3e196bdfd62963e4ece9f0e34)
 on December 26, 2020.
 </em></small>
 
@@ -96,7 +97,7 @@ This notice will be updated once all contributors meeting [authorship criteria](
     · ![Twitter icon](images/twitter.svg){.inline_icon}
     [dhimmel](https://twitter.com/dhimmel)<br>
   <small>
-     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
+     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Related Sciences
      · Funded by GBMF4552
   </small>
 
