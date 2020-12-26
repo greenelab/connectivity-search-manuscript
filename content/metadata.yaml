@@ -14,8 +14,7 @@ keywords:
 lang: en-US
 thumbnail: https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png
 authors:
-  -
-    github: dhimmel
+  - github: dhimmel
     name: Daniel S. Himmelstein
     initials: DSH
     orcid: 0000-0002-3012-7446
@@ -23,6 +22,7 @@ authors:
     email: daniel.himmelstein@gmail.com
     affiliations:
       - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
+      - Related Sciences
     funders: GBMF4552
 pandoc:
   manubot-fail-on-errors: True
