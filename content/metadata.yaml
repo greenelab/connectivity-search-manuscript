@@ -24,3 +24,5 @@ authors:
     affiliations:
       - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
     funders: GBMF4552
+pandoc:
+  manubot-fail-on-errors: True
