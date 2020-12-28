@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2020-12-26'
+date-meta: '2020-12-28'
 author-meta:
 - Daniel S. Himmelstein
 manubot-fail-on-errors: true
@@ -26,8 +26,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2020-12-26" />
-  <meta name="citation_publication_date" content="2020-12-26" />
+  <meta name="dc.date" content="2020-12-28" />
+  <meta name="citation_publication_date" content="2020-12-28" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/d7a12043f21a60f3e196bdfd62963e4ece9f0e34/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d7a12043f21a60f3e196bdfd62963e4ece9f0e34/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d7a12043f21a60f3e196bdfd62963e4ece9f0e34/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/1701b611c23281ced961300eaf478242ed13bc94/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/1701b611c23281ced961300eaf478242ed13bc94/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/1701b611c23281ced961300eaf478242ed13bc94/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -71,10 +71,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/d7a12043f21a60f3e196bdfd62963e4ece9f0e34/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/1701b611c23281ced961300eaf478242ed13bc94/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@d7a1204](https://github.com/greenelab/connectivity-search-manuscript/tree/d7a12043f21a60f3e196bdfd62963e4ece9f0e34)
-on December 26, 2020.
+from [greenelab/connectivity-search-manuscript@1701b61](https://github.com/greenelab/connectivity-search-manuscript/tree/1701b611c23281ced961300eaf478242ed13bc94)
+on December 28, 2020.
 </em></small>
 
 ## Authors
