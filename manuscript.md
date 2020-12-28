@@ -45,9 +45,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/1701b611c23281ced961300eaf478242ed13bc94/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/1701b611c23281ced961300eaf478242ed13bc94/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/1701b611c23281ced961300eaf478242ed13bc94/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/a80832362b907c8750d329205161d54264932577/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a80832362b907c8750d329205161d54264932577/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a80832362b907c8750d329205161d54264932577/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -71,9 +71,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/1701b611c23281ced961300eaf478242ed13bc94/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/a80832362b907c8750d329205161d54264932577/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@1701b61](https://github.com/greenelab/connectivity-search-manuscript/tree/1701b611c23281ced961300eaf478242ed13bc94)
+from [greenelab/connectivity-search-manuscript@a808323](https://github.com/greenelab/connectivity-search-manuscript/tree/a80832362b907c8750d329205161d54264932577)
 on December 28, 2020.
 </em></small>
 
@@ -209,25 +209,44 @@ The model predicts whether a compound–disease pair is a treatment based on its
 
 ### Related Works
 
-Copious research has focused on determining whether two nodes are related.
-Early approaches make this decision via measuring neighborhood overlap between two nodes or by measuring path similarity scores between two nodes [@doi:10.1002/asi.20591; @doi:10.1016/j.physa.2010.11.027].
-These approaches predicted node relatedness with great success;
-however, these methods are difficult to scale as a network grows in size and ignore other sources of information such as type [@doi:10.1002/asi.20591].
+[@node2vec]: doi:10.1145/2939672.2939754
+[@metapath2vec]: doi:10.1145/3097983.3098036
+[@edge2vec]: doi:10.1186/s12859-019-2914-2
+[@hneem]: doi:10.1109/BIBM47256.2019.8983134
+[@prtransx]: doi:10.2196/17645
+[@proximity]: doi:10.1002/asi.20591
+[@lu-survey]: doi:10.1016/j.physa.2010.11.027
+[@lsger]: doi:10.1093/jamia/ocy117
+[@tiresias]: doi:10.1016/j.websem.2017.06.002
+[@smudge]: doi:10.1093/bioinformatics/bty559
+[@multipath2vec]: doi:10.1186/s12920-019-0627-z
+[@deepwalk]: doi:10.1093/bioinformatics/btx160
+[@recap]: doi:10.1007/978-3-319-25007-6_36
+[@fairy]: doi:10.1145/3289600.3290990
+[@letor]: doi:10.1561/1500000016
+[@metaexp]: doi:10.1145/3184558.3186978
+[@espresso]: doi:10.1145/2983323.2983778
 
-Recently, focus has shifted to using graph embeddings to determine if two nodes are related [@doi:10.1093/jamia/ocy117; @doi:10.1016/j.websem.2017.06.002; @arxiv:1710.05980].
-These types of methods involve mapping nodes and sometimes edges to dense vectors via a neural network model [@arxiv:1607.00653; @doi:10.1145/3097983.3098036; @doi:10.1186/s12859-019-2914-2], matrix factorization [@doi:10.1007/bf02288367] or by translational distance models [@transe].
-Once these dense vectors have been produced, quantitative scores that measure node relatedness can be generated via a machine learning model [@doi:10.1016/j.websem.2017.06.002; @doi:10.1109/BIBM47256.2019.8983134; @arxiv:1909.00672] or by selected similarity metrics [@doi:10.1093/jamia/ocy117; @doi:10.1093/bioinformatics/bty559; @doi:10.1186/s12920-019-0627-z; @arxiv:1710.05980; @doi:10.1093/bioinformatics/btx160].
+
+Copious research has focused on determining whether two nodes are related.
+Early approaches make this decision via measuring neighborhood overlap between two nodes or by measuring path similarity scores between two nodes [@proximity; @lu-survey].
+These approaches predicted node relatedness with great success;
+however, these methods are difficult to scale as a network grows in size and ignore other sources of information such as type [@proximity].
+
+Recently, focus has shifted to using graph embeddings to determine if two nodes are related [@lsger; @tiresias; @arxiv:1710.05980].
+These types of methods involve mapping nodes and sometimes edges to dense vectors via a neural network model [@node2vec; @metapath2vec; @edge2vec], matrix factorization [@doi:10.1007/bf02288367] or by translational distance models [@transe].
+Once these dense vectors have been produced, quantitative scores that measure node relatedness can be generated via a machine learning model [@tiresias; @hneem; @prtransx] or by selected similarity metrics [@lsger; @smudge; @multipath2vec; @arxiv:1710.05980; @deepwalk].
 These approaches have been quite successful in determining node relatedness.
 Yet, they only state _whether_ two nodes are related and fail to provide an explanation on _why_ two nodes are related.
 
 Explaining why two nodes are related is a non-trivial task because approaches are required to output more information than a simple similarity score.
-The first group of approaches output a list of ranked paths are most relevant between two nodes [@doi:10.1007/978-3-319-25007-6_36; @doi:10.1145/3289600.3290990; @doi:10.1145/3184558.3186978; @doi:10.1145/3132847.3133161]. 
-For example, Ghazimatin et al. constructed a tool that provides an explanation for why items appear on a user's social media feed [@doi:10.1145/3289600.3290990].
+The first group of approaches output a list of ranked paths are most relevant between two nodes [@recap; @fairy; @metaexp; @doi:10.1145/3132847.3133161]. 
+For example, Ghazimatin et al. constructed a tool that provides an explanation for why items appear on a user's social media feed [@fairy].
 The authors constructed an interaction graph, which is a heterogenous network of users and content classes (i.e. categories, user posts, songs etc.).
 From this graph, they generated paths based on content timestamps and generated various features for each path. 
-Using these generated features, the authors used a learn to rank model [@doi:10.1561/1500000016] to highlight the most relevant path between a user and the content of interest [@doi:10.1145/3289600.3290990].
-Besides providing a list of paths, another way to explain how two nodes are related is to provide a listing of sub-graphs for a given network [@doi:10.1145/2983323.2983778].
-However, this approach requires a weighted network to generate results [@doi:10.1145/2983323.2983778].
+Using these generated features, the authors used a learn to rank model [@letor] to highlight the most relevant path between a user and the content of interest [@fairy].
+Besides providing a list of paths, another way to explain how two nodes are related is to provide a listing of sub-graphs for a given network [@espresso].
+However, this approach requires a weighted network to generate results [@espresso].
 Overall, previous approaches that explain how two nodes are related have been mainly used on non-biological networks and to our current knowledge this is the first study to apply explanations on node relatedness within the biological domain (TODO: rephrase).
 
 TODO: touch on supervised versus unsupervised.
@@ -236,10 +255,10 @@ TODO: touch on supervised versus unsupervised.
 
 https://github.com/greenelab/hetmech/issues/56
 
-Network embeddings edge2vec [@doi:10.1186/s12859-019-2914-2] (cited above), metapath2vec [@doi:10.1145/3097983.3098036] (cited above), HINE [@doi:10.1007/978-3-319-55753-3_12].
+Network embeddings edge2vec [@edge2vec] (cited above), metapath2vec [@metapath2vec] (cited above), HINE [@doi:10.1007/978-3-319-55753-3_12].
 
 @doi:10.1145/2736277.2741123 training node pairs to important metapaths (Forward Stagewise Path Generation).
-[MetaExp](https://meta-exp.github.io/) [@doi:10.1145/3184558.3186978] user selects two sets of nodes. MetaExp detects metapaths and interacts with the user to progressively refine metapaths.
+[MetaExp](https://meta-exp.github.io/) [@metaexp] user selects two sets of nodes. MetaExp detects metapaths and interacts with the user to progressively refine metapaths.
 
 ### Unsupervised connectivity search
 
