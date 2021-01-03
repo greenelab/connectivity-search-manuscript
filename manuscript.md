@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2020-12-28'
+date-meta: '2021-01-03'
 author-meta:
 - Daniel S. Himmelstein
 manubot-fail-on-errors: true
@@ -26,8 +26,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2020-12-28" />
-  <meta name="citation_publication_date" content="2020-12-28" />
+  <meta name="dc.date" content="2021-01-03" />
+  <meta name="citation_publication_date" content="2021-01-03" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,9 +45,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/a80832362b907c8750d329205161d54264932577/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a80832362b907c8750d329205161d54264932577/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a80832362b907c8750d329205161d54264932577/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/012c1e9f3fd2efed59ec6b157df84f4430d34bd7/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/012c1e9f3fd2efed59ec6b157df84f4430d34bd7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/012c1e9f3fd2efed59ec6b157df84f4430d34bd7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -71,10 +71,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/a80832362b907c8750d329205161d54264932577/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/012c1e9f3fd2efed59ec6b157df84f4430d34bd7/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@a808323](https://github.com/greenelab/connectivity-search-manuscript/tree/a80832362b907c8750d329205161d54264932577)
-on December 28, 2020.
+from [greenelab/connectivity-search-manuscript@012c1e9](https://github.com/greenelab/connectivity-search-manuscript/tree/012c1e9f3fd2efed59ec6b157df84f4430d34bd7)
+on January 3, 2021.
 </em></small>
 
 ## Authors
@@ -688,11 +688,11 @@ but decided against it in case certain applications required greater precision.
 We used SciPy sparse for path count and DWPC matrices with density < 0.7, serialized to disk with compression and a `.sparse.npz` extension.
 This format minimizes the space on disk and load time for the entire matrix, but does not offer read access to slices.
 We used Numpy 2D arrays for DWPC matrices with density ≥ 0.7, serialized to disk using Numpy's `.npy` format.
-We bundled the path count and DWPC matrix files into HetMat archives by metapath length and deposited the archives to Zenodo [@doi:10.5281/zenodo.1435834].
+We bundled the path count and DWPC matrix files into HetMat archives by metapath length and deposited the archives to Zenodo [@zenodo].
 The archive for length 3 DWPCs was the largest at 131.7 GB.
 
 We also generated null DWPC summary statistics for the 2,205 metapaths,
-which are also available by metapath length from Zenodo as HetMat archives consisting of `.tsv.gz` files [@doi:10.5281/zenodo.1435834].
+which are also available by metapath length from Zenodo as HetMat archives consisting of `.tsv.gz` files [@zenodo].
 Due to degree-grouping, null DWPCs summary statistic archives are much smaller than the DWPC archives.
 The archive for length 3 null DWPCs summary statistics was 733.1 MB.
 However, the compute required to generate null DWPCs is far greater, because there are multiple permuted hetnets (in our case 200).
@@ -763,12 +763,13 @@ p-value threshold:
 
 We created a backend application using Python's Django web framework.
 The source code is available in the [`connectivity-search-backend`](https://github.com/greenelab/connectivity-search-backend) repository.
-The primary role of the backend is manage a relational database and provide an API for requesting data.
+The primary role of the backend is to manage a relational database and provide an API for requesting data.
 
 We define the database schema [using](https://github.com/greenelab/connectivity-search-backend/blob/af12f8cf2ad47d9a25ce8d1b7889390654eb3bb9/dj_hetmech_app/models.py "models.py for the dj_hetmech_app") Django's object-relational mapping framework (Figure @fig:database).
 We [import](https://github.com/greenelab/connectivity-search-backend/blob/af12f8cf2ad47d9a25ce8d1b7889390654eb3bb9/dj_hetmech_app/management/commands/populate_database.py "dj_hetmech_app populate_database management command") the data into a PostgreSQL database.
 Populating the database for all 2,205 metapaths up to length 3 was a prolonged operation, [taking](https://github.com/greenelab/connectivity-search-backend/pull/41#issuecomment-488054789) over 3 days.
 The majority of the time is spent populating the `DegreeGroupedPermutation` (37,905,389 rows) and `PathCount` (174,986,768 rows) tables.
+The database is located at `search-db.het.io` with public read-only access [available](https://github.com/greenelab/connectivity-search-backend#database).
 
 ![
 **Schema for the connectivity search backend relational database models.**
@@ -798,13 +799,66 @@ Todo:
 
 ### Realtime open science
 
+This study was conducted entirely in the open via public GitHub repositories.
+We used GitHub Issues for discussion, leaving a rich online history of the scholarly process.
+Furthermore, most additions to the analyses were performed by pull request,
+whereby a contributor proposes a set of changes.
+This provides an oppertunity for other contributors to review changes before they are officially accepted.
+For example, in [greenelab/hetmech#156](https://github.com/greenelab/hetmech/pull/156) \@zietzm proposed a notebook to visualize parameters for null DWPC distributions.
+After \@zietzm addressed \@dhimmel's comments, the pull request was approved and merged into the project's main branch.
+
+The manuscript for this study was written using [Manubot](https://manubot.org/), which allows authors to collaboratively write manuscripts on GitHub [@doi:10.1371/journal.pcbi.1007128].
+The Manubot-rendered manuscript is available at <https://greenelab.github.io/connectivity-search-manuscript/>.
+We encourage readers with feedback or questions to comment publicly via [GitHub Issues](https://github.com/greenelab/connectivity-search-manuscript/issues).
+
 ### Software & data availability
 
+This study primarily involves the following repositories:
+<!-- https://github.com/topics/hetnet-connectivity-search -->
 
+- [greenelab/connectivity-search-manuscript](https://github.com/greenelab/connectivity-search-manuscript):
+  Source code for this manuscript.
+  Best place for general comments or questions.
+  CC BY 4.0 License.
+- [greenelab/hetmech](https://github.com/greenelab/hetmech):
+  The initial project repository that contains research notebooks, dataset generation code, and exploratory data analyses.
+  The hetmatpy package was first developed as part of this repository until its [relocation](https://github.com/hetio/hetmatpy/issues/1) in November 2018.
+  BSD 3-Clause License.
+- [greenelab/connectivity-search-backend](https://github.com/greenelab/connectivity-search-backend):
+  Source code for the connectivity search database and API.
+  BSD 3-Clause License.
+- [greenelab/connectivity-search-frontend](https://github.com/greenelab/connectivity-search-frontend):
+  Source code for the connectivity search webapp.
+  BSD 3-Clause License.
+- [hetio/hetmatpy](https://github.com/hetio/hetmatpy):
+  Python package for matrix storage and operations on hetnets.
+  Released on [PyPI](https://pypi.org/project/hetmatpy/).
+  BSD 2-Clause Plus Patent License.
+- [hetio/hetnetpy](https://github.com/hetio/hetnetpy)
+  Preexisiting python package for representing hetnets.
+  Dependency of hetmatpy.
+  Released on [PyPI](https://pypi.org/project/hetnetpy/).
+  Dual licensed under BSD 2-Clause Plus Patent License and CC0 1.0 (public domain dedication).
+- [hetio/hetionet](https://github.com/hetio/hetionet).
+  Preexisiting data repository for Hetionet,
+  including the public Neo4j instance and HetMat archives.
+  CC0 1.0 License.
+- [hetio/het.io](https://github.com/hetio/het.io).
+  Preexisiting source code for the <https://het.io/> website.
+  CC BY 4.0 License.
+
+The hetmech and hetionet repositories contain datasets related to this study.
+Large datasets were compressed and tracked with [Git LFS](https://git-lfs.github.com/) (Large File Storage).
+GitHub LFS had a max file size of 2 GB.
+Datasets exceeding this size, along with other essential datasets, are available from Zenodo [@zenodo].
+
+
+<!-- link reference syntax citation key aliases -->
 [@hetio-dag]: doi:10.1371/journal.pcbi.1004259
 [@rephetio]: doi:10.7554/eLife.26726
 [@vagelos-2017]: doi:10.6084/m9.figshare.5346577
 [@xswap]: https://greenelab.github.io/xswap-manuscript/
+[@zenodo]: doi:10.5281/zenodo.1435833
 
 
 ## References {.page_break_before}
