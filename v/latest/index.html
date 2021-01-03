@@ -47,9 +47,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/012c1e9f3fd2efed59ec6b157df84f4430d34bd7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/012c1e9f3fd2efed59ec6b157df84f4430d34bd7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/012c1e9f3fd2efed59ec6b157df84f4430d34bd7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/799b04b3cb5c58b57208d5c093a28aeffa80923e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/799b04b3cb5c58b57208d5c093a28aeffa80923e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/799b04b3cb5c58b57208d5c093a28aeffa80923e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -65,9 +65,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/012c1e9f3fd2efed59ec6b157df84f4430d34bd7/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/799b04b3cb5c58b57208d5c093a28aeffa80923e/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/012c1e9f3fd2efed59ec6b157df84f4430d34bd7">greenelab/connectivity-search-manuscript@012c1e9</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/799b04b3cb5c58b57208d5c093a28aeffa80923e">greenelab/connectivity-search-manuscript@799b04b</a>
 on January 3, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -266,12 +266,14 @@ Besides providing a list of paths, another way to explain how two nodes are rela
 However, this approach requires a weighted network to generate results <span class="citation" data-cites="Hf24Hzrl">[<a href="#ref-Hf24Hzrl" role="doc-biblioref">31</a>]</span>.
 Overall, previous approaches that explain how two nodes are related have been mainly used on non-biological networks and to our current knowledge this is the first study to apply explanations on node relatedness within the biological domain (TODO: rephrase).</p>
 <p>TODO: touch on supervised versus unsupervised.</p>
-<h3 id="todo-other-works">TODO: Other works</h3>
+<h3 id="other-works">Other works</h3>
+<p>TODO: integrate this content into <a href="#related-works">Related Works</a>.</p>
 <p>https://github.com/greenelab/hetmech/issues/56</p>
 <p>Network embeddings edge2vec <span class="citation" data-cites="jyhFBVzQ">[<a href="#ref-jyhFBVzQ" role="doc-biblioref">18</a>]</span> (cited above), metapath2vec <span class="citation" data-cites="1AeZs6xaT">[<a href="#ref-1AeZs6xaT" role="doc-biblioref">17</a>]</span> (cited above), HINE <span class="citation" data-cites="15kVSbZyi">[<a href="#ref-15kVSbZyi" role="doc-biblioref">32</a>]</span>.</p>
 <p><span class="citation" data-cites="Vz9QIDKV"><a href="#ref-Vz9QIDKV" role="doc-biblioref">33</a></span> training node pairs to important metapaths (Forward Stagewise Path Generation).
 <a href="https://meta-exp.github.io/">MetaExp</a> <span class="citation" data-cites="19H7j1WBd">[<a href="#ref-19H7j1WBd" role="doc-biblioref">28</a>]</span> user selects two sets of nodes. MetaExp detects metapaths and interacts with the user to progressively refine metapaths.</p>
 <h3 id="unsupervised-connectivity-search">Unsupervised connectivity search</h3>
+<p>TODO: summarize the goal of unsupervised hetnet connectivity search.</p>
 <h2 class="page_break_before" id="results">Results</h2>
 <h3 id="connectivity-search-webapp">Connectivity Search Webapp</h3>
 <p>We created the connectivity search webapp available at <a href="https://het.io/search/" class="uri">https://het.io/search/</a>.
@@ -314,6 +316,7 @@ Clicking an edge displays its properties, informing the user that association be
 <p>We created the hetmatpy Python package,
 available on <a href="https://github.com/hetio/hetmatpy">GitHub</a> and <a href="https://pypi.org/project/hetmatpy/">PyPI</a> under the permissive BSD-2-Clause Plus Patent License.
 This package provides a matrix-based utilities for hetnets.</p>
+<p>TODO: improve flow and cohesion between software methods and results.</p>
 <h3 id="dwpc-null-distribution">DWPC null distribution</h3>
 <p>To assess connectivity between a source and target node, we use the DWPC (degree-weighted path count) metric.
 The DWPC is similar to path count (number of paths between the source and target node along a given metapath), except that it downweights paths through high degree nodes.
@@ -329,6 +332,7 @@ Second, comparing DWPCs between node pairs fails to account for the situation wh
 <em>p</em>-values have a broadly understood interpretation — in our case, the probability that a DWPC equal to or greater than the observed DWPC could occur under a null model.
 By tailoring the null distribution for a DWPC to the degree of its source and target node, we account for degree effects when determining the significance of a DWPC.</p>
 <h3 id="enriched-metapaths">Enriched metapaths</h3>
+<p>TODO: write this section</p>
 <div id="fig:webapp-metapaths" class="fignos">
 <figure>
 <img src="https://github.com/greenelab/connectivity-search-manuscript/raw/b290b4ad435553c7126867e0720f3112b4692809/content/media/webapp/v3/b.metapaths-expanded.png" alt="" /><figcaption><span>Figure 3:</span> <strong>Expanded metapath details from the connectivity search webapp.</strong>
@@ -373,10 +377,30 @@ Used to generate the gamma-hurdle model of the null DWPC distribution.</li>
 A Cypher query that users can run in the <a href="https://neo4j.het.io/browser/">Neo4j browser</a> to show paths with the largest DWPCs for the metapath.</li>
 </ul>
 <h3 id="enriched-paths">Enriched paths</h3>
+<p>TODO: write this section</p>
+<p>The paths webapp panel includes the following information (Figure <a href="#fig:webapp">2</a>C):
+<!-- https://github.com/greenelab/connectivity-search-frontend/blob/63bb4acbcebe4b346882754719071856b30b43ba/src/definitions.json --></p>
+<ul>
+<li><strong>path</strong>:
+The sequence of edges in the network connecting the source node to the target node.
+Duplicate nodes are not permitted in paths.</li>
+<li><strong>path score</strong>:
+A metric of how meaningful the path is in describing the connectivity between the source and target node.
+The score combines the magnitude of the metapath’s p-value with the percent of the DWPC contributed by the path.</li>
+<li><strong>% of DWPC</strong>
+The contribution of the path to the DWPC for its metapath.
+This metric compares the importance of all paths of the same metapath from the source node to the target node.</li>
+</ul>
+<p>TODO: discuss path score and ranking by path score.</p>
 <h3 id="comparison-to-rephetio">Comparison to Rephetio</h3>
-<h3 id="detecting-mechanisms-of-action-for-indications">Detecting Mechanisms of Action for Indications</h3>
-<p>Assess ability to predict paths in <a href="https://github.com/SuLab/DrugMechDB" class="uri">https://github.com/SuLab/DrugMechDB</a></p>
+<p>TODO: write this section.</p>
+<!--
+  https://github.com/dhimmel/connectivity-search-manuscript/commit/8f5a2ae4732249d4b6f33a6a142cc4043152c458
+-->
 <h3 id="use-cases">Use cases</h3>
+<p>TODO: determine what further use cases and examples we’d like to explore.</p>
+<h4 id="detecting-mechanisms-of-action-for-indications">Detecting Mechanisms of Action for Indications</h4>
+<p>TODO: Assess ability to predict paths in <a href="https://github.com/SuLab/DrugMechDB" class="uri">https://github.com/SuLab/DrugMechDB</a></p>
 <h2 class="page_break_before" id="discussion">Discussion</h2>
 <p>STUB: Contributions of this work:</p>
 <ul>
@@ -716,6 +740,7 @@ but are also available for general research use.</p>
 <p>The database only stores a single orientation of a metapath. For example, if GpPpGaD is stored between the given source and target node, DaGpPpG would not also be stored. Therefore, both orientations of a metapath are searched against the PathCount table.</p>
 </blockquote>
 <h3 id="webapp-frontend">Webapp &amp; Frontend</h3>
+<p>TODO: write this section.</p>
 <h3 id="realtime-open-science">Realtime open science</h3>
 <p>This study was conducted entirely in the open via public GitHub repositories.
 We used GitHub Issues for discussion, leaving a rich online history of the scholarly process.
