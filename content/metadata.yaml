@@ -31,6 +31,7 @@ authors:
     twitter: ZietzMichael
     email: michael.zietz@gmail.com
     affiliations:
+      - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
       - Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
 pandoc:
   manubot-fail-on-errors: True
