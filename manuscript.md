@@ -12,9 +12,10 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2021-01-03'
+date-meta: '2021-01-08'
 author-meta:
 - Daniel S. Himmelstein
+- Michael Zietz
 manubot-fail-on-errors: true
 header-includes: |-
   <!--
@@ -26,8 +27,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2021-01-03" />
-  <meta name="citation_publication_date" content="2021-01-03" />
+  <meta name="dc.date" content="2021-01-08" />
+  <meta name="citation_publication_date" content="2021-01-08" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,15 +40,20 @@ header-includes: |-
   <meta name="citation_author_institution" content="Related Sciences" />
   <meta name="citation_author_orcid" content="0000-0002-3012-7446" />
   <meta name="twitter:creator" content="@dhimmel" />
+  <meta name="citation_author" content="Michael Zietz" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
+  <meta name="citation_author_institution" content="Department of Biomedical Informatics, Columbia University, New York, New York, United States of America" />
+  <meta name="citation_author_orcid" content="0000-0003-0539-630X" />
+  <meta name="twitter:creator" content="@ZietzMichael" />
   <link rel="canonical" href="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta property="og:url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta property="twitter:url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/799b04b3cb5c58b57208d5c093a28aeffa80923e/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/799b04b3cb5c58b57208d5c093a28aeffa80923e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/799b04b3cb5c58b57208d5c093a28aeffa80923e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/bb8f20da42e36a850bede5bf0579818100ddabed/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/bb8f20da42e36a850bede5bf0579818100ddabed/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/bb8f20da42e36a850bede5bf0579818100ddabed/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -71,10 +77,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/799b04b3cb5c58b57208d5c093a28aeffa80923e/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/bb8f20da42e36a850bede5bf0579818100ddabed/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@799b04b](https://github.com/greenelab/connectivity-search-manuscript/tree/799b04b3cb5c58b57208d5c093a28aeffa80923e)
-on January 3, 2021.
+from [greenelab/connectivity-search-manuscript@bb8f20d](https://github.com/greenelab/connectivity-search-manuscript/tree/bb8f20da42e36a850bede5bf0579818100ddabed)
+on January 8, 2021.
 </em></small>
 
 ## Authors
@@ -99,6 +105,17 @@ This notice will be updated once all contributors meeting [authorship criteria](
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Related Sciences
      · Funded by GBMF4552
+  </small>
+
++ **Michael Zietz**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0003-0539-630X](https://orcid.org/0000-0003-0539-630X)
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [zietzm](https://github.com/zietzm)
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    [ZietzMichael](https://twitter.com/ZietzMichael)<br>
+  <small>
+     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
   </small>
 
 
