@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/greenelab/connectivity-search-manuscript/tree/gh-pages) branch hosts the contents of this directory at <https://greenelab.github.io/connectivity-search-manuscript/>.
-The permalink for this webpage version is <https://greenelab.github.io/connectivity-search-manuscript/v/799b04b3cb5c58b57208d5c093a28aeffa80923e/>.
+The permalink for this webpage version is <https://greenelab.github.io/connectivity-search-manuscript/v/bb8f20da42e36a850bede5bf0579818100ddabed/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://greenelab.github.io/connectivity-search-manuscript/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`799b04b3cb5c58b57208d5c093a28aeffa80923e`](https://github.com/greenelab/connectivity-search-manuscript/commit/799b04b3cb5c58b57208d5c093a28aeffa80923e).
+[`bb8f20da42e36a850bede5bf0579818100ddabed`](https://github.com/greenelab/connectivity-search-manuscript/commit/bb8f20da42e36a850bede5bf0579818100ddabed).
