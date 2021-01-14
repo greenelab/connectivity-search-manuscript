@@ -4,6 +4,7 @@ arxiv
 BAAB
 BABA
 CBABACXYZ
+cgreene
 connecitivity
 CrC
 CtDrDtC
@@ -35,6 +36,7 @@ GiGdG
 GJA
 GpPpGaD
 greenelab
+GreeneScientist
 Hadamard
 heterogenous
 hetmech
@@ -57,7 +59,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 YY
 Zietz
 zietzm

@@ -12,10 +12,11 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2021-01-08'
+date-meta: '2021-01-14'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
+- Casey S. Greene
 manubot-fail-on-errors: true
 header-includes: |-
   <!--
@@ -27,8 +28,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2021-01-08" />
-  <meta name="citation_publication_date" content="2021-01-08" />
+  <meta name="dc.date" content="2021-01-14" />
+  <meta name="citation_publication_date" content="2021-01-14" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -45,15 +46,21 @@ header-includes: |-
   <meta name="citation_author_institution" content="Department of Biomedical Informatics, Columbia University, New York, New York, United States of America" />
   <meta name="citation_author_orcid" content="0000-0003-0539-630X" />
   <meta name="twitter:creator" content="@ZietzMichael" />
+  <meta name="citation_author" content="Casey S. Greene" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
+  <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
+  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
+  <meta name="citation_author_orcid" content="0000-0001-8713-9213" />
+  <meta name="twitter:creator" content="@GreeneScientist" />
   <link rel="canonical" href="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta property="og:url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta property="twitter:url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/bb8f20da42e36a850bede5bf0579818100ddabed/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/bb8f20da42e36a850bede5bf0579818100ddabed/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/bb8f20da42e36a850bede5bf0579818100ddabed/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/27ee3b2ed33a6de924cfe8087efb90956e5fb14b/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/27ee3b2ed33a6de924cfe8087efb90956e5fb14b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/27ee3b2ed33a6de924cfe8087efb90956e5fb14b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -77,10 +84,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/bb8f20da42e36a850bede5bf0579818100ddabed/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/27ee3b2ed33a6de924cfe8087efb90956e5fb14b/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@bb8f20d](https://github.com/greenelab/connectivity-search-manuscript/tree/bb8f20da42e36a850bede5bf0579818100ddabed)
-on January 8, 2021.
+from [greenelab/connectivity-search-manuscript@27ee3b2](https://github.com/greenelab/connectivity-search-manuscript/tree/27ee3b2ed33a6de924cfe8087efb90956e5fb14b)
+on January 14, 2021.
 </em></small>
 
 ## Authors
@@ -116,6 +123,18 @@ This notice will be updated once all contributors meeting [authorship criteria](
     [ZietzMichael](https://twitter.com/ZietzMichael)<br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
+  </small>
+
++ **Casey S. Greene**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0001-8713-9213](https://orcid.org/0000-0001-8713-9213)
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [cgreene](https://github.com/cgreene)
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    [GreeneScientist](https://twitter.com/GreeneScientist)<br>
+  <small>
+     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+     · Funded by the National Human Genome Research Institute (R01 HG010067); the National Cancer Institute (R01 CA237170); the Gordon and Betty Moore Foundation (GBMF 4552)
   </small>
 
 
