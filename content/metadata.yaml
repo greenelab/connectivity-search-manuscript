@@ -33,5 +33,19 @@ authors:
     affiliations:
       - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
       - Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
+  - github: cgreene
+    name: Casey S. Greene
+    initials: CSG
+    orcid: 0000-0001-8713-9213
+    twitter: GreeneScientist
+    email: casey.s.greene@cuanschutz.edu
+    funders:
+      - the National Human Genome Research Institute (R01 HG010067)
+      - the National Cancer Institute (R01 CA237170)
+      - the Gordon and Betty Moore Foundation (GBMF 4552)
+    affiliations:
+      - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
+      - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+      - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
 pandoc:
   manubot-fail-on-errors: True
