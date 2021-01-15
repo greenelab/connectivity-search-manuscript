@@ -33,6 +33,17 @@ authors:
     affiliations:
       - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
       - Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
+ - github: danich1
+    name: David N. Nicholson
+    initials: DNN
+    orcid: 0000-0003-0002-5761
+    twitter: null
+    email: dnicholson329@gmail.com
+    affiliations:
+      - Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
+    funders:
+      - The Gordon and Betty Moore Foundation (GBMF4552)
+      - The National Institutes of Health (T32 HG000046)
   - github: cgreene
     name: Casey S. Greene
     initials: CSG
