@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2021-01-15'
+date-meta: '2021-05-29'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -29,8 +29,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2021-01-15" />
-  <meta name="citation_publication_date" content="2021-01-15" />
+  <meta name="dc.date" content="2021-05-29" />
+  <meta name="citation_publication_date" content="2021-05-29" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -63,9 +63,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/9953e0e1cc6989da32ccf190ea731e51e7a616fb/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/9953e0e1cc6989da32ccf190ea731e51e7a616fb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/9953e0e1cc6989da32ccf190ea731e51e7a616fb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/650112ab029fbe6ce1f8acdf65d7d60da03fa49f/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/650112ab029fbe6ce1f8acdf65d7d60da03fa49f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/650112ab029fbe6ce1f8acdf65d7d60da03fa49f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -89,10 +89,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/9953e0e1cc6989da32ccf190ea731e51e7a616fb/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/650112ab029fbe6ce1f8acdf65d7d60da03fa49f/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@9953e0e](https://github.com/greenelab/connectivity-search-manuscript/tree/9953e0e1cc6989da32ccf190ea731e51e7a616fb)
-on January 15, 2021.
+from [greenelab/connectivity-search-manuscript@650112a](https://github.com/greenelab/connectivity-search-manuscript/tree/650112ab029fbe6ce1f8acdf65d7d60da03fa49f)
+on May 29, 2021.
 </em></small>
 
 ## Authors
@@ -157,13 +157,16 @@ This notice will be updated once all contributors meeting [authorship criteria](
 ## Abstract {.page_break_before}
 
 Hetnets, short for “heterogeneous networks”, contain multiple node and relationship types and offer a way to encode biomedical knowledge.
-For example, Hetionet connects 11 types of nodes — including genes, diseases, drugs, pathways, and anatomical structures — with over 2 million edges of 24 types.
+For example, Hetionet connects 11 types of nodes
+— including genes, diseases, drugs, pathways, and anatomical structures
+— with over 2 million edges of 24 types.
 Previously, we trained a classifier to repurpose drugs using features extracted from Hetionet.
 The model identified types of paths between a drug and disease that occurred more frequently between known treatments.
 
 For many applications however, a training set of known relationships does not exist;
-Yet researchers would still like to know how two nodes are meaningfully connected.
-For example, users may want to know not only how metformin is related to breast cancer, but also how the GJA1 gene might be involved in insomnia.
+Yet researchers would still like to learn how two nodes are meaningfully connected.
+For example, users may be curious not only how metformin is related to breast cancer,
+but also how the _GJA1_ gene might be involved in insomnia.
 Therefore, we developed hetnet connectivity search to propose the most important paths between any two nodes.
 
 The algorithm behind connectivity search identifies types of paths that occur more frequently than would be expected by chance (based on node degree alone).
@@ -184,7 +187,8 @@ But in many cases, it is necessary to be able to distinguish between different t
 
 A *hetnet* (short for **het**erogeneous information **net**work [@doi:10.15363/thinklab.d104]) is a network where nodes and edges have type.
 The ability to differentiate between different types of entities and relationships allows a hetnet to accurately describe more complex data.
-Hetnets are particularly useful in biomedicine, where it is important to capture the conceptual distinctions between various concepts,
+Hetnets are particularly useful in biomedicine,
+where it is important to capture the conceptual distinctions between various concepts,
 such as genes and diseases, or upregulation and binding.
 
 The types of nodes and edges in a hetnet are defined by a schema, referred to as a metagraph.
@@ -194,7 +198,8 @@ as opposed to a specific node/edge/path itself (e.g. acetaminophen).
 
 ### Hetionet
 
-[Hetionet](https://het.io/about/) is a knowledge graph of human biology, disease, and medicine, integrating information from millions of studies and decades of research.
+[Hetionet](https://het.io/about/) is a knowledge graph of human biology, disease, and medicine,
+integrating information from millions of studies and decades of research.
 Hetionet v1.0 combines information from [29 public databases](https://git.dhimmel.com/rephetio-manuscript/#tbl:resources).
 The network contains 47,031 nodes of [11 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metanodes) (Table @tbl:metanodes) and 2,250,197 edges of [24 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metaedges) (Figure {@fig:rephetio}A).
 
@@ -224,8 +229,10 @@ which was designed to interact with networks where nodes and edges have both typ
 
 One limitation that restricts the applicability of Hetionet is incompleteness.
 In many cases, Hetionet v1.0 includes only a subset of the nodes from a given resource.
-For example, the Disease Ontology contains over 9,000 diseases [@doi:10.1093/nar/gky1032], while Hetionet includes only 137 diseases [@doi:10.15363/thinklab.d44].
-Nodes were excluded to avoid redundant or overly specific nodes, while ensuring a minimum level of connectivity for compounds and diseases.
+For example, the Disease Ontology contains over 9,000 diseases [@doi:10.1093/nar/gky1032],
+while Hetionet includes only 137 diseases [@doi:10.15363/thinklab.d44].
+Nodes were excluded to avoid redundant or overly specific nodes,
+while ensuring a minimum level of connectivity for compounds and diseases.
 See the [Project Rephetio methods](https://git.dhimmel.com/rephetio-manuscript/#nodes) for more details [@rephetio].
 Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types.
 Other integrative resources, some still under development, include [Wikidata](https://www.wikidata.org) [@doi:10.7554/eLife.52614], [SemMedDB](https://skr3.nlm.nih.gov/SemMedDB/) [@doi:10.1093/bioinformatics/bts591; @doi:10.1109/BIBM.2018.8621568; @doi:10.1186/s12859-019-3297-0], [SPOKE](https://spoke.ucsf.edu/), and [DRKG](https://github.com/gnn4dr/DRKG).
@@ -235,7 +242,8 @@ Other integrative resources, some still under development, include [Wikidata](ht
 Project Rephetio is the name of the [study](https://git.dhimmel.com/rephetio-manuscript/) that created Hetionet and applied it repurpose drugs [@rephetio].
 This project [predicted](https://het.io/repurpose/) the probability of drug efficacy for 209,168 compound–disease pairs.
 The approach learned which types of paths occur more or less frequently between known treatments than non-treatments (Figure {@fig:rephetio}B).
-To train the model, Rephetio created [PharmacotherapyDB](https://doi.org/10.6084/m9.figshare.3103054), a physician-curated catalog of 755 disease-modifying treatments [@doi:10.15363/thinklab.d182].
+To train the model, Rephetio created [PharmacotherapyDB](https://doi.org/10.6084/m9.figshare.3103054),
+a physician-curated catalog of 755 disease-modifying treatments [@doi:10.15363/thinklab.d182].
 
 ![
 **A. Hetionet v1.0 metagraph.**
@@ -244,19 +252,35 @@ The types of nodes and edges in Hetionet.
 **B. Supervised machine learning approach from Project Rephetio.**
 This figure visualizes the feature matrix used by Project Rephetio to make supervised predictions.
 Each row represents a compound–disease pair.
-The top half of rows correspond to known treatments (i.e. positives), while the bottom half correspond to non-treatments (i.e. negatives, not known to be treatments in PharmacotherapyDB).
+The top half of rows correspond to known treatments (i.e. positives),
+while the bottom half correspond to non-treatments
+(i.e. negatives under a *closed-world assumption*, not known to be treatments in PharmacotherapyDB).
 Here, an equal number of treatments and non-treatments are shown, but in reality the problem is heavily imbalanced.
 Project Rephetio scaled models to assume a positive prevalence of 0.36% [@rephetio; @doi:10.15363/thinklab.d210].
 Each column represents a metapath, labeled with its abbreviation.
 \
-Feature values are DWPCs (transformed and standardized), which assess the connectivity along the specified metapath between the specific compound and disease.
+Feature values are DWPCs (transformed and standardized),
+which assess the connectivity along the specified metapath between the specific compound and disease.
 Green colored values indicate above-average connectivity,
 whereas blue values indicate below average connectivity.
 In general, positives have greater connectivity for the selected metapaths than negatives.
 Rephetio used a logistic regression model to learn the effect of each type of connectivity (feature) on the likelihood that a compound treats a disease.
-The model predicts whether a compound–disease pair is a treatment based on its features, but requires supervision in the form of known treatments.
+The model predicts whether a compound–disease pair is a treatment based on its features,
+but requires supervision in the form of known treatments.
 <!-- info on this figure's creation in https://github.com/greenelab/connectivity-search-manuscript/issues/11 -->
 ](https://github.com/greenelab/connectivity-search-manuscript/raw/f98c3470a8bf8f40f5f6aed2794c6ea66b93b14b/content/media/rephetio/metagraph-and-features.png){#fig:rephetio width="100%" .white}
+
+### Unsupervised hetnet connectivity search
+
+Project Rephetio was able to successfully predict treatments,
+including those under investigation by clinical trail.
+However, two challenges limit the applicability of the Rephetio approach,
+which this study aims to address.
+First, Rephetio required known labels (i.e. treatment status) to train a model.
+Hence, the approach cannot be applied to domains where training labels do not exist.
+Second, the DWPC metric used to assess connectivity is sensitive to node degree.
+The Rephetio approach was incapable of detecting whether a high DWPC score indicated meaningful connectivity above the level expected by the background network degrees.
+Here we propose Hetnet connectivity search, which defines a null distribution for DWPCs that accounts for degree and enables detecting meaningful hetnet connectivity without training labels.
 
 ### Related Works
 
@@ -277,30 +301,34 @@ The model predicts whether a compound–disease pair is a treatment based on its
 [@letor]: doi:10.1561/1500000016
 [@metaexp]: doi:10.1145/3184558.3186978
 [@espresso]: doi:10.1145/2983323.2983778
+[@pykeen]: https://jmlr.org/papers/v22/20-825.html
+[@smr]: doi:10.1016/j.bdr.2020.100174
 
+Existing research provides methods for determining whether two nodes are related,
+although primarily focuses on homogeneous networks (without type).
+Early approaches detected related nodes by measuring neighborhood overlap or path similarity between two nodes [@proximity; @lu-survey].
+These approaches predicted node relatedness with success.
+However, they are difficult to scale as a network grow in size or semantic richness (i.e. type) [@proximity].
 
-Copious research has focused on determining whether two nodes are related.
-Early approaches make this decision via measuring neighborhood overlap between two nodes or by measuring path similarity scores between two nodes [@proximity; @lu-survey].
-These approaches predicted node relatedness with great success;
-however, these methods are difficult to scale as a network grows in size and ignore other sources of information such as type [@proximity].
-
-Recently, focus has shifted to using graph embeddings to determine if two nodes are related [@lsger; @tiresias; @arxiv:1710.05980].
-These types of methods involve mapping nodes and sometimes edges to dense vectors via a neural network model [@node2vec; @metapath2vec; @edge2vec], matrix factorization [@doi:10.1007/bf02288367] or by translational distance models [@transe].
-Once these dense vectors have been produced, quantitative scores that measure node relatedness can be generated via a machine learning model [@tiresias; @hneem; @prtransx] or by selected similarity metrics [@lsger; @smudge; @multipath2vec; @arxiv:1710.05980; @deepwalk].
+More recently, focus has shifted to graph embeddings to determine if two nodes are related,
+specifically in the context of knowledge graphs, which are often semantically rich and include type
+[@lsger; @tiresias; @smr; @pykeen].
+These types of methods involve mapping nodes and sometimes edges to dense vectors via a neural network model [@node2vec; @metapath2vec; @edge2vec], matrix factorization [@doi:10.1007/bf02288367], or by translational distance models [@transe].
+Once these dense vectors have been produced, quantitative scores that measure node relatedness can be generated via a machine learning model [@tiresias; @hneem; @prtransx] or by selected similarity metrics [@lsger; @smudge; @multipath2vec; @smr; @deepwalk].
 These approaches have been quite successful in determining node relatedness.
 Yet, they only state _whether_ two nodes are related and fail to provide an explanation on _why_ two nodes are related.
 
 Explaining why two nodes are related is a non-trivial task because approaches are required to output more information than a simple similarity score.
 The first group of approaches output a list of ranked paths are most relevant between two nodes [@recap; @fairy; @metaexp; @doi:10.1145/3132847.3133161]. 
 For example, Ghazimatin et al. constructed a tool that provides an explanation for why items appear on a user's social media feed [@fairy].
-The authors constructed an interaction graph, which is a heterogenous network of users and content classes (i.e. categories, user posts, songs etc.).
+The authors constructed an interaction graph, which is a heterogenous network of users and content classes (e.g. categories, user posts, songs).
 From this graph, they generated paths based on content timestamps and generated various features for each path. 
 Using these generated features, the authors used a learn to rank model [@letor] to highlight the most relevant path between a user and the content of interest [@fairy].
 Besides providing a list of paths, another way to explain how two nodes are related is to provide a listing of sub-graphs for a given network [@espresso].
 However, this approach requires a weighted network to generate results [@espresso].
-Overall, previous approaches that explain how two nodes are related have been mainly used on non-biological networks and to our current knowledge this is the first study to apply explanations on node relatedness within the biological domain (TODO: rephrase).
 
 TODO: touch on supervised versus unsupervised.
+TODO: differentiate hetnet connectivity search
 
 ### Other works
 
@@ -312,10 +340,6 @@ Network embeddings edge2vec [@edge2vec] (cited above), metapath2vec [@metapath2v
 
 @doi:10.1145/2736277.2741123 training node pairs to important metapaths (Forward Stagewise Path Generation).
 [MetaExp](https://meta-exp.github.io/) [@metaexp] user selects two sets of nodes. MetaExp detects metapaths and interacts with the user to progressively refine metapaths.
-
-### Unsupervised connectivity search
-
-TODO: summarize the goal of unsupervised hetnet connectivity search.
 
 ## Results {.page_break_before}
 

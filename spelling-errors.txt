@@ -1,6 +1,5 @@
 ABCABC
 ARNT
-arxiv
 BAAB
 BABA
 CBABACXYZ
@@ -13,12 +12,11 @@ DaGiGpPW
 DaGpPpG
 danich
 dataset
-Datasets
+datasets
 DdGpPW
 deepwalk
 dhimmel
 dhimmel’s
-Django’s
 downweighted
 DrD
 DrDaGaDrD
@@ -55,6 +53,8 @@ PathCount
 piecewise
 Preexisiting
 prtransx
+pykeen
+smr
 Unchecking
 XaXbX
 XaYbXcY
