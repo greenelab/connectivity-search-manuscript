@@ -1,5 +1,6 @@
 ABCABC
 ARNT
+arxiv
 BAAB
 BABA
 CBABACXYZ
@@ -12,7 +13,7 @@ DaGiGpPW
 DaGpPpG
 danich
 dataset
-datasets
+Datasets
 DdGpPW
 deepwalk
 dhimmel
@@ -40,6 +41,7 @@ Hadamard
 heterogenous
 hetmech
 hneem
+kgem
 LFS
 Mayers
 metapath’s
