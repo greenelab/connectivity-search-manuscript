@@ -35,7 +35,6 @@ etcetera
 evalute
 familywise
 GBMF
-Ghazimatin
 GiGdG
 GJA
 GpPWpGaD
@@ -43,7 +42,6 @@ greenelab
 GreeneScientist
 GSEA
 Hadamard
-heterogenous
 hetmech
 hneem
 intested

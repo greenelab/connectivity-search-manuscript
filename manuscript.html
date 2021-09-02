@@ -84,9 +84,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/401f8b70e40a3de686fe458a47c6c9395670224a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/401f8b70e40a3de686fe458a47c6c9395670224a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/401f8b70e40a3de686fe458a47c6c9395670224a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -102,9 +102,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/401f8b70e40a3de686fe458a47c6c9395670224a/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4">greenelab/connectivity-search-manuscript@39bd049</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/401f8b70e40a3de686fe458a47c6c9395670224a">greenelab/connectivity-search-manuscript@401f8b7</a>
 on September 2, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -336,34 +336,31 @@ Second, the DWPC metric used to assess connectivity is sensitive to node degree.
 The Rephetio approach was incapable of detecting whether a high DWPC score indicated meaningful connectivity above the level expected by the background network degrees.
 Here we propose Hetnet connectivity search, which defines a null distribution for DWPCs that accounts for degree and enables detecting meaningful hetnet connectivity without training labels.</p>
 <h3 id="related-works">Related Works</h3>
+<!--
+Issues related to other works and important references:
+https://github.com/greenelab/connectivity-search-analyses/issues/56
+https://github.com/greenelab/connectivity-search-manuscript/issues/28
+-->
 <p>Existing research provides methods for determining whether two nodes are related,
 although primarily focuses on homogeneous networks (without type).
 Early approaches detected related nodes by measuring neighborhood overlap or path similarity between two nodes <span class="citation" data-cites="EfWvuSjX 7iZtCGcX">[<a href="#ref-EfWvuSjX" role="doc-biblioref">11</a>,<a href="#ref-7iZtCGcX" role="doc-biblioref">12</a>]</span>.
 These approaches predicted node relatedness with success.
-However, they are difficult to scale as a network grow in size or semantic richness (i.e. type) <span class="citation" data-cites="EfWvuSjX">[<a href="#ref-EfWvuSjX" role="doc-biblioref">11</a>]</span>.</p>
+However, they are difficult to scale as a network grows in size or semantic richness (i.e. type) <span class="citation" data-cites="EfWvuSjX">[<a href="#ref-EfWvuSjX" role="doc-biblioref">11</a>]</span>.</p>
 <p>More recently, focus has shifted to graph embeddings to determine if two nodes are related,
 specifically in the context of knowledge graphs, which are often semantically rich and include type
 <span class="citation" data-cites="otY29wFV NnOS86ev GYLacVTV 3gzmoW2V 3tyf5NSe">[<a href="#ref-otY29wFV" role="doc-biblioref">13</a>,<a href="#ref-NnOS86ev" role="doc-biblioref">14</a>,<a href="#ref-GYLacVTV" role="doc-biblioref">15</a>,<a href="#ref-3gzmoW2V" role="doc-biblioref">16</a>,<a href="#ref-3tyf5NSe" role="doc-biblioref">17</a>]</span>.
-These types of methods involve mapping nodes and sometimes edges to dense vectors via a neural network model <span class="citation" data-cites="U1Dfux5r 1AeZs6xaT jyhFBVzQ">[<a href="#ref-U1Dfux5r" role="doc-biblioref">18</a>,<a href="#ref-1AeZs6xaT" role="doc-biblioref">19</a>,<a href="#ref-jyhFBVzQ" role="doc-biblioref">20</a>]</span>, matrix factorization <span class="citation" data-cites="H0ez30Pz">[<a href="#ref-H0ez30Pz" role="doc-biblioref">21</a>]</span>, or by translational distance models <span class="citation" data-cites="cnCLKeU9">[<a href="#ref-cnCLKeU9" role="doc-biblioref">22</a>]</span>.
-Once these dense vectors have been produced, quantitative scores that measure node relatedness can be generated via a machine learning model <span class="citation" data-cites="NnOS86ev taI1UUAE 17ioZ6znu">[<a href="#ref-NnOS86ev" role="doc-biblioref">14</a>,<a href="#ref-taI1UUAE" role="doc-biblioref">23</a>,<a href="#ref-17ioZ6znu" role="doc-biblioref">24</a>]</span> or by selected similarity metrics <span class="citation" data-cites="otY29wFV 1D9FTzRBg 6PISrkV5 GYLacVTV 19E33rJiu">[<a href="#ref-otY29wFV" role="doc-biblioref">13</a>,<a href="#ref-GYLacVTV" role="doc-biblioref">15</a>,<a href="#ref-1D9FTzRBg" role="doc-biblioref">25</a>,<a href="#ref-6PISrkV5" role="doc-biblioref">26</a>,<a href="#ref-19E33rJiu" role="doc-biblioref">27</a>]</span>.
+These types of methods involve mapping nodes and sometimes edges to dense vectors via a neural network model <span class="citation" data-cites="U1Dfux5r 1AeZs6xaT jyhFBVzQ">[<a href="#ref-U1Dfux5r" role="doc-biblioref">18</a>,<a href="#ref-1AeZs6xaT" role="doc-biblioref">19</a>,<a href="#ref-jyhFBVzQ" role="doc-biblioref">20</a>]</span>, matrix factorization <span class="citation" data-cites="xq3Nsf5M 1EeE9qtFA">[<a href="#ref-xq3Nsf5M" role="doc-biblioref">21</a>,<a href="#ref-1EeE9qtFA" role="doc-biblioref">22</a>]</span>, or by translational distance models <span class="citation" data-cites="cnCLKeU9">[<a href="#ref-cnCLKeU9" role="doc-biblioref">23</a>]</span>.
+Once these dense vectors have been produced, quantitative scores that measure node relatedness can be generated via a machine learning model <span class="citation" data-cites="NnOS86ev taI1UUAE 17ioZ6znu">[<a href="#ref-NnOS86ev" role="doc-biblioref">14</a>,<a href="#ref-taI1UUAE" role="doc-biblioref">24</a>,<a href="#ref-17ioZ6znu" role="doc-biblioref">25</a>]</span> or by selected similarity metrics <span class="citation" data-cites="otY29wFV 1D9FTzRBg 6PISrkV5 GYLacVTV 19E33rJiu">[<a href="#ref-otY29wFV" role="doc-biblioref">13</a>,<a href="#ref-GYLacVTV" role="doc-biblioref">15</a>,<a href="#ref-1D9FTzRBg" role="doc-biblioref">26</a>,<a href="#ref-6PISrkV5" role="doc-biblioref">27</a>,<a href="#ref-19E33rJiu" role="doc-biblioref">28</a>]</span>.
 These approaches have been quite successful in determining node relatedness.
 Yet, they only state <em>whether</em> two nodes are related and fail to provide an explanation on <em>why</em> two nodes are related.</p>
 <p>Explaining why two nodes are related is a non-trivial task because approaches are required to output more information than a simple similarity score.
-The first group of approaches output a list of ranked paths are most relevant between two nodes <span class="citation" data-cites="Dbie18xe GPBbIfq9 19H7j1WBd L3DO8oq1">[<a href="#ref-Dbie18xe" role="doc-biblioref">28</a>,<a href="#ref-GPBbIfq9" role="doc-biblioref">29</a>,<a href="#ref-19H7j1WBd" role="doc-biblioref">30</a>,<a href="#ref-L3DO8oq1" role="doc-biblioref">31</a>]</span>.
-For example, Ghazimatin et al. constructed a tool that provides an explanation for why items appear on a user’s social media feed <span class="citation" data-cites="GPBbIfq9">[<a href="#ref-GPBbIfq9" role="doc-biblioref">29</a>]</span>.
-The authors constructed an interaction graph, which is a heterogenous network of users and content classes (e.g. categories, user posts, songs).
-From this graph, they generated paths based on content timestamps and generated various features for each path.
-Using these generated features, the authors used a learn to rank model <span class="citation" data-cites="16cqF4HO2">[<a href="#ref-16cqF4HO2" role="doc-biblioref">32</a>]</span> to highlight the most relevant path between a user and the content of interest <span class="citation" data-cites="GPBbIfq9">[<a href="#ref-GPBbIfq9" role="doc-biblioref">29</a>]</span>.
-Besides providing a list of paths, another way to explain how two nodes are related is to provide a listing of sub-graphs for a given network <span class="citation" data-cites="Hf24Hzrl">[<a href="#ref-Hf24Hzrl" role="doc-biblioref">33</a>]</span>.
-However, this approach requires a weighted network to generate results <span class="citation" data-cites="Hf24Hzrl">[<a href="#ref-Hf24Hzrl" role="doc-biblioref">33</a>]</span>.</p>
-<p>TODO: touch on supervised versus unsupervised.
-TODO: differentiate hetnet connectivity search</p>
-<h3 id="other-works">Other works</h3>
-<p>TODO: integrate this content into <a href="#related-works">Related Works</a>.</p>
-<p>https://github.com/greenelab/hetmech/issues/56</p>
-<p>Network embeddings edge2vec <span class="citation" data-cites="jyhFBVzQ">[<a href="#ref-jyhFBVzQ" role="doc-biblioref">20</a>]</span> (cited above), metapath2vec <span class="citation" data-cites="1AeZs6xaT">[<a href="#ref-1AeZs6xaT" role="doc-biblioref">19</a>]</span> (cited above), HINE <span class="citation" data-cites="15kVSbZyi">[<a href="#ref-15kVSbZyi" role="doc-biblioref">34</a>]</span>.</p>
-<p><span class="citation" data-cites="Vz9QIDKV">[<a href="#ref-Vz9QIDKV" role="doc-biblioref">35</a>]</span> training node pairs to important metapaths (Forward Stagewise Path Generation).
-<a href="https://meta-exp.github.io/">MetaExp</a> <span class="citation" data-cites="19H7j1WBd">[<a href="#ref-19H7j1WBd" role="doc-biblioref">30</a>]</span> user selects two sets of nodes. MetaExp detects metapaths and interacts with the user to progressively refine metapaths.</p>
+The first group of approaches output a list of ranked paths that are most relevant between two nodes <span class="citation" data-cites="Dbie18xe GPBbIfq9 L3DO8oq1">[<a href="#ref-Dbie18xe" role="doc-biblioref">29</a>,<a href="#ref-GPBbIfq9" role="doc-biblioref">30</a>,<a href="#ref-L3DO8oq1" role="doc-biblioref">31</a>]</span>.
+For example, the FAIRY framework explains for why items appear on a user’s social media feed based on a network of users and content classes (e.g. categories, user posts, songs) <span class="citation" data-cites="GPBbIfq9">[<a href="#ref-GPBbIfq9" role="doc-biblioref">30</a>]</span>.
+ESPRESSO explains how two sets of nodes are related by returning subgraphs <span class="citation" data-cites="Hf24Hzrl">[<a href="#ref-Hf24Hzrl" role="doc-biblioref">32</a>]</span>.
+Other approaches such as MetaExp return important metapaths rather than paths,
+but require some form of supervision <span class="citation" data-cites="19H7j1WBd Vz9QIDKV">[<a href="#ref-19H7j1WBd" role="doc-biblioref">33</a>,<a href="#ref-Vz9QIDKV" role="doc-biblioref">34</a>]</span>.
+Our goal with Hetnet connectivity search is to explain how two nodes are related,
+while doing so in an unsupervised manner that captures the semantic richness of edge type and returns results in the form of both metapaths and paths.</p>
 <h2 class="page_break_before" id="results">Results</h2>
 <h3 id="connectivity-search-webapp">Connectivity Search Webapp</h3>
 <p>We created the connectivity search webapp available at <a href="https://het.io/search/" class="uri">https://het.io/search/</a>.
@@ -410,7 +407,7 @@ This package provides a matrix-based utilities for hetnets.</p>
 <h3 id="dwpc-null-distribution">DWPC null distribution</h3>
 <p>To assess connectivity between a source and target node, we use the DWPC (degree-weighted path count) metric.
 The DWPC is similar to path count (number of paths between the source and target node along a given metapath), except that it downweights paths through high degree nodes.
-Rather than using the raw DWPC for a source-metapath-target combination, we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling <span class="citation" data-cites="17mGFvxXu">[<a href="#ref-17mGFvxXu" role="doc-biblioref">36</a>]</span>.
+Rather than using the raw DWPC for a source-metapath-target combination, we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling <span class="citation" data-cites="17mGFvxXu">[<a href="#ref-17mGFvxXu" role="doc-biblioref">35</a>]</span>.
 <!--
 Future work should consider a different method for transforming DWPCs:
 scale by nonzero mean rather than mean.
@@ -541,7 +538,7 @@ A HetMat directory stores a single heterogeneous network, whose data resides in 
 <li>A <code>metagraph.json</code> file stores the schema, defining which types of nodes and edges comprise the hetnet.
 This format is defined by the <a href="https://github.com/hetio/hetnetpy">hetnetpy</a> Python package.
 Hetnetpy was originally developed with the name hetio during prior studies
-<span class="citation" data-cites="WkPlH1ds O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-WkPlH1ds" role="doc-biblioref">37</a>]</span>,
+<span class="citation" data-cites="WkPlH1ds O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-WkPlH1ds" role="doc-biblioref">36</a>]</span>,
 but we <a href="https://github.com/hetio/hetnetpy/issues/40">renamed</a> it to het<strong>net</strong>py for better disambiguation from het<strong>mat</strong>py.</li>
 <li>A <code>nodes</code> directory containing one file per node type (metanode) that defines each node.
 Currently, <code>.tsv</code> files where each row represents a node are supported.</li>
@@ -562,14 +559,14 @@ A <code>hetmat_from_graph</code> function creates a HetMat object and directory 
 <p>We converted Hetionet v1.0 to HetMat format and uploaded the <code>hetionet-v1.0.hetmat.zip</code> archive to the <a href="https://github.com/hetio/hetionet/tree/master/hetnet/matrix">Hetionet data repository</a>.</p>
 <h3 id="dwpc-matrix-multiplication-algorithms">DWPC matrix multiplication algorithms</h3>
 <p>Prior to this study, we used two implementations for computing DWPCs.
-The first is a pure Python implementation available in the <a href="https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/pathtools.py#L8-L21"><code>hetnetpy.pathtools.DWPC</code></a> function <span class="citation" data-cites="WkPlH1ds">[<a href="#ref-WkPlH1ds" role="doc-biblioref">37</a>]</span>.
-The second uses a Cypher query, prepared by <a href="https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/neo4j.py#L363-L393"><code>hetnetpy.neo4j.construct_dwpc_query</code></a>, that is executed by the Neo4j database <span class="citation" data-cites="O21tn8vf kNYoxBiQ">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-kNYoxBiQ" role="doc-biblioref">38</a>]</span>.
+The first is a pure Python implementation available in the <a href="https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/pathtools.py#L8-L21"><code>hetnetpy.pathtools.DWPC</code></a> function <span class="citation" data-cites="WkPlH1ds">[<a href="#ref-WkPlH1ds" role="doc-biblioref">36</a>]</span>.
+The second uses a Cypher query, prepared by <a href="https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/neo4j.py#L363-L393"><code>hetnetpy.neo4j.construct_dwpc_query</code></a>, that is executed by the Neo4j database <span class="citation" data-cites="O21tn8vf kNYoxBiQ">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-kNYoxBiQ" role="doc-biblioref">37</a>]</span>.
 Both of these implementations require traversing all paths between the source and target node.
-Hence, they are computationally cumbersome despite optimizations <span class="citation" data-cites="xWWaK51z">[<a href="#ref-xWWaK51z" role="doc-biblioref">39</a>]</span>.</p>
+Hence, they are computationally cumbersome despite optimizations <span class="citation" data-cites="xWWaK51z">[<a href="#ref-xWWaK51z" role="doc-biblioref">38</a>]</span>.</p>
 <p>Since our methods only require degree-weighted counts, not fully enumerated paths, adjacency matrix multiplication presents an alternative approach.
 Multiplication alone, however, counts walks rather than paths, meaning paths traversing a single node multiple times are counted.
 When computing network-based features to quantify the relationship between a source and target node,
-we would like to exclude traversing duplicate nodes (i.e. paths, not trails nor walks) <span class="citation" data-cites="w6rL3OYz">[<a href="#ref-w6rL3OYz" role="doc-biblioref">40</a>]</span>.
+we would like to exclude traversing duplicate nodes (i.e. paths, not trails nor walks) <span class="citation" data-cites="w6rL3OYz">[<a href="#ref-w6rL3OYz" role="doc-biblioref">39</a>]</span>.
 To benefit from the speed advantages of only counting paths, we developed a suite of algorithms to compute true path counts and DWPCs using matrix multiplication.</p>
 <p>Our implementation begins by categorizing a metapath according to the pattern of its repeated metanodes, allowing DWPC computation using a specialized order of operations.
 For example, the metapath <em>DrDtCrC</em> is categorized as a set of disjoint repeats, while <em>DtCtDpC</em> is categorized as repeats of the form BABA.
@@ -580,7 +577,7 @@ Randomly-inserted non-repeated metanodes (e.g. <em>G</em> in <em>DrDaGaDrD</em>
 By segmenting and computing recursively, we can evalute DWPC efficiently on highly complex metapaths, using simple patterns as building-blocks for higher-level patterns.
 Finally, our specialized DWPC functions are applied to individual segments, the results are combined, and final corrections are made to ensure no repeated nodes are counted.
 The recursive, segmented approach we developed allowed us additionally to implement a caching strategy that improved speed by avoiding duplicate DWPC computations.
-In summary, the functionality we developed resulted in greater than a 175-fold reduction in compute time, allowing us to compute millions of DWPC values across Hetionet <span class="citation" data-cites="15nwuvjrA">[<a href="#ref-15nwuvjrA" role="doc-biblioref">41</a>]</span>.</p>
+In summary, the functionality we developed resulted in greater than a 175-fold reduction in compute time, allowing us to compute millions of DWPC values across Hetionet <span class="citation" data-cites="15nwuvjrA">[<a href="#ref-15nwuvjrA" role="doc-biblioref">40</a>]</span>.</p>
 <h4 id="details-of-matrix-dwpc-implementation">Details of matrix DWPC implementation</h4>
 <p>DWPC computation requires us to remove all duplicate nodes from paths.
 We used three repeat patterns as the building blocks for DWPC computation: short repeats (AAA), nested repeats (BAAB), and overlapping repeats (BABA).
@@ -605,7 +602,7 @@ For example, a long metapath pattern of the form CBABACXYZ can be segmented as (
 In addition to these matrix routines—which advantageously count rather than enumerate paths—we implemented a general matrix method for any metapath type.
 The general method is important for patterns such as long (≥ 4) repeats, or complex repeat patterns (e.g. of the form ABCABC), but it requires path enumeration and is therefore slower.
 As an alternative approach for complex paths, we developed an approximate DWPC method that corrects repeats in disjoint simple patterns but only corrects the first repeat in complex patterns (e.g. ≥ length four repeat).
-Mayers et al. developed an alternative approximation, which subtracts the main diagonal at every occurrence of the first repeated metanode <span class="citation" data-cites="IJWsN67g">[<a href="#ref-IJWsN67g" role="doc-biblioref">42</a>]</span>.
+Mayers et al. developed an alternative approximation, which subtracts the main diagonal at every occurrence of the first repeated metanode <span class="citation" data-cites="IJWsN67g">[<a href="#ref-IJWsN67g" role="doc-biblioref">41</a>]</span>.
 All our matrix methods were validated against existing implementations involving explicit path enumeration to ensure consistent results.</p>
 <!-- Discuss caching strategies, sequential versus recursive
 Runtime comparison to show the speedup.
@@ -626,23 +623,23 @@ Rephetio computed a portion of in XX time -->
 -->
 <h3 id="permuted-hetnets">Permuted hetnets</h3>
 <p>In order to generate a null distribution for a DWPC, we rely on DWPCs computed from permuted hetnets.
-We derive permuted hetnets from the unpermuted network using the XSwap algorithm <span class="citation" data-cites="iKOIEzQ9">[<a href="#ref-iKOIEzQ9" role="doc-biblioref">43</a>]</span>.
+We derive permuted hetnets from the unpermuted network using the XSwap algorithm <span class="citation" data-cites="iKOIEzQ9">[<a href="#ref-iKOIEzQ9" role="doc-biblioref">42</a>]</span>.
 XSwap randomizes edges while preserving node degree.
 Therefore, it’s ideal for generating null distributions that retain general degree effects,
 but destroy the actual meaning of edges.
-We adapt XSwap to hetnets by applying it separately to each metaedge <span class="citation" data-cites="O21tn8vf GE6jhWnt 17QDcGqUi">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">44</a>,<a href="#ref-17QDcGqUi" role="doc-biblioref">45</a>]</span>.</p>
-<p>Project Rephetio created 5 permuted hetnets <span class="citation" data-cites="O21tn8vf GE6jhWnt">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">44</a>]</span>,
+We adapt XSwap to hetnets by applying it separately to each metaedge <span class="citation" data-cites="O21tn8vf GE6jhWnt 17QDcGqUi">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">43</a>,<a href="#ref-17QDcGqUi" role="doc-biblioref">44</a>]</span>.</p>
+<p>Project Rephetio created 5 permuted hetnets <span class="citation" data-cites="O21tn8vf GE6jhWnt">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">43</a>]</span>,
 which were used to generate a null distribution of classifier performance for each metapath-based feature.
 Here, we aim to create a null distribution for individual DWPCs, which requires vastly more permuted values to estimate with accuracy.
 Therefore, we generated 200 permuted hetnets (<a href="https://github.com/hetio/hetionet/tree/a95ae76581af604e91d744680aee3f888fa18887/hetnet/permuted/matrix">archive</a>).
 <!-- Permuted hetmats generated in PR https://github.com/greenelab/hetmech/pull/127 -->
-More recently, we also developed the <code>xswap</code> Python <a href="https://github.com/greenelab/xswap">package</a>, whose optimized C/C++ implementation will enable future research to generate even larger sets of permuted networks <span class="citation" data-cites="17QDcGqUi">[<a href="#ref-17QDcGqUi" role="doc-biblioref">45</a>]</span>.</p>
+More recently, we also developed the <code>xswap</code> Python <a href="https://github.com/greenelab/xswap">package</a>, whose optimized C/C++ implementation will enable future research to generate even larger sets of permuted networks <span class="citation" data-cites="17QDcGqUi">[<a href="#ref-17QDcGqUi" role="doc-biblioref">44</a>]</span>.</p>
 <h3 id="degree-grouping-of-node-pairs">Degree-grouping of node pairs</h3>
 <p>For each of the 200 permuted networks and each of the 2,205 metapaths, we computed the entire DWPC matrix (i.e. all source nodes × target nodes).
 Therefore, for each actual DWPC value, we computed 200 permuted DWPC values.
 Because permutation preserves only node degree, DWPC values among nodes with the same source and target degrees are equivalent to additional permutations.
 We greatly increased the effective number of permutations by grouping DWPC values according to node degree, affording us a superior estimation of the DWPC null distribution.</p>
-<p>We have applied this <em>degree-grouping</em> approach previously when calculating the prior probability of edge existence based on the source and target node degrees <span class="citation" data-cites="19OyKPQ4M 17QDcGqUi">[<a href="#ref-17QDcGqUi" role="doc-biblioref">45</a>,<a href="#ref-19OyKPQ4M" role="doc-biblioref">46</a>]</span>.
+<p>We have applied this <em>degree-grouping</em> approach previously when calculating the prior probability of edge existence based on the source and target node degrees <span class="citation" data-cites="19OyKPQ4M 17QDcGqUi">[<a href="#ref-17QDcGqUi" role="doc-biblioref">44</a>,<a href="#ref-19OyKPQ4M" role="doc-biblioref">45</a>]</span>.
 But here, we apply <em>degree-grouping</em> to null DWPCs.
 The result is that the null distribution for a DWPC is based not only on permuted DWPCs for the corresponding source–metapath–target combination,
 but instead on all permuted DWPCs for the source-degree–metapath–target-degree combination.</p>
@@ -750,9 +747,9 @@ we computed the complete path count matrix and DWPC matrix
 (<a href="https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/bulk.ipynb">notebook</a>).
 In total, we computed 137,786,767,964 path counts (and the same number of DWPCs) on the unpermuted network,
 of which 11.6% were nonzero.</p>
-<p>The DWPC has a single parameter, called the damping exponent (<em>w</em>), which controls how much paths through high-degree nodes are downweighted <span class="citation" data-cites="WkPlH1ds">[<a href="#ref-WkPlH1ds" role="doc-biblioref">37</a>]</span>.
+<p>The DWPC has a single parameter, called the damping exponent (<em>w</em>), which controls how much paths through high-degree nodes are downweighted <span class="citation" data-cites="WkPlH1ds">[<a href="#ref-WkPlH1ds" role="doc-biblioref">36</a>]</span>.
 When <em>w</em> = 0, the DWPC is equivalent to the path count.
-Previously, we found <em>w</em> = 0.4 was optimal for predicting disease-associated genes <span class="citation" data-cites="WkPlH1ds">[<a href="#ref-WkPlH1ds" role="doc-biblioref">37</a>]</span>.
+Previously, we found <em>w</em> = 0.4 was optimal for predicting disease-associated genes <span class="citation" data-cites="WkPlH1ds">[<a href="#ref-WkPlH1ds" role="doc-biblioref">36</a>]</span>.
 Here, we use <em>w</em> = 0.5, since taking the square root of degrees has more intuitive appeal.</p>
 <p>We selected data types for matrix values that would allow for high precision.
 We used 64-bit unsigned integers for path counts and 64-bit floating-point numbers for DWPCs.
@@ -761,10 +758,10 @@ but decided against it in case certain applications required greater precision.<
 <p>We used SciPy sparse for path count and DWPC matrices with density &lt; 0.7, serialized to disk with compression and a <code>.sparse.npz</code> extension.
 This format minimizes the space on disk and load time for the entire matrix, but does not offer read access to slices.
 We used Numpy 2D arrays for DWPC matrices with density ≥ 0.7, serialized to disk using Numpy’s <code>.npy</code> format.
-We bundled the path count and DWPC matrix files into HetMat archives by metapath length and deposited the archives to Zenodo <span class="citation" data-cites="pkJqqM2W">[<a href="#ref-pkJqqM2W" role="doc-biblioref">47</a>]</span>.
+We bundled the path count and DWPC matrix files into HetMat archives by metapath length and deposited the archives to Zenodo <span class="citation" data-cites="pkJqqM2W">[<a href="#ref-pkJqqM2W" role="doc-biblioref">46</a>]</span>.
 The archive for length 3 DWPCs was the largest at 131.7 GB.</p>
 <p>We also generated null DWPC summary statistics for the 2,205 metapaths,
-which are also available by metapath length from Zenodo as HetMat archives consisting of <code>.tsv.gz</code> files <span class="citation" data-cites="pkJqqM2W">[<a href="#ref-pkJqqM2W" role="doc-biblioref">47</a>]</span>.
+which are also available by metapath length from Zenodo as HetMat archives consisting of <code>.tsv.gz</code> files <span class="citation" data-cites="pkJqqM2W">[<a href="#ref-pkJqqM2W" role="doc-biblioref">46</a>]</span>.
 Due to degree-grouping, null DWPCs summary statistic archives are much smaller than the DWPC archives.
 The archive for length 3 null DWPCs summary statistics was 733.1 MB.
 However, the compute required to generate null DWPCs is far greater, because there are multiple permuted hetnets (in our case 200).
@@ -783,7 +780,7 @@ Using Figure <a href="#fig:webapp-metapaths">3</a> as an example, the <a href="h
 <p>Bonferroni controls familywise error rate,
 which corresponds here to incorrectly finding that <em>any</em> metapath of a given length is enriched.
 As a result, our adjusted p-values are conservative.
-We would prefer to adjust <em>p</em>-values for false discovery rate <span class="citation" data-cites="q6QyrHEZ">[<a href="#ref-q6QyrHEZ" role="doc-biblioref">48</a>]</span>,
+We would prefer to adjust <em>p</em>-values for false discovery rate <span class="citation" data-cites="q6QyrHEZ">[<a href="#ref-q6QyrHEZ" role="doc-biblioref">47</a>]</span>,
 but these methods often require access to all <em>p</em>-values at once (impractical here) and assume a uniform distribution of <em>p</em>-values when there is no signal (not the case here when most DWPCs are zero).</p>
 <h3 id="prioritizing-enriched-metapaths-for-database-storage">Prioritizing enriched metapaths for database storage</h3>
 <p>Storing DWPCs and their significance in the database (as part of the <code>PathCount</code> table in Figure <a href="#fig:database">5</a>) enables the connectivity search webapp to provide users with enriched metapaths between query nodes in realtime.
@@ -865,7 +862,7 @@ whereby a contributor proposes a set of changes.
 This provides an oppertunity for other contributors to review changes before they are officially accepted.
 For example, in <a href="https://github.com/greenelab/hetmech/pull/156">greenelab/hetmech#156</a> @zietzm proposed a notebook to visualize parameters for null DWPC distributions.
 After @zietzm addressed @dhimmel’s comments, the pull request was approved and merged into the project’s main branch.</p>
-<p>The manuscript for this study was written using <a href="https://manubot.org/">Manubot</a>, which allows authors to collaboratively write manuscripts on GitHub <span class="citation" data-cites="YuJbg3zO">[<a href="#ref-YuJbg3zO" role="doc-biblioref">49</a>]</span>.
+<p>The manuscript for this study was written using <a href="https://manubot.org/">Manubot</a>, which allows authors to collaboratively write manuscripts on GitHub <span class="citation" data-cites="YuJbg3zO">[<a href="#ref-YuJbg3zO" role="doc-biblioref">48</a>]</span>.
 The Manubot-rendered manuscript is available at <a href="https://greenelab.github.io/connectivity-search-manuscript/" class="uri">https://greenelab.github.io/connectivity-search-manuscript/</a>.
 We encourage readers with feedback or questions to comment publicly via <a href="https://github.com/greenelab/connectivity-search-manuscript/issues">GitHub Issues</a>.</p>
 <h3 id="software-data-availability">Software &amp; data availability</h3>
@@ -906,7 +903,7 @@ CC BY 4.0 License.</li>
 <p>The hetmech and hetionet repositories contain datasets related to this study.
 Large datasets were compressed and tracked with <a href="https://git-lfs.github.com/">Git LFS</a> (Large File Storage).
 GitHub LFS had a max file size of 2 GB.
-Datasets exceeding this size, along with other essential datasets, are available from Zenodo <span class="citation" data-cites="pkJqqM2W">[<a href="#ref-pkJqqM2W" role="doc-biblioref">47</a>]</span>.</p>
+Datasets exceeding this size, along with other essential datasets, are available from Zenodo <span class="citation" data-cites="pkJqqM2W">[<a href="#ref-pkJqqM2W" role="doc-biblioref">46</a>]</span>.</p>
 <!-- link reference syntax citation key aliases -->
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
@@ -971,92 +968,89 @@ Datasets exceeding this size, along with other essential datasets, are available
 <div id="ref-jyhFBVzQ" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>edge2vec: Representation learning using edge semantics for biomedical knowledge discovery</strong> <div class="csl-block">Zheng Gao, Gang Fu, Chunping Ouyang, Satoshi Tsutsui, Xiaozhong Liu, Jeremy Yang, Christopher Gessner, Brian Foote, David Wild, Ying Ding, Qi Yu</div> <em>BMC Bioinformatics</em> (2019-06-10) <a href="https://doi.org/ggpcsq">https://doi.org/ggpcsq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s12859-019-2914-2">10.1186/s12859-019-2914-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31238875">31238875</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6593489">PMC6593489</a></div></div>
 </div>
-<div id="ref-H0ez30Pz" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>The approximation of one matrix by another of lower rank</strong> <div class="csl-block">Carl Eckart, Gale Young</div> <em>Psychometrika</em> (1936-09) <a href="https://doi.org/c2frtd">https://doi.org/c2frtd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/bf02288367">10.1007/bf02288367</a></div></div>
+<div id="ref-xq3Nsf5M" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>Preclinical validation of therapeutic targets predicted by tensor factorization on heterogeneous graphs</strong> <div class="csl-block">Saee Paliwal, Alex de Giorgio, Daniel Neil, Jean-Baptiste Michel, Alix MB Lacoste</div> <em>Scientific Reports</em> (2020-10-26) <a href="https://doi.org/gg49">https://doi.org/gg49</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41598-020-74922-z">10.1038/s41598-020-74922-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33106501">33106501</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7589557">PMC7589557</a></div></div>
+</div>
+<div id="ref-1EeE9qtFA" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>Data Fusion by Matrix Factorization</strong> <div class="csl-block">Marinka Zitnik, Blaz Zupan</div> <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em> (2015-01-01) <a href="https://doi.org/f3mqwz">https://doi.org/f3mqwz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/tpami.2014.2343973">10.1109/tpami.2014.2343973</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26353207">26353207</a></div></div>
 </div>
 <div id="ref-cnCLKeU9" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>Translating embeddings for modeling multi-relational data</strong> <div class="csl-block">Antoine Bordes, Nicolas Usunier, Alberto Garcia-Durán, Jason Weston, Oksana Yakhnenko</div> <em>Proceedings of the 26th International Conference on Neural Information Processing Systems</em> (2013-12) <a href="https://dl.acm.org/doi/10.5555/2999792.2999923">https://dl.acm.org/doi/10.5555/2999792.2999923</a></div>
+<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>Translating embeddings for modeling multi-relational data</strong> <div class="csl-block">Antoine Bordes, Nicolas Usunier, Alberto Garcia-Durán, Jason Weston, Oksana Yakhnenko</div> <em>Proceedings of the 26th International Conference on Neural Information Processing Systems</em> (2013-12) <a href="https://dl.acm.org/doi/10.5555/2999792.2999923">https://dl.acm.org/doi/10.5555/2999792.2999923</a></div>
 </div>
 <div id="ref-taI1UUAE" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>Predicting gene-disease associations from the heterogeneous network using graph embedding</strong> <div class="csl-block">Xiaochan Wang, Yuchong Gong, Jing Yi, Wen Zhang</div> <em>Institute of Electrical and Electronics Engineers (IEEE)</em> (2019-11) <a href="https://doi.org/ggmrpj">https://doi.org/ggmrpj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/bibm47256.2019.8983134">10.1109/bibm47256.2019.8983134</a></div></div>
+<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>Predicting gene-disease associations from the heterogeneous network using graph embedding</strong> <div class="csl-block">Xiaochan Wang, Yuchong Gong, Jing Yi, Wen Zhang</div> <em>Institute of Electrical and Electronics Engineers (IEEE)</em> (2019-11) <a href="https://doi.org/ggmrpj">https://doi.org/ggmrpj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/bibm47256.2019.8983134">10.1109/bibm47256.2019.8983134</a></div></div>
 </div>
 <div id="ref-17ioZ6znu" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>A Method to Learn Embedding of a Probabilistic Medical Knowledge Graph: Algorithm Development</strong> <div class="csl-block">Linfeng Li, Peng Wang, Yao Wang, Shenghui Wang, Jun Yan, Jinpeng Jiang, Buzhou Tang, Chengliang Wang, Yuting Liu</div> <em>JMIR Medical Informatics</em> (2020-05-21) <a href="https://doi.org/ghqszs">https://doi.org/ghqszs</a> <div class="csl-block">DOI: <a href="https://doi.org/10.2196/17645">10.2196/17645</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32436854">32436854</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7273238">PMC7273238</a></div></div>
+<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>A Method to Learn Embedding of a Probabilistic Medical Knowledge Graph: Algorithm Development</strong> <div class="csl-block">Linfeng Li, Peng Wang, Yao Wang, Shenghui Wang, Jun Yan, Jinpeng Jiang, Buzhou Tang, Chengliang Wang, Yuting Liu</div> <em>JMIR Medical Informatics</em> (2020-05-21) <a href="https://doi.org/ghqszs">https://doi.org/ghqszs</a> <div class="csl-block">DOI: <a href="https://doi.org/10.2196/17645">10.2196/17645</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32436854">32436854</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7273238">PMC7273238</a></div></div>
 </div>
 <div id="ref-1D9FTzRBg" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Semantic Disease Gene Embeddings (SmuDGE): phenotype-based disease gene prioritization without phenotypes</strong> <div class="csl-block">Mona Alshahrani, Robert Hoehndorf</div> <em>Bioinformatics</em> (2018-09-01) <a href="https://doi.org/gd9k8n">https://doi.org/gd9k8n</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/bty559">10.1093/bioinformatics/bty559</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30423077">30423077</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6129260">PMC6129260</a></div></div>
+<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>Semantic Disease Gene Embeddings (SmuDGE): phenotype-based disease gene prioritization without phenotypes</strong> <div class="csl-block">Mona Alshahrani, Robert Hoehndorf</div> <em>Bioinformatics</em> (2018-09-01) <a href="https://doi.org/gd9k8n">https://doi.org/gd9k8n</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/bty559">10.1093/bioinformatics/bty559</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30423077">30423077</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6129260">PMC6129260</a></div></div>
 </div>
 <div id="ref-6PISrkV5" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>A network embedding model for pathogenic genes prediction by multi-path random walking on heterogeneous network</strong> <div class="csl-block">Bo Xu, Yu Liu, Shuo Yu, Lei Wang, Jie Dong, Hongfei Lin, Zhihao Yang, Jian Wang, Feng Xia</div> <em>BMC Medical Genomics</em> (2019-12-23) <a href="https://doi.org/ggmrpq">https://doi.org/ggmrpq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s12920-019-0627-z">10.1186/s12920-019-0627-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31865919">31865919</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6927107">PMC6927107</a></div></div>
+<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>A network embedding model for pathogenic genes prediction by multi-path random walking on heterogeneous network</strong> <div class="csl-block">Bo Xu, Yu Liu, Shuo Yu, Lei Wang, Jie Dong, Hongfei Lin, Zhihao Yang, Jian Wang, Feng Xia</div> <em>BMC Medical Genomics</em> (2019-12-23) <a href="https://doi.org/ggmrpq">https://doi.org/ggmrpq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s12920-019-0627-z">10.1186/s12920-019-0627-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31865919">31865919</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6927107">PMC6927107</a></div></div>
 </div>
 <div id="ref-19E33rJiu" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>Deep mining heterogeneous networks of biomedical linked data to predict novel drug–target associations</strong> <div class="csl-block">Nansu Zong, Hyeoneui Kim, Victoria Ngo, Olivier Harismendy</div> <em>Bioinformatics</em> (2017-08-01) <a href="https://doi.org/gbqjgx">https://doi.org/gbqjgx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btx160">10.1093/bioinformatics/btx160</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28430977">28430977</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5860112">PMC5860112</a></div></div>
+<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>Deep mining heterogeneous networks of biomedical linked data to predict novel drug–target associations</strong> <div class="csl-block">Nansu Zong, Hyeoneui Kim, Victoria Ngo, Olivier Harismendy</div> <em>Bioinformatics</em> (2017-08-01) <a href="https://doi.org/gbqjgx">https://doi.org/gbqjgx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btx160">10.1093/bioinformatics/btx160</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28430977">28430977</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5860112">PMC5860112</a></div></div>
 </div>
 <div id="ref-Dbie18xe" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>Explaining and Suggesting Relatedness in Knowledge Graphs</strong> <div class="csl-block">Giuseppe Pirrò</div> <em>Lecture Notes in Computer Science</em> (2015) <a href="https://doi.org/gg5nkd">https://doi.org/gg5nkd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/978-3-319-25007-6_36">10.1007/978-3-319-25007-6_36</a></div></div>
+<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>Explaining and Suggesting Relatedness in Knowledge Graphs</strong> <div class="csl-block">Giuseppe Pirrò</div> <em>Lecture Notes in Computer Science</em> (2015) <a href="https://doi.org/gg5nkd">https://doi.org/gg5nkd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/978-3-319-25007-6_36">10.1007/978-3-319-25007-6_36</a></div></div>
 </div>
 <div id="ref-GPBbIfq9" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>FAIRY</strong> <div class="csl-block">Azin Ghazimatin, Rishiraj Saha Roy, Gerhard Weikum</div> <em>Association for Computing Machinery (ACM)</em> (2019-01-30) <a href="https://doi.org/gf2wqj">https://doi.org/gf2wqj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3289600.3290990">10.1145/3289600.3290990</a></div></div>
-</div>
-<div id="ref-19H7j1WBd" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">30. </div><div class="csl-right-inline"><strong>MetaExp: Interactive Explanation and Exploration of Large Knowledge Graphs</strong> <div class="csl-block">Freya Behrens, Fatemeh Aghaei, Emmanuel Müller, Martin Preusse, Nikola Müller, Michael Hunger, Sebastian Bischoff, Pius Ladenburger, Julius Rückin, Laurenz Seidel, … Davide Mottin</div> <em>WWW '18: Companion Proceedings of the The Web Conference 2018</em> (2018-04) <a href="https://doi.org/gg2c7w">https://doi.org/gg2c7w</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3184558.3186978">10.1145/3184558.3186978</a></div></div>
+<div class="csl-left-margin">30. </div><div class="csl-right-inline"><strong>FAIRY</strong> <div class="csl-block">Azin Ghazimatin, Rishiraj Saha Roy, Gerhard Weikum</div> <em>Association for Computing Machinery (ACM)</em> (2019-01-30) <a href="https://doi.org/gf2wqj">https://doi.org/gf2wqj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3289600.3290990">10.1145/3289600.3290990</a></div></div>
 </div>
 <div id="ref-L3DO8oq1" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">31. </div><div class="csl-right-inline"><strong>Using Knowledge Graphs to Explain Entity Co-occurrence in Twitter</strong> <div class="csl-block">Yiwei Wang, Mark James Carman, Yuan-Fang Li</div> <em>Association for Computing Machinery (ACM)</em> (2017-11-06) <a href="https://doi.org/gg5nkf">https://doi.org/gg5nkf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3132847.3133161">10.1145/3132847.3133161</a></div></div>
 </div>
-<div id="ref-16cqF4HO2" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">32. </div><div class="csl-right-inline"><strong>Learning to Rank for Information Retrieval</strong> <div class="csl-block">Tie-Yan Liu</div> <em>Foundations and Trends® in Information Retrieval</em> (2007) <a href="https://doi.org/cbgvzm">https://doi.org/cbgvzm</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1561/1500000016">10.1561/1500000016</a></div></div>
-</div>
 <div id="ref-Hf24Hzrl" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">33. </div><div class="csl-right-inline"><strong>ESPRESSO</strong> <div class="csl-block">Stephan Seufert, Klaus Berberich, Srikanta J Bedathur, Sarath Kumar Kondreddi, Patrick Ernst, Gerhard Weikum</div> <em>Association for Computing Machinery (ACM)</em> (2016-10-24) <a href="https://doi.org/gcpx7w">https://doi.org/gcpx7w</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2983323.2983778">10.1145/2983323.2983778</a></div></div>
+<div class="csl-left-margin">32. </div><div class="csl-right-inline"><strong>ESPRESSO</strong> <div class="csl-block">Stephan Seufert, Klaus Berberich, Srikanta J Bedathur, Sarath Kumar Kondreddi, Patrick Ernst, Gerhard Weikum</div> <em>Association for Computing Machinery (ACM)</em> (2016-10-24) <a href="https://doi.org/gcpx7w">https://doi.org/gcpx7w</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2983323.2983778">10.1145/2983323.2983778</a></div></div>
 </div>
-<div id="ref-15kVSbZyi" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">34. </div><div class="csl-right-inline"><strong>HINE: Heterogeneous Information Network Embedding</strong> <div class="csl-block">Yuxin Chen, Chenguang Wang</div> <em>Lecture Notes in Computer Science</em> (2017) <a href="https://doi.org/gg2c7t">https://doi.org/gg2c7t</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/978-3-319-55753-3_12">10.1007/978-3-319-55753-3_12</a></div></div>
+<div id="ref-19H7j1WBd" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">33. </div><div class="csl-right-inline"><strong>MetaExp: Interactive Explanation and Exploration of Large Knowledge Graphs</strong> <div class="csl-block">Freya Behrens, Fatemeh Aghaei, Emmanuel Müller, Martin Preusse, Nikola Müller, Michael Hunger, Sebastian Bischoff, Pius Ladenburger, Julius Rückin, Laurenz Seidel, … Davide Mottin</div> <em>WWW '18: Companion Proceedings of the The Web Conference 2018</em> (2018-04) <a href="https://doi.org/gg2c7w">https://doi.org/gg2c7w</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3184558.3186978">10.1145/3184558.3186978</a></div></div>
 </div>
 <div id="ref-Vz9QIDKV" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">35. </div><div class="csl-right-inline"><strong>Discovering Meta-Paths in Large Heterogeneous Information Networks</strong> <div class="csl-block">Changping Meng, Reynold Cheng, Silviu Maniu, Pierre Senellart, Wangda Zhang</div> <em>Association for Computing Machinery (ACM)</em> (2015-05-18) <a href="https://doi.org/gg2c7v">https://doi.org/gg2c7v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2736277.2741123">10.1145/2736277.2741123</a></div></div>
+<div class="csl-left-margin">34. </div><div class="csl-right-inline"><strong>Discovering Meta-Paths in Large Heterogeneous Information Networks</strong> <div class="csl-block">Changping Meng, Reynold Cheng, Silviu Maniu, Pierre Senellart, Wangda Zhang</div> <em>Association for Computing Machinery (ACM)</em> (2015-05-18) <a href="https://doi.org/gg2c7v">https://doi.org/gg2c7v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2736277.2741123">10.1145/2736277.2741123</a></div></div>
 </div>
 <div id="ref-17mGFvxXu" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">36. </div><div class="csl-right-inline"><strong>Transforming DWPCs for hetnet edge prediction</strong> <div class="csl-block">Daniel Himmelstein, Pouya Khankhanian, Antoine Lizee</div> <em>ThinkLab</em> (2016-04-01) <a href="https://doi.org/f3qbmd">https://doi.org/f3qbmd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d193">10.15363/thinklab.d193</a></div></div>
+<div class="csl-left-margin">35. </div><div class="csl-right-inline"><strong>Transforming DWPCs for hetnet edge prediction</strong> <div class="csl-block">Daniel Himmelstein, Pouya Khankhanian, Antoine Lizee</div> <em>ThinkLab</em> (2016-04-01) <a href="https://doi.org/f3qbmd">https://doi.org/f3qbmd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d193">10.15363/thinklab.d193</a></div></div>
 </div>
 <div id="ref-WkPlH1ds" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">37. </div><div class="csl-right-inline"><strong>Heterogeneous Network Edge Prediction: A Data Integration Approach to Prioritize Disease-Associated Genes</strong> <div class="csl-block">Daniel S Himmelstein, Sergio E Baranzini</div> <em>PLOS Computational Biology</em> (2015-07-09) <a href="https://doi.org/98q">https://doi.org/98q</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1004259">10.1371/journal.pcbi.1004259</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26158728">26158728</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4497619">PMC4497619</a></div></div>
+<div class="csl-left-margin">36. </div><div class="csl-right-inline"><strong>Heterogeneous Network Edge Prediction: A Data Integration Approach to Prioritize Disease-Associated Genes</strong> <div class="csl-block">Daniel S Himmelstein, Sergio E Baranzini</div> <em>PLOS Computational Biology</em> (2015-07-09) <a href="https://doi.org/98q">https://doi.org/98q</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1004259">10.1371/journal.pcbi.1004259</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26158728">26158728</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4497619">PMC4497619</a></div></div>
 </div>
 <div id="ref-kNYoxBiQ" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">38. </div><div class="csl-right-inline"><strong>Using the neo4j graph database for hetnets</strong> <div class="csl-block">Daniel Himmelstein</div> <em>ThinkLab</em> (2015-10-02) <a href="https://doi.org/f3mqvk">https://doi.org/f3mqvk</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d112">10.15363/thinklab.d112</a></div></div>
+<div class="csl-left-margin">37. </div><div class="csl-right-inline"><strong>Using the neo4j graph database for hetnets</strong> <div class="csl-block">Daniel Himmelstein</div> <em>ThinkLab</em> (2015-10-02) <a href="https://doi.org/f3mqvk">https://doi.org/f3mqvk</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d112">10.15363/thinklab.d112</a></div></div>
 </div>
 <div id="ref-xWWaK51z" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">39. </div><div class="csl-right-inline"><strong>Estimating the complexity of hetnet traversal</strong> <div class="csl-block">Daniel Himmelstein, Antoine Lizee</div> <em>ThinkLab</em> (2016-03-22) <a href="https://doi.org/gbr42x">https://doi.org/gbr42x</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d187">10.15363/thinklab.d187</a></div></div>
+<div class="csl-left-margin">38. </div><div class="csl-right-inline"><strong>Estimating the complexity of hetnet traversal</strong> <div class="csl-block">Daniel Himmelstein, Antoine Lizee</div> <em>ThinkLab</em> (2016-03-22) <a href="https://doi.org/gbr42x">https://doi.org/gbr42x</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d187">10.15363/thinklab.d187</a></div></div>
 </div>
 <div id="ref-w6rL3OYz" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">40. </div><div class="csl-right-inline"><strong>Path exclusion conditions</strong> <div class="csl-block">Daniel Himmelstein</div> <em>ThinkLab</em> (2015-12-08) <a href="https://doi.org/gg2rw2">https://doi.org/gg2rw2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d134">10.15363/thinklab.d134</a></div></div>
+<div class="csl-left-margin">39. </div><div class="csl-right-inline"><strong>Path exclusion conditions</strong> <div class="csl-block">Daniel Himmelstein</div> <em>ThinkLab</em> (2015-12-08) <a href="https://doi.org/gg2rw2">https://doi.org/gg2rw2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d134">10.15363/thinklab.d134</a></div></div>
 </div>
 <div id="ref-15nwuvjrA" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">41. </div><div class="csl-right-inline"><strong>Vagelos Report Summer 2017</strong> <div class="csl-block">Michael Zietz</div> <em>figshare</em> (2017) <a href="https://doi.org/gbr3pf">https://doi.org/gbr3pf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.6084/m9.figshare.5346577">10.6084/m9.figshare.5346577</a></div></div>
+<div class="csl-left-margin">40. </div><div class="csl-right-inline"><strong>Vagelos Report Summer 2017</strong> <div class="csl-block">Michael Zietz</div> <em>figshare</em> (2017) <a href="https://doi.org/gbr3pf">https://doi.org/gbr3pf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.6084/m9.figshare.5346577">10.6084/m9.figshare.5346577</a></div></div>
 </div>
 <div id="ref-IJWsN67g" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">42. </div><div class="csl-right-inline"><strong>GitHub - mmayers12/hetnet_ml: Software to quickly extract features from heterogeneous networks for machine learning.</strong> <div class="csl-block">GitHub</div> <a href="https://github.com/mmayers12/hetnet_ml">https://github.com/mmayers12/hetnet_ml</a></div>
+<div class="csl-left-margin">41. </div><div class="csl-right-inline"><strong>GitHub - mmayers12/hetnet_ml: Software to quickly extract features from heterogeneous networks for machine learning.</strong> <div class="csl-block">GitHub</div> <a href="https://github.com/mmayers12/hetnet_ml">https://github.com/mmayers12/hetnet_ml</a></div>
 </div>
 <div id="ref-iKOIEzQ9" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">43. </div><div class="csl-right-inline"><strong>Randomization Techniques for Graphs</strong> <div class="csl-block">Sami Hanhijärvi, Gemma C Garriga, Kai Puolamäki</div> <em>Society for Industrial &amp; Applied Mathematics (SIAM)</em> (2009-04-30) <a href="https://doi.org/f3mn58">https://doi.org/f3mn58</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1137/1.9781611972795.67">10.1137/1.9781611972795.67</a></div></div>
+<div class="csl-left-margin">42. </div><div class="csl-right-inline"><strong>Randomization Techniques for Graphs</strong> <div class="csl-block">Sami Hanhijärvi, Gemma C Garriga, Kai Puolamäki</div> <em>Society for Industrial &amp; Applied Mathematics (SIAM)</em> (2009-04-30) <a href="https://doi.org/f3mn58">https://doi.org/f3mn58</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1137/1.9781611972795.67">10.1137/1.9781611972795.67</a></div></div>
 </div>
 <div id="ref-GE6jhWnt" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">44. </div><div class="csl-right-inline"><strong>Assessing the effectiveness of our hetnet permutations</strong> <div class="csl-block">Daniel Himmelstein</div> <em>ThinkLab</em> (2016-02-25) <a href="https://doi.org/f3mqt5">https://doi.org/f3mqt5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d178">10.15363/thinklab.d178</a></div></div>
+<div class="csl-left-margin">43. </div><div class="csl-right-inline"><strong>Assessing the effectiveness of our hetnet permutations</strong> <div class="csl-block">Daniel Himmelstein</div> <em>ThinkLab</em> (2016-02-25) <a href="https://doi.org/f3mqt5">https://doi.org/f3mqt5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d178">10.15363/thinklab.d178</a></div></div>
 </div>
 <div id="ref-17QDcGqUi" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">45. </div><div class="csl-right-inline"><strong>The probability of edge existence due to node degree: a baseline for network-based predictions</strong> <div class="csl-block">Michael Zietz, Daniel S Himmelstein, Kyle Kloster, Christopher Williams, Michael W Nagle, Blair D Sullivan, Casey S Greene</div> <em>Manubot</em> (2020-03-05) <a href="https://greenelab.github.io/xswap-manuscript/">https://greenelab.github.io/xswap-manuscript/</a></div>
+<div class="csl-left-margin">44. </div><div class="csl-right-inline"><strong>The probability of edge existence due to node degree: a baseline for network-based predictions</strong> <div class="csl-block">Michael Zietz, Daniel S Himmelstein, Kyle Kloster, Christopher Williams, Michael W Nagle, Blair D Sullivan, Casey S Greene</div> <em>Manubot</em> (2020-03-05) <a href="https://greenelab.github.io/xswap-manuscript/">https://greenelab.github.io/xswap-manuscript/</a></div>
 </div>
 <div id="ref-19OyKPQ4M" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">46. </div><div class="csl-right-inline"><strong>Network Edge Prediction: Estimating the prior</strong> <div class="csl-block">Antoine Lizee, Daniel Himmelstein</div> <em>ThinkLab</em> (2016-04-14) <a href="https://doi.org/f3qbmg">https://doi.org/f3qbmg</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d201">10.15363/thinklab.d201</a></div></div>
+<div class="csl-left-margin">45. </div><div class="csl-right-inline"><strong>Network Edge Prediction: Estimating the prior</strong> <div class="csl-block">Antoine Lizee, Daniel Himmelstein</div> <em>ThinkLab</em> (2016-04-14) <a href="https://doi.org/f3qbmg">https://doi.org/f3qbmg</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d201">10.15363/thinklab.d201</a></div></div>
 </div>
 <div id="ref-pkJqqM2W" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">47. </div><div class="csl-right-inline"><strong>Node connectivity measurements for Hetionet v1.0 metapaths</strong> <div class="csl-block">Daniel Himmelstein, Michael Zietz, Kyle Kloster, Michael Nagle, Blair Sullivan, Casey Greene</div> <em>Zenodo</em> (2018-11-06) <a href="https://doi.org/cww7">https://doi.org/cww7</a> <div class="csl-block">DOI: <a href="https://doi.org/10.5281/zenodo.1435833">10.5281/zenodo.1435833</a></div></div>
+<div class="csl-left-margin">46. </div><div class="csl-right-inline"><strong>Node connectivity measurements for Hetionet v1.0 metapaths</strong> <div class="csl-block">Daniel Himmelstein, Michael Zietz, Kyle Kloster, Michael Nagle, Blair Sullivan, Casey Greene</div> <em>Zenodo</em> (2018-11-06) <a href="https://doi.org/cww7">https://doi.org/cww7</a> <div class="csl-block">DOI: <a href="https://doi.org/10.5281/zenodo.1435833">10.5281/zenodo.1435833</a></div></div>
 </div>
 <div id="ref-q6QyrHEZ" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">48. </div><div class="csl-right-inline"><strong>A practical guide to methods controlling false discoveries in computational biology</strong> <div class="csl-block">Keegan Korthauer, Patrick K Kimes, Claire Duvallet, Alejandro Reyes, Ayshwarya Subramanian, Mingxiang Teng, Chinmay Shukla, Eric J Alm, Stephanie C Hicks</div> <em>Genome Biology</em> (2019-06-04) <a href="https://doi.org/gf3ncd">https://doi.org/gf3ncd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-019-1716-1">10.1186/s13059-019-1716-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31164141">31164141</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6547503">PMC6547503</a></div></div>
+<div class="csl-left-margin">47. </div><div class="csl-right-inline"><strong>A practical guide to methods controlling false discoveries in computational biology</strong> <div class="csl-block">Keegan Korthauer, Patrick K Kimes, Claire Duvallet, Alejandro Reyes, Ayshwarya Subramanian, Mingxiang Teng, Chinmay Shukla, Eric J Alm, Stephanie C Hicks</div> <em>Genome Biology</em> (2019-06-04) <a href="https://doi.org/gf3ncd">https://doi.org/gf3ncd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-019-1716-1">10.1186/s13059-019-1716-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31164141">31164141</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6547503">PMC6547503</a></div></div>
 </div>
 <div id="ref-YuJbg3zO" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">49. </div><div class="csl-right-inline"><strong>Open collaborative writing with Manubot</strong> <div class="csl-block">Daniel S Himmelstein, Vincent Rubinetti, David R Slochower, Dongbo Hu, Venkat S Malladi, Casey S Greene, Anthony Gitter</div> <em>PLOS Computational Biology</em> (2019-06-24) <a href="https://doi.org/c7np">https://doi.org/c7np</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi.1007128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31233491">31233491</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6611653">PMC6611653</a></div></div>
+<div class="csl-left-margin">48. </div><div class="csl-right-inline"><strong>Open collaborative writing with Manubot</strong> <div class="csl-block">Daniel S Himmelstein, Vincent Rubinetti, David R Slochower, Dongbo Hu, Venkat S Malladi, Casey S Greene, Anthony Gitter</div> <em>PLOS Computational Biology</em> (2019-06-24) <a href="https://doi.org/c7np">https://doi.org/c7np</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi.1007128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31233491">31233491</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6611653">PMC6611653</a></div></div>
 </div>
 </div>
 <!-- default theme -->
