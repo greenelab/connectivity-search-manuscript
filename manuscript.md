@@ -63,9 +63,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -89,9 +89,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@f492501](https://github.com/greenelab/connectivity-search-manuscript/tree/f4925018d18367b07db72e9b64043c08ee06e9a0)
+from [greenelab/connectivity-search-manuscript@39bd049](https://github.com/greenelab/connectivity-search-manuscript/tree/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4)
 on September 2, 2021.
 </em></small>
 
@@ -908,6 +908,10 @@ We define the database schema [using](https://github.com/greenelab/connectivity-
 We [import](https://github.com/greenelab/connectivity-search-backend/blob/af12f8cf2ad47d9a25ce8d1b7889390654eb3bb9/dj_hetmech_app/management/commands/populate_database.py "dj_hetmech_app populate_database management command") the data into a PostgreSQL database.
 Populating the database for all 2,205 metapaths up to length 3 was a prolonged operation, [taking](https://github.com/greenelab/connectivity-search-backend/pull/41#issuecomment-488054789) over 3 days.
 The majority of the time is spent populating the `DegreeGroupedPermutation` (37,905,389 rows) and `PathCount` (174,986,768 rows) tables.
+To avoid redundancy, the database only stores a single orientation of a metapath.
+For example, if rows are stored for the _GpPWpGaD_ metapath,
+they would not also be stored for the _DaGpPWpG_ metapath.
+The backend is responsible for checking both orientations of a metapath in the database and reversing metapaths on-the-fly before returning results.
 The database is located at `search-db.het.io` with public read-only access [available](https://github.com/greenelab/connectivity-search-backend#database).
 
 ![
@@ -930,13 +934,10 @@ Producing results for these queries relies on internal calls to the PostgreSQL r
 They were designed to power the hetnet connectivity search webapp,
 but are also available for general research use.
 
-Todo:
-
-> The database only stores a single orientation of a metapath. For example, if GpPpGaD is stored between the given source and target node, DaGpPpG would not also be stored. Therefore, both orientations of a metapath are searched against the PathCount table.
-
 ### Webapp & Frontend
 
 TODO: write this section.
+https://github.com/greenelab/connectivity-search-manuscript/issues/29
 
 ### Realtime open science
 

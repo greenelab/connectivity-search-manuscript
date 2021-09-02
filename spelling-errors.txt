@@ -13,10 +13,10 @@ CrC
 CtDrDtC
 CtDtCtD
 DaGiGpPW
-DaGpPpG
+DaGpPWpG
 danich
 dataset
-Datasets
+datasets
 DdGpPW
 deepwalk
 dhimmel
@@ -38,7 +38,7 @@ GBMF
 Ghazimatin
 GiGdG
 GJA
-GpPpGaD
+GpPWpGaD
 greenelab
 GreeneScientist
 GSEA
@@ -57,7 +57,6 @@ Numpy’s
 oppertunity
 Othertimes
 parametrized
-PathCount
 piecewise
 Preexisiting
 prtransx
