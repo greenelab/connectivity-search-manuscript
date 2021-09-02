@@ -84,9 +84,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -102,9 +102,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/f4925018d18367b07db72e9b64043c08ee06e9a0">greenelab/connectivity-search-manuscript@f492501</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/39bd0493a9d634bd8a56c6ec8b23b3192afd8ec4">greenelab/connectivity-search-manuscript@39bd049</a>
 on September 2, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -829,6 +829,10 @@ The primary role of the backend is to manage a relational database and provide a
 We <a href="https://github.com/greenelab/connectivity-search-backend/blob/af12f8cf2ad47d9a25ce8d1b7889390654eb3bb9/dj_hetmech_app/management/commands/populate_database.py" title="dj_hetmech_app populate_database management command">import</a> the data into a PostgreSQL database.
 Populating the database for all 2,205 metapaths up to length 3 was a prolonged operation, <a href="https://github.com/greenelab/connectivity-search-backend/pull/41#issuecomment-488054789">taking</a> over 3 days.
 The majority of the time is spent populating the <code>DegreeGroupedPermutation</code> (37,905,389 rows) and <code>PathCount</code> (174,986,768 rows) tables.
+To avoid redundancy, the database only stores a single orientation of a metapath.
+For example, if rows are stored for the <em>GpPWpGaD</em> metapath,
+they would not also be stored for the <em>DaGpPWpG</em> metapath.
+The backend is responsible for checking both orientations of a metapath in the database and reversing metapaths on-the-fly before returning results.
 The database is located at <code>search-db.het.io</code> with public read-only access <a href="https://github.com/greenelab/connectivity-search-backend#database">available</a>.</p>
 <div id="fig:database" class="fignos">
 <figure>
@@ -850,12 +854,9 @@ The endpoints return JSON payloads.
 Producing results for these queries relies on internal calls to the PostgreSQL relational database as well as the pre-existing Hetionet v1.0 Neo4j graph database.
 They were designed to power the hetnet connectivity search webapp,
 but are also available for general research use.</p>
-<p>Todo:</p>
-<blockquote>
-<p>The database only stores a single orientation of a metapath. For example, if GpPpGaD is stored between the given source and target node, DaGpPpG would not also be stored. Therefore, both orientations of a metapath are searched against the PathCount table.</p>
-</blockquote>
 <h3 id="webapp-frontend">Webapp &amp; Frontend</h3>
-<p>TODO: write this section.</p>
+<p>TODO: write this section.
+https://github.com/greenelab/connectivity-search-manuscript/issues/29</p>
 <h3 id="realtime-open-science">Realtime open science</h3>
 <p>This study was conducted entirely in the open via public GitHub repositories.
 We used GitHub Issues for discussion, leaving a rich online history of the scholarly process.
