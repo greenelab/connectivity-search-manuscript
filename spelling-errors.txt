@@ -1,9 +1,12 @@
 ABCABC
+accross
 ARNT
 arxiv
 BAAB
 BABA
 CBABACXYZ
+CbGpPWpG
+CbGpPWpGaD
 cgreene
 connecitivity
 CrC
@@ -13,7 +16,7 @@ DaGiGpPW
 DaGpPpG
 danich
 dataset
-datasets
+Datasets
 DdGpPW
 deepwalk
 dhimmel
@@ -28,6 +31,7 @@ DrugCentral
 DtCtDpC
 DWPCs
 erogeneous
+etcetera
 evalute
 familywise
 GBMF
@@ -37,10 +41,12 @@ GJA
 GpPpGaD
 greenelab
 GreeneScientist
+GSEA
 Hadamard
 heterogenous
 hetmech
 hneem
+intested
 kgem
 LFS
 Mayers
@@ -57,7 +63,9 @@ Preexisiting
 prtransx
 pykeen
 smr
+sriving
 Unchecking
+underperforms
 XaXbX
 XaYbXcY
 XaYbYcX
