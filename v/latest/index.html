@@ -84,9 +84,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/c79f5be7310ae110fdf2bc04544048e27c093880/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/c79f5be7310ae110fdf2bc04544048e27c093880/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/c79f5be7310ae110fdf2bc04544048e27c093880/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -102,9 +102,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/c79f5be7310ae110fdf2bc04544048e27c093880/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/f4925018d18367b07db72e9b64043c08ee06e9a0/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/c79f5be7310ae110fdf2bc04544048e27c093880">greenelab/connectivity-search-manuscript@c79f5be</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/f4925018d18367b07db72e9b64043c08ee06e9a0">greenelab/connectivity-search-manuscript@f492501</a>
 on September 2, 2021.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -410,7 +410,12 @@ This package provides a matrix-based utilities for hetnets.</p>
 <h3 id="dwpc-null-distribution">DWPC null distribution</h3>
 <p>To assess connectivity between a source and target node, we use the DWPC (degree-weighted path count) metric.
 The DWPC is similar to path count (number of paths between the source and target node along a given metapath), except that it downweights paths through high degree nodes.
-Rather than using the raw DWPC for a source-metapath-target combination, we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling <span class="citation" data-cites="17mGFvxXu">[<a href="#ref-17mGFvxXu" role="doc-biblioref">36</a>]</span>.</p>
+Rather than using the raw DWPC for a source-metapath-target combination, we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling <span class="citation" data-cites="17mGFvxXu">[<a href="#ref-17mGFvxXu" role="doc-biblioref">36</a>]</span>.
+<!--
+Future work should consider a different method for transforming DWPCs:
+scale by nonzero mean rather than mean.
+https://github.com/hetio/hetmatpy/issues/11
+--></p>
 <p>Previously, we had no technique for detecting whether a DWPC value was exceptional.
 One possibility is to evaluate the DWPCs for all pairs of nodes and select the top scores (e.g. the top 5% of DWPCs).
 Another possibility is to pick a transformed DWPC score as a cutoff.
@@ -492,21 +497,41 @@ This metric compares the importance of all paths of the same metapath from the s
 <h4 id="detecting-mechanisms-of-action-for-indications">Detecting Mechanisms of Action for Indications</h4>
 <p>TODO: Assess ability to predict paths in <a href="https://github.com/SuLab/DrugMechDB" class="uri">https://github.com/SuLab/DrugMechDB</a></p>
 <h2 class="page_break_before" id="discussion">Discussion</h2>
-<p>STUB: Contributions of this work:</p>
-<ul>
-<li>search engine for hetnet connectivity between two nodes, realtime results</li>
-<li>interactive webapp and user interface for displaying metapaths, paths, and subgraphs.</li>
-<li>optimized methods for computing DWPCs using matrix multiplication</li>
-<li>method for estimating <em>p</em>-values for a DWPC, based on null DWPCs computed from permuted hetnets.</li>
-<li>the hetmatpy Python package and HetMat data structure that provide a highly-optimized computational infrastructure to make this possible.</li>
-</ul>
-<p>STUB: Future work:</p>
-<ul>
-<li>node set transformations</li>
-<li><a href="https://github.com/hetio/hetmatpy/issues/11">improved DWPC scaling</a></li>
-<li>longer metapaths</li>
-<li>auto-detection of informative metapaths</li>
-</ul>
+<p>In this study we introduce a search engine for hetnet connectivity between two nodes that is able to return results in realtime.
+An interactive webapp helps users explore node connectivity by ranking metapaths and paths,
+while visualizing multiple paths in a subgraph.</p>
+<p>Several methodological contributions made this possible.
+We developed optimized algorithms for computing DWPCs using matrix multiplication.
+In addition, we created a method for estimating a <em>p</em>-value for a DWPC,
+using null DWPCs computed on permuted hetnets.
+We implemented these advances in the open source hetmatpy Python package and HetMat data structure to provide highly-optimized computational infrastructure for representing and reasoning on hetnets using matrices.</p>
+<p>This work lays the foundation for exciting future directions.
+Here, we computed all DWPCs for Hetionet metapaths with length ≤ 3.
+Our search engine will therefore overlook important connectivity from longer metapaths.
+However, it is infeasible to compute DWPCs for all longer metapaths.
+One solution would be to only extend metapaths that are detected as informative.
+For example, if a <em>CbGpPWpG</em> metapath is deemed informative,
+then it could be extended with additional metaedges like <em>CbGpPWpGaD</em>.
+One unsupervised approach would be to use the distribution of DWPC <em>p</em>-values for a metapath to detect whether the paths still convey sufficient information, for example by requiring an enrichment of small <em>p</em>-values.
+Were this to method to fail, supervised alternatives could be explored,
+such as the ability for DWPCs from a longer metapath to predict that of a shorter metapath or metaedge,
+with care taken to prevent label leakage.
+One final approach could learn from user interest and compute longer metapaths only when requested.</p>
+<p>In this work, we focus on queries where the input is a node pair.
+Equally interesting would be queries where the input is a set of nodes of the same type, optionally with weights.
+The search would compute DWPCs for paths originating on the query nodes.
+The simpler formulation would compute DWPCs for metapaths separately and compare to null distributions from permuted hetnets.
+A more advanced formulation would combine scores accross metapaths such that every node in the hetnet would receive a single score capturing its connectivity to the query set.
+This approach would have similar utility to gene set enrichment analysis (GSEA) in that the user could provide a set of genes as input and receive a ranked list of nodes that characterize the function of the query genes.
+However, it would excel in its versatility by returning results of any node type without requiring pre-defined gene sets to match against.
+Some users might be intested in node set transformations where scores for one node type are converted to another node type.
+This approach could take scores for human genes and convert them to side effects, diseases, pathways, etcetera.</p>
+<p>Our work is not without limitation.
+The final product relies on multiple databases and cached computations that specific to Hetionet v1.0.
+Despite sriving for a modular architecture,
+generating an equivalent search webapp for a different hetnet would be challenging due to the many components involved.
+Furthermore, we would benefit from greater real-world evaluation of the connectivity search results to help identify situations where the method underperforms.
+Despite these challenges, our study demonstrates one of the first public search engines for node connectivity on a biomedical knowledge graph, while contributing methods and software that we hope will inspire future work.</p>
 <h2 class="page_break_before" id="methods">Methods</h2>
 <h3 id="the-hetmat-awakens">The HetMat awakens</h3>
 <p>At the core of the hetmatpy package is the HetMat data structure for storing and accessing the network.
