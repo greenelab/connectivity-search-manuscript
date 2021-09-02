@@ -13,7 +13,7 @@ DaGiGpPW
 DaGpPpG
 danich
 dataset
-Datasets
+datasets
 DdGpPW
 deepwalk
 dhimmel
@@ -62,7 +62,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 YY
 Zietz
 zietzm
