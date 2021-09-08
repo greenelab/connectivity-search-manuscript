@@ -44,6 +44,12 @@ authors:
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4552)
       - The National Institutes of Health (T32 HG000046)
+  - github: vincerubinetti
+    name: Vincent Rubinetti
+    initials: VR
+    orcid: 0000-0002-4655-3773
+    affiliations:
+      - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
   - github: cgreene
     name: Casey S. Greene
     initials: CSG
