@@ -81,7 +81,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 YY
 Zietz
 zietzm

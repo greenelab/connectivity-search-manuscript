@@ -12,12 +12,12 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2021-09-10'
+date-meta: '2021-09-11'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
-- David N. Nicholson
 - Vincent Rubinetti
+- David N. Nicholson
 - Casey S. Greene
 manubot-fail-on-errors: true
 header-includes: |-
@@ -30,8 +30,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2021-09-10" />
-  <meta name="citation_publication_date" content="2021-09-10" />
+  <meta name="dc.date" content="2021-09-11" />
+  <meta name="citation_publication_date" content="2021-09-11" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -48,14 +48,14 @@ header-includes: |-
   <meta name="citation_author_institution" content="Department of Biomedical Informatics, Columbia University, New York, New York, United States of America" />
   <meta name="citation_author_orcid" content="0000-0003-0539-630X" />
   <meta name="twitter:creator" content="@ZietzMichael" />
-  <meta name="citation_author" content="David N. Nicholson" />
-  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
-  <meta name="citation_author_orcid" content="0000-0003-0002-5761" />
-  <meta name="twitter:creator" content="@None" />
   <meta name="citation_author" content="Vincent Rubinetti" />
   <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
   <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
   <meta name="citation_author_orcid" content="0000-0002-4655-3773" />
+  <meta name="citation_author" content="David N. Nicholson" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
+  <meta name="citation_author_orcid" content="0000-0003-0002-5761" />
+  <meta name="twitter:creator" content="@None" />
   <meta name="citation_author" content="Casey S. Greene" />
   <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
   <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/bdaa50dce5d1f1b8a4a91a422223e14ffc480d83/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/bdaa50dce5d1f1b8a4a91a422223e14ffc480d83/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/bdaa50dce5d1f1b8a4a91a422223e14ffc480d83/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/89c6ebb9de4a0bd29292517308b0b5bd9304fa90/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/89c6ebb9de4a0bd29292517308b0b5bd9304fa90/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/89c6ebb9de4a0bd29292517308b0b5bd9304fa90/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -94,10 +94,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/bdaa50dce5d1f1b8a4a91a422223e14ffc480d83/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/89c6ebb9de4a0bd29292517308b0b5bd9304fa90/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@bdaa50d](https://github.com/greenelab/connectivity-search-manuscript/tree/bdaa50dce5d1f1b8a4a91a422223e14ffc480d83)
-on September 10, 2021.
+from [greenelab/connectivity-search-manuscript@89c6ebb](https://github.com/greenelab/connectivity-search-manuscript/tree/89c6ebb9de4a0bd29292517308b0b5bd9304fa90)
+on September 11, 2021.
 </em></small>
 
 ## Authors
@@ -135,6 +135,15 @@ This notice will be updated once all contributors meeting [authorship criteria](
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
   </small>
 
++ **Vincent Rubinetti**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0002-4655-3773](https://orcid.org/0000-0002-4655-3773)
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [vincerubinetti](https://github.com/vincerubinetti)<br>
+  <small>
+     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+  </small>
+
 + **David N. Nicholson**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon}
     [0000-0003-0002-5761](https://orcid.org/0000-0003-0002-5761)
@@ -143,15 +152,6 @@ This notice will be updated once all contributors meeting [authorship criteria](
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552); The National Institutes of Health (T32 HG000046)
-  </small>
-
-+ **Vincent Rubinetti**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [0000-0002-4655-3773](https://orcid.org/0000-0002-4655-3773)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [vincerubinetti](https://github.com/vincerubinetti)<br>
-  <small>
-     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
   </small>
 
 + **Casey S. Greene**<br>
