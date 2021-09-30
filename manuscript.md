@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2021-09-11'
+date-meta: '2021-09-30'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -30,8 +30,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2021-09-11" />
-  <meta name="citation_publication_date" content="2021-09-11" />
+  <meta name="dc.date" content="2021-09-30" />
+  <meta name="citation_publication_date" content="2021-09-30" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/89c6ebb9de4a0bd29292517308b0b5bd9304fa90/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/89c6ebb9de4a0bd29292517308b0b5bd9304fa90/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/89c6ebb9de4a0bd29292517308b0b5bd9304fa90/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/469160eea58b032e3c125fccb6b15702ff97459a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/469160eea58b032e3c125fccb6b15702ff97459a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/469160eea58b032e3c125fccb6b15702ff97459a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -94,10 +94,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/89c6ebb9de4a0bd29292517308b0b5bd9304fa90/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/469160eea58b032e3c125fccb6b15702ff97459a/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@89c6ebb](https://github.com/greenelab/connectivity-search-manuscript/tree/89c6ebb9de4a0bd29292517308b0b5bd9304fa90)
-on September 11, 2021.
+from [greenelab/connectivity-search-manuscript@469160e](https://github.com/greenelab/connectivity-search-manuscript/tree/469160eea58b032e3c125fccb6b15702ff97459a)
+on September 30, 2021.
 </em></small>
 
 ## Authors
@@ -360,10 +360,14 @@ while doing so in an unsupervised manner that captures the semantic richness of 
 
 ### Hetio Website
 
-We registered the domain `https://het.io` and built a website hosted at that address to serve as a unified, publicly-palatable home for Hetio.
-
-Primarily, the website is where the connectivity search webapp can be used, as well as several other interactive apps.
-It also includes high level information on hetnets and Hetionet, citation and contact details, links to supporting studies and software, downloads and exploration of Hetionet data, and various Hetio-related media.
+We revamped the website hosted at <https://het.io> to serve as a unified home for this study and the hetnet related research that preceded it.
+Primarily, the website is where the connectivity search webapp can be used,
+as well as several other interactive apps for prior projects.
+It also includes high level information on hetnets and Hetionet,
+citation and contact details,
+links to supporting studies and software,
+downloads and exploration of Hetionet data,
+and various related media.
 
 ![
 **Homepage of the Hetio website.**
@@ -970,7 +974,7 @@ The source code is available in the [`het.io`](https://github.com/hetio/het.io) 
 
 To ease the burden of maintenance and typical website hosting costs, the HTML, CSS, JavaScript, and other assets for the website are hosted for free on GitHub Pages.
 Jekyll was chosen over other static site generators for simplicity, ease-of-use, popularity (support), and its convenient integration with GitHub Pages.
-To make a change to the website, an author simply commits the changes (either directly or through a pull request) to the repository's `gh-pages` branch, and GitHub automatically re-compiles the website and hosts the resulting files at the provided custom domain url.
+To make a change to the website, an author simply commits the changes (either directly or through a pull request) to the repository's `gh-pages` branch, and GitHub automatically re-compiles the website and hosts the resulting files at the provided custom domain URL.
 No explicit build instructions or other continuous integration is required.
 
 #### Webapps
@@ -982,38 +986,38 @@ Since the rest of the overarching Hetio website was mostly non-interactive conte
 
 We used React's own `create-react-app` command line tool to generate a boilerplate for the app.
 This greatly simplified setting up and maintaining the app's testing and building pipelines, bypassing time-consuming configuration of things like Webpack and linters.
-Some configuration of was necessary to produce non-hashed, consistently named output files like `index.js` that could be easily and reliably referenced by and embedded into the Hetio Jekyll website.
+Some configuration was necessary to produce non-hashed, consistently named output files like `index.js` that could be easily and reliably referenced by and embedded into the Hetio Jekyll website.
 
 For authoring components, we used React's traditional class syntax.
 At the time of authoring the app, React Hooks were still nascent, thus the simpler and less-verbose functional syntax was not viable.
 
-While writing this application, we also elected to re-write the pre-existing [rephetio](https://het.io/repurpose/) and [disease-associated genes](https://het.io/disease-genes/) apps in the same manner.
+While writing this application, we also elected to re-write the pre-existing [Rephetio](https://het.io/repurpose/) and [disease-associated genes](https://het.io/disease-genes/) apps in the same manner.
 We created a custom package of React components and utility functions that could be shared across the multiple interactive apps on the website.
 The package is located at and can be installed from the [`frontend-components`](https://github.com/greenelab/frontend-components) repository.
-The package consists of interface "components" (building blocks) like buttons, sortable/searchable/paginated tables, etc., as well as utility functions for formatting data, debugging, etc.
-Each of the interactive apps import this package to reduce code repetition, and to enforce a consistent style and behavior across the website.
+The package consists of interface "components" (building blocks) like buttons, sortable/searchable/paginated tables, etc., as well as utility functions for formatting data, debugging, etcetera.
+Each of the interactive apps import this package to reduce code repetition and to enforce a consistent style and behavior across the website.
 
 For managing state in the connectivity search app, we used the Redux library.
 In general, Redux is a well-accepted approach to managing complex state.
 To be more explicit, Redux was chosen over vanilla React or other state management libraries for a few reasons:
 
-1) The state in this app was very "global", meaning most of it was needed by a lot of different parts of the app.
+1. The state in this app was very "global", meaning most of it was needed by a lot of different parts of the app.
 Redux provides a convenient global "store" of state that is easily accessible to any component, avoiding the "prop-drilling" phenomenon.
-2) The structure of the state is nested and complex.
+2. The structure of the state is nested and complex.
 Redux's "reducer" approach make it cleaner to modify this type of data.
-3) Redux's approach to immutable state that is updated by actions and pure functions makes the application easier to debug.
+3. Redux's approach to immutable state that is updated by actions and pure functions makes the application easier to debug.
 It is easy to get a clear timeline of how and when the state changed, and what changed it. 
 
 To create the graph visualization at the bottom of the app, the D3 library was used.
 D3 was chosen over other many other library choices for flexibility and comprehensiveness of features.
 At the time of development, no other library could be found that satisfied several core requirements:
 
-1) SVG implementation for high-resolution, publication-ready figures.
-2) Force-directed layout for untangling nodes.
-3) Pinnable nodes and other physics customizations.
-4) Customizable node and edge drag/hover/select behavior.
-5) Intuitive pan/zoom view that worked on desktop and mobile.
-6) Node and edge appearances that were completely customizable for alignment, text wrapping, color, outlines, fonts, arrowheads, non-colliding coincident edges, etc.
+1. SVG implementation for high-resolution, publication-ready figures.
+2. Force-directed layout for untangling nodes.
+3. Pinnable nodes and other physics customizations.
+4. Customizable node and edge drag/hover/select behavior.
+5. Intuitive pan/zoom view that worked on desktop and mobile.
+6. Node and edge appearances that were completely customizable for alignment, text wrapping, color, outlines, fonts, arrowheads, non-colliding coincident edges, etc.
 
 ### Visual Design
 
@@ -1021,15 +1025,17 @@ A limited palette of colors was chosen to represent the different types of nodes
 These colors are listed and programmatically accessible in the [`hetionet`](https://github.com/hetio/hetionet) repository under `/describe/styles.json`.
 
 At the time of developing connectivity search, Hetionet already had an established palette of colors (from Project Rephetio).
-To avoid confusion, we were careful to keep the general hue of each metanode color the same for "backwards compatibility", i.e. genes stayed generally blue, diseases stayed generally brown, etc.
-In this way, this palette selection was more of a modernization/"refresh".
-For cohesiveness, accessibility, and aesthetic appeal, we used the professionally-curated Material Design palette as a source for the specific color values.
+To avoid confusion, we were careful to keep the general hue of each metanode color the same for backwards compatibility,
+e.g. genes stayed generally blue, diseases stayed generally brown.
+In this way, this palette selection was more of a modernization/refresh.
+For cohesiveness, accessibility, and aesthetic appeal,
+we used the professionally-curated Material Design palette as a source for the specific color values.
 
 The palette is now used in all Hetio-related applications and materials.
 This is not just to maintain a consistent look and feel across the Hetio organization, but to convey clear and precise meaning.
 For example, the colors used in the metagraph in Figure {@fig:rephetio}A are exactly the same colors, and thus represent the same types of entities, as in _any part of the connectivity search app_ (Figure {@fig:webapp}).
 
-Colors in the palette are also used in the Hetio logo (seen in Figure {@fig:website}) and other miscellaneous logos and iconography across the website, to establish an identifiable "brand" for Hetio organization as a whole.
+Colors in the palette are also used in the Hetio logo (seen in Figure {@fig:website}) and other miscellaneous logos and iconography across the website, to establish an identifiable brand for the Hetio organization as a whole.
 
 ### Realtime open science
 

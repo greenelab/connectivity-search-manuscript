@@ -12,7 +12,7 @@ connecitivity
 CrC
 CtDrDtC
 CtDtCtD
-customizable
+Customizable
 customizations
 DaGiGpPW
 DaGpPWpG
@@ -81,7 +81,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 YY
 Zietz
 zietzm
