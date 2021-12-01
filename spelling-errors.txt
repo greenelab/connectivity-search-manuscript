@@ -18,7 +18,7 @@ DaGiGpPW
 DaGpPWpG
 danich
 dataset
-datasets
+Datasets
 DdGpPW
 deepwalk
 dhimmel
@@ -27,7 +27,6 @@ downweighted
 DrD
 DrDaGaDrD
 DrDtCrC
-DRKG
 DrugBank
 DrugCentral
 DtCtDpC
@@ -67,6 +66,7 @@ pykeen
 React’s
 Redux
 Redux’s
+RTX
 Rubinetti
 smr
 sortable
@@ -81,7 +81,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 YY
 Zietz
 zietzm

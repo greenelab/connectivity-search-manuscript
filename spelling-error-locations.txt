@@ -10,8 +10,8 @@ content/05.main-text.md:35:MF
 content/05.main-text.md:37:drugcentral
 content/05.main-text.md:37:DrugCentral
 content/05.main-text.md:57:dhimmel
-content/05.main-text.md:59:DRKG
-content/05.main-text.md:59:DRKG
+content/05.main-text.md:59:RTX
+content/05.main-text.md:59:RTX
 content/05.main-text.md:63:dhimmel
 content/05.main-text.md:83:DWPCs
 content/05.main-text.md:91:greenelab
