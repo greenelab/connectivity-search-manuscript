@@ -12,13 +12,13 @@ connecitivity
 CrC
 CtDrDtC
 CtDtCtD
-Customizable
+customizable
 customizations
 DaGiGpPW
 DaGpPWpG
 danich
 dataset
-Datasets
+datasets
 DdGpPW
 deepwalk
 dhimmel

@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2021-12-01'
+date-meta: '2021-12-11'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -30,8 +30,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2021-12-01" />
-  <meta name="citation_publication_date" content="2021-12-01" />
+  <meta name="dc.date" content="2021-12-11" />
+  <meta name="citation_publication_date" content="2021-12-11" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/654b31a82502351358921f8921b088e8b5ebdbbb/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/654b31a82502351358921f8921b088e8b5ebdbbb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/654b31a82502351358921f8921b088e8b5ebdbbb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/a99e2fff00e289358904da889516518a9b305aa6/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a99e2fff00e289358904da889516518a9b305aa6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a99e2fff00e289358904da889516518a9b305aa6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -94,10 +94,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/654b31a82502351358921f8921b088e8b5ebdbbb/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/a99e2fff00e289358904da889516518a9b305aa6/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@654b31a](https://github.com/greenelab/connectivity-search-manuscript/tree/654b31a82502351358921f8921b088e8b5ebdbbb)
-on December 1, 2021.
+from [greenelab/connectivity-search-manuscript@a99e2ff](https://github.com/greenelab/connectivity-search-manuscript/tree/a99e2fff00e289358904da889516518a9b305aa6)
+on December 11, 2021.
 </em></small>
 
 ## Authors
@@ -113,11 +113,11 @@ This notice will be updated once all contributors meeting [authorship criteria](
 
 
 + **Daniel S. Himmelstein**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-3012-7446](https://orcid.org/0000-0002-3012-7446)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [dhimmel](https://github.com/dhimmel)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [dhimmel](https://twitter.com/dhimmel)<br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Related Sciences
@@ -125,29 +125,29 @@ This notice will be updated once all contributors meeting [authorship criteria](
   </small>
 
 + **Michael Zietz**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-0539-630X](https://orcid.org/0000-0003-0539-630X)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [zietzm](https://github.com/zietzm)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [ZietzMichael](https://twitter.com/ZietzMichael)<br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
   </small>
 
 + **Vincent Rubinetti**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-4655-3773](https://orcid.org/0000-0002-4655-3773)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [vincerubinetti](https://github.com/vincerubinetti)<br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
   </small>
 
 + **David N. Nicholson**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-0002-5761](https://orcid.org/0000-0003-0002-5761)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [danich1](https://github.com/danich1)<br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
@@ -155,11 +155,11 @@ This notice will be updated once all contributors meeting [authorship criteria](
   </small>
 
 + **Casey S. Greene**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-8713-9213](https://orcid.org/0000-0001-8713-9213)
-    · ![GitHub icon](images/github.svg){.inline_icon}
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [cgreene](https://github.com/cgreene)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
     [GreeneScientist](https://twitter.com/GreeneScientist)<br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
