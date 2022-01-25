@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2021-12-11'
+date-meta: '2022-01-25'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -30,8 +30,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2021-12-11" />
-  <meta name="citation_publication_date" content="2021-12-11" />
+  <meta name="dc.date" content="2022-01-25" />
+  <meta name="citation_publication_date" content="2022-01-25" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/a99e2fff00e289358904da889516518a9b305aa6/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a99e2fff00e289358904da889516518a9b305aa6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a99e2fff00e289358904da889516518a9b305aa6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/6279eeab43c0a5413d723ae54ed02fea8db18d9c/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6279eeab43c0a5413d723ae54ed02fea8db18d9c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6279eeab43c0a5413d723ae54ed02fea8db18d9c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -94,10 +94,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/a99e2fff00e289358904da889516518a9b305aa6/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/6279eeab43c0a5413d723ae54ed02fea8db18d9c/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@a99e2ff](https://github.com/greenelab/connectivity-search-manuscript/tree/a99e2fff00e289358904da889516518a9b305aa6)
-on December 11, 2021.
+from [greenelab/connectivity-search-manuscript@6279eea](https://github.com/greenelab/connectivity-search-manuscript/tree/6279eeab43c0a5413d723ae54ed02fea8db18d9c)
+on January 25, 2022.
 </em></small>
 
 ## Authors
@@ -424,15 +424,30 @@ Clicking an edge displays its properties, informing the user that association be
 
 We created the hetmatpy Python package,
 available on [GitHub](https://github.com/hetio/hetmatpy) and [PyPI](https://pypi.org/project/hetmatpy/) under the permissive BSD-2-Clause Plus Patent License.
-This package provides a matrix-based utilities for hetnets.
+This package provides matrix-based utilities for hetnets.
+Each metaedge is represented by a distinct adjacency matrix,
+which can be either a dense Numpy array or sparse SciPy matrix (see [HetMat architecture]).
+Adjacency matrices are stored on disk and loaded in a lazy manner to help scale the software to hetnets that are too large to fit entirely in memory.
 
-TODO: improve flow and cohesion between software methods and results.
+The primary focus of the package is to provide compute optimized and memory efficient implementations of path counting algorithms.
+Specifically, the package supports computing _degree-weighted_ path counts (DWPCs),
+which can be done efficiently using matrix multiplication
+but require complex adjustments to avoid counting paths with duplicate nodes
+(i.e. to filter walks that are not paths, see [DWPC matrix multiplication algorithms]).
+The package is able to reuse existing path count computations that span segments of a longer metapath.
+The package also supports generating null distributions for DWPCs derived from permuted networks,
+see [Degree-grouping of node pairs].
+Since this approach generates too many permuted DWPC values to store on disk,
+our implementation retains summary statistics for each degree-group that allow computation of a [Gamma-hurdle distribution] from which null DWPC _p_-values can be generated.
 
 ### DWPC null distribution
 
-To assess connectivity between a source and target node, we use the DWPC (degree-weighted path count) metric.
-The DWPC is similar to path count (number of paths between the source and target node along a given metapath), except that it downweights paths through high degree nodes.
-Rather than using the raw DWPC for a source-metapath-target combination, we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling [@doi:10.15363/thinklab.d193].
+To assess connectivity between a source and target node,
+we use the DWPC (degree-weighted path count) metric.
+The DWPC is similar to path count (number of paths between the source and target node along a given metapath),
+except that it downweights paths through high degree nodes.
+Rather than using the raw DWPC for a source-metapath-target combination,
+we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling [@doi:10.15363/thinklab.d193].
 <!--
 Future work should consider a different method for transforming DWPCs:
 scale by nonzero mean rather than mean.
@@ -444,17 +459,33 @@ One possibility is to evaluate the DWPCs for all pairs of nodes and select the t
 Another possibility is to pick a transformed DWPC score as a cutoff.
 The shortcomings of these methods are twofold.
 First, neither the percentile nor absolute value of a DWPC has inherent meaning.
-To select transformed DWPCs greater than 6, or alternatively the top 1% of DWPCs, is arbitrary.
-Second, comparing DWPCs between node pairs fails to account for the situation where high-degree node pairs are likely to score higher, solely on account of their degree (TODO: figure).
+To select transformed DWPCs greater than 3.5, or alternatively the top 1% of DWPCs, is arbitrary.
+Second, comparing DWPCs between node pairs fails to account for the situation where high-degree node pairs are likely to score higher,
+solely on account of their degree (TODO: figure).
 
-To address these shortcomings, we developed a method to compute the right-tail _p_-value of a DWPC.
-_p_-values have a broadly understood interpretation --- in our case, the probability that a DWPC equal to or greater than the observed DWPC could occur under a null model.
-By tailoring the null distribution for a DWPC to the degree of its source and target node, we account for degree effects when determining the significance of a DWPC.
+To address these shortcomings,
+we developed a method to compute the right-tail _p_-value of a DWPC.
+_p_-values have a broadly understood interpretation
+--- in our case, the probability that a DWPC equal to or greater than the observed DWPC could occur under a null model.
+Our null model is based on DWPCs generated from permuted networks,
+where edges have been randomized in a degree-preserving manner (see [Permuted hetnets]).
 
+By tailoring the null distribution for a DWPC to the degree of its source and target node (see [Degree-grouping of node pairs]),
+we account for degree effects when determining the significance of a DWPC.
+To improve the accuracy of DWPC _p_-values,
+we use fit a [gamma-hurdle distribution] to the null DWPCs.
+In rare cases, there are insufficient nonzero null DWPCs to fit the gamma portion of the null distribution.
+In these cases, we fallback to an emprical calculation as described in [Empirical DWPC p-values].
 
 ### Enriched metapaths
 
-TODO: write this section
+For each of the 2,205 metapaths in Hetionet v1.0 with length ≤ 3,
+we computed DWPCs for all node pairs and their corresponding null distributions, see [DWPC and null distribution computation].
+We store the most significant DWPCs as described in [Prioritizing enriched metapaths for database storage],
+which appear as the "precomputed" rows in the webapp metapath table (Figure {@fig:webapp}B & @fig:webapp-metapaths).
+DWPCs that are not retained by the database can be regenerated on the fly.
+This design allows us to immediately provide users with the metapaths that are most enriched between two query nodes,
+while still allowing on-demand access to the full metrics for all metapaths with length ≤ 3.
 
 ![
 **Expanded metapath details from the connectivity search webapp.**
@@ -577,7 +608,7 @@ Despite these challenges, our study demonstrates one of the first public search 
 
 ## Methods {.page_break_before}
 
-### The HetMat awakens
+### HetMat architecture
 
 At the core of the hetmatpy package is the HetMat data structure for storing and accessing the network.
 HetMats are stored on disk as a directory, which by convention uses a `.hetmat` extension.
