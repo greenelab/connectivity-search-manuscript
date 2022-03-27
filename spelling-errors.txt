@@ -4,11 +4,13 @@ ARNT
 arxiv
 BAAB
 BABA
+bewteen
 CBABACXYZ
 CbGpPWpG
 CbGpPWpGaD
 cgreene
 connecitivity
+contributd
 CrC
 CtDrDtC
 CtDtCtD
@@ -30,6 +32,7 @@ DrDtCrC
 DrugBank
 DrugCentral
 DtCtDpC
+DWPC’s
 DWPCs
 emprical
 erogeneous
@@ -46,6 +49,7 @@ GSEA
 Hadamard
 hetmech
 hneem
+hueristic
 intested
 kgem
 LFS
@@ -82,7 +86,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 YY
 Zietz
 zietzm

@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-01-25'
+date-meta: '2022-03-27'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -30,8 +30,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-01-25" />
-  <meta name="citation_publication_date" content="2022-01-25" />
+  <meta name="dc.date" content="2022-03-27" />
+  <meta name="citation_publication_date" content="2022-03-27" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/6279eeab43c0a5413d723ae54ed02fea8db18d9c/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6279eeab43c0a5413d723ae54ed02fea8db18d9c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6279eeab43c0a5413d723ae54ed02fea8db18d9c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/9858db373ebb582aa6f9a6e6d57c36a15e801690/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/9858db373ebb582aa6f9a6e6d57c36a15e801690/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/9858db373ebb582aa6f9a6e6d57c36a15e801690/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -94,10 +94,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/6279eeab43c0a5413d723ae54ed02fea8db18d9c/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/9858db373ebb582aa6f9a6e6d57c36a15e801690/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@6279eea](https://github.com/greenelab/connectivity-search-manuscript/tree/6279eeab43c0a5413d723ae54ed02fea8db18d9c)
-on January 25, 2022.
+from [greenelab/connectivity-search-manuscript@9858db3](https://github.com/greenelab/connectivity-search-manuscript/tree/9858db373ebb582aa6f9a6e6d57c36a15e801690)
+on March 27, 2022.
 </em></small>
 
 ## Authors
@@ -384,7 +384,8 @@ The workflow is based around showing the user the most important metapaths and p
 
 The design guides the user through selecting a source and target node (Figure {@fig:webapp}A).
 The webapp returns metapaths, scored by whether they occurred more than expected based on network degree (Figure {@fig:webapp}B).
-Users can proceed by requesting the specific paths for each metapath, which are placed in a unified table sorted according to their path score (Figure {@fig:webapp}C).
+Users can proceed by requesting the specific paths for each metapath,
+which are placed in a unified table sorted according to their path score (Figure {@fig:webapp}C).
 Finally, the webapp produces publication-ready visualizations containing user-selected paths (Figure {@fig:webapp}D).
 
 ![
@@ -531,9 +532,18 @@ The table includes the following columns:
 
 ### Enriched paths
 
-TODO: write this section
+In addition to knowing which metapaths are enriched between two query nodes,
+it is helpful to see the specific paths that contribute highly to such enrichment.
+Since the DWPC is a summation of a path metric (called the path degree product),
+it is straightforward to calculate the proportion of a DWPC attributable to an individual path.
+The webapp allows users to select a metapath to populate a table of the corresponding paths.
+These paths are generated on-the-fly through a Cypher query to the Hetionet Neo4j database.
 
-The paths webapp panel includes the following information (Figure {@fig:webapp}C):
+It is desirable to have a consolidated view of paths across multiple metapaths.
+Therefore, we calculate a _path score_ hueristic,
+which can be used to compare the importance of paths bewteen metapaths.
+The path score equals the proportion of the DWPC contributd by a path multiplied by the magnitude of the DWPC's _p_-value (-log~10~(_p_)).
+To illustrate, the paths webapp panel includes the following information (Figure {@fig:webapp}C):
 <!-- https://github.com/greenelab/connectivity-search-frontend/blob/63bb4acbcebe4b346882754719071856b30b43ba/src/definitions.json -->
 
 - **path**:
@@ -546,8 +556,6 @@ The paths webapp panel includes the following information (Figure {@fig:webapp}C
   The contribution of the path to the DWPC for its metapath.
   This metric compares the importance of all paths of the same metapath from the source node to the target node.
 
-TODO: discuss path score and ranking by path score.
-
 ### Comparison to Rephetio
 
 TODO: write this section.
@@ -555,14 +563,6 @@ TODO: write this section.
 <!--
   https://github.com/dhimmel/connectivity-search-manuscript/commit/8f5a2ae4732249d4b6f33a6a142cc4043152c458
 -->
-
-### Use cases
-
-TODO: determine what further use cases and examples we'd like to explore.
-
-#### Detecting Mechanisms of Action for Indications
-
-TODO: Assess ability to predict paths in <https://github.com/SuLab/DrugMechDB>
 
 ## Discussion {.page_break_before}
 
