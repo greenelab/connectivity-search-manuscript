@@ -6,9 +6,11 @@ BAAB
 BABA
 bewteen
 CBABACXYZ
+CbG
 CbGpPWpG
 CbGpPWpGaD
 cgreene
+colormap
 connecitivity
 contributd
 CrC
@@ -23,6 +25,7 @@ dataset
 datasets
 DdGpPW
 deepwalk
+Dev
 dhimmel
 dhimmel’s
 downweighted
@@ -42,6 +45,7 @@ familywise
 GBMF
 GiGdG
 GJA
+GpPW
 GpPWpGaD
 greenelab
 GreeneScientist
@@ -77,6 +81,7 @@ smr
 sortable
 sriving
 superset
+umpermuted
 Unchecking
 underperforms
 vincerubinetti
@@ -86,7 +91,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 YY
 Zietz
 zietzm

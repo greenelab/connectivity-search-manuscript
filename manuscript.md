@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-03-27'
+date-meta: '2022-06-11'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -30,8 +30,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-03-27" />
-  <meta name="citation_publication_date" content="2022-03-27" />
+  <meta name="dc.date" content="2022-06-11" />
+  <meta name="citation_publication_date" content="2022-06-11" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/9858db373ebb582aa6f9a6e6d57c36a15e801690/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/9858db373ebb582aa6f9a6e6d57c36a15e801690/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/9858db373ebb582aa6f9a6e6d57c36a15e801690/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -94,10 +94,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/9858db373ebb582aa6f9a6e6d57c36a15e801690/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@9858db3](https://github.com/greenelab/connectivity-search-manuscript/tree/9858db373ebb582aa6f9a6e6d57c36a15e801690)
-on March 27, 2022.
+from [greenelab/connectivity-search-manuscript@f4b227e](https://github.com/greenelab/connectivity-search-manuscript/tree/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13)
+on June 11, 2022.
 </em></small>
 
 ## Authors
@@ -462,7 +462,7 @@ The shortcomings of these methods are twofold.
 First, neither the percentile nor absolute value of a DWPC has inherent meaning.
 To select transformed DWPCs greater than 3.5, or alternatively the top 1% of DWPCs, is arbitrary.
 Second, comparing DWPCs between node pairs fails to account for the situation where high-degree node pairs are likely to score higher,
-solely on account of their degree (TODO: figure).
+solely on account of their degree (@fig:degree-group-metrics).
 
 To address these shortcomings,
 we developed a method to compute the right-tail _p_-value of a DWPC.
@@ -781,6 +781,39 @@ Every degree pair for a given metapath has corresponding statistics that summari
 
 TODO: somewhere link to notebook https://github.com/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/bulk.ipynb
 -->
+
+Figure @fig:degree-group-metrics shows how various aspects of DWPCs vary by degree group. 
+The rows display the following metrics of the DWPC distribution for all node-pairs in a given degree-group:
+
+- **# Nonzero DWPCs**:
+  The number of nonzero DWPCs values (on average per network to enable comparison).
+- **% Nonzero DWPCs**:
+  Of the total number of DWPCs, the percent that is nonzero.
+  As node degrees increase, the chance of node pairs having at least one path, and hence a nonzero DWPC, greatly increases.
+- **Mean DWPC**:
+  The average value of all DWPCs including zeros.
+- **Mean Nonzero DWPC**:
+  The average value of nonzero DWPCs.
+- **Std Dev Nonzero DWPC**:
+  The standard deviation of nonzero DWPCs.
+- **Gamma Model β**:
+  The β parameter of the gamma model fit on nonzero DWPCs.
+  Note that the gamma model is only fit on permuted network DWPCs to estimate a null distribution for the unpermuted network DWPCs.
+  Since this parameter varies with source & target node degree,
+  it is important to fit a separate gamma model for each degree group.
+
+![
+**Path-based metrics vary by node degree and network permutation status.**
+Each row shows a different metric of the DWPC distribution for the _CbGpPWpG_ metapath --- traversing Compound--binds--Gene--participates--Pathway--participates--Gene, selected for illustrative purposes.
+Metrics are computed for degree-groups,
+which is a specific pair of source degree (in this case, the source compound's count of CbG edges)
+and target degree (in this case, the target gene's count of GpPW edges).
+On the left, metrics are reported for the unpermuted hetnet and on the right for the 200 permuted hetnets.
+Hence, each cell on right summarizes 200 times the number of DWPCs as the corresponding cell on the left.
+The colormap is row normalized, such that its intensity peaks for the maximum value of each metric across the umpermuted and permuted values.
+Gray indicates null values.
+](https://github.com/greenelab/connectivity-search-analyses/raw/15f1925c0481d8e6bab8b0931f48f2fad388c68c/explore/degree-group-analyses.png){#fig:degree-group-metrics}
+
 
 ### Gamma-hurdle distribution
 
