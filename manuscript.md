@@ -68,9 +68,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -94,9 +94,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@f4b227e](https://github.com/greenelab/connectivity-search-manuscript/tree/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13)
+from [greenelab/connectivity-search-manuscript@309825c](https://github.com/greenelab/connectivity-search-manuscript/tree/309825c10a186ca8c5755bbe5dba4bacde7a740a)
 on June 11, 2022.
 </em></small>
 
@@ -187,9 +187,9 @@ The algorithm behind connectivity search identifies types of paths that occur mo
 We implemented the method on Hetionet and provide an online interface at <https://het.io/search>.
 Several optimizations were required to precompute significant instances of node connectivity at scale.
 We provide an open source implementation of these methods in our new Python package named [hetmatpy](https://github.com/hetio/hetmatpy "Python package for matrix storage and operations on hetnets").
-
+<!--
 To validate the method, we show that it identifies much of the same evidence for specific instances of drug repurposing as the previous supervised approach, but without requiring a training set.
-
+-->
 
 ## Introduction {.page_break_before}
 
@@ -556,11 +556,11 @@ To illustrate, the paths webapp panel includes the following information (Figure
   The contribution of the path to the DWPC for its metapath.
   This metric compares the importance of all paths of the same metapath from the source node to the target node.
 
+<!--
 ### Comparison to Rephetio
 
 TODO: write this section.
 
-<!--
   https://github.com/dhimmel/connectivity-search-manuscript/commit/8f5a2ae4732249d4b6f33a6a142cc4043152c458
 -->
 
@@ -778,8 +778,6 @@ Their values are always a running total and can be updated incrementally as stat
 Should note:
 Permuted DWPCs were scaled by dividing by the mean of all unpermuted DWPCs for the metapath and then applying the inverse hyperbolic sine transformation.
 Every degree pair for a given metapath has corresponding statistics that summarize its values across permuted hetnets.
-
-TODO: somewhere link to notebook https://github.com/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/bulk.ipynb
 -->
 
 Figure @fig:degree-group-metrics shows how various aspects of DWPCs vary by degree group. 
