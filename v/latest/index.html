@@ -86,9 +86,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -107,9 +107,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/f4b227ebf1d7c5b92b0c3fa00cfa810839e38b13">greenelab/connectivity-search-manuscript@f4b227e</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/309825c10a186ca8c5755bbe5dba4bacde7a740a">greenelab/connectivity-search-manuscript@309825c</a>
 on June 11, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -184,8 +184,10 @@ Therefore, we developed hetnet connectivity search to propose the most important
 <p>The algorithm behind connectivity search identifies types of paths that occur more frequently than would be expected by chance (based on node degree alone).
 We implemented the method on Hetionet and provide an online interface at <a href="https://het.io/search" class="uri">https://het.io/search</a>.
 Several optimizations were required to precompute significant instances of node connectivity at scale.
-We provide an open source implementation of these methods in our new Python package named <a href="https://github.com/hetio/hetmatpy" title="Python package for matrix storage and operations on hetnets">hetmatpy</a>.</p>
-<p>To validate the method, we show that it identifies much of the same evidence for specific instances of drug repurposing as the previous supervised approach, but without requiring a training set.</p>
+We provide an open source implementation of these methods in our new Python package named <a href="https://github.com/hetio/hetmatpy" title="Python package for matrix storage and operations on hetnets">hetmatpy</a>.
+<!--
+To validate the method, we show that it identifies much of the same evidence for specific instances of drug repurposing as the previous supervised approach, but without requiring a training set.
+--></p>
 <h2 class="page_break_before" id="introduction">Introduction</h2>
 <p>A <em>network</em> (also known as a <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)">graph</a>) is a conceptual representation of a group of entities — called <em>nodes</em> — and the relationships between them — called <em>edges</em>.
 Typically, a network has only one type of node and one type of edge.
@@ -560,9 +562,11 @@ The score combines the magnitude of the metapath’s p-value with the percent of
 The contribution of the path to the DWPC for its metapath.
 This metric compares the importance of all paths of the same metapath from the source node to the target node.</li>
 </ul>
-<h3 id="comparison-to-rephetio">Comparison to Rephetio</h3>
-<p>TODO: write this section.</p>
 <!--
+### Comparison to Rephetio
+
+TODO: write this section.
+
   https://github.com/dhimmel/connectivity-search-manuscript/commit/8f5a2ae4732249d4b6f33a6a142cc4043152c458
 -->
 <h2 class="page_break_before" id="discussion">Discussion</h2>
@@ -739,8 +743,6 @@ Their values are always a running total and can be updated incrementally as stat
 Should note:
 Permuted DWPCs were scaled by dividing by the mean of all unpermuted DWPCs for the metapath and then applying the inverse hyperbolic sine transformation.
 Every degree pair for a given metapath has corresponding statistics that summarize its values across permuted hetnets.
-
-TODO: somewhere link to notebook https://github.com/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/bulk.ipynb
 -->
 <p>Figure <a href="#fig:degree-group-metrics">5</a> shows how various aspects of DWPCs vary by degree group.
 The rows display the following metrics of the DWPC distribution for all node-pairs in a given degree-group:</p>
