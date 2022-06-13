@@ -12,12 +12,13 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-06-11'
+date-meta: '2022-06-13'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
 - Vincent Rubinetti
 - David N. Nicholson
+- Dongbo Hu
 - Casey S. Greene
 manubot-fail-on-errors: true
 header-includes: |-
@@ -30,8 +31,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-06-11" />
-  <meta name="citation_publication_date" content="2022-06-11" />
+  <meta name="dc.date" content="2022-06-13" />
+  <meta name="citation_publication_date" content="2022-06-13" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -56,6 +57,10 @@ header-includes: |-
   <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
   <meta name="citation_author_orcid" content="0000-0003-0002-5761" />
   <meta name="twitter:creator" content="@None" />
+  <meta name="citation_author" content="Dongbo Hu" />
+  <meta name="citation_author_institution" content="Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
+  <meta name="citation_author_orcid" content="None" />
+  <meta name="twitter:creator" content="@None" />
   <meta name="citation_author" content="Casey S. Greene" />
   <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
   <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
@@ -68,9 +73,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2b090c477455c8df270d97a52e3c5ed7a73af3bf/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2b090c477455c8df270d97a52e3c5ed7a73af3bf/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2b090c477455c8df270d97a52e3c5ed7a73af3bf/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -94,10 +99,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/309825c10a186ca8c5755bbe5dba4bacde7a740a/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/2b090c477455c8df270d97a52e3c5ed7a73af3bf/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@309825c](https://github.com/greenelab/connectivity-search-manuscript/tree/309825c10a186ca8c5755bbe5dba4bacde7a740a)
-on June 11, 2022.
+from [greenelab/connectivity-search-manuscript@2b090c4](https://github.com/greenelab/connectivity-search-manuscript/tree/2b090c477455c8df270d97a52e3c5ed7a73af3bf)
+on June 13, 2022.
 </em></small>
 
 ## Authors
@@ -152,6 +157,14 @@ This notice will be updated once all contributors meeting [authorship criteria](
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552); The National Institutes of Health (T32 HG000046)
+  </small>
+
++ **Dongbo Hu**<br>
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [dongbohu](https://github.com/dongbohu)<br>
+  <small>
+     Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
+     · Funded by GBMF4552
   </small>
 
 + **Casey S. Greene**<br>
