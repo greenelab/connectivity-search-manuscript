@@ -40,6 +40,16 @@ authors:
     affiliations:
       - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
       - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+  - github: ben-heil
+    name: Benjamin J. Heil
+    initials: BJH
+    orcid: 0000-0002-2811-1031
+    twitter: autobencoder
+    email: benheil@pennmedicine.upenn.edu
+    affiliations:
+      - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
+    funders:
+      - The Gordon and Betty Moore Foundation (GBMF4552)
   - github: danich1
     name: David N. Nicholson
     initials: DNN
