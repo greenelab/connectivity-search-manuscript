@@ -2,6 +2,7 @@ ABCABC
 accross
 ARNT
 arxiv
+autobencoder
 BAAB
 BABA
 bewteen
@@ -53,6 +54,7 @@ greenelab
 GreeneScientist
 GSEA
 Hadamard
+heil
 hetmech
 hneem
 Hu
@@ -94,7 +96,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 YY
 Zietz
 zietzm
