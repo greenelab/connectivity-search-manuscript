@@ -54,7 +54,7 @@ greenelab
 GreeneScientist
 GSEA
 Hadamard
-heil
+Heil
 hetmech
 hneem
 Hu
@@ -84,7 +84,6 @@ RTX
 Rubinetti
 smr
 sortable
-sriving
 superset
 umpermuted
 Unchecking
@@ -96,7 +95,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 YY
 Zietz
 zietzm
