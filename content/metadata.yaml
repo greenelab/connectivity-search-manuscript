@@ -70,6 +70,15 @@ authors:
     affiliations:
       - Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
     funders: GBMF4552
+  - github: naglem
+    name: Michael W. Nagle
+    initials: MWN
+    orcid: 0000-0002-4677-7582
+    twitter: mikenagle84
+    email: mike_nagle@eisai.com
+    affiliations:
+      - Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc, Cambridge, Massachusetts, United States of America
+      - Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc, Cambridge, Massachusetts, United States of America
   - github: cgreene
     name: Casey S. Greene
     initials: CSG
