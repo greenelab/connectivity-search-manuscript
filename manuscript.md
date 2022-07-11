@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-06-19'
+date-meta: '2022-07-11'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -32,8 +32,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-06-19" />
-  <meta name="citation_publication_date" content="2022-06-19" />
+  <meta name="dc.date" content="2022-07-11" />
+  <meta name="citation_publication_date" content="2022-07-11" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -78,9 +78,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/99d88409e6fea54b370441d66d3e484be7b6dc88/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/99d88409e6fea54b370441d66d3e484be7b6dc88/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/99d88409e6fea54b370441d66d3e484be7b6dc88/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/e9a2ffb4c17673cceea209fac8aac0ee078bf5c1/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/e9a2ffb4c17673cceea209fac8aac0ee078bf5c1/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/e9a2ffb4c17673cceea209fac8aac0ee078bf5c1/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -104,10 +104,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/99d88409e6fea54b370441d66d3e484be7b6dc88/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/e9a2ffb4c17673cceea209fac8aac0ee078bf5c1/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@99d8840](https://github.com/greenelab/connectivity-search-manuscript/tree/99d88409e6fea54b370441d66d3e484be7b6dc88)
-on June 19, 2022.
+from [greenelab/connectivity-search-manuscript@e9a2ffb](https://github.com/greenelab/connectivity-search-manuscript/tree/e9a2ffb4c17673cceea209fac8aac0ee078bf5c1)
+on July 11, 2022.
 </em></small>
 
 ## Authors
@@ -122,7 +122,8 @@ This notice will be updated once all contributors meeting [authorship criteria](
 
 
 
-+ **Daniel S. Himmelstein**<br>
++ **Daniel S. Himmelstein**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-3012-7446](https://orcid.org/0000-0002-3012-7446)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -134,7 +135,8 @@ This notice will be updated once all contributors meeting [authorship criteria](
      · Funded by GBMF4552
   </small>
 
-+ **Michael Zietz**<br>
++ **Michael Zietz**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-0539-630X](https://orcid.org/0000-0003-0539-630X)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -145,7 +147,8 @@ This notice will be updated once all contributors meeting [authorship criteria](
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
   </small>
 
-+ **Vincent Rubinetti**<br>
++ **Vincent Rubinetti**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-4655-3773](https://orcid.org/0000-0002-4655-3773)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -154,7 +157,8 @@ This notice will be updated once all contributors meeting [authorship criteria](
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
   </small>
 
-+ **Benjamin J. Heil**<br>
++ **Benjamin J. Heil**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-2811-1031](https://orcid.org/0000-0002-2811-1031)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -166,7 +170,8 @@ This notice will be updated once all contributors meeting [authorship criteria](
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552)
   </small>
 
-+ **David N. Nicholson**<br>
++ **David N. Nicholson**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-0002-5761](https://orcid.org/0000-0003-0002-5761)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -176,7 +181,8 @@ This notice will be updated once all contributors meeting [authorship criteria](
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552); The National Institutes of Health (T32 HG000046)
   </small>
 
-+ **Dongbo Hu**<br>
++ **Dongbo Hu**
+  <br>
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [dongbohu](https://github.com/dongbohu)<br>
   <small>
@@ -184,7 +190,8 @@ This notice will be updated once all contributors meeting [authorship criteria](
      · Funded by GBMF4552
   </small>
 
-+ **Casey S. Greene**<br>
++ **Casey S. Greene**
+  <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-8713-9213](https://orcid.org/0000-0001-8713-9213)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -196,6 +203,11 @@ This notice will be updated once all contributors meeting [authorship criteria](
      · Funded by the National Human Genome Research Institute (R01 HG010067); the National Cancer Institute (R01 CA237170); the Gordon and Betty Moore Foundation (GBMF 4552)
   </small>
 
+
+::: {#correspondence}
+✉ — Correspondence possible via [GitHub Issues](https://github.com/greenelab/connectivity-search-manuscript/issues)
+
+:::
 
 
 ## Abstract {.page_break_before}
