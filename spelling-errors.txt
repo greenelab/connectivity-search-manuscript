@@ -54,7 +54,7 @@ greenelab
 GreeneScientist
 GSEA
 Hadamard
-heil
+Heil
 hetmech
 hneem
 Hu
@@ -95,7 +95,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 YY
 Zietz
 zietzm

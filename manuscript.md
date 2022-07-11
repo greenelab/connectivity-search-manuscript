@@ -78,9 +78,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/e9a2ffb4c17673cceea209fac8aac0ee078bf5c1/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/e9a2ffb4c17673cceea209fac8aac0ee078bf5c1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/e9a2ffb4c17673cceea209fac8aac0ee078bf5c1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/df0be884fd9db059b03abc66f9c158a51cecd13a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/df0be884fd9db059b03abc66f9c158a51cecd13a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/df0be884fd9db059b03abc66f9c158a51cecd13a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -104,9 +104,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/e9a2ffb4c17673cceea209fac8aac0ee078bf5c1/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/df0be884fd9db059b03abc66f9c158a51cecd13a/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@e9a2ffb](https://github.com/greenelab/connectivity-search-manuscript/tree/e9a2ffb4c17673cceea209fac8aac0ee078bf5c1)
+from [greenelab/connectivity-search-manuscript@df0be88](https://github.com/greenelab/connectivity-search-manuscript/tree/df0be884fd9db059b03abc66f9c158a51cecd13a)
 on July 11, 2022.
 </em></small>
 
@@ -191,7 +191,7 @@ This notice will be updated once all contributors meeting [authorship criteria](
   </small>
 
 + **Casey S. Greene**
-  <br>
+  ^[✉](#correspondence)^<br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-8713-9213](https://orcid.org/0000-0001-8713-9213)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
@@ -206,6 +206,9 @@ This notice will be updated once all contributors meeting [authorship criteria](
 
 ::: {#correspondence}
 ✉ — Correspondence possible via [GitHub Issues](https://github.com/greenelab/connectivity-search-manuscript/issues)
+or email to
+Casey S. Greene \<casey.s.greene@cuanschutz.edu\>.
+
 
 :::
 
