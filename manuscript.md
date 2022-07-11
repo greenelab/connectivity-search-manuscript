@@ -20,6 +20,7 @@ author-meta:
 - Benjamin J. Heil
 - David N. Nicholson
 - Dongbo Hu
+- Yun Hao
 - Michael W. Nagle
 - Casey S. Greene
 manubot-fail-on-errors: true
@@ -67,6 +68,10 @@ header-includes: |-
   <meta name="citation_author_institution" content="Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
   <meta name="citation_author_orcid" content="None" />
   <meta name="twitter:creator" content="@None" />
+  <meta name="citation_author" content="Yun Hao" />
+  <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA" />
+  <meta name="citation_author_orcid" content="0000-0002-1684-0085" />
+  <meta name="twitter:creator" content="@YhaoC" />
   <meta name="citation_author" content="Michael W. Nagle" />
   <meta name="citation_author_institution" content="Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc, Cambridge, Massachusetts, United States of America" />
   <meta name="citation_author_institution" content="Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc, Cambridge, Massachusetts, United States of America" />
@@ -84,9 +89,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/97f9c488b865e9c88427b2d07fd4d5060b09b079/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/97f9c488b865e9c88427b2d07fd4d5060b09b079/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/97f9c488b865e9c88427b2d07fd4d5060b09b079/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/5ef01d76ce599fbae3ab70d18afbadedd0038243/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/5ef01d76ce599fbae3ab70d18afbadedd0038243/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/5ef01d76ce599fbae3ab70d18afbadedd0038243/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -110,9 +115,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/97f9c488b865e9c88427b2d07fd4d5060b09b079/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/5ef01d76ce599fbae3ab70d18afbadedd0038243/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@97f9c48](https://github.com/greenelab/connectivity-search-manuscript/tree/97f9c488b865e9c88427b2d07fd4d5060b09b079)
+from [greenelab/connectivity-search-manuscript@5ef01d7](https://github.com/greenelab/connectivity-search-manuscript/tree/5ef01d76ce599fbae3ab70d18afbadedd0038243)
 on July 11, 2022.
 </em></small>
 
@@ -194,6 +199,18 @@ This notice will be updated once all contributors meeting [authorship criteria](
   <small>
      Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
      · Funded by GBMF4552
+  </small>
+
++ **Yun Hao**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
+    [0000-0002-1684-0085](https://orcid.org/0000-0002-1684-0085)
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [yhao-compbio](https://github.com/yhao-compbio)
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
+    [YhaoC](https://twitter.com/YhaoC)<br>
+  <small>
+     Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA
   </small>
 
 + **Michael W. Nagle**
