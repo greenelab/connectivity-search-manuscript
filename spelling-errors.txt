@@ -17,13 +17,13 @@ contributd
 CrC
 CtDrDtC
 CtDtCtD
-customizable
+Customizable
 customizations
 DaGiGpPW
 DaGpPWpG
 danich
 dataset
-datasets
+Datasets
 DdGpPW
 deepwalk
 Dev
@@ -40,6 +40,7 @@ DrugCentral
 DtCtDpC
 DWPC’s
 DWPCs
+Eisai
 emprical
 erogeneous
 etcetera
@@ -66,7 +67,11 @@ linters
 Mayers
 metapath’s
 MF
+mikenagle
 multipath
+Nagle
+naglem
+Neurogenomics
 Numpy’s
 oppertunity
 Othertimes
