@@ -70,6 +70,15 @@ authors:
     affiliations:
       - Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
     funders: GBMF4552
+  - github: yhao-compbio
+    name: Yun Hao
+    initials: YH
+    orcid: 0000-0002-1684-0085
+    twitter: YhaoC
+    email: yun.hao@pennmedicine.upenn.edu
+    affiliations:
+      - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA
+    funders: null    
   - github: cgreene
     name: Casey S. Greene
     initials: CSG
