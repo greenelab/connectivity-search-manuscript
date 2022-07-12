@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-07-11'
+date-meta: '2022-07-12'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -34,8 +34,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-07-11" />
-  <meta name="citation_publication_date" content="2022-07-11" />
+  <meta name="dc.date" content="2022-07-12" />
+  <meta name="citation_publication_date" content="2022-07-12" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -66,7 +66,7 @@ header-includes: |-
   <meta name="twitter:creator" content="@None" />
   <meta name="citation_author" content="Dongbo Hu" />
   <meta name="citation_author_institution" content="Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
-  <meta name="citation_author_orcid" content="None" />
+  <meta name="citation_author_orcid" content="0000-0001-7870-8242" />
   <meta name="twitter:creator" content="@None" />
   <meta name="citation_author" content="Yun Hao" />
   <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA" />
@@ -89,9 +89,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/5ef01d76ce599fbae3ab70d18afbadedd0038243/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/5ef01d76ce599fbae3ab70d18afbadedd0038243/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/5ef01d76ce599fbae3ab70d18afbadedd0038243/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -115,10 +115,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/5ef01d76ce599fbae3ab70d18afbadedd0038243/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@5ef01d7](https://github.com/greenelab/connectivity-search-manuscript/tree/5ef01d76ce599fbae3ab70d18afbadedd0038243)
-on July 11, 2022.
+from [greenelab/connectivity-search-manuscript@90eb34d](https://github.com/greenelab/connectivity-search-manuscript/tree/90eb34d3e8de66c386a226f8eee4f3bd986487c6)
+on July 12, 2022.
 </em></small>
 
 ## Authors
@@ -194,6 +194,8 @@ This notice will be updated once all contributors meeting [authorship criteria](
 
 + **Dongbo Hu**
   <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
+    [0000-0001-7870-8242](https://orcid.org/0000-0001-7870-8242)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [dongbohu](https://github.com/dongbohu)<br>
   <small>
