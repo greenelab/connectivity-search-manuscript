@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-07-12'
+date-meta: '2022-07-16'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -34,8 +34,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-07-12" />
-  <meta name="citation_publication_date" content="2022-07-12" />
+  <meta name="dc.date" content="2022-07-16" />
+  <meta name="citation_publication_date" content="2022-07-16" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -89,9 +89,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -115,10 +115,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@90eb34d](https://github.com/greenelab/connectivity-search-manuscript/tree/90eb34d3e8de66c386a226f8eee4f3bd986487c6)
-on July 12, 2022.
+from [greenelab/connectivity-search-manuscript@ad7c95d](https://github.com/greenelab/connectivity-search-manuscript/tree/ad7c95de645fc6da43baaa7f547b2080d8881735)
+on July 16, 2022.
 </em></small>
 
 ## Authors
@@ -253,21 +253,19 @@ Casey S. Greene \<casey.s.greene@cuanschutz.edu\>.
 ## Abstract {.page_break_before}
 
 Hetnets, short for “heterogeneous networks”, contain multiple node and relationship types and offer a way to encode biomedical knowledge.
-For example, Hetionet connects 11 types of nodes
+One such example, Hetionet connects 11 types of nodes
 — including genes, diseases, drugs, pathways, and anatomical structures
 — with over 2 million edges of 24 types.
-Previously, we trained a classifier to repurpose drugs using features extracted from Hetionet.
-The model identified types of paths between a drug and disease that occurred more frequently between known treatments.
-
-For many applications however, a training set of known relationships does not exist;
-Yet researchers would still like to learn how two nodes are meaningfully connected.
+Previous work has demonstrated that supervised machine learning methods applied to such networks can identify drug repurposing opportunities.
+However, a training set of known relationships does not exist for many types of node pairs, even when it would be useful to examine how nodes of those types are meaningfully connected.
 For example, users may be curious not only how metformin is related to breast cancer,
 but also how the _GJA1_ gene might be involved in insomnia.
-Therefore, we developed hetnet connectivity search to propose the most important paths between any two nodes.
-
+We developed a new procedure, termed hetnet connectivity search, that proposes important paths between any two nodes without requiring a supervised gold standard.
 The algorithm behind connectivity search identifies types of paths that occur more frequently than would be expected by chance (based on node degree alone).
+We find that predictions are broadly similar to those from previously described supervised approaches for certain node type pairs.
+Scoring of individual paths is based on the most specific paths of a given type.
+Several optimizations were required to precompute significant instances of node connectivity at the scale of large knowledge graphs.
 We implemented the method on Hetionet and provide an online interface at <https://het.io/search>.
-Several optimizations were required to precompute significant instances of node connectivity at scale.
 We provide an open source implementation of these methods in our new Python package named [hetmatpy](https://github.com/hetio/hetmatpy "Python package for matrix storage and operations on hetnets").
 <!--
 To validate the method, we show that it identifies much of the same evidence for specific instances of drug repurposing as the previous supervised approach, but without requiring a training set.
@@ -278,8 +276,6 @@ To validate the method, we show that it identifies much of the same evidence for
 A *network* (also known as a [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics))) is a conceptual representation of a group of entities — called *nodes* — and the relationships between them — called *edges*.
 Typically, a network has only one type of node and one type of edge.
 But in many cases, it is necessary to be able to distinguish between different types of entities and relationships.
-
-### Hetnets
 
 A *hetnet* (short for **het**erogeneous information **net**work [@doi:10.15363/thinklab.d104]) is a network where nodes and edges have type.
 The ability to differentiate between different types of entities and relationships allows a hetnet to accurately describe more complex data.
@@ -292,55 +288,22 @@ The metagraph consists of metanodes (types of nodes) and metaedges (types of edg
 Note that the prefix *meta* is used to refer to type (e.g. compound),
 as opposed to a specific node/edge/path itself (e.g. acetaminophen).
 
-### Hetionet
-
-[Hetionet](https://het.io/about/) is a knowledge graph of human biology, disease, and medicine,
-integrating information from millions of studies and decades of research.
-Hetionet v1.0 combines information from [29 public databases](https://git.dhimmel.com/rephetio-manuscript/#tbl:resources).
-The network contains 47,031 nodes of [11 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metanodes) (Table @tbl:metanodes) and 2,250,197 edges of [24 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metaedges) (Figure {@fig:rephetio}A).
-
-| Metanode | Abbr | Nodes | Description |
-| --- | --- | --- | --- |
-| Anatomy | A | 402 | Anatomical structures, excluding structures that are known not to be found in humans. From [Uberon](http://uberon.github.io/). |
-| Biological Process | BP | 11381 | Larger processes or biological programs accomplished by multiple molecular activities. From [Gene Ontology](http://geneontology.org/). |
-| Cellular Component | CC | 1391 | The locations relative to cellular structures in which a gene product performs a function. From [Gene Ontology](http://geneontology.org/). |
-| Compound | C | 1552 | Approved small molecule compounds with documented chemical structures. From [DrugBank](https://www.drugbank.ca/). |
-| Disease | D | 137 | Complex diseases, selected to be distinct and specific enough to be clinically relevant yet general enough to be well annotated. From [Disease Ontology](http://disease-ontology.org/). |
-| Gene | G | 20945 | Protein-coding human genes. From [Entrez Gene](https://www.ncbi.nlm.nih.gov/gene). |
-| Molecular Function | MF | 2884 | Activities that occur at the molecular level, such as "catalysis" or "transport". From [Gene Ontology](http://geneontology.org/). |
-| Pathway | PW | 1822 | A series of actions among molecules in a cell that leads to a certain product or change in the cell. From [WikiPathways](https://www.wikipathways.org/index.php/WikiPathways), [Reactome](https://reactome.org/), and Pathway Interaction Database. |
-| Pharmacologic Class | PC | 345 | "Chemical/Ingredient", "Mechanism of Action", and "Physiologic Effect" FDA class types. From [DrugCentral](http://drugcentral.org/). |
-| Side Effect | SE | 5734 | Adverse drug reactions. From [SIDER](http://sideeffects.embl.de/)/[UMLS](https://www.nlm.nih.gov/research/umls/). |
-| Symptom | S | 438 | Signs and Symptoms (i.e. clinical abnormalities that can indicate a medical condition). From the [MeSH ontology](https://www.nlm.nih.gov/mesh/meshhome.html). |
-
-Table: **Node types in Hetionet**
-The abbreviation, number of nodes, and description for each of the 11 metanodes in Hetionet v1.0.
-{#tbl:metanodes}
-
-Hetionet provides a foundation for building hetnet applications.
+One such network is hetionet, which provides a foundation for building hetnet applications.
 It unifies data from several different, disparate sources into a single, comprehensive, accessible, common-format network.
 The database is publicly accessible without login at <https://neo4j.het.io>.
 The Neo4j graph database enables querying Hetionet using the Cypher language,
 which was designed to interact with networks where nodes and edges have both types and properties.
 
-One limitation that restricts the applicability of Hetionet is incompleteness.
-In many cases, Hetionet v1.0 includes only a subset of the nodes from a given resource.
-For example, the Disease Ontology contains over 9,000 diseases [@doi:10.1093/nar/gky1032],
-while Hetionet includes only 137 diseases [@doi:10.15363/thinklab.d44].
-Nodes were excluded to avoid redundant or overly specific nodes,
-while ensuring a minimum level of connectivity for compounds and diseases.
-See the [Project Rephetio methods](https://git.dhimmel.com/rephetio-manuscript/#nodes) for more details [@rephetio].
-Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types.
-Other integrative resources, some still under development, include [Wikidata](https://www.wikidata.org) [@doi:10.7554/eLife.52614], [SemMedDB](https://skr3.nlm.nih.gov/SemMedDB/) [@doi:10.1093/bioinformatics/bts591; @doi:10.1109/BIBM.2018.8621568; @doi:10.1186/s12859-019-3297-0], [SPOKE](https://spoke.ucsf.edu/), and [RTX-KG2c](https://github.com/RTXteam/RTX-KG2) [@doi:10.1101/2021.10.17.464747].
-
-### Rephetio
-
-Project Rephetio is the name of the [study](https://git.dhimmel.com/rephetio-manuscript/) that created Hetionet and applied it to repurpose drugs [@rephetio].
-This project [predicted](https://het.io/repurpose/) the probability of drug efficacy for 209,168 compound–disease pairs.
-The approach learned which types of paths occur more or less frequently between known treatments than non-treatments (Figure {@fig:rephetio}B).
-To train the model, Rephetio created [PharmacotherapyDB](https://doi.org/10.6084/m9.figshare.3103054),
+One such application, Project Rephetio, focused on drug repurposing [@rephetio].
+The authors [predicted](https://het.io/repurpose/) the probability of drug efficacy for 209,168 compound–disease pairs.
+A supervised machine learning approach learned which types of paths occur more or less frequently between known treatments than non-treatments (Figure {@fig:rephetio}B).
+To train the model, the authors created [PharmacotherapyDB](https://doi.org/10.6084/m9.figshare.3103054),
 a physician-curated catalog of 755 disease-modifying treatments [@doi:10.15363/thinklab.d182].
 
+<!--
+  pretty sure a previous paper at gigascience required us to move figures to the results section,
+  so we may need to add a results panel and put this at the beginning of the results section.
+-->
 ![
 **A. Hetionet v1.0 metagraph.**
 The types of nodes and edges in Hetionet.
@@ -366,25 +329,14 @@ but requires supervision in the form of known treatments.
 <!-- info on this figure's creation in https://github.com/greenelab/connectivity-search-manuscript/issues/11 -->
 ](https://github.com/greenelab/connectivity-search-manuscript/raw/f98c3470a8bf8f40f5f6aed2794c6ea66b93b14b/content/media/rephetio/metagraph-and-features.png){#fig:rephetio width="100%" .white}
 
-### Unsupervised hetnet connectivity search
-
-Project Rephetio was able to successfully predict treatments,
+Project Rephetio successfully predicted treatments,
 including those under investigation by clinical trail.
-However, two challenges limit the applicability of the Rephetio approach,
-which this study aims to address.
+However, two challenges limit the applicability of Rephetio.
 First, Rephetio required known labels (i.e. treatment status) to train a model.
 Hence, the approach cannot be applied to domains where training labels do not exist.
 Second, the DWPC metric used to assess connectivity is sensitive to node degree.
 The Rephetio approach was incapable of detecting whether a high DWPC score indicated meaningful connectivity above the level expected by the background network degrees.
-Here we propose Hetnet connectivity search, which defines a null distribution for DWPCs that accounts for degree and enables detecting meaningful hetnet connectivity without training labels.
-
-### Hetio
-
-*Hetio* is a superset/collection of hetnet-related research, tools, and datasets that, most notably, includes the Hetionet project itself and the connectivity search tool that are the focus of this manuscript.
-Most of the Hetio resources and projects can be found under the [Hetio GitHub organization](https://github.com/hetio), with a others being available under the [Greene Lab GitHub organization](https://github.com/greenelab), one of the collaborating groups.
-Information about Hetio is also displayed and disseminated on the [Hetio website](https://het.io/), as discussed in more detail below. 
-
-### Related Works
+Here we develop Hetnet connectivity search, which defines a null distribution for DWPCs that accounts for degree and enables detecting meaningful hetnet connectivity without training labels.
 
 <!--
 Issues related to other works and important references:
@@ -689,6 +641,43 @@ Furthermore, we would benefit from greater real-world evaluation of the connecti
 Despite these challenges, our study demonstrates one of the first public search engines for node connectivity on a biomedical knowledge graph, while contributing methods and software that we hope will inspire future work.
 
 ## Methods {.page_break_before}
+
+### Hetionet
+
+We used the hetionet knowledge graph to demonstrate connectivity search.
+[Hetionet](https://het.io/about/) is a knowledge graph of human biology, disease, and medicine,
+integrating information from millions of studies and decades of research.
+Hetionet v1.0 combines information from [29 public databases](https://git.dhimmel.com/rephetio-manuscript/#tbl:resources).
+The network contains 47,031 nodes of [11 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metanodes) (Table @tbl:metanodes) and 2,250,197 edges of [24 types](https://git.dhimmel.com/rephetio-manuscript/#tbl:metaedges) (Figure {@fig:rephetio}A).
+
+| Metanode | Abbr | Nodes | Description |
+| --- | --- | --- | --- |
+| Anatomy | A | 402 | Anatomical structures, excluding structures that are known not to be found in humans. From [Uberon](http://uberon.github.io/). |
+| Biological Process | BP | 11381 | Larger processes or biological programs accomplished by multiple molecular activities. From [Gene Ontology](http://geneontology.org/). |
+| Cellular Component | CC | 1391 | The locations relative to cellular structures in which a gene product performs a function. From [Gene Ontology](http://geneontology.org/). |
+| Compound | C | 1552 | Approved small molecule compounds with documented chemical structures. From [DrugBank](https://www.drugbank.ca/). |
+| Disease | D | 137 | Complex diseases, selected to be distinct and specific enough to be clinically relevant yet general enough to be well annotated. From [Disease Ontology](http://disease-ontology.org/). |
+| Gene | G | 20945 | Protein-coding human genes. From [Entrez Gene](https://www.ncbi.nlm.nih.gov/gene). |
+| Molecular Function | MF | 2884 | Activities that occur at the molecular level, such as "catalysis" or "transport". From [Gene Ontology](http://geneontology.org/). |
+| Pathway | PW | 1822 | A series of actions among molecules in a cell that leads to a certain product or change in the cell. From [WikiPathways](https://www.wikipathways.org/index.php/WikiPathways), [Reactome](https://reactome.org/), and Pathway Interaction Database. |
+| Pharmacologic Class | PC | 345 | "Chemical/Ingredient", "Mechanism of Action", and "Physiologic Effect" FDA class types. From [DrugCentral](http://drugcentral.org/). |
+| Side Effect | SE | 5734 | Adverse drug reactions. From [SIDER](http://sideeffects.embl.de/)/[UMLS](https://www.nlm.nih.gov/research/umls/). |
+| Symptom | S | 438 | Signs and Symptoms (i.e. clinical abnormalities that can indicate a medical condition). From the [MeSH ontology](https://www.nlm.nih.gov/mesh/meshhome.html). |
+
+Table: **Node types in Hetionet**
+The abbreviation, number of nodes, and description for each of the 11 metanodes in Hetionet v1.0.
+{#tbl:metanodes}
+
+
+One limitation that restricts the applicability of Hetionet is incompleteness.
+In many cases, Hetionet v1.0 includes only a subset of the nodes from a given resource.
+For example, the Disease Ontology contains over 9,000 diseases [@doi:10.1093/nar/gky1032],
+while Hetionet includes only 137 diseases [@doi:10.15363/thinklab.d44].
+Nodes were excluded to avoid redundant or overly specific nodes,
+while ensuring a minimum level of connectivity for compounds and diseases.
+See the [Project Rephetio methods](https://git.dhimmel.com/rephetio-manuscript/#nodes) for more details [@rephetio].
+Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types.
+Other integrative resources, some still under development, include [Wikidata](https://www.wikidata.org) [@doi:10.7554/eLife.52614], [SemMedDB](https://skr3.nlm.nih.gov/SemMedDB/) [@doi:10.1093/bioinformatics/bts591; @doi:10.1109/BIBM.2018.8621568; @doi:10.1186/s12859-019-3297-0], [SPOKE](https://spoke.ucsf.edu/), and [RTX-KG2c](https://github.com/RTXteam/RTX-KG2) [@doi:10.1101/2021.10.17.464747].
 
 ### HetMat architecture
 
@@ -1196,6 +1185,14 @@ The Manubot-rendered manuscript is available at <https://greenelab.github.io/con
 We encourage readers with feedback or questions to comment publicly via [GitHub Issues](https://github.com/greenelab/connectivity-search-manuscript/issues).
 
 ### Software & data availability
+
+#### Hetio
+
+*Hetio* is a superset/collection of hetnet-related research, tools, and datasets that, most notably, includes the Hetionet project itself and the connectivity search tool that are the focus of this manuscript.
+Most of the Hetio resources and projects can be found under the [Hetio GitHub organization](https://github.com/hetio), with a others being available under the [Greene Lab GitHub organization](https://github.com/greenelab), one of the collaborating groups.
+Information about Hetio is also displayed and disseminated on the [Hetio website](https://het.io/), as noted in the [Hetio Website] section. 
+
+#### Hetnet Connectivity Search
 
 This study primarily involves the following repositories:
 <!-- https://github.com/topics/hetnet-connectivity-search -->

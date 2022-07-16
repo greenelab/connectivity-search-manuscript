@@ -13,7 +13,7 @@
   <meta name="author" content="Yun Hao" />
   <meta name="author" content="Michael W. Nagle" />
   <meta name="author" content="Casey S. Greene" />
-  <meta name="dcterms.date" content="2022-07-12" />
+  <meta name="dcterms.date" content="2022-07-16" />
   <meta name="keywords" content="hetnets, networks, connectivity, search, hetionet, knowledge graphs, algorithms, nodes, bioinformatics, biomedical informatics" />
   <title>Hetnet connectivity search provides rapid insights into how two biomedical entities are related</title>
   <style>
@@ -52,8 +52,8 @@
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-07-12" />
-  <meta name="citation_publication_date" content="2022-07-12" />
+  <meta name="dc.date" content="2022-07-16" />
+  <meta name="citation_publication_date" content="2022-07-16" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -107,9 +107,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -128,10 +128,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/90eb34d3e8de66c386a226f8eee4f3bd986487c6/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/90eb34d3e8de66c386a226f8eee4f3bd986487c6">greenelab/connectivity-search-manuscript@90eb34d</a>
-on July 12, 2022.
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/ad7c95de645fc6da43baaa7f547b2080d8881735">greenelab/connectivity-search-manuscript@ad7c95d</a>
+on July 16, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <!-- include the Font Awesome library, per: https://fontawesome.com/start -->
@@ -246,19 +246,19 @@ Casey S. Greene &lt;casey.s.greene@cuanschutz.edu&gt;.</p>
 </div>
 <h2 class="page_break_before" id="abstract">Abstract</h2>
 <p>Hetnets, short for “heterogeneous networks”, contain multiple node and relationship types and offer a way to encode biomedical knowledge.
-For example, Hetionet connects 11 types of nodes
+One such example, Hetionet connects 11 types of nodes
 — including genes, diseases, drugs, pathways, and anatomical structures
 — with over 2 million edges of 24 types.
-Previously, we trained a classifier to repurpose drugs using features extracted from Hetionet.
-The model identified types of paths between a drug and disease that occurred more frequently between known treatments.</p>
-<p>For many applications however, a training set of known relationships does not exist;
-Yet researchers would still like to learn how two nodes are meaningfully connected.
+Previous work has demonstrated that supervised machine learning methods applied to such networks can identify drug repurposing opportunities.
+However, a training set of known relationships does not exist for many types of node pairs, even when it would be useful to examine how nodes of those types are meaningfully connected.
 For example, users may be curious not only how metformin is related to breast cancer,
 but also how the <em>GJA1</em> gene might be involved in insomnia.
-Therefore, we developed hetnet connectivity search to propose the most important paths between any two nodes.</p>
-<p>The algorithm behind connectivity search identifies types of paths that occur more frequently than would be expected by chance (based on node degree alone).
+We developed a new procedure, termed hetnet connectivity search, that proposes important paths between any two nodes without requiring a supervised gold standard.
+The algorithm behind connectivity search identifies types of paths that occur more frequently than would be expected by chance (based on node degree alone).
+We find that predictions are broadly similar to those from previously described supervised approaches for certain node type pairs.
+Scoring of individual paths is based on the most specific paths of a given type.
+Several optimizations were required to precompute significant instances of node connectivity at the scale of large knowledge graphs.
 We implemented the method on Hetionet and provide an online interface at <a href="https://het.io/search" class="uri">https://het.io/search</a>.
-Several optimizations were required to precompute significant instances of node connectivity at scale.
 We provide an open source implementation of these methods in our new Python package named <a href="https://github.com/hetio/hetmatpy" title="Python package for matrix storage and operations on hetnets">hetmatpy</a>.
 <!--
 To validate the method, we show that it identifies much of the same evidence for specific instances of drug repurposing as the previous supervised approach, but without requiring a training set.
@@ -267,7 +267,6 @@ To validate the method, we show that it identifies much of the same evidence for
 <p>A <em>network</em> (also known as a <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)">graph</a>) is a conceptual representation of a group of entities — called <em>nodes</em> — and the relationships between them — called <em>edges</em>.
 Typically, a network has only one type of node and one type of edge.
 But in many cases, it is necessary to be able to distinguish between different types of entities and relationships.</p>
-<h3 id="hetnets">Hetnets</h3>
 <p>A <em>hetnet</em> (short for <strong>het</strong>erogeneous information <strong>net</strong>work <span class="citation" data-cites="QWTAHxFj">[<a href="#ref-QWTAHxFj" role="doc-biblioref">1</a>]</span>) is a network where nodes and edges have type.
 The ability to differentiate between different types of entities and relationships allows a hetnet to accurately describe more complex data.
 Hetnets are particularly useful in biomedicine,
@@ -277,123 +276,23 @@ such as genes and diseases, or upregulation and binding.</p>
 The metagraph consists of metanodes (types of nodes) and metaedges (types of edges).
 Note that the prefix <em>meta</em> is used to refer to type (e.g. compound),
 as opposed to a specific node/edge/path itself (e.g. acetaminophen).</p>
-<h3 id="hetionet">Hetionet</h3>
-<p><a href="https://het.io/about/">Hetionet</a> is a knowledge graph of human biology, disease, and medicine,
-integrating information from millions of studies and decades of research.
-Hetionet v1.0 combines information from <a href="https://git.dhimmel.com/rephetio-manuscript/#tbl:resources">29 public databases</a>.
-The network contains 47,031 nodes of <a href="https://git.dhimmel.com/rephetio-manuscript/#tbl:metanodes">11 types</a> (Table <a href="#tbl:metanodes">1</a>) and 2,250,197 edges of <a href="https://git.dhimmel.com/rephetio-manuscript/#tbl:metaedges">24 types</a> (Figure <a href="#fig:rephetio">1</a>A).</p>
-<div id="tbl:metanodes" class="tablenos">
-<table id="tbl:metanodes">
-<caption><span>Table 1:</span> <strong>Node types in Hetionet</strong>
-The abbreviation, number of nodes, and description for each of the 11 metanodes in Hetionet v1.0.
-</caption>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Metanode</th>
-<th>Abbr</th>
-<th>Nodes</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Anatomy</td>
-<td>A</td>
-<td>402</td>
-<td>Anatomical structures, excluding structures that are known not to be found in humans. From <a href="http://uberon.github.io/">Uberon</a>.</td>
-</tr>
-<tr class="even">
-<td>Biological Process</td>
-<td>BP</td>
-<td>11381</td>
-<td>Larger processes or biological programs accomplished by multiple molecular activities. From <a href="http://geneontology.org/">Gene Ontology</a>.</td>
-</tr>
-<tr class="odd">
-<td>Cellular Component</td>
-<td>CC</td>
-<td>1391</td>
-<td>The locations relative to cellular structures in which a gene product performs a function. From <a href="http://geneontology.org/">Gene Ontology</a>.</td>
-</tr>
-<tr class="even">
-<td>Compound</td>
-<td>C</td>
-<td>1552</td>
-<td>Approved small molecule compounds with documented chemical structures. From <a href="https://www.drugbank.ca/">DrugBank</a>.</td>
-</tr>
-<tr class="odd">
-<td>Disease</td>
-<td>D</td>
-<td>137</td>
-<td>Complex diseases, selected to be distinct and specific enough to be clinically relevant yet general enough to be well annotated. From <a href="http://disease-ontology.org/">Disease Ontology</a>.</td>
-</tr>
-<tr class="even">
-<td>Gene</td>
-<td>G</td>
-<td>20945</td>
-<td>Protein-coding human genes. From <a href="https://www.ncbi.nlm.nih.gov/gene">Entrez Gene</a>.</td>
-</tr>
-<tr class="odd">
-<td>Molecular Function</td>
-<td>MF</td>
-<td>2884</td>
-<td>Activities that occur at the molecular level, such as “catalysis” or “transport”. From <a href="http://geneontology.org/">Gene Ontology</a>.</td>
-</tr>
-<tr class="even">
-<td>Pathway</td>
-<td>PW</td>
-<td>1822</td>
-<td>A series of actions among molecules in a cell that leads to a certain product or change in the cell. From <a href="https://www.wikipathways.org/index.php/WikiPathways">WikiPathways</a>, <a href="https://reactome.org/">Reactome</a>, and Pathway Interaction Database.</td>
-</tr>
-<tr class="odd">
-<td>Pharmacologic Class</td>
-<td>PC</td>
-<td>345</td>
-<td>“Chemical/Ingredient”, “Mechanism of Action”, and “Physiologic Effect” FDA class types. From <a href="http://drugcentral.org/">DrugCentral</a>.</td>
-</tr>
-<tr class="even">
-<td>Side Effect</td>
-<td>SE</td>
-<td>5734</td>
-<td>Adverse drug reactions. From <a href="http://sideeffects.embl.de/">SIDER</a>/<a href="https://www.nlm.nih.gov/research/umls/">UMLS</a>.</td>
-</tr>
-<tr class="odd">
-<td>Symptom</td>
-<td>S</td>
-<td>438</td>
-<td>Signs and Symptoms (i.e. clinical abnormalities that can indicate a medical condition). From the <a href="https://www.nlm.nih.gov/mesh/meshhome.html">MeSH ontology</a>.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Hetionet provides a foundation for building hetnet applications.
+<p>One such network is hetionet, which provides a foundation for building hetnet applications.
 It unifies data from several different, disparate sources into a single, comprehensive, accessible, common-format network.
 The database is publicly accessible without login at <a href="https://neo4j.het.io" class="uri">https://neo4j.het.io</a>.
 The Neo4j graph database enables querying Hetionet using the Cypher language,
 which was designed to interact with networks where nodes and edges have both types and properties.</p>
-<p>One limitation that restricts the applicability of Hetionet is incompleteness.
-In many cases, Hetionet v1.0 includes only a subset of the nodes from a given resource.
-For example, the Disease Ontology contains over 9,000 diseases <span class="citation" data-cites="1FsruosUW">[<a href="#ref-1FsruosUW" role="doc-biblioref">2</a>]</span>,
-while Hetionet includes only 137 diseases <span class="citation" data-cites="203l6hC3">[<a href="#ref-203l6hC3" role="doc-biblioref">3</a>]</span>.
-Nodes were excluded to avoid redundant or overly specific nodes,
-while ensuring a minimum level of connectivity for compounds and diseases.
-See the <a href="https://git.dhimmel.com/rephetio-manuscript/#nodes">Project Rephetio methods</a> for more details <span class="citation" data-cites="O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>]</span>.
-Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types.
-Other integrative resources, some still under development, include <a href="https://www.wikidata.org">Wikidata</a> <span class="citation" data-cites="HUodcdz1">[<a href="#ref-HUodcdz1" role="doc-biblioref">5</a>]</span>, <a href="https://skr3.nlm.nih.gov/SemMedDB/">SemMedDB</a> <span class="citation" data-cites="eKVkBSDD reekunFL uTOtIsTj">[<a href="#ref-eKVkBSDD" role="doc-biblioref">6</a>,<a href="#ref-reekunFL" role="doc-biblioref">7</a>,<a href="#ref-uTOtIsTj" role="doc-biblioref">8</a>]</span>, <a href="https://spoke.ucsf.edu/">SPOKE</a>, and <a href="https://github.com/RTXteam/RTX-KG2">RTX-KG2c</a> <span class="citation" data-cites="19BbeTNuB">[<a href="#ref-19BbeTNuB" role="doc-biblioref">9</a>]</span>.</p>
-<h3 id="rephetio">Rephetio</h3>
-<p>Project Rephetio is the name of the <a href="https://git.dhimmel.com/rephetio-manuscript/">study</a> that created Hetionet and applied it to repurpose drugs <span class="citation" data-cites="O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>]</span>.
-This project <a href="https://het.io/repurpose/">predicted</a> the probability of drug efficacy for 209,168 compound–disease pairs.
-The approach learned which types of paths occur more or less frequently between known treatments than non-treatments (Figure <a href="#fig:rephetio">1</a>B).
-To train the model, Rephetio created <a href="https://doi.org/10.6084/m9.figshare.3103054">PharmacotherapyDB</a>,
-a physician-curated catalog of 755 disease-modifying treatments <span class="citation" data-cites="5t7pfaPv">[<a href="#ref-5t7pfaPv" role="doc-biblioref">10</a>]</span>.</p>
+<p>One such application, Project Rephetio, focused on drug repurposing <span class="citation" data-cites="O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">2</a>]</span>.
+The authors <a href="https://het.io/repurpose/">predicted</a> the probability of drug efficacy for 209,168 compound–disease pairs.
+A supervised machine learning approach learned which types of paths occur more or less frequently between known treatments than non-treatments (Figure <a href="#fig:rephetio">1</a>B).
+To train the model, the authors created <a href="https://doi.org/10.6084/m9.figshare.3103054">PharmacotherapyDB</a>,
+a physician-curated catalog of 755 disease-modifying treatments <span class="citation" data-cites="5t7pfaPv">[<a href="#ref-5t7pfaPv" role="doc-biblioref">3</a>]</span>.</p>
+<!--
+  pretty sure a previous paper at gigascience required us to move figures to the results section,
+  so we may need to add a results panel and put this at the beginning of the results section.
+-->
 <div id="fig:rephetio" class="fignos">
 <figure>
-<img src="https://github.com/greenelab/connectivity-search-manuscript/raw/f98c3470a8bf8f40f5f6aed2794c6ea66b93b14b/content/media/rephetio/metagraph-and-features.png" class="white" style="width:100.0%" alt="Figure 1: A. Hetionet v1.0 metagraph. The types of nodes and edges in Hetionet. B. Supervised machine learning approach from Project Rephetio. This figure visualizes the feature matrix used by Project Rephetio to make supervised predictions. Each row represents a compound–disease pair. The top half of rows correspond to known treatments (i.e. positives), while the bottom half correspond to non-treatments (i.e. negatives under a closed-world assumption, not known to be treatments in PharmacotherapyDB). Here, an equal number of treatments and non-treatments are shown, but in reality the problem is heavily imbalanced. Project Rephetio scaled models to assume a positive prevalence of 0.36% [4,11]. Each column represents a metapath, labeled with its abbreviation. Feature values are DWPCs (transformed and standardized), which assess the connectivity along the specified metapath between the specific compound and disease. Green colored values indicate above-average connectivity, whereas blue values indicate below average connectivity. In general, positives have greater connectivity for the selected metapaths than negatives. Rephetio used a logistic regression model to learn the effect of each type of connectivity (feature) on the likelihood that a compound treats a disease. The model predicts whether a compound–disease pair is a treatment based on its features, but requires supervision in the form of known treatments. " />
+<img src="https://github.com/greenelab/connectivity-search-manuscript/raw/f98c3470a8bf8f40f5f6aed2794c6ea66b93b14b/content/media/rephetio/metagraph-and-features.png" class="white" style="width:100.0%" alt="Figure 1: A. Hetionet v1.0 metagraph. The types of nodes and edges in Hetionet. B. Supervised machine learning approach from Project Rephetio. This figure visualizes the feature matrix used by Project Rephetio to make supervised predictions. Each row represents a compound–disease pair. The top half of rows correspond to known treatments (i.e. positives), while the bottom half correspond to non-treatments (i.e. negatives under a closed-world assumption, not known to be treatments in PharmacotherapyDB). Here, an equal number of treatments and non-treatments are shown, but in reality the problem is heavily imbalanced. Project Rephetio scaled models to assume a positive prevalence of 0.36% [2,4]. Each column represents a metapath, labeled with its abbreviation. Feature values are DWPCs (transformed and standardized), which assess the connectivity along the specified metapath between the specific compound and disease. Green colored values indicate above-average connectivity, whereas blue values indicate below average connectivity. In general, positives have greater connectivity for the selected metapaths than negatives. Rephetio used a logistic regression model to learn the effect of each type of connectivity (feature) on the likelihood that a compound treats a disease. The model predicts whether a compound–disease pair is a treatment based on its features, but requires supervision in the form of known treatments. " />
 <figcaption aria-hidden="true"><span>Figure 1:</span> <strong>A. Hetionet v1.0 metagraph.</strong>
 The types of nodes and edges in Hetionet.<br />
 <strong>B. Supervised machine learning approach from Project Rephetio.</strong>
@@ -403,7 +302,7 @@ The top half of rows correspond to known treatments (i.e. positives),
 while the bottom half correspond to non-treatments
 (i.e. negatives under a <em>closed-world assumption</em>, not known to be treatments in PharmacotherapyDB).
 Here, an equal number of treatments and non-treatments are shown, but in reality the problem is heavily imbalanced.
-Project Rephetio scaled models to assume a positive prevalence of 0.36% <span class="citation" data-cites="O21tn8vf vvdoVrc6">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-vvdoVrc6" role="doc-biblioref">11</a>]</span>.
+Project Rephetio scaled models to assume a positive prevalence of 0.36% <span class="citation" data-cites="O21tn8vf vvdoVrc6">[<a href="#ref-O21tn8vf" role="doc-biblioref">2</a>,<a href="#ref-vvdoVrc6" role="doc-biblioref">4</a>]</span>.
 Each column represents a metapath, labeled with its abbreviation.<br />
 Feature values are DWPCs (transformed and standardized),
 which assess the connectivity along the specified metapath between the specific compound and disease.
@@ -416,21 +315,14 @@ but requires supervision in the form of known treatments.
 <!-- info on this figure's creation in https://github.com/greenelab/connectivity-search-manuscript/issues/11 --></figcaption>
 </figure>
 </div>
-<h3 id="unsupervised-hetnet-connectivity-search">Unsupervised hetnet connectivity search</h3>
-<p>Project Rephetio was able to successfully predict treatments,
+<p>Project Rephetio successfully predicted treatments,
 including those under investigation by clinical trail.
-However, two challenges limit the applicability of the Rephetio approach,
-which this study aims to address.
+However, two challenges limit the applicability of Rephetio.
 First, Rephetio required known labels (i.e. treatment status) to train a model.
 Hence, the approach cannot be applied to domains where training labels do not exist.
 Second, the DWPC metric used to assess connectivity is sensitive to node degree.
 The Rephetio approach was incapable of detecting whether a high DWPC score indicated meaningful connectivity above the level expected by the background network degrees.
-Here we propose Hetnet connectivity search, which defines a null distribution for DWPCs that accounts for degree and enables detecting meaningful hetnet connectivity without training labels.</p>
-<h3 id="hetio">Hetio</h3>
-<p><em>Hetio</em> is a superset/collection of hetnet-related research, tools, and datasets that, most notably, includes the Hetionet project itself and the connectivity search tool that are the focus of this manuscript.
-Most of the Hetio resources and projects can be found under the <a href="https://github.com/hetio">Hetio GitHub organization</a>, with a others being available under the <a href="https://github.com/greenelab">Greene Lab GitHub organization</a>, one of the collaborating groups.
-Information about Hetio is also displayed and disseminated on the <a href="https://het.io/">Hetio website</a>, as discussed in more detail below.</p>
-<h3 id="related-works">Related Works</h3>
+Here we develop Hetnet connectivity search, which defines a null distribution for DWPCs that accounts for degree and enables detecting meaningful hetnet connectivity without training labels.</p>
 <!--
 Issues related to other works and important references:
 https://github.com/greenelab/connectivity-search-analyses/issues/56
@@ -438,22 +330,22 @@ https://github.com/greenelab/connectivity-search-manuscript/issues/28
 -->
 <p>Existing research provides methods for determining whether two nodes are related,
 although primarily focuses on homogeneous networks (without type).
-Early approaches detected related nodes by measuring neighborhood overlap or path similarity between two nodes <span class="citation" data-cites="EfWvuSjX 7iZtCGcX">[<a href="#ref-EfWvuSjX" role="doc-biblioref">12</a>,<a href="#ref-7iZtCGcX" role="doc-biblioref">13</a>]</span>.
+Early approaches detected related nodes by measuring neighborhood overlap or path similarity between two nodes <span class="citation" data-cites="EfWvuSjX 7iZtCGcX">[<a href="#ref-EfWvuSjX" role="doc-biblioref">5</a>,<a href="#ref-7iZtCGcX" role="doc-biblioref">6</a>]</span>.
 These approaches predicted node relatedness with success.
-However, they are difficult to scale as a network grows in size or semantic richness (i.e. type) <span class="citation" data-cites="EfWvuSjX">[<a href="#ref-EfWvuSjX" role="doc-biblioref">12</a>]</span>.</p>
+However, they are difficult to scale as a network grows in size or semantic richness (i.e. type) <span class="citation" data-cites="EfWvuSjX">[<a href="#ref-EfWvuSjX" role="doc-biblioref">5</a>]</span>.</p>
 <p>More recently, focus has shifted to graph embeddings to determine if two nodes are related,
 specifically in the context of knowledge graphs, which are often semantically rich and include type
-<span class="citation" data-cites="otY29wFV NnOS86ev GYLacVTV 3gzmoW2V 3tyf5NSe">[<a href="#ref-otY29wFV" role="doc-biblioref">14</a>,<a href="#ref-NnOS86ev" role="doc-biblioref">15</a>,<a href="#ref-GYLacVTV" role="doc-biblioref">16</a>,<a href="#ref-3gzmoW2V" role="doc-biblioref">17</a>,<a href="#ref-3tyf5NSe" role="doc-biblioref">18</a>]</span>.
-These types of methods involve mapping nodes and sometimes edges to dense vectors via a neural network model <span class="citation" data-cites="U1Dfux5r 1AeZs6xaT jyhFBVzQ">[<a href="#ref-U1Dfux5r" role="doc-biblioref">19</a>,<a href="#ref-1AeZs6xaT" role="doc-biblioref">20</a>,<a href="#ref-jyhFBVzQ" role="doc-biblioref">21</a>]</span>, matrix factorization <span class="citation" data-cites="xq3Nsf5M 1EeE9qtFA">[<a href="#ref-xq3Nsf5M" role="doc-biblioref">22</a>,<a href="#ref-1EeE9qtFA" role="doc-biblioref">23</a>]</span>, or by translational distance models <span class="citation" data-cites="cnCLKeU9">[<a href="#ref-cnCLKeU9" role="doc-biblioref">24</a>]</span>.
-Once these dense vectors have been produced, quantitative scores that measure node relatedness can be generated via a machine learning model <span class="citation" data-cites="NnOS86ev taI1UUAE 17ioZ6znu">[<a href="#ref-NnOS86ev" role="doc-biblioref">15</a>,<a href="#ref-taI1UUAE" role="doc-biblioref">25</a>,<a href="#ref-17ioZ6znu" role="doc-biblioref">26</a>]</span> or by selected similarity metrics <span class="citation" data-cites="otY29wFV 1D9FTzRBg 6PISrkV5 GYLacVTV 19E33rJiu">[<a href="#ref-otY29wFV" role="doc-biblioref">14</a>,<a href="#ref-GYLacVTV" role="doc-biblioref">16</a>,<a href="#ref-1D9FTzRBg" role="doc-biblioref">27</a>,<a href="#ref-6PISrkV5" role="doc-biblioref">28</a>,<a href="#ref-19E33rJiu" role="doc-biblioref">29</a>]</span>.
+<span class="citation" data-cites="otY29wFV NnOS86ev GYLacVTV 3gzmoW2V 3tyf5NSe">[<a href="#ref-otY29wFV" role="doc-biblioref">7</a>,<a href="#ref-NnOS86ev" role="doc-biblioref">8</a>,<a href="#ref-GYLacVTV" role="doc-biblioref">9</a>,<a href="#ref-3gzmoW2V" role="doc-biblioref">10</a>,<a href="#ref-3tyf5NSe" role="doc-biblioref">11</a>]</span>.
+These types of methods involve mapping nodes and sometimes edges to dense vectors via a neural network model <span class="citation" data-cites="U1Dfux5r 1AeZs6xaT jyhFBVzQ">[<a href="#ref-U1Dfux5r" role="doc-biblioref">12</a>,<a href="#ref-1AeZs6xaT" role="doc-biblioref">13</a>,<a href="#ref-jyhFBVzQ" role="doc-biblioref">14</a>]</span>, matrix factorization <span class="citation" data-cites="xq3Nsf5M 1EeE9qtFA">[<a href="#ref-xq3Nsf5M" role="doc-biblioref">15</a>,<a href="#ref-1EeE9qtFA" role="doc-biblioref">16</a>]</span>, or by translational distance models <span class="citation" data-cites="cnCLKeU9">[<a href="#ref-cnCLKeU9" role="doc-biblioref">17</a>]</span>.
+Once these dense vectors have been produced, quantitative scores that measure node relatedness can be generated via a machine learning model <span class="citation" data-cites="NnOS86ev taI1UUAE 17ioZ6znu">[<a href="#ref-NnOS86ev" role="doc-biblioref">8</a>,<a href="#ref-taI1UUAE" role="doc-biblioref">18</a>,<a href="#ref-17ioZ6znu" role="doc-biblioref">19</a>]</span> or by selected similarity metrics <span class="citation" data-cites="otY29wFV 1D9FTzRBg 6PISrkV5 GYLacVTV 19E33rJiu">[<a href="#ref-otY29wFV" role="doc-biblioref">7</a>,<a href="#ref-GYLacVTV" role="doc-biblioref">9</a>,<a href="#ref-1D9FTzRBg" role="doc-biblioref">20</a>,<a href="#ref-6PISrkV5" role="doc-biblioref">21</a>,<a href="#ref-19E33rJiu" role="doc-biblioref">22</a>]</span>.
 These approaches have been quite successful in determining node relatedness.
 Yet, they only state <em>whether</em> two nodes are related and fail to provide an explanation on <em>why</em> two nodes are related.</p>
 <p>Explaining why two nodes are related is a non-trivial task because approaches are required to output more information than a simple similarity score.
-The first group of approaches output a list of ranked paths that are most relevant between two nodes <span class="citation" data-cites="Dbie18xe GPBbIfq9 L3DO8oq1">[<a href="#ref-Dbie18xe" role="doc-biblioref">30</a>,<a href="#ref-GPBbIfq9" role="doc-biblioref">31</a>,<a href="#ref-L3DO8oq1" role="doc-biblioref">32</a>]</span>.
-For example, the FAIRY framework explains for why items appear on a user’s social media feed based on a network of users and content classes (e.g. categories, user posts, songs) <span class="citation" data-cites="GPBbIfq9">[<a href="#ref-GPBbIfq9" role="doc-biblioref">31</a>]</span>.
-ESPRESSO explains how two sets of nodes are related by returning subgraphs <span class="citation" data-cites="Hf24Hzrl">[<a href="#ref-Hf24Hzrl" role="doc-biblioref">33</a>]</span>.
+The first group of approaches output a list of ranked paths that are most relevant between two nodes <span class="citation" data-cites="Dbie18xe GPBbIfq9 L3DO8oq1">[<a href="#ref-Dbie18xe" role="doc-biblioref">23</a>,<a href="#ref-GPBbIfq9" role="doc-biblioref">24</a>,<a href="#ref-L3DO8oq1" role="doc-biblioref">25</a>]</span>.
+For example, the FAIRY framework explains for why items appear on a user’s social media feed based on a network of users and content classes (e.g. categories, user posts, songs) <span class="citation" data-cites="GPBbIfq9">[<a href="#ref-GPBbIfq9" role="doc-biblioref">24</a>]</span>.
+ESPRESSO explains how two sets of nodes are related by returning subgraphs <span class="citation" data-cites="Hf24Hzrl">[<a href="#ref-Hf24Hzrl" role="doc-biblioref">26</a>]</span>.
 Other approaches such as MetaExp return important metapaths rather than paths,
-but require some form of supervision <span class="citation" data-cites="19H7j1WBd Vz9QIDKV">[<a href="#ref-19H7j1WBd" role="doc-biblioref">34</a>,<a href="#ref-Vz9QIDKV" role="doc-biblioref">35</a>]</span>.
+but require some form of supervision <span class="citation" data-cites="19H7j1WBd Vz9QIDKV">[<a href="#ref-19H7j1WBd" role="doc-biblioref">27</a>,<a href="#ref-Vz9QIDKV" role="doc-biblioref">28</a>]</span>.
 Our goal with Hetnet connectivity search is to explain how two nodes are related,
 while doing so in an unsupervised manner that captures the semantic richness of edge type and returns results in the form of both metapaths and paths.</p>
 <h2 class="page_break_before" id="results">Results</h2>
@@ -535,7 +427,7 @@ we use the DWPC (degree-weighted path count) metric.
 The DWPC is similar to path count (number of paths between the source and target node along a given metapath),
 except that it downweights paths through high degree nodes.
 Rather than using the raw DWPC for a source-metapath-target combination,
-we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling <span class="citation" data-cites="17mGFvxXu">[<a href="#ref-17mGFvxXu" role="doc-biblioref">36</a>]</span>.
+we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling <span class="citation" data-cites="17mGFvxXu">[<a href="#ref-17mGFvxXu" role="doc-biblioref">29</a>]</span>.
 <!--
 Future work should consider a different method for transforming DWPCs:
 scale by nonzero mean rather than mean.
@@ -681,6 +573,110 @@ generating an equivalent search webapp for a different hetnet would be challengi
 Furthermore, we would benefit from greater real-world evaluation of the connectivity search results to help identify situations where the method underperforms.
 Despite these challenges, our study demonstrates one of the first public search engines for node connectivity on a biomedical knowledge graph, while contributing methods and software that we hope will inspire future work.</p>
 <h2 class="page_break_before" id="methods">Methods</h2>
+<h3 id="hetionet">Hetionet</h3>
+<p>We used the hetionet knowledge graph to demonstrate connectivity search.
+<a href="https://het.io/about/">Hetionet</a> is a knowledge graph of human biology, disease, and medicine,
+integrating information from millions of studies and decades of research.
+Hetionet v1.0 combines information from <a href="https://git.dhimmel.com/rephetio-manuscript/#tbl:resources">29 public databases</a>.
+The network contains 47,031 nodes of <a href="https://git.dhimmel.com/rephetio-manuscript/#tbl:metanodes">11 types</a> (Table <a href="#tbl:metanodes">1</a>) and 2,250,197 edges of <a href="https://git.dhimmel.com/rephetio-manuscript/#tbl:metaedges">24 types</a> (Figure <a href="#fig:rephetio">1</a>A).</p>
+<div id="tbl:metanodes" class="tablenos">
+<table id="tbl:metanodes">
+<caption><span>Table 1:</span> <strong>Node types in Hetionet</strong>
+The abbreviation, number of nodes, and description for each of the 11 metanodes in Hetionet v1.0.
+</caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metanode</th>
+<th>Abbr</th>
+<th>Nodes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Anatomy</td>
+<td>A</td>
+<td>402</td>
+<td>Anatomical structures, excluding structures that are known not to be found in humans. From <a href="http://uberon.github.io/">Uberon</a>.</td>
+</tr>
+<tr class="even">
+<td>Biological Process</td>
+<td>BP</td>
+<td>11381</td>
+<td>Larger processes or biological programs accomplished by multiple molecular activities. From <a href="http://geneontology.org/">Gene Ontology</a>.</td>
+</tr>
+<tr class="odd">
+<td>Cellular Component</td>
+<td>CC</td>
+<td>1391</td>
+<td>The locations relative to cellular structures in which a gene product performs a function. From <a href="http://geneontology.org/">Gene Ontology</a>.</td>
+</tr>
+<tr class="even">
+<td>Compound</td>
+<td>C</td>
+<td>1552</td>
+<td>Approved small molecule compounds with documented chemical structures. From <a href="https://www.drugbank.ca/">DrugBank</a>.</td>
+</tr>
+<tr class="odd">
+<td>Disease</td>
+<td>D</td>
+<td>137</td>
+<td>Complex diseases, selected to be distinct and specific enough to be clinically relevant yet general enough to be well annotated. From <a href="http://disease-ontology.org/">Disease Ontology</a>.</td>
+</tr>
+<tr class="even">
+<td>Gene</td>
+<td>G</td>
+<td>20945</td>
+<td>Protein-coding human genes. From <a href="https://www.ncbi.nlm.nih.gov/gene">Entrez Gene</a>.</td>
+</tr>
+<tr class="odd">
+<td>Molecular Function</td>
+<td>MF</td>
+<td>2884</td>
+<td>Activities that occur at the molecular level, such as “catalysis” or “transport”. From <a href="http://geneontology.org/">Gene Ontology</a>.</td>
+</tr>
+<tr class="even">
+<td>Pathway</td>
+<td>PW</td>
+<td>1822</td>
+<td>A series of actions among molecules in a cell that leads to a certain product or change in the cell. From <a href="https://www.wikipathways.org/index.php/WikiPathways">WikiPathways</a>, <a href="https://reactome.org/">Reactome</a>, and Pathway Interaction Database.</td>
+</tr>
+<tr class="odd">
+<td>Pharmacologic Class</td>
+<td>PC</td>
+<td>345</td>
+<td>“Chemical/Ingredient”, “Mechanism of Action”, and “Physiologic Effect” FDA class types. From <a href="http://drugcentral.org/">DrugCentral</a>.</td>
+</tr>
+<tr class="even">
+<td>Side Effect</td>
+<td>SE</td>
+<td>5734</td>
+<td>Adverse drug reactions. From <a href="http://sideeffects.embl.de/">SIDER</a>/<a href="https://www.nlm.nih.gov/research/umls/">UMLS</a>.</td>
+</tr>
+<tr class="odd">
+<td>Symptom</td>
+<td>S</td>
+<td>438</td>
+<td>Signs and Symptoms (i.e. clinical abnormalities that can indicate a medical condition). From the <a href="https://www.nlm.nih.gov/mesh/meshhome.html">MeSH ontology</a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>One limitation that restricts the applicability of Hetionet is incompleteness.
+In many cases, Hetionet v1.0 includes only a subset of the nodes from a given resource.
+For example, the Disease Ontology contains over 9,000 diseases <span class="citation" data-cites="1FsruosUW">[<a href="#ref-1FsruosUW" role="doc-biblioref">30</a>]</span>,
+while Hetionet includes only 137 diseases <span class="citation" data-cites="203l6hC3">[<a href="#ref-203l6hC3" role="doc-biblioref">31</a>]</span>.
+Nodes were excluded to avoid redundant or overly specific nodes,
+while ensuring a minimum level of connectivity for compounds and diseases.
+See the <a href="https://git.dhimmel.com/rephetio-manuscript/#nodes">Project Rephetio methods</a> for more details <span class="citation" data-cites="O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">2</a>]</span>.
+Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types.
+Other integrative resources, some still under development, include <a href="https://www.wikidata.org">Wikidata</a> <span class="citation" data-cites="HUodcdz1">[<a href="#ref-HUodcdz1" role="doc-biblioref">32</a>]</span>, <a href="https://skr3.nlm.nih.gov/SemMedDB/">SemMedDB</a> <span class="citation" data-cites="eKVkBSDD reekunFL uTOtIsTj">[<a href="#ref-eKVkBSDD" role="doc-biblioref">33</a>,<a href="#ref-reekunFL" role="doc-biblioref">34</a>,<a href="#ref-uTOtIsTj" role="doc-biblioref">35</a>]</span>, <a href="https://spoke.ucsf.edu/">SPOKE</a>, and <a href="https://github.com/RTXteam/RTX-KG2">RTX-KG2c</a> <span class="citation" data-cites="19BbeTNuB">[<a href="#ref-19BbeTNuB" role="doc-biblioref">36</a>]</span>.</p>
 <h3 id="hetmat-architecture">HetMat architecture</h3>
 <p>At the core of the hetmatpy package is the HetMat data structure for storing and accessing the network.
 HetMats are stored on disk as a directory, which by convention uses a <code>.hetmat</code> extension.
@@ -689,7 +685,7 @@ A HetMat directory stores a single heterogeneous network, whose data resides in 
 <li>A <code>metagraph.json</code> file stores the schema, defining which types of nodes and edges comprise the hetnet.
 This format is defined by the <a href="https://github.com/hetio/hetnetpy">hetnetpy</a> Python package.
 Hetnetpy was originally developed with the name hetio during prior studies
-<span class="citation" data-cites="WkPlH1ds O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-WkPlH1ds" role="doc-biblioref">37</a>]</span>,
+<span class="citation" data-cites="WkPlH1ds O21tn8vf">[<a href="#ref-O21tn8vf" role="doc-biblioref">2</a>,<a href="#ref-WkPlH1ds" role="doc-biblioref">37</a>]</span>,
 but we <a href="https://github.com/hetio/hetnetpy/issues/40">renamed</a> it to het<strong>net</strong>py for better disambiguation from het<strong>mat</strong>py.</li>
 <li>A <code>nodes</code> directory containing one file per node type (metanode) that defines each node.
 Currently, <code>.tsv</code> files where each row represents a node are supported.</li>
@@ -711,7 +707,7 @@ A <code>hetmat_from_graph</code> function creates a HetMat object and directory 
 <h3 id="dwpc-matrix-multiplication-algorithms">DWPC matrix multiplication algorithms</h3>
 <p>Prior to this study, we used two implementations for computing DWPCs.
 The first is a pure Python implementation available in the <a href="https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/pathtools.py#L8-L21"><code>hetnetpy.pathtools.DWPC</code></a> function <span class="citation" data-cites="WkPlH1ds">[<a href="#ref-WkPlH1ds" role="doc-biblioref">37</a>]</span>.
-The second uses a Cypher query, prepared by <a href="https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/neo4j.py#L363-L393"><code>hetnetpy.neo4j.construct_dwpc_query</code></a>, that is executed by the Neo4j database <span class="citation" data-cites="O21tn8vf kNYoxBiQ">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-kNYoxBiQ" role="doc-biblioref">38</a>]</span>.
+The second uses a Cypher query, prepared by <a href="https://github.com/hetio/hetnetpy/blob/aa16e6a7092c039a6b175a73a35c006e53acee20/hetnetpy/neo4j.py#L363-L393"><code>hetnetpy.neo4j.construct_dwpc_query</code></a>, that is executed by the Neo4j database <span class="citation" data-cites="O21tn8vf kNYoxBiQ">[<a href="#ref-O21tn8vf" role="doc-biblioref">2</a>,<a href="#ref-kNYoxBiQ" role="doc-biblioref">38</a>]</span>.
 Both of these implementations require traversing all paths between the source and target node.
 Hence, they are computationally cumbersome despite optimizations <span class="citation" data-cites="xWWaK51z">[<a href="#ref-xWWaK51z" role="doc-biblioref">39</a>]</span>.</p>
 <p>Since our methods only require degree-weighted counts, not fully enumerated paths, adjacency matrix multiplication presents an alternative approach.
@@ -778,8 +774,8 @@ We derive permuted hetnets from the unpermuted network using the XSwap algorithm
 XSwap randomizes edges while preserving node degree.
 Therefore, it’s ideal for generating null distributions that retain general degree effects,
 but destroy the actual meaning of edges.
-We adapt XSwap to hetnets by applying it separately to each metaedge <span class="citation" data-cites="O21tn8vf GE6jhWnt 17QDcGqUi">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">44</a>,<a href="#ref-17QDcGqUi" role="doc-biblioref">45</a>]</span>.</p>
-<p>Project Rephetio created 5 permuted hetnets <span class="citation" data-cites="O21tn8vf GE6jhWnt">[<a href="#ref-O21tn8vf" role="doc-biblioref">4</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">44</a>]</span>,
+We adapt XSwap to hetnets by applying it separately to each metaedge <span class="citation" data-cites="O21tn8vf GE6jhWnt 17QDcGqUi">[<a href="#ref-O21tn8vf" role="doc-biblioref">2</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">44</a>,<a href="#ref-17QDcGqUi" role="doc-biblioref">45</a>]</span>.</p>
+<p>Project Rephetio created 5 permuted hetnets <span class="citation" data-cites="O21tn8vf GE6jhWnt">[<a href="#ref-O21tn8vf" role="doc-biblioref">2</a>,<a href="#ref-GE6jhWnt" role="doc-biblioref">44</a>]</span>,
 which were used to generate a null distribution of classifier performance for each metapath-based feature.
 Here, we aim to create a null distribution for individual DWPCs, which requires vastly more permuted values to estimate with accuracy.
 Therefore, we generated 200 permuted hetnets (<a href="https://github.com/hetio/hetionet/tree/a95ae76581af604e91d744680aee3f888fa18887/hetnet/permuted/matrix">archive</a>).
@@ -1105,6 +1101,11 @@ After @zietzm addressed @dhimmel’s comments, the pull request was approved and
 The Manubot-rendered manuscript is available at <a href="https://greenelab.github.io/connectivity-search-manuscript/" class="uri">https://greenelab.github.io/connectivity-search-manuscript/</a>.
 We encourage readers with feedback or questions to comment publicly via <a href="https://github.com/greenelab/connectivity-search-manuscript/issues">GitHub Issues</a>.</p>
 <h3 id="software-data-availability">Software &amp; data availability</h3>
+<h4 id="hetio">Hetio</h4>
+<p><em>Hetio</em> is a superset/collection of hetnet-related research, tools, and datasets that, most notably, includes the Hetionet project itself and the connectivity search tool that are the focus of this manuscript.
+Most of the Hetio resources and projects can be found under the <a href="https://github.com/hetio">Hetio GitHub organization</a>, with a others being available under the <a href="https://github.com/greenelab">Greene Lab GitHub organization</a>, one of the collaborating groups.
+Information about Hetio is also displayed and disseminated on the <a href="https://het.io/">Hetio website</a>, as noted in the <a href="#hetio-website-1">Hetio Website</a> section.</p>
+<h4 id="hetnet-connectivity-search">Hetnet Connectivity Search</h4>
 <p>This study primarily involves the following repositories:
 <!-- https://github.com/topics/hetnet-connectivity-search --></p>
 <ul>
@@ -1150,110 +1151,110 @@ Datasets exceeding this size, along with other essential datasets, are available
 <div id="ref-QWTAHxFj" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>Renaming ‘heterogeneous networks’ to a more concise and catchy term</strong> <div class="csl-block">Daniel Himmelstein, Casey Greene, Sergio Baranzini</div> <em>ThinkLab</em> (2015-08-16) <a href="https://doi.org/f3mn4v">https://doi.org/f3mn4v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d104">10.15363/thinklab.d104</a></div></div>
 </div>
-<div id="ref-1FsruosUW" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Human Disease Ontology 2018 update: classification, content and workflow expansion</strong> <div class="csl-block">Lynn M Schriml, Elvira Mitraka, James Munro, Becky Tauber, Mike Schor, Lance Nickle, Victor Felix, Linda Jeng, Cynthia Bearer, Richard Lichenstein, … Carol Greene</div> <em>Nucleic Acids Research</em> (2018-11-08) <a href="https://doi.org/ggx9wp">https://doi.org/ggx9wp</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/nar/gky1032">10.1093/nar/gky1032</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30407550">30407550</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6323977">PMC6323977</a></div></div>
-</div>
-<div id="ref-203l6hC3" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>Unifying disease vocabularies</strong> <div class="csl-block">Daniel Himmelstein, Tong Shu Li</div> <em>ThinkLab</em> (2015-03-30) <a href="https://doi.org/f3mqv5">https://doi.org/f3mqv5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d44">10.15363/thinklab.d44</a></div></div>
-</div>
 <div id="ref-O21tn8vf" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>Systematic integration of biomedical knowledge prioritizes drugs for repurposing</strong> <div class="csl-block">Daniel Scott Himmelstein, Antoine Lizee, Christine Hessler, Leo Brueggeman, Sabrina L Chen, Dexter Hadley, Ari Green, Pouya Khankhanian, Sergio E Baranzini</div> <em>eLife</em> (2017-09-22) <a href="https://doi.org/cdfk">https://doi.org/cdfk</a> <div class="csl-block">DOI: <a href="https://doi.org/10.7554/elife.26726">10.7554/elife.26726</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28936969">28936969</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5640425">PMC5640425</a></div></div>
-</div>
-<div id="ref-HUodcdz1" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Wikidata as a knowledge graph for the life sciences</strong> <div class="csl-block">Andra Waagmeester, Gregory Stupp, Sebastian Burgstaller-Muehlbacher, Benjamin M Good, Malachi Griffith, Obi L Griffith, Kristina Hanspers, Henning Hermjakob, Toby S Hudson, Kevin Hybiske, … Andrew I Su</div> <em>eLife</em> (2020-03-17) <a href="https://doi.org/ggqqc6">https://doi.org/ggqqc6</a> <div class="csl-block">DOI: <a href="https://doi.org/10.7554/elife.52614">10.7554/elife.52614</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32180547">32180547</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7077981">PMC7077981</a></div></div>
-</div>
-<div id="ref-eKVkBSDD" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>SemMedDB: a PubMed-scale repository of biomedical semantic predications</strong> <div class="csl-block">H Kilicoglu, D Shin, M Fiszman, G Rosemblat, TC Rindflesch</div> <em>Bioinformatics</em> (2012-10-08) <a href="https://doi.org/f4hp3x">https://doi.org/f4hp3x</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/bts591">10.1093/bioinformatics/bts591</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23044550">23044550</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509487">PMC3509487</a></div></div>
-</div>
-<div id="ref-reekunFL" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Constructing Biomedical Knowledge Graph Based on SemMedDB and Linked Open Data</strong> <div class="csl-block">Qing Cong, Zhiyong Feng, Fang Li, Li Zhang, Guozheng Rao, Cui Tao</div> <em>2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</em> (2018-12) <a href="https://doi.org/ggzb26">https://doi.org/ggzb26</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/bibm.2018.8621568">10.1109/bibm.2018.8621568</a></div></div>
-</div>
-<div id="ref-uTOtIsTj" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Time-resolved evaluation of compound repositioning predictions on a text-mined knowledge network</strong> <div class="csl-block">Michael Mayers, Tong Shu Li, Núria Queralt-Rosinach, Andrew I Su</div> <em>BMC Bioinformatics</em> (2019-12) <a href="https://doi.org/ggpcsr">https://doi.org/ggpcsr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s12859-019-3297-0">10.1186/s12859-019-3297-0</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31829175">31829175</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6907279">PMC6907279</a></div></div>
-</div>
-<div id="ref-19BbeTNuB" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>RTX-KG2: a system for building a semantically standardized knowledge graph for translational biomedicine</strong> <div class="csl-block">EC Wood, Amy K Glen, Lindsey G Kvarfordt, Finn Womack, Liliana Acevedo, Timothy S Yoon, Chunyu Ma, Veronica Flores, Meghamala Sinha, Yodsawalai Chodpathumwan, … Stephen A Ramsey</div> <em>Cold Spring Harbor Laboratory</em> (2021-10-18) <a href="https://doi.org/gm6xqw">https://doi.org/gm6xqw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2021.10.17.464747">10.1101/2021.10.17.464747</a></div></div>
+<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Systematic integration of biomedical knowledge prioritizes drugs for repurposing</strong> <div class="csl-block">Daniel Scott Himmelstein, Antoine Lizee, Christine Hessler, Leo Brueggeman, Sabrina L Chen, Dexter Hadley, Ari Green, Pouya Khankhanian, Sergio E Baranzini</div> <em>eLife</em> (2017-09-22) <a href="https://doi.org/cdfk">https://doi.org/cdfk</a> <div class="csl-block">DOI: <a href="https://doi.org/10.7554/elife.26726">10.7554/elife.26726</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28936969">28936969</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5640425">PMC5640425</a></div></div>
 </div>
 <div id="ref-5t7pfaPv" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>Announcing PharmacotherapyDB: the Open Catalog of Drug Therapies for Disease</strong> <div class="csl-block">Daniel Himmelstein</div> <em>ThinkLab</em> (2016-03-15) <a href="https://doi.org/f3mqtv">https://doi.org/f3mqtv</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d182">10.15363/thinklab.d182</a></div></div>
+<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>Announcing PharmacotherapyDB: the Open Catalog of Drug Therapies for Disease</strong> <div class="csl-block">Daniel Himmelstein</div> <em>ThinkLab</em> (2016-03-15) <a href="https://doi.org/f3mqtv">https://doi.org/f3mqtv</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d182">10.15363/thinklab.d182</a></div></div>
 </div>
 <div id="ref-vvdoVrc6" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>Our hetnet edge prediction methodology: the modeling framework for Project Rephetio</strong> <div class="csl-block">Daniel Himmelstein</div> <em>ThinkLab</em> (2016-05-04) <a href="https://doi.org/f3qbmj">https://doi.org/f3qbmj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d210">10.15363/thinklab.d210</a></div></div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>Our hetnet edge prediction methodology: the modeling framework for Project Rephetio</strong> <div class="csl-block">Daniel Himmelstein</div> <em>ThinkLab</em> (2016-05-04) <a href="https://doi.org/f3qbmj">https://doi.org/f3qbmj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d210">10.15363/thinklab.d210</a></div></div>
 </div>
 <div id="ref-EfWvuSjX" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>The link-prediction problem for social networks</strong> <div class="csl-block">David Liben-Nowell, Jon Kleinberg</div> <em>Journal of the American Society for Information Science and Technology</em> (2007) <a href="https://doi.org/c56765">https://doi.org/c56765</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1002/asi.20591">10.1002/asi.20591</a></div></div>
+<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>The link-prediction problem for social networks</strong> <div class="csl-block">David Liben-Nowell, Jon Kleinberg</div> <em>Journal of the American Society for Information Science and Technology</em> (2007) <a href="https://doi.org/c56765">https://doi.org/c56765</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1002/asi.20591">10.1002/asi.20591</a></div></div>
 </div>
 <div id="ref-7iZtCGcX" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>Link prediction in complex networks: A survey</strong> <div class="csl-block">Linyuan Lü, Tao Zhou</div> <em>Physica A: Statistical Mechanics and its Applications</em> (2011-03) <a href="https://doi.org/dbs8g8">https://doi.org/dbs8g8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.physa.2010.11.027">10.1016/j.physa.2010.11.027</a></div></div>
+<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Link prediction in complex networks: A survey</strong> <div class="csl-block">Linyuan Lü, Tao Zhou</div> <em>Physica A: Statistical Mechanics and its Applications</em> (2011-03) <a href="https://doi.org/dbs8g8">https://doi.org/dbs8g8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.physa.2010.11.027">10.1016/j.physa.2010.11.027</a></div></div>
 </div>
 <div id="ref-otY29wFV" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>Heterogeneous network embedding for identifying symptom candidate genes</strong> <div class="csl-block">Kuo Yang, Ning Wang, Guangming Liu, Ruyu Wang, Jian Yu, Runshun Zhang, Jianxin Chen, Xuezhong Zhou</div> <em>Journal of the American Medical Informatics Association</em> (2018-10-23) <a href="https://doi.org/gfg6nr">https://doi.org/gfg6nr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/jamia/ocy117">10.1093/jamia/ocy117</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30357378">30357378</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7646926">PMC7646926</a></div></div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Heterogeneous network embedding for identifying symptom candidate genes</strong> <div class="csl-block">Kuo Yang, Ning Wang, Guangming Liu, Ruyu Wang, Jian Yu, Runshun Zhang, Jianxin Chen, Xuezhong Zhou</div> <em>Journal of the American Medical Informatics Association</em> (2018-10-23) <a href="https://doi.org/gfg6nr">https://doi.org/gfg6nr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/jamia/ocy117">10.1093/jamia/ocy117</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30357378">30357378</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7646926">PMC7646926</a></div></div>
 </div>
 <div id="ref-NnOS86ev" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Large-scale structural and textual similarity-based mining of knowledge graph to predict drug–drug interactions</strong> <div class="csl-block">Ibrahim Abdelaziz, Achille Fokoue, Oktie Hassanzadeh, Ping Zhang, Mohammad Sadoghi</div> <em>Journal of Web Semantics</em> (2017-05) <a href="https://doi.org/gcrwk3">https://doi.org/gcrwk3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.websem.2017.06.002">10.1016/j.websem.2017.06.002</a></div></div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Large-scale structural and textual similarity-based mining of knowledge graph to predict drug–drug interactions</strong> <div class="csl-block">Ibrahim Abdelaziz, Achille Fokoue, Oktie Hassanzadeh, Ping Zhang, Mohammad Sadoghi</div> <em>Journal of Web Semantics</em> (2017-05) <a href="https://doi.org/gcrwk3">https://doi.org/gcrwk3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.websem.2017.06.002">10.1016/j.websem.2017.06.002</a></div></div>
 </div>
 <div id="ref-GYLacVTV" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>SMR: Medical Knowledge Graph Embedding for Safe Medicine Recommendation</strong> <div class="csl-block">Fan Gong, Meng Wang, Haofen Wang, Sen Wang, Mengyue Liu</div> <em>Big Data Research</em> (2021-02) <a href="https://doi.org/gjqwnc">https://doi.org/gjqwnc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.bdr.2020.100174">10.1016/j.bdr.2020.100174</a></div></div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>SMR: Medical Knowledge Graph Embedding for Safe Medicine Recommendation</strong> <div class="csl-block">Fan Gong, Meng Wang, Haofen Wang, Sen Wang, Mengyue Liu</div> <em>Big Data Research</em> (2021-02) <a href="https://doi.org/gjqwnc">https://doi.org/gjqwnc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.bdr.2020.100174">10.1016/j.bdr.2020.100174</a></div></div>
 </div>
 <div id="ref-3gzmoW2V" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>PyKEEN 1.0: A Python Library for Training and Evaluating Knowledge Graph Embeddings</strong> <div class="csl-block">Mehdi Ali, Max Berrendorf, Charles Tapley Hoyt, Laurent Vermue, Sahand Sharifzadeh, Volker Tresp, Jens Lehmann</div> <em>Journal of Machine Learning Research</em> (2021) <a href="http://jmlr.org/papers/v22/20-825.html">http://jmlr.org/papers/v22/20-825.html</a></div>
+<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>PyKEEN 1.0: A Python Library for Training and Evaluating Knowledge Graph Embeddings</strong> <div class="csl-block">Mehdi Ali, Max Berrendorf, Charles Tapley Hoyt, Laurent Vermue, Sahand Sharifzadeh, Volker Tresp, Jens Lehmann</div> <em>Journal of Machine Learning Research</em> (2021) <a href="http://jmlr.org/papers/v22/20-825.html">http://jmlr.org/papers/v22/20-825.html</a></div>
 </div>
 <div id="ref-3tyf5NSe" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Understanding the Performance of Knowledge Graph Embeddings in Drug Discovery</strong> <div class="csl-block">Stephen Bonner, Ian P Barrett, Cheng Ye, Rowan Swiers, Ola Engkvist, Charles Tapley Hoyt, William L Hamilton</div> <em>arXiv</em> (2022-06-01) <a href="https://arxiv.org/abs/2105.10488">https://arxiv.org/abs/2105.10488</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.ailsci.2022.100036">10.1016/j.ailsci.2022.100036</a></div></div>
+<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>Understanding the Performance of Knowledge Graph Embeddings in Drug Discovery</strong> <div class="csl-block">Stephen Bonner, Ian P Barrett, Cheng Ye, Rowan Swiers, Ola Engkvist, Charles Tapley Hoyt, William L Hamilton</div> <em>arXiv</em> (2022-06-01) <a href="https://arxiv.org/abs/2105.10488">https://arxiv.org/abs/2105.10488</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1016/j.ailsci.2022.100036">10.1016/j.ailsci.2022.100036</a></div></div>
 </div>
 <div id="ref-U1Dfux5r" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>node2vec</strong> <div class="csl-block">Aditya Grover, Jure Leskovec</div> <em>Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em> (2016-08-13) <a href="https://doi.org/gftdzj">https://doi.org/gftdzj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2939672.2939754">10.1145/2939672.2939754</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27853626">27853626</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5108654">PMC5108654</a></div></div>
+<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>node2vec</strong> <div class="csl-block">Aditya Grover, Jure Leskovec</div> <em>Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em> (2016-08-13) <a href="https://doi.org/gftdzj">https://doi.org/gftdzj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2939672.2939754">10.1145/2939672.2939754</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27853626">27853626</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5108654">PMC5108654</a></div></div>
 </div>
 <div id="ref-1AeZs6xaT" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>metapath2vec: Scalable Representation Learning for Heterogeneous Networks</strong> <div class="csl-block">Yuxiao Dong, Nitesh V Chawla, Ananthram Swami</div> <em>KDD '17: Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em> (2017-08) <a href="https://doi.org/gfsqzn">https://doi.org/gfsqzn</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3097983.3098036">10.1145/3097983.3098036</a></div></div>
+<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>metapath2vec: Scalable Representation Learning for Heterogeneous Networks</strong> <div class="csl-block">Yuxiao Dong, Nitesh V Chawla, Ananthram Swami</div> <em>KDD '17: Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</em> (2017-08) <a href="https://doi.org/gfsqzn">https://doi.org/gfsqzn</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3097983.3098036">10.1145/3097983.3098036</a></div></div>
 </div>
 <div id="ref-jyhFBVzQ" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>edge2vec: Representation learning using edge semantics for biomedical knowledge discovery</strong> <div class="csl-block">Zheng Gao, Gang Fu, Chunping Ouyang, Satoshi Tsutsui, Xiaozhong Liu, Jeremy Yang, Christopher Gessner, Brian Foote, David Wild, Ying Ding, Qi Yu</div> <em>BMC Bioinformatics</em> (2019-06-10) <a href="https://doi.org/ggpcsq">https://doi.org/ggpcsq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s12859-019-2914-2">10.1186/s12859-019-2914-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31238875">31238875</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6593489">PMC6593489</a></div></div>
+<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>edge2vec: Representation learning using edge semantics for biomedical knowledge discovery</strong> <div class="csl-block">Zheng Gao, Gang Fu, Chunping Ouyang, Satoshi Tsutsui, Xiaozhong Liu, Jeremy Yang, Christopher Gessner, Brian Foote, David Wild, Ying Ding, Qi Yu</div> <em>BMC Bioinformatics</em> (2019-06-10) <a href="https://doi.org/ggpcsq">https://doi.org/ggpcsq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s12859-019-2914-2">10.1186/s12859-019-2914-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31238875">31238875</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6593489">PMC6593489</a></div></div>
 </div>
 <div id="ref-xq3Nsf5M" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>Preclinical validation of therapeutic targets predicted by tensor factorization on heterogeneous graphs</strong> <div class="csl-block">Saee Paliwal, Alex de Giorgio, Daniel Neil, Jean-Baptiste Michel, Alix MB Lacoste</div> <em>Scientific Reports</em> (2020-10-26) <a href="https://doi.org/gg49">https://doi.org/gg49</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41598-020-74922-z">10.1038/s41598-020-74922-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33106501">33106501</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7589557">PMC7589557</a></div></div>
+<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Preclinical validation of therapeutic targets predicted by tensor factorization on heterogeneous graphs</strong> <div class="csl-block">Saee Paliwal, Alex de Giorgio, Daniel Neil, Jean-Baptiste Michel, Alix MB Lacoste</div> <em>Scientific Reports</em> (2020-10-26) <a href="https://doi.org/gg49">https://doi.org/gg49</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41598-020-74922-z">10.1038/s41598-020-74922-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33106501">33106501</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7589557">PMC7589557</a></div></div>
 </div>
 <div id="ref-1EeE9qtFA" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>Data Fusion by Matrix Factorization</strong> <div class="csl-block">Marinka Zitnik, Blaz Zupan</div> <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em> (2015-01-01) <a href="https://doi.org/f3mqwz">https://doi.org/f3mqwz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/tpami.2014.2343973">10.1109/tpami.2014.2343973</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26353207">26353207</a></div></div>
+<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>Data Fusion by Matrix Factorization</strong> <div class="csl-block">Marinka Zitnik, Blaz Zupan</div> <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em> (2015-01-01) <a href="https://doi.org/f3mqwz">https://doi.org/f3mqwz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/tpami.2014.2343973">10.1109/tpami.2014.2343973</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26353207">26353207</a></div></div>
 </div>
 <div id="ref-cnCLKeU9" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>Translating embeddings for modeling multi-relational data</strong> <div class="csl-block">Antoine Bordes, Nicolas Usunier, Alberto Garcia-Durán, Jason Weston, Oksana Yakhnenko</div> <em>Proceedings of the 26th International Conference on Neural Information Processing Systems</em> (2013-12) <a href="https://dl.acm.org/doi/10.5555/2999792.2999923">https://dl.acm.org/doi/10.5555/2999792.2999923</a></div>
+<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Translating embeddings for modeling multi-relational data</strong> <div class="csl-block">Antoine Bordes, Nicolas Usunier, Alberto Garcia-Durán, Jason Weston, Oksana Yakhnenko</div> <em>Proceedings of the 26th International Conference on Neural Information Processing Systems</em> (2013-12) <a href="https://dl.acm.org/doi/10.5555/2999792.2999923">https://dl.acm.org/doi/10.5555/2999792.2999923</a></div>
 </div>
 <div id="ref-taI1UUAE" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Predicting gene-disease associations from the heterogeneous network using graph embedding</strong> <div class="csl-block">Xiaochan Wang, Yuchong Gong, Jing Yi, Wen Zhang</div> <em>2019 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</em> (2019-11) <a href="https://doi.org/ggmrpj">https://doi.org/ggmrpj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/bibm47256.2019.8983134">10.1109/bibm47256.2019.8983134</a></div></div>
+<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Predicting gene-disease associations from the heterogeneous network using graph embedding</strong> <div class="csl-block">Xiaochan Wang, Yuchong Gong, Jing Yi, Wen Zhang</div> <em>2019 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</em> (2019-11) <a href="https://doi.org/ggmrpj">https://doi.org/ggmrpj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/bibm47256.2019.8983134">10.1109/bibm47256.2019.8983134</a></div></div>
 </div>
 <div id="ref-17ioZ6znu" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>A Method to Learn Embedding of a Probabilistic Medical Knowledge Graph: Algorithm Development</strong> <div class="csl-block">Linfeng Li, Peng Wang, Yao Wang, Shenghui Wang, Jun Yan, Jinpeng Jiang, Buzhou Tang, Chengliang Wang, Yuting Liu</div> <em>JMIR Medical Informatics</em> (2020-05-21) <a href="https://doi.org/ghqszs">https://doi.org/ghqszs</a> <div class="csl-block">DOI: <a href="https://doi.org/10.2196/17645">10.2196/17645</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32436854">32436854</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7273238">PMC7273238</a></div></div>
+<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>A Method to Learn Embedding of a Probabilistic Medical Knowledge Graph: Algorithm Development</strong> <div class="csl-block">Linfeng Li, Peng Wang, Yao Wang, Shenghui Wang, Jun Yan, Jinpeng Jiang, Buzhou Tang, Chengliang Wang, Yuting Liu</div> <em>JMIR Medical Informatics</em> (2020-05-21) <a href="https://doi.org/ghqszs">https://doi.org/ghqszs</a> <div class="csl-block">DOI: <a href="https://doi.org/10.2196/17645">10.2196/17645</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32436854">32436854</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7273238">PMC7273238</a></div></div>
 </div>
 <div id="ref-1D9FTzRBg" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>Semantic Disease Gene Embeddings (SmuDGE): phenotype-based disease gene prioritization without phenotypes</strong> <div class="csl-block">Mona Alshahrani, Robert Hoehndorf</div> <em>Bioinformatics</em> (2018-09-01) <a href="https://doi.org/gd9k8n">https://doi.org/gd9k8n</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/bty559">10.1093/bioinformatics/bty559</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30423077">30423077</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6129260">PMC6129260</a></div></div>
+<div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>Semantic Disease Gene Embeddings (SmuDGE): phenotype-based disease gene prioritization without phenotypes</strong> <div class="csl-block">Mona Alshahrani, Robert Hoehndorf</div> <em>Bioinformatics</em> (2018-09-01) <a href="https://doi.org/gd9k8n">https://doi.org/gd9k8n</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/bty559">10.1093/bioinformatics/bty559</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30423077">30423077</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6129260">PMC6129260</a></div></div>
 </div>
 <div id="ref-6PISrkV5" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>A network embedding model for pathogenic genes prediction by multi-path random walking on heterogeneous network</strong> <div class="csl-block">Bo Xu, Yu Liu, Shuo Yu, Lei Wang, Jie Dong, Hongfei Lin, Zhihao Yang, Jian Wang, Feng Xia</div> <em>BMC Medical Genomics</em> (2019-12) <a href="https://doi.org/ggmrpq">https://doi.org/ggmrpq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s12920-019-0627-z">10.1186/s12920-019-0627-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31865919">31865919</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6927107">PMC6927107</a></div></div>
+<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>A network embedding model for pathogenic genes prediction by multi-path random walking on heterogeneous network</strong> <div class="csl-block">Bo Xu, Yu Liu, Shuo Yu, Lei Wang, Jie Dong, Hongfei Lin, Zhihao Yang, Jian Wang, Feng Xia</div> <em>BMC Medical Genomics</em> (2019-12) <a href="https://doi.org/ggmrpq">https://doi.org/ggmrpq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s12920-019-0627-z">10.1186/s12920-019-0627-z</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31865919">31865919</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6927107">PMC6927107</a></div></div>
 </div>
 <div id="ref-19E33rJiu" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>Deep mining heterogeneous networks of biomedical linked data to predict novel drug–target associations</strong> <div class="csl-block">Nansu Zong, Hyeoneui Kim, Victoria Ngo, Olivier Harismendy</div> <em>Bioinformatics</em> (2017-04-18) <a href="https://doi.org/gbqjgx">https://doi.org/gbqjgx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btx160">10.1093/bioinformatics/btx160</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28430977">28430977</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5860112">PMC5860112</a></div></div>
+<div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>Deep mining heterogeneous networks of biomedical linked data to predict novel drug–target associations</strong> <div class="csl-block">Nansu Zong, Hyeoneui Kim, Victoria Ngo, Olivier Harismendy</div> <em>Bioinformatics</em> (2017-04-18) <a href="https://doi.org/gbqjgx">https://doi.org/gbqjgx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/btx160">10.1093/bioinformatics/btx160</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28430977">28430977</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5860112">PMC5860112</a></div></div>
 </div>
 <div id="ref-Dbie18xe" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">30. </div><div class="csl-right-inline"><strong>Explaining and Suggesting Relatedness in Knowledge Graphs</strong> <div class="csl-block">Giuseppe Pirrò</div> <em>The Semantic Web - ISWC 2015</em> (2015) <a href="https://doi.org/gg5nkd">https://doi.org/gg5nkd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/978-3-319-25007-6_36">10.1007/978-3-319-25007-6_36</a></div></div>
+<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>Explaining and Suggesting Relatedness in Knowledge Graphs</strong> <div class="csl-block">Giuseppe Pirrò</div> <em>The Semantic Web - ISWC 2015</em> (2015) <a href="https://doi.org/gg5nkd">https://doi.org/gg5nkd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1007/978-3-319-25007-6_36">10.1007/978-3-319-25007-6_36</a></div></div>
 </div>
 <div id="ref-GPBbIfq9" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">31. </div><div class="csl-right-inline"><strong>FAIRY</strong> <div class="csl-block">Azin Ghazimatin, Rishiraj Saha Roy, Gerhard Weikum</div> <em>Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining</em> (2019-01-30) <a href="https://doi.org/gf2wqj">https://doi.org/gf2wqj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3289600.3290990">10.1145/3289600.3290990</a></div></div>
+<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>FAIRY</strong> <div class="csl-block">Azin Ghazimatin, Rishiraj Saha Roy, Gerhard Weikum</div> <em>Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining</em> (2019-01-30) <a href="https://doi.org/gf2wqj">https://doi.org/gf2wqj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3289600.3290990">10.1145/3289600.3290990</a></div></div>
 </div>
 <div id="ref-L3DO8oq1" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">32. </div><div class="csl-right-inline"><strong>Using Knowledge Graphs to Explain Entity Co-occurrence in Twitter</strong> <div class="csl-block">Yiwei Wang, Mark James Carman, Yuan-Fang Li</div> <em>Proceedings of the 2017 ACM on Conference on Information and Knowledge Management</em> (2017-11-06) <a href="https://doi.org/gg5nkf">https://doi.org/gg5nkf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3132847.3133161">10.1145/3132847.3133161</a></div></div>
+<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Using Knowledge Graphs to Explain Entity Co-occurrence in Twitter</strong> <div class="csl-block">Yiwei Wang, Mark James Carman, Yuan-Fang Li</div> <em>Proceedings of the 2017 ACM on Conference on Information and Knowledge Management</em> (2017-11-06) <a href="https://doi.org/gg5nkf">https://doi.org/gg5nkf</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3132847.3133161">10.1145/3132847.3133161</a></div></div>
 </div>
 <div id="ref-Hf24Hzrl" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">33. </div><div class="csl-right-inline"><strong>ESPRESSO</strong> <div class="csl-block">Stephan Seufert, Klaus Berberich, Srikanta J Bedathur, Sarath Kumar Kondreddi, Patrick Ernst, Gerhard Weikum</div> <em>Proceedings of the 25th ACM International on Conference on Information and Knowledge Management</em> (2016-10-24) <a href="https://doi.org/gcpx7w">https://doi.org/gcpx7w</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2983323.2983778">10.1145/2983323.2983778</a></div></div>
+<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>ESPRESSO</strong> <div class="csl-block">Stephan Seufert, Klaus Berberich, Srikanta J Bedathur, Sarath Kumar Kondreddi, Patrick Ernst, Gerhard Weikum</div> <em>Proceedings of the 25th ACM International on Conference on Information and Knowledge Management</em> (2016-10-24) <a href="https://doi.org/gcpx7w">https://doi.org/gcpx7w</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2983323.2983778">10.1145/2983323.2983778</a></div></div>
 </div>
 <div id="ref-19H7j1WBd" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">34. </div><div class="csl-right-inline"><strong>MetaExp: Interactive Explanation and Exploration of Large Knowledge Graphs</strong> <div class="csl-block">Freya Behrens, Fatemeh Aghaei, Emmanuel Müller, Martin Preusse, Nikola Müller, Michael Hunger, Sebastian Bischoff, Pius Ladenburger, Julius Rückin, Laurenz Seidel, … Davide Mottin</div> <em>WWW '18: Companion Proceedings of the The Web Conference 2018</em> (2018-04) <a href="https://doi.org/gg2c7w">https://doi.org/gg2c7w</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3184558.3186978">10.1145/3184558.3186978</a></div></div>
+<div class="csl-left-margin">27. </div><div class="csl-right-inline"><strong>MetaExp: Interactive Explanation and Exploration of Large Knowledge Graphs</strong> <div class="csl-block">Freya Behrens, Fatemeh Aghaei, Emmanuel Müller, Martin Preusse, Nikola Müller, Michael Hunger, Sebastian Bischoff, Pius Ladenburger, Julius Rückin, Laurenz Seidel, … Davide Mottin</div> <em>WWW '18: Companion Proceedings of the The Web Conference 2018</em> (2018-04) <a href="https://doi.org/gg2c7w">https://doi.org/gg2c7w</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/3184558.3186978">10.1145/3184558.3186978</a></div></div>
 </div>
 <div id="ref-Vz9QIDKV" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">35. </div><div class="csl-right-inline"><strong>Discovering Meta-Paths in Large Heterogeneous Information Networks</strong> <div class="csl-block">Changping Meng, Reynold Cheng, Silviu Maniu, Pierre Senellart, Wangda Zhang</div> <em>Proceedings of the 24th International Conference on World Wide Web</em> (2015-05-18) <a href="https://doi.org/gg2c7v">https://doi.org/gg2c7v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2736277.2741123">10.1145/2736277.2741123</a></div></div>
+<div class="csl-left-margin">28. </div><div class="csl-right-inline"><strong>Discovering Meta-Paths in Large Heterogeneous Information Networks</strong> <div class="csl-block">Changping Meng, Reynold Cheng, Silviu Maniu, Pierre Senellart, Wangda Zhang</div> <em>Proceedings of the 24th International Conference on World Wide Web</em> (2015-05-18) <a href="https://doi.org/gg2c7v">https://doi.org/gg2c7v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1145/2736277.2741123">10.1145/2736277.2741123</a></div></div>
 </div>
 <div id="ref-17mGFvxXu" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">36. </div><div class="csl-right-inline"><strong>Transforming DWPCs for hetnet edge prediction</strong> <div class="csl-block">Daniel Himmelstein, Pouya Khankhanian, Antoine Lizee</div> <em>ThinkLab</em> (2016-04-01) <a href="https://doi.org/f3qbmd">https://doi.org/f3qbmd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d193">10.15363/thinklab.d193</a></div></div>
+<div class="csl-left-margin">29. </div><div class="csl-right-inline"><strong>Transforming DWPCs for hetnet edge prediction</strong> <div class="csl-block">Daniel Himmelstein, Pouya Khankhanian, Antoine Lizee</div> <em>ThinkLab</em> (2016-04-01) <a href="https://doi.org/f3qbmd">https://doi.org/f3qbmd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d193">10.15363/thinklab.d193</a></div></div>
+</div>
+<div id="ref-1FsruosUW" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">30. </div><div class="csl-right-inline"><strong>Human Disease Ontology 2018 update: classification, content and workflow expansion</strong> <div class="csl-block">Lynn M Schriml, Elvira Mitraka, James Munro, Becky Tauber, Mike Schor, Lance Nickle, Victor Felix, Linda Jeng, Cynthia Bearer, Richard Lichenstein, … Carol Greene</div> <em>Nucleic Acids Research</em> (2018-11-08) <a href="https://doi.org/ggx9wp">https://doi.org/ggx9wp</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/nar/gky1032">10.1093/nar/gky1032</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30407550">30407550</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6323977">PMC6323977</a></div></div>
+</div>
+<div id="ref-203l6hC3" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">31. </div><div class="csl-right-inline"><strong>Unifying disease vocabularies</strong> <div class="csl-block">Daniel Himmelstein, Tong Shu Li</div> <em>ThinkLab</em> (2015-03-30) <a href="https://doi.org/f3mqv5">https://doi.org/f3mqv5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.15363/thinklab.d44">10.15363/thinklab.d44</a></div></div>
+</div>
+<div id="ref-HUodcdz1" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">32. </div><div class="csl-right-inline"><strong>Wikidata as a knowledge graph for the life sciences</strong> <div class="csl-block">Andra Waagmeester, Gregory Stupp, Sebastian Burgstaller-Muehlbacher, Benjamin M Good, Malachi Griffith, Obi L Griffith, Kristina Hanspers, Henning Hermjakob, Toby S Hudson, Kevin Hybiske, … Andrew I Su</div> <em>eLife</em> (2020-03-17) <a href="https://doi.org/ggqqc6">https://doi.org/ggqqc6</a> <div class="csl-block">DOI: <a href="https://doi.org/10.7554/elife.52614">10.7554/elife.52614</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32180547">32180547</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7077981">PMC7077981</a></div></div>
+</div>
+<div id="ref-eKVkBSDD" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">33. </div><div class="csl-right-inline"><strong>SemMedDB: a PubMed-scale repository of biomedical semantic predications</strong> <div class="csl-block">H Kilicoglu, D Shin, M Fiszman, G Rosemblat, TC Rindflesch</div> <em>Bioinformatics</em> (2012-10-08) <a href="https://doi.org/f4hp3x">https://doi.org/f4hp3x</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/bioinformatics/bts591">10.1093/bioinformatics/bts591</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23044550">23044550</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3509487">PMC3509487</a></div></div>
+</div>
+<div id="ref-reekunFL" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">34. </div><div class="csl-right-inline"><strong>Constructing Biomedical Knowledge Graph Based on SemMedDB and Linked Open Data</strong> <div class="csl-block">Qing Cong, Zhiyong Feng, Fang Li, Li Zhang, Guozheng Rao, Cui Tao</div> <em>2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</em> (2018-12) <a href="https://doi.org/ggzb26">https://doi.org/ggzb26</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/bibm.2018.8621568">10.1109/bibm.2018.8621568</a></div></div>
+</div>
+<div id="ref-uTOtIsTj" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">35. </div><div class="csl-right-inline"><strong>Time-resolved evaluation of compound repositioning predictions on a text-mined knowledge network</strong> <div class="csl-block">Michael Mayers, Tong Shu Li, Núria Queralt-Rosinach, Andrew I Su</div> <em>BMC Bioinformatics</em> (2019-12) <a href="https://doi.org/ggpcsr">https://doi.org/ggpcsr</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s12859-019-3297-0">10.1186/s12859-019-3297-0</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31829175">31829175</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6907279">PMC6907279</a></div></div>
+</div>
+<div id="ref-19BbeTNuB" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">36. </div><div class="csl-right-inline"><strong>RTX-KG2: a system for building a semantically standardized knowledge graph for translational biomedicine</strong> <div class="csl-block">EC Wood, Amy K Glen, Lindsey G Kvarfordt, Finn Womack, Liliana Acevedo, Timothy S Yoon, Chunyu Ma, Veronica Flores, Meghamala Sinha, Yodsawalai Chodpathumwan, … Stephen A Ramsey</div> <em>Cold Spring Harbor Laboratory</em> (2021-10-18) <a href="https://doi.org/gm6xqw">https://doi.org/gm6xqw</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2021.10.17.464747">10.1101/2021.10.17.464747</a></div></div>
 </div>
 <div id="ref-WkPlH1ds" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">37. </div><div class="csl-right-inline"><strong>Heterogeneous Network Edge Prediction: A Data Integration Approach to Prioritize Disease-Associated Genes</strong> <div class="csl-block">Daniel S Himmelstein, Sergio E Baranzini</div> <em>PLOS Computational Biology</em> (2015-07-09) <a href="https://doi.org/98q">https://doi.org/98q</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1371/journal.pcbi.1004259">10.1371/journal.pcbi.1004259</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26158728">26158728</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4497619">PMC4497619</a></div></div>
