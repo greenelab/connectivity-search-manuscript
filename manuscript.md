@@ -89,9 +89,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/20c743513247146c3f191d88f1a9d5457c8d8c9e/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/20c743513247146c3f191d88f1a9d5457c8d8c9e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/20c743513247146c3f191d88f1a9d5457c8d8c9e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/b1af553f17983aa9a1ea87efe6b9ef7e321567bf/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/b1af553f17983aa9a1ea87efe6b9ef7e321567bf/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/b1af553f17983aa9a1ea87efe6b9ef7e321567bf/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -115,9 +115,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/20c743513247146c3f191d88f1a9d5457c8d8c9e/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/b1af553f17983aa9a1ea87efe6b9ef7e321567bf/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@20c7435](https://github.com/greenelab/connectivity-search-manuscript/tree/20c743513247146c3f191d88f1a9d5457c8d8c9e)
+from [greenelab/connectivity-search-manuscript@b1af553](https://github.com/greenelab/connectivity-search-manuscript/tree/b1af553f17983aa9a1ea87efe6b9ef7e321567bf)
 on September 17, 2022.
 </em></small>
 
@@ -366,7 +366,7 @@ https://github.com/greenelab/connectivity-search-manuscript/issues/28
 [@rosalind]: doi:10.1038/s41598-020-74922-z
 [@fusion]: 	doi:10.1109/TPAMI.2014.2343973
 [@twitter-kg]: doi:10.1145/3132847.3133161
-[@bioteque]: doi:10.1145/3132847.3133161
+[@bioteque]: doi:10.1038/s41467-022-33026-0
 
 Existing research provides methods for determining whether two nodes are related,
 although primarily focuses on homogeneous networks (without type).
