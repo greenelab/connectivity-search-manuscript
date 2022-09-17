@@ -40,6 +40,16 @@ authors:
     affiliations:
       - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
       - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+  - github: kkloste
+    name: Kyle Kloster
+    initials: KK
+    orcid: 0000-0001-5678-7197
+    twitter: kylekloster
+    email: kyle.kloster@gmail.com
+    affiliations:
+      - Carbon, Inc.
+      - Department of Computer Science, North Carolina State University, Raleigh, North Carolina, United States of America
+    funders: GBMF4560
   - github: ben-heil
     name: Benjamin J. Heil
     initials: BJH
