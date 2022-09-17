@@ -89,9 +89,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/087cf08e91bb6a400fe1c8bd85c141f9f6f38ba4/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/087cf08e91bb6a400fe1c8bd85c141f9f6f38ba4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/087cf08e91bb6a400fe1c8bd85c141f9f6f38ba4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/20c743513247146c3f191d88f1a9d5457c8d8c9e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/20c743513247146c3f191d88f1a9d5457c8d8c9e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/20c743513247146c3f191d88f1a9d5457c8d8c9e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -115,9 +115,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/087cf08e91bb6a400fe1c8bd85c141f9f6f38ba4/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/20c743513247146c3f191d88f1a9d5457c8d8c9e/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@087cf08](https://github.com/greenelab/connectivity-search-manuscript/tree/087cf08e91bb6a400fe1c8bd85c141f9f6f38ba4)
+from [greenelab/connectivity-search-manuscript@20c7435](https://github.com/greenelab/connectivity-search-manuscript/tree/20c743513247146c3f191d88f1a9d5457c8d8c9e)
 on September 17, 2022.
 </em></small>
 

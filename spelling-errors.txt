@@ -19,13 +19,13 @@ contributd
 CrC
 CtDrDtC
 CtDtCtD
-Customizable
+customizable
 customizations
 DaGiGpPW
 DaGpPWpG
 danich
 dataset
-datasets
+Datasets
 DdGpPW
 deepwalk
 Dev
@@ -58,7 +58,7 @@ GreeneScientist
 GSEA
 Hadamard
 Hao
-heil
+Heil
 hetmech
 hneem
 Hu
