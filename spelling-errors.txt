@@ -6,6 +6,7 @@ autobencoder
 BAAB
 BABA
 bewteen
+Bioteque
 CBABACXYZ
 CbG
 CbGpPWpG
@@ -18,13 +19,13 @@ contributd
 CrC
 CtDrDtC
 CtDtCtD
-customizable
+Customizable
 customizations
 DaGiGpPW
 DaGpPWpG
 danich
 dataset
-Datasets
+datasets
 DdGpPW
 deepwalk
 Dev

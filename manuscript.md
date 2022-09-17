@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-07-16'
+date-meta: '2022-09-17'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -34,8 +34,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-07-16" />
-  <meta name="citation_publication_date" content="2022-07-16" />
+  <meta name="dc.date" content="2022-09-17" />
+  <meta name="citation_publication_date" content="2022-09-17" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -89,9 +89,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/087cf08e91bb6a400fe1c8bd85c141f9f6f38ba4/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/087cf08e91bb6a400fe1c8bd85c141f9f6f38ba4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/087cf08e91bb6a400fe1c8bd85c141f9f6f38ba4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -115,10 +115,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/ad7c95de645fc6da43baaa7f547b2080d8881735/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/087cf08e91bb6a400fe1c8bd85c141f9f6f38ba4/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@ad7c95d](https://github.com/greenelab/connectivity-search-manuscript/tree/ad7c95de645fc6da43baaa7f547b2080d8881735)
-on July 16, 2022.
+from [greenelab/connectivity-search-manuscript@087cf08](https://github.com/greenelab/connectivity-search-manuscript/tree/087cf08e91bb6a400fe1c8bd85c141f9f6f38ba4)
+on September 17, 2022.
 </em></small>
 
 ## Authors
@@ -366,6 +366,7 @@ https://github.com/greenelab/connectivity-search-manuscript/issues/28
 [@rosalind]: doi:10.1038/s41598-020-74922-z
 [@fusion]: 	doi:10.1109/TPAMI.2014.2343973
 [@twitter-kg]: doi:10.1145/3132847.3133161
+[@bioteque]: doi:10.1145/3132847.3133161
 
 Existing research provides methods for determining whether two nodes are related,
 although primarily focuses on homogeneous networks (without type).
@@ -376,7 +377,11 @@ However, they are difficult to scale as a network grows in size or semantic rich
 More recently, focus has shifted to graph embeddings to determine if two nodes are related,
 specifically in the context of knowledge graphs, which are often semantically rich and include type
 [@lsger; @tiresias; @smr; @pykeen; @kgem-performance].
-These types of methods involve mapping nodes and sometimes edges to dense vectors via a neural network model [@node2vec; @metapath2vec; @edge2vec], matrix factorization [@rosalind; @fusion], or by translational distance models [@transe].
+These types of methods involve mapping nodes and sometimes edges to dense vectors via
+neural network models [@node2vec; @metapath2vec; @edge2vec],
+matrix factorization [@rosalind; @fusion],
+or translational distance models [@transe].
+Bioteque creates node embeddings from the bipartite network of DWPCs for a given metapath [@bioteque].
 Once these dense vectors have been produced, quantitative scores that measure node relatedness can be generated via a machine learning model [@tiresias; @hneem; @prtransx] or by selected similarity metrics [@lsger; @smudge; @multipath2vec; @smr; @deepwalk].
 These approaches have been quite successful in determining node relatedness.
 Yet, they only state _whether_ two nodes are related and fail to provide an explanation on _why_ two nodes are related.
@@ -676,7 +681,7 @@ while Hetionet includes only 137 diseases [@doi:10.15363/thinklab.d44].
 Nodes were excluded to avoid redundant or overly specific nodes,
 while ensuring a minimum level of connectivity for compounds and diseases.
 See the [Project Rephetio methods](https://git.dhimmel.com/rephetio-manuscript/#nodes) for more details [@rephetio].
-Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types.
+Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types [@arxiv:2102.10062].
 Other integrative resources, some still under development, include [Wikidata](https://www.wikidata.org) [@doi:10.7554/eLife.52614], [SemMedDB](https://skr3.nlm.nih.gov/SemMedDB/) [@doi:10.1093/bioinformatics/bts591; @doi:10.1109/BIBM.2018.8621568; @doi:10.1186/s12859-019-3297-0], [SPOKE](https://spoke.ucsf.edu/), and [RTX-KG2c](https://github.com/RTXteam/RTX-KG2) [@doi:10.1101/2021.10.17.464747].
 
 ### HetMat architecture
