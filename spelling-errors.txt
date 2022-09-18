@@ -25,7 +25,7 @@ DaGiGpPW
 DaGpPWpG
 danich
 dataset
-Datasets
+datasets
 DdGpPW
 deepwalk
 Dev
@@ -65,6 +65,9 @@ Hu
 hueristic
 intested
 kgem
+kkloste
+Kloster
+kylekloster
 LFS
 linters
 Mayers
@@ -103,7 +106,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 yhao
 YhaoC
 Yun

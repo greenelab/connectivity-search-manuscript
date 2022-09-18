@@ -12,11 +12,12 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-09-17'
+date-meta: '2022-09-18'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
 - Vincent Rubinetti
+- Kyle Kloster
 - Benjamin J. Heil
 - David N. Nicholson
 - Dongbo Hu
@@ -34,8 +35,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-09-17" />
-  <meta name="citation_publication_date" content="2022-09-17" />
+  <meta name="dc.date" content="2022-09-18" />
+  <meta name="citation_publication_date" content="2022-09-18" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -56,6 +57,11 @@ header-includes: |-
   <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
   <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
   <meta name="citation_author_orcid" content="0000-0002-4655-3773" />
+  <meta name="citation_author" content="Kyle Kloster" />
+  <meta name="citation_author_institution" content="Carbon, Inc." />
+  <meta name="citation_author_institution" content="Department of Computer Science, North Carolina State University, Raleigh, North Carolina, United States of America" />
+  <meta name="citation_author_orcid" content="0000-0001-5678-7197" />
+  <meta name="twitter:creator" content="@kylekloster" />
   <meta name="citation_author" content="Benjamin J. Heil" />
   <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania" />
   <meta name="citation_author_orcid" content="0000-0002-2811-1031" />
@@ -89,9 +95,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/b1af553f17983aa9a1ea87efe6b9ef7e321567bf/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/b1af553f17983aa9a1ea87efe6b9ef7e321567bf/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/b1af553f17983aa9a1ea87efe6b9ef7e321567bf/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/179759ca8b71066d6f67a2f459a274f14047988a/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/179759ca8b71066d6f67a2f459a274f14047988a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/179759ca8b71066d6f67a2f459a274f14047988a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -115,10 +121,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/b1af553f17983aa9a1ea87efe6b9ef7e321567bf/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/179759ca8b71066d6f67a2f459a274f14047988a/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@b1af553](https://github.com/greenelab/connectivity-search-manuscript/tree/b1af553f17983aa9a1ea87efe6b9ef7e321567bf)
-on September 17, 2022.
+from [greenelab/connectivity-search-manuscript@179759c](https://github.com/greenelab/connectivity-search-manuscript/tree/179759ca8b71066d6f67a2f459a274f14047988a)
+on September 18, 2022.
 </em></small>
 
 ## Authors
@@ -166,6 +172,19 @@ This notice will be updated once all contributors meeting [authorship criteria](
     [vincerubinetti](https://github.com/vincerubinetti)<br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+  </small>
+
++ **Kyle Kloster**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
+    [0000-0001-5678-7197](https://orcid.org/0000-0001-5678-7197)
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [kkloste](https://github.com/kkloste)
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
+    [kylekloster](https://twitter.com/kylekloster)<br>
+  <small>
+     Carbon, Inc.; Department of Computer Science, North Carolina State University, Raleigh, North Carolina, United States of America
+     · Funded by GBMF4560
   </small>
 
 + **Benjamin J. Heil**
