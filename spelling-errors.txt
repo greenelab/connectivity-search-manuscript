@@ -1,5 +1,6 @@
 ABCABC
 accross
+Alquaddoomi
 ARNT
 arxiv
 autobencoder
@@ -19,7 +20,7 @@ contributd
 CrC
 CtDrDtC
 CtDtCtD
-customizable
+Customizable
 customizations
 DaGiGpPW
 DaGpPWpG
@@ -47,6 +48,7 @@ emprical
 erogeneous
 etcetera
 evalute
+falquaddoomi
 familywise
 GBMF
 GiGdG
@@ -106,7 +108,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 yhao
 YhaoC
 Yun

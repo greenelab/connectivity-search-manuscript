@@ -19,6 +19,7 @@ author-meta:
 - Vincent Rubinetti
 - Kyle Kloster
 - Benjamin J. Heil
+- Faisal Alquaddoomi
 - Dongbo Hu
 - David N. Nicholson
 - Yun Hao
@@ -66,6 +67,10 @@ header-includes: |-
   <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania" />
   <meta name="citation_author_orcid" content="0000-0002-2811-1031" />
   <meta name="twitter:creator" content="@autobencoder" />
+  <meta name="citation_author" content="Faisal Alquaddoomi" />
+  <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
+  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
+  <meta name="citation_author_orcid" content="0000-0003-4297-8747" />
   <meta name="citation_author" content="Dongbo Hu" />
   <meta name="citation_author_institution" content="Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
   <meta name="citation_author_orcid" content="0000-0001-7870-8242" />
@@ -95,9 +100,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/1cbbc467c0e489ec49a8810aa32213daf710f35d/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/1cbbc467c0e489ec49a8810aa32213daf710f35d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/1cbbc467c0e489ec49a8810aa32213daf710f35d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/310e30c0426cbebbdff2e3f12565297b617e53eb/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/310e30c0426cbebbdff2e3f12565297b617e53eb/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/310e30c0426cbebbdff2e3f12565297b617e53eb/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -121,9 +126,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/1cbbc467c0e489ec49a8810aa32213daf710f35d/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/310e30c0426cbebbdff2e3f12565297b617e53eb/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@1cbbc46](https://github.com/greenelab/connectivity-search-manuscript/tree/1cbbc467c0e489ec49a8810aa32213daf710f35d)
+from [greenelab/connectivity-search-manuscript@310e30c](https://github.com/greenelab/connectivity-search-manuscript/tree/310e30c0426cbebbdff2e3f12565297b617e53eb)
 on September 20, 2022.
 </em></small>
 
@@ -198,6 +203,16 @@ This notice will be updated once all contributors meeting [authorship criteria](
   <small>
      Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552)
+  </small>
+
++ **Faisal Alquaddoomi**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
+    [0000-0003-4297-8747](https://orcid.org/0000-0003-4297-8747)
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [falquaddoomi](https://github.com/falquaddoomi)<br>
+  <small>
+     Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
   </small>
 
 + **Dongbo Hu**
