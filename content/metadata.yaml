@@ -60,6 +60,14 @@ authors:
       - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4552)
+  - github: falquaddoomi
+    name: Faisal Alquaddoomi
+    initials: FSA
+    orcid: 0000-0003-4297-8747
+    email: faisal.alquaddoomi@cuanschutz.edu
+    affiliations:
+      - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+      - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
   - github: dongbohu
     name: Dongbo Hu
     initials: DH
