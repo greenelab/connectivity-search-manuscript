@@ -60,6 +60,15 @@ authors:
       - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4552)
+  - github: dongbohu
+    name: Dongbo Hu
+    initials: DH
+    orcid: 0000-0001-7870-8242
+    twitter: null
+    email: dongbo.hu@gmail.com
+    affiliations:
+      - Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
+    funders: GBMF4552
   - github: danich1
     name: David N. Nicholson
     initials: DNN
@@ -71,15 +80,6 @@ authors:
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4552)
       - The National Institutes of Health (T32 HG000046)
-  - github: dongbohu
-    name: Dongbo Hu
-    initials: DH
-    orcid: 0000-0001-7870-8242
-    twitter: null
-    email: dongbo.hu@gmail.com
-    affiliations:
-      - Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
-    funders: GBMF4552
   - github: yhao-compbio
     name: Yun Hao
     initials: YH
