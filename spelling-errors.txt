@@ -19,7 +19,7 @@ contributd
 CrC
 CtDrDtC
 CtDtCtD
-Customizable
+customizable
 customizations
 DaGiGpPW
 DaGpPWpG
@@ -58,7 +58,7 @@ GreeneScientist
 GSEA
 Hadamard
 Hao
-Heil
+heil
 hetmech
 hneem
 Hu
@@ -106,7 +106,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 yhao
 YhaoC
 Yun

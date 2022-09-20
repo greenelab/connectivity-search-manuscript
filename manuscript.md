@@ -12,15 +12,15 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-09-18'
+date-meta: '2022-09-20'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
 - Vincent Rubinetti
 - Kyle Kloster
 - Benjamin J. Heil
-- David N. Nicholson
 - Dongbo Hu
+- David N. Nicholson
 - Yun Hao
 - Michael W. Nagle
 - Casey S. Greene
@@ -35,8 +35,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-09-18" />
-  <meta name="citation_publication_date" content="2022-09-18" />
+  <meta name="dc.date" content="2022-09-20" />
+  <meta name="citation_publication_date" content="2022-09-20" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -66,13 +66,13 @@ header-includes: |-
   <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania" />
   <meta name="citation_author_orcid" content="0000-0002-2811-1031" />
   <meta name="twitter:creator" content="@autobencoder" />
-  <meta name="citation_author" content="David N. Nicholson" />
-  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
-  <meta name="citation_author_orcid" content="0000-0003-0002-5761" />
-  <meta name="twitter:creator" content="@None" />
   <meta name="citation_author" content="Dongbo Hu" />
   <meta name="citation_author_institution" content="Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
   <meta name="citation_author_orcid" content="0000-0001-7870-8242" />
+  <meta name="twitter:creator" content="@None" />
+  <meta name="citation_author" content="David N. Nicholson" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
+  <meta name="citation_author_orcid" content="0000-0003-0002-5761" />
   <meta name="twitter:creator" content="@None" />
   <meta name="citation_author" content="Yun Hao" />
   <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA" />
@@ -95,9 +95,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/179759ca8b71066d6f67a2f459a274f14047988a/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/179759ca8b71066d6f67a2f459a274f14047988a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/179759ca8b71066d6f67a2f459a274f14047988a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/1cbbc467c0e489ec49a8810aa32213daf710f35d/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/1cbbc467c0e489ec49a8810aa32213daf710f35d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/1cbbc467c0e489ec49a8810aa32213daf710f35d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -121,10 +121,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/179759ca8b71066d6f67a2f459a274f14047988a/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/1cbbc467c0e489ec49a8810aa32213daf710f35d/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@179759c](https://github.com/greenelab/connectivity-search-manuscript/tree/179759ca8b71066d6f67a2f459a274f14047988a)
-on September 18, 2022.
+from [greenelab/connectivity-search-manuscript@1cbbc46](https://github.com/greenelab/connectivity-search-manuscript/tree/1cbbc467c0e489ec49a8810aa32213daf710f35d)
+on September 20, 2022.
 </em></small>
 
 ## Authors
@@ -200,17 +200,6 @@ This notice will be updated once all contributors meeting [authorship criteria](
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552)
   </small>
 
-+ **David N. Nicholson**
-  <br>
-    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
-    [0000-0003-0002-5761](https://orcid.org/0000-0003-0002-5761)
-    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [danich1](https://github.com/danich1)<br>
-  <small>
-     Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
-     · Funded by The Gordon and Betty Moore Foundation (GBMF4552); The National Institutes of Health (T32 HG000046)
-  </small>
-
 + **Dongbo Hu**
   <br>
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
@@ -220,6 +209,17 @@ This notice will be updated once all contributors meeting [authorship criteria](
   <small>
      Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
      · Funded by GBMF4552
+  </small>
+
++ **David N. Nicholson**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
+    [0000-0003-0002-5761](https://orcid.org/0000-0003-0002-5761)
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [danich1](https://github.com/danich1)<br>
+  <small>
+     Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
+     · Funded by The Gordon and Betty Moore Foundation (GBMF4552); The National Institutes of Health (T32 HG000046)
   </small>
 
 + **Yun Hao**
