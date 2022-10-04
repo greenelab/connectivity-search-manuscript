@@ -1,11 +1,9 @@
 ABCABC
-accross
 Alquaddoomi
 ARNT
 autobencoder
 BAAB
 BABA
-bewteen
 Bioteque
 CBABACXYZ
 CbG
@@ -14,12 +12,10 @@ CbGpPWpGaD
 cgreene
 colormap
 compbio
-connecitivity
-contributd
 CrC
 CtDrDtC
 CtDtCtD
-Customizable
+customizable
 customizations
 DaGiGpPW
 DaGpPWpG
@@ -43,10 +39,8 @@ DtCtDpC
 DWPC’s
 DWPCs
 Eisai
-emprical
 erogeneous
 etcetera
-evalute
 falquaddoomi
 familywise
 GBMF
@@ -59,12 +53,10 @@ GreeneScientist
 GSEA
 Hadamard
 Hao
-heil
+Heil
 hetmech
 hneem
 Hu
-hueristic
-intested
 kgem
 kkloste
 Kloster
@@ -81,7 +73,6 @@ naglem
 Neurogenomics
 Numpy’s
 oppertunity
-Othertimes
 parametrized
 piecewise
 Pinnable
@@ -97,7 +88,6 @@ Rubinetti
 smr
 sortable
 superset
-umpermuted
 Unchecking
 underperforms
 vincerubinetti
@@ -107,7 +97,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 yhao
 YhaoC
 Yun

@@ -40,7 +40,6 @@ content/05.main-text.md:230:DWPCs
 content/05.main-text.md:237:DWPCs
 content/05.main-text.md:243:DWPCs
 content/05.main-text.md:244:DWPCs
-content/05.main-text.md:245:emprical
 content/05.main-text.md:250:DWPCs
 content/05.main-text.md:251:DWPCs
 content/05.main-text.md:253:DWPCs
@@ -57,9 +56,6 @@ content/05.main-text.md:289:DWPCs
 content/05.main-text.md:291:DWPCs
 content/05.main-text.md:294:DWPCs
 content/05.main-text.md:297:DWPCs
-content/05.main-text.md:309:hueristic
-content/05.main-text.md:310:bewteen
-content/05.main-text.md:311:contributd
 content/05.main-text.md:311:DWPC's
 content/05.main-text.md:313:greenelab
 content/05.main-text.md:320:metapath's
@@ -71,9 +67,7 @@ content/05.main-text.md:348:DWPCs
 content/05.main-text.md:354:DWPCs
 content/05.main-text.md:360:DWPCs
 content/05.main-text.md:361:DWPCs
-content/05.main-text.md:362:accross
 content/05.main-text.md:363:GSEA
-content/05.main-text.md:365:intested
 content/05.main-text.md:366:etcetera
 content/05.main-text.md:372:underperforms
 content/05.main-text.md:382:dhimmel
@@ -91,7 +85,6 @@ content/05.main-text.md:448:DWPCs
 content/05.main-text.md:458:DWPCs
 content/05.main-text.md:461:BABA
 content/05.main-text.md:462:piecewise
-content/05.main-text.md:467:evalute
 content/05.main-text.md:475:BAAB
 content/05.main-text.md:475:BABA
 content/05.main-text.md:476:XwXyZ
@@ -155,7 +148,6 @@ content/05.main-text.md:610:CbG
 content/05.main-text.md:611:GpPW
 content/05.main-text.md:613:DWPCs
 content/05.main-text.md:614:colormap
-content/05.main-text.md:614:umpermuted
 content/05.main-text.md:616:greenelab
 content/05.main-text.md:628:parametrized
 content/05.main-text.md:634:DWPCs
@@ -198,7 +190,6 @@ content/05.main-text.md:733:DWPCs
 content/05.main-text.md:734:DWPCs
 content/05.main-text.md:737:DWPCs
 content/05.main-text.md:737:DWPCs
-content/05.main-text.md:741:connecitivity
 content/05.main-text.md:743:DWPCs
 content/05.main-text.md:749:DdGpPW
 content/05.main-text.md:749:DdGpPW
@@ -214,7 +205,6 @@ content/05.main-text.md:770:DWPCs
 content/05.main-text.md:782:DWPCs
 content/05.main-text.md:784:Unchecking
 content/05.main-text.md:786:DWPCs
-content/05.main-text.md:786:Othertimes
 content/05.main-text.md:789:greenelab
 content/05.main-text.md:789:hetmech
 content/05.main-text.md:791:greenelab

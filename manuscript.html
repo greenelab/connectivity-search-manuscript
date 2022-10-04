@@ -118,9 +118,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/f33c9aa325ff489cf801d66069270d93f21c7d88/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f33c9aa325ff489cf801d66069270d93f21c7d88/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f33c9aa325ff489cf801d66069270d93f21c7d88/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2b1fdbc1926238c0db6efaebb3c3e82b8d7ddf31/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2b1fdbc1926238c0db6efaebb3c3e82b8d7ddf31/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2b1fdbc1926238c0db6efaebb3c3e82b8d7ddf31/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -139,9 +139,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/f33c9aa325ff489cf801d66069270d93f21c7d88/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/2b1fdbc1926238c0db6efaebb3c3e82b8d7ddf31/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/f33c9aa325ff489cf801d66069270d93f21c7d88">greenelab/connectivity-search-manuscript@f33c9aa</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/2b1fdbc1926238c0db6efaebb3c3e82b8d7ddf31">greenelab/connectivity-search-manuscript@2b1fdbc</a>
 on October 4, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -308,7 +308,7 @@ such as genes and diseases, or upregulation and binding.</p>
 The metagraph consists of metanodes (types of nodes) and metaedges (types of edges).
 Note that the prefix <em>meta</em> is used to refer to type (e.g. compound),
 as opposed to a specific node/edge/path itself (e.g. acetaminophen).</p>
-<p>One such network is hetionet, which provides a foundation for building hetnet applications.
+<p>One such network is Hetionet, which provides a foundation for building hetnet applications.
 It unifies data from several different, disparate sources into a single, comprehensive, accessible, common-format network.
 The database is publicly accessible without login at <a href="https://neo4j.het.io" class="uri">https://neo4j.het.io</a>.
 The Neo4j graph database enables querying Hetionet using the Cypher language,
@@ -488,7 +488,7 @@ we account for degree effects when determining the significance of a DWPC.
 To improve the accuracy of DWPC <em>p</em>-values,
 we use fit a <a href="#gamma-hurdle-distribution">gamma-hurdle distribution</a> to the null DWPCs.
 In rare cases, there are insufficient nonzero null DWPCs to fit the gamma portion of the null distribution.
-In these cases, we fallback to an emprical calculation as described in <a href="#empirical-dwpc-p-values">Empirical DWPC p-values</a>.</p>
+In these cases, we fallback to an empirical calculation as described in <a href="#empirical-dwpc-p-values">Empirical DWPC p-values</a>.</p>
 <h3 id="enriched-metapaths">Enriched metapaths</h3>
 <p>For each of the 2,205 metapaths in Hetionet v1.0 with length ≤ 3,
 we computed DWPCs for all node pairs and their corresponding null distributions, see <a href="#dwpc-and-null-distribution-computation">DWPC and null distribution computation</a>.
@@ -549,9 +549,9 @@ it is straightforward to calculate the proportion of a DWPC attributable to an i
 The webapp allows users to select a metapath to populate a table of the corresponding paths.
 These paths are generated on-the-fly through a Cypher query to the Hetionet Neo4j database.</p>
 <p>It is desirable to have a consolidated view of paths across multiple metapaths.
-Therefore, we calculate a <em>path score</em> hueristic,
-which can be used to compare the importance of paths bewteen metapaths.
-The path score equals the proportion of the DWPC contributd by a path multiplied by the magnitude of the DWPC’s <em>p</em>-value (-log<sub>10</sub>(<em>p</em>)).
+Therefore, we calculate a <em>path score</em> heuristic,
+which can be used to compare the importance of paths between metapaths.
+The path score equals the proportion of the DWPC contributed by a path multiplied by the magnitude of the DWPC’s <em>p</em>-value (-log<sub>10</sub>(<em>p</em>)).
 To illustrate, the paths webapp panel includes the following information (Figure <a href="#fig:webapp">3</a>C):
 <!-- https://github.com/greenelab/connectivity-search-frontend/blob/63bb4acbcebe4b346882754719071856b30b43ba/src/definitions.json --></p>
 <ul>
@@ -597,10 +597,10 @@ One final approach could learn from user interest and compute longer metapaths o
 Equally interesting would be queries where the input is a set of nodes of the same type, optionally with weights.
 The search would compute DWPCs for paths originating on the query nodes.
 The simpler formulation would compute DWPCs for metapaths separately and compare to null distributions from permuted hetnets.
-A more advanced formulation would combine scores accross metapaths such that every node in the hetnet would receive a single score capturing its connectivity to the query set.
+A more advanced formulation would combine scores across metapaths such that every node in the hetnet would receive a single score capturing its connectivity to the query set.
 This approach would have similar utility to gene set enrichment analysis (GSEA) in that the user could provide a set of genes as input and receive a ranked list of nodes that characterize the function of the query genes.
 However, it would excel in its versatility by returning results of any node type without requiring pre-defined gene sets to match against.
-Some users might be intested in node set transformations where scores for one node type are converted to another node type.
+Some users might be interested in node set transformations where scores for one node type are converted to another node type.
 This approach could take scores for human genes and convert them to side effects, diseases, pathways, etcetera.</p>
 <p>Our work is not without limitation.
 The final product relies on multiple databases and cached computations that specific to Hetionet v1.0.
@@ -757,7 +757,7 @@ Many complex repeat patterns can be represented piecewise as simpler patterns, a
 For example, disjoint groups of repeats like <em>DrDtCrC</em> can be computed as the matrix product of DWPC matrices for <em>DrD</em> and <em>CrC</em>.
 Randomly-inserted non-repeated metanodes (e.g. <em>G</em> in <em>DrDaGaDrD</em>) require no special treatment, and are included in DWPC with a simple matrix multiplication.</p>
 <p>After metapath categorization, we segment metapaths according to their repeat pattern, following our order of operations.
-By segmenting and computing recursively, we can evalute DWPC efficiently on highly complex metapaths, using simple patterns as building-blocks for higher-level patterns.
+By segmenting and computing recursively, we can evaluate DWPC efficiently on highly complex metapaths, using simple patterns as building-blocks for higher-level patterns.
 Finally, our specialized DWPC functions are applied to individual segments, the results are combined, and final corrections are made to ensure no repeated nodes are counted.
 The recursive, segmented approach we developed allowed us additionally to implement a caching strategy that improved speed by avoiding duplicate DWPC computations.
 In summary, the functionality we developed resulted in greater than a 175-fold reduction in compute time, allowing us to compute millions of DWPC values across Hetionet <span class="citation" data-cites="15nwuvjrA">[<a href="#ref-15nwuvjrA" role="doc-biblioref">43</a>]</span>.</p>
@@ -873,7 +873,7 @@ it is important to fit a separate gamma model for each degree group.</li>
 </ul>
 <div id="fig:degree-group-metrics" class="fignos">
 <figure>
-<img src="https://github.com/greenelab/connectivity-search-analyses/raw/15f1925c0481d8e6bab8b0931f48f2fad388c68c/explore/degree-group-analyses.png" alt="Figure 5: Path-based metrics vary by node degree and network permutation status. Each row shows a different metric of the DWPC distribution for the CbGpPWpG metapath — traversing Compound–binds–Gene–participates–Pathway–participates–Gene, selected for illustrative purposes. Metrics are computed for degree-groups, which is a specific pair of source degree (in this case, the source compound’s count of CbG edges) and target degree (in this case, the target gene’s count of GpPW edges). On the left, metrics are reported for the unpermuted hetnet and on the right for the 200 permuted hetnets. Hence, each cell on right summarizes 200 times the number of DWPCs as the corresponding cell on the left. The colormap is row normalized, such that its intensity peaks for the maximum value of each metric across the umpermuted and permuted values. Gray indicates null values." />
+<img src="https://github.com/greenelab/connectivity-search-analyses/raw/15f1925c0481d8e6bab8b0931f48f2fad388c68c/explore/degree-group-analyses.png" alt="Figure 5: Path-based metrics vary by node degree and network permutation status. Each row shows a different metric of the DWPC distribution for the CbGpPWpG metapath — traversing Compound–binds–Gene–participates–Pathway–participates–Gene, selected for illustrative purposes. Metrics are computed for degree-groups, which is a specific pair of source degree (in this case, the source compound’s count of CbG edges) and target degree (in this case, the target gene’s count of GpPW edges). On the left, metrics are reported for the unpermuted hetnet and on the right for the 200 permuted hetnets. Hence, each cell on right summarizes 200 times the number of DWPCs as the corresponding cell on the left. The colormap is row normalized, such that its intensity peaks for the maximum value of each metric across the unpermuted and permuted values. Gray indicates null values." />
 <figcaption aria-hidden="true"><span>Figure 5:</span> <strong>Path-based metrics vary by node degree and network permutation status.</strong>
 Each row shows a different metric of the DWPC distribution for the <em>CbGpPWpG</em> metapath — traversing Compound–binds–Gene–participates–Pathway–participates–Gene, selected for illustrative purposes.
 Metrics are computed for degree-groups,
@@ -881,7 +881,7 @@ which is a specific pair of source degree (in this case, the source compound’s
 and target degree (in this case, the target gene’s count of GpPW edges).
 On the left, metrics are reported for the unpermuted hetnet and on the right for the 200 permuted hetnets.
 Hence, each cell on right summarizes 200 times the number of DWPCs as the corresponding cell on the left.
-The colormap is row normalized, such that its intensity peaks for the maximum value of each metric across the umpermuted and permuted values.
+The colormap is row normalized, such that its intensity peaks for the maximum value of each metric across the unpermuted and permuted values.
 Gray indicates null values.</figcaption>
 </figure>
 </div>
@@ -985,7 +985,7 @@ As a result, computing and saving all DWPCs took 6 hours,
 whereas computing and saving the null DWPC summary statistics took 361 hours.</p>
 <p>Including null DWPCs and path counts, the Zenodo deposit totals 185.1 GB and contains the results of computing ~28 trillion DWPCs — 27,832,927,128,728 to be exact.</p>
 <h3 id="adjusting-dwpc-p-values">Adjusting DWPC <em>p</em>-values</h3>
-<p>When a user applies hetnet connecitivity search to identify enriched metapaths between two nodes,
+<p>When a user applies hetnet connectivity search to identify enriched metapaths between two nodes,
 many metapaths are evaluated for significance.
 Due to multiple testing of many DWPCs, low <em>p</em>-values are likely to arise by chance.
 Therefore, we devised a multiple testing correction.</p>
@@ -1025,7 +1025,7 @@ The −0.3 exponent applies the large DWPC-matrix penalty.</p>
 These are calculated on-the-fly, delegating DWPC computation to the Neo4j database.
 Unchecking “precomputed only” on the webapp shows all possible metapaths for two query nodes.
 For some node pairs, the on-the-fly computation is quick (less than a second).
-Othertimes, computing DWPCs for all metapaths might take more than a minute.</p>
+Other times, computing DWPCs for all metapaths might take more than a minute.</p>
 <!--
 https://github.com/greenelab/hetmech/blob/cad458b29f508c66b4b14cdd641db6855426221b/explore/metapath-thresholds/metapath-thresholds.ipynb
 
