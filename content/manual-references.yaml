@@ -111,3 +111,72 @@
   title: Translating embeddings for modeling multi-relational data
   URL: https://dl.acm.org/doi/10.5555/2999792.2999923
   type: paper-conference
+- id: doi:10.1145/2983323.2983778
+  DOI: 10.1145/2983323.2983778
+  type: paper-conference
+  source: Crossref
+  title: 'ESPRESSO: Explaining Relationships between Entity Sets'  # Crossref metadata has title set to just "ESPRESSO" https://twitter.com/dhimmel/status/1577287933479919616
+  author:
+  - given: Stephan
+    family: Seufert
+  - given: Klaus
+    family: Berberich
+  - given: Srikanta J.
+    family: Bedathur
+  - given: Sarath Kumar
+    family: Kondreddi
+  - given: Patrick
+    family: Ernst
+  - given: Gerhard
+    family: Weikum
+  event: 'CIKM''16: ACM Conference on Information and Knowledge Management'
+  container-title: Proceedings of the 25th ACM International on Conference on Information and Knowledge Management
+  publisher: ACM
+  issued:
+    date-parts:
+    - - 2016
+      - 10
+      - 24
+  URL: https://doi.org/gcpx7w
+- id: doi:10.1145/2939672.2939754
+  DOI: 10.1145/2939672.2939754
+  type: paper-conference
+  source: Crossref
+  title: 'node2vec: Scalable Feature Learning for Networks'  # https://twitter.com/dhimmel/status/1577287933479919616
+  author:
+  - given: Aditya
+    family: Grover
+  - given: Jure
+    family: Leskovec
+  event: 'KDD ''16: The 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining'
+  container-title: Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining
+  publisher: ACM
+  issued:
+    date-parts:
+    - - 2016
+      - 8
+      - 13
+  URL: https://doi.org/gftdzj
+  PMCID: PMC5108654
+  PMID: '27853626'
+- id: doi:10.1145/3289600.3290990
+  DOI: 10.1145/3289600.3290990
+  type: paper-conference
+  source: Crossref
+  title: "FAIRY: A Framework for Understanding Relationships Between Users' Actions and their Social Feeds" # https://twitter.com/dhimmel/status/1577287933479919616
+  author:
+  - given: Azin
+    family: Ghazimatin
+  - given: Rishiraj
+    family: Saha Roy
+  - given: Gerhard
+    family: Weikum
+  event: 'WSDM ''19: The Twelfth ACM International Conference on Web Search and Data Mining'
+  container-title: Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining
+  publisher: ACM
+  issued:
+    date-parts:
+    - - 2019
+      - 1
+      - 30
+  URL: https://doi.org/gf2wqj
