@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-09-20'
+date-meta: '2022-10-04'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -36,8 +36,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-09-20" />
-  <meta name="citation_publication_date" content="2022-09-20" />
+  <meta name="dc.date" content="2022-10-04" />
+  <meta name="citation_publication_date" content="2022-10-04" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -100,9 +100,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/310e30c0426cbebbdff2e3f12565297b617e53eb/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/310e30c0426cbebbdff2e3f12565297b617e53eb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/310e30c0426cbebbdff2e3f12565297b617e53eb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/4c8980999755d348bf8c2d6d675f945609fd0428/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4c8980999755d348bf8c2d6d675f945609fd0428/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4c8980999755d348bf8c2d6d675f945609fd0428/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -126,10 +126,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/310e30c0426cbebbdff2e3f12565297b617e53eb/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/4c8980999755d348bf8c2d6d675f945609fd0428/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@310e30c](https://github.com/greenelab/connectivity-search-manuscript/tree/310e30c0426cbebbdff2e3f12565297b617e53eb)
-on September 20, 2022.
+from [greenelab/connectivity-search-manuscript@4c89809](https://github.com/greenelab/connectivity-search-manuscript/tree/4c8980999755d348bf8c2d6d675f945609fd0428)
+on October 4, 2022.
 </em></small>
 
 ## Authors
@@ -395,7 +395,7 @@ https://github.com/greenelab/connectivity-search-manuscript/issues/28
 [@metaexp]: doi:10.1145/3184558.3186978
 [@espresso]: doi:10.1145/2983323.2983778
 [@pykeen]: https://jmlr.org/papers/v22/20-825.html
-[@kgem-performance]: arxiv:2105.10488
+[@kgem-performance]: doi:10.1016/j.ailsci.2022.100036
 [@smr]: doi:10.1016/j.bdr.2020.100174
 [@rosalind]: doi:10.1038/s41598-020-74922-z
 [@fusion]: 	doi:10.1109/TPAMI.2014.2343973
@@ -715,8 +715,8 @@ while Hetionet includes only 137 diseases [@doi:10.15363/thinklab.d44].
 Nodes were excluded to avoid redundant or overly specific nodes,
 while ensuring a minimum level of connectivity for compounds and diseases.
 See the [Project Rephetio methods](https://git.dhimmel.com/rephetio-manuscript/#nodes) for more details [@rephetio].
-Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types [@arxiv:2102.10062].
-Other integrative resources, some still under development, include [Wikidata](https://www.wikidata.org) [@doi:10.7554/eLife.52614], [SemMedDB](https://skr3.nlm.nih.gov/SemMedDB/) [@doi:10.1093/bioinformatics/bts591; @doi:10.1109/BIBM.2018.8621568; @doi:10.1186/s12859-019-3297-0], [SPOKE](https://spoke.ucsf.edu/), and [RTX-KG2c](https://github.com/RTXteam/RTX-KG2) [@doi:10.1101/2021.10.17.464747].
+Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types [@doi:10.1093/bib/bbac404].
+Other integrative resources, some still under development, include [Wikidata](https://www.wikidata.org) [@doi:10.7554/eLife.52614], [SemMedDB](https://skr3.nlm.nih.gov/SemMedDB/) [@doi:10.1093/bioinformatics/bts591; @doi:10.1109/BIBM.2018.8621568; @doi:10.1186/s12859-019-3297-0], [SPOKE](https://spoke.ucsf.edu/), and [RTX-KG2c](https://github.com/RTXteam/RTX-KG2) [@doi:10.1186/s12859-022-04932-3].
 
 ### HetMat architecture
 

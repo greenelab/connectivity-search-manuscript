@@ -2,7 +2,6 @@ ABCABC
 accross
 Alquaddoomi
 ARNT
-arxiv
 autobencoder
 BAAB
 BABA
@@ -20,13 +19,13 @@ contributd
 CrC
 CtDrDtC
 CtDtCtD
-Customizable
+customizable
 customizations
 DaGiGpPW
 DaGpPWpG
 danich
 dataset
-datasets
+Datasets
 DdGpPW
 deepwalk
 Dev
@@ -108,7 +107,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 yhao
 YhaoC
 Yun
