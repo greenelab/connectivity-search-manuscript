@@ -34,6 +34,7 @@
     date-parts:
     - - 2018
       - 4
+      - 23
   container-title: 'WWW ''18: Companion Proceedings of the The Web Conference 2018'
   publisher: Association for Computing Machinery (ACM)
   DOI: 10.1145/3184558.3186978
@@ -52,6 +53,7 @@
     date-parts:
     - - 2017
       - 8
+      - 4
   container-title: 'KDD ''17: Proceedings of the 23rd ACM SIGKDD International Conference
     on Knowledge Discovery and Data Mining'
   publisher: Association for Computing Machinery (ACM)
@@ -102,6 +104,7 @@
     date-parts:
     - - 2013
       - 12
+      - 5
   page: 2787-2795
   publisher: Curran Associates Inc.
   publisher-place: Red Hook, NY, USA
