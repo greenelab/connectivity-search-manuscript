@@ -100,9 +100,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/4c8980999755d348bf8c2d6d675f945609fd0428/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4c8980999755d348bf8c2d6d675f945609fd0428/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4c8980999755d348bf8c2d6d675f945609fd0428/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/f33c9aa325ff489cf801d66069270d93f21c7d88/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f33c9aa325ff489cf801d66069270d93f21c7d88/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f33c9aa325ff489cf801d66069270d93f21c7d88/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -112,7 +112,8 @@ header-includes: |-
   <meta name="theme-color" content="#ad1457" />
   <!-- end Manubot generated metadata -->
 bibliography:
-- content/manual-references.json
+- content/manual-references-2022-10-04.json
+- content/manual-references.yaml
 manubot-output-bibliography: output/references.json
 manubot-output-citekeys: output/citations.tsv
 manubot-requests-cache-path: ci/cache/requests-cache
@@ -126,9 +127,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/4c8980999755d348bf8c2d6d675f945609fd0428/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/f33c9aa325ff489cf801d66069270d93f21c7d88/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@4c89809](https://github.com/greenelab/connectivity-search-manuscript/tree/4c8980999755d348bf8c2d6d675f945609fd0428)
+from [greenelab/connectivity-search-manuscript@f33c9aa](https://github.com/greenelab/connectivity-search-manuscript/tree/f33c9aa325ff489cf801d66069270d93f21c7d88)
 on October 4, 2022.
 </em></small>
 
