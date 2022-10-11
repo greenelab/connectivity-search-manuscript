@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/6bfedcf65584766e4e8bebed7baae9b157ec751d/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6bfedcf65584766e4e8bebed7baae9b157ec751d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6bfedcf65584766e4e8bebed7baae9b157ec751d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/1d76b245dddb6845e484c768a38000ffa533e7c4/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/1d76b245dddb6845e484c768a38000ffa533e7c4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/1d76b245dddb6845e484c768a38000ffa533e7c4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -132,21 +132,16 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/6bfedcf65584766e4e8bebed7baae9b157ec751d/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/1d76b245dddb6845e484c768a38000ffa533e7c4/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@6bfedcf](https://github.com/greenelab/connectivity-search-manuscript/tree/6bfedcf65584766e4e8bebed7baae9b157ec751d)
+from [greenelab/connectivity-search-manuscript@1d76b24](https://github.com/greenelab/connectivity-search-manuscript/tree/1d76b245dddb6845e484c768a38000ffa533e7c4)
 on October 11, 2022.
 </em></small>
 
 ## Authors
 
 <!-- include the Font Awesome library, per: https://fontawesome.com/start -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-[
-[]{.fas .fa-info-circle .fa-lg} **Manuscript in preparation**<br>
-The authorship information below is incomplete and preliminary.
-This notice will be updated once all contributors meeting [authorship criteria](https://github.com/greenelab/onboarding/blob/master/onboarding.md "Greene Lab Onboarding. See Authorship section") have added themselves to [`metadata.yaml`](https://github.com/greenelab/connectivity-search-manuscript/blob/master/content/metadata.yaml).
-]{.banner .lightpurple}
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> -->
 
 
 
