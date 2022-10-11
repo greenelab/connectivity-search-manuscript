@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-10-04'
+date-meta: '2022-10-11'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -23,6 +23,7 @@ author-meta:
 - Dongbo Hu
 - David N. Nicholson
 - Yun Hao
+- Blair D. Sullivan
 - Michael W. Nagle
 - Casey S. Greene
 manubot-fail-on-errors: true
@@ -36,8 +37,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-10-04" />
-  <meta name="citation_publication_date" content="2022-10-04" />
+  <meta name="dc.date" content="2022-10-11" />
+  <meta name="citation_publication_date" content="2022-10-11" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -83,6 +84,10 @@ header-includes: |-
   <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA" />
   <meta name="citation_author_orcid" content="0000-0002-1684-0085" />
   <meta name="twitter:creator" content="@YhaoC" />
+  <meta name="citation_author" content="Blair D. Sullivan" />
+  <meta name="citation_author_institution" content="School of Computing, University of Utah, Salt Lake City, Utah, USA" />
+  <meta name="citation_author_orcid" content="0000-0001-7720-6208" />
+  <meta name="twitter:creator" content="@BlairDSullivan" />
   <meta name="citation_author" content="Michael W. Nagle" />
   <meta name="citation_author_institution" content="Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc, Cambridge, Massachusetts, United States of America" />
   <meta name="citation_author_institution" content="Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc, Cambridge, Massachusetts, United States of America" />
@@ -100,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2b1fdbc1926238c0db6efaebb3c3e82b8d7ddf31/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2b1fdbc1926238c0db6efaebb3c3e82b8d7ddf31/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2b1fdbc1926238c0db6efaebb3c3e82b8d7ddf31/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/6bfedcf65584766e4e8bebed7baae9b157ec751d/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6bfedcf65584766e4e8bebed7baae9b157ec751d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6bfedcf65584766e4e8bebed7baae9b157ec751d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -127,10 +132,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/2b1fdbc1926238c0db6efaebb3c3e82b8d7ddf31/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/6bfedcf65584766e4e8bebed7baae9b157ec751d/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@2b1fdbc](https://github.com/greenelab/connectivity-search-manuscript/tree/2b1fdbc1926238c0db6efaebb3c3e82b8d7ddf31)
-on October 4, 2022.
+from [greenelab/connectivity-search-manuscript@6bfedcf](https://github.com/greenelab/connectivity-search-manuscript/tree/6bfedcf65584766e4e8bebed7baae9b157ec751d)
+on October 11, 2022.
 </em></small>
 
 ## Authors
@@ -248,6 +253,18 @@ This notice will be updated once all contributors meeting [authorship criteria](
     [YhaoC](https://twitter.com/YhaoC)<br>
   <small>
      Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA
+  </small>
+
++ **Blair D. Sullivan**
+  <br>
+    ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
+    [0000-0001-7720-6208](https://orcid.org/0000-0001-7720-6208)
+    · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
+    [bdsullivan](https://github.com/bdsullivan)
+    · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
+    [BlairDSullivan](https://twitter.com/BlairDSullivan)<br>
+  <small>
+     School of Computing, University of Utah, Salt Lake City, Utah, USA
   </small>
 
 + **Michael W. Nagle**

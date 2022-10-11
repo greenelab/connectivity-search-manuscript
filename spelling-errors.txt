@@ -4,7 +4,9 @@ ARNT
 autobencoder
 BAAB
 BABA
+bdsullivan
 Bioteque
+BlairDSullivan
 CBABACXYZ
 CbG
 CbGpPWpG
@@ -53,7 +55,7 @@ GreeneScientist
 GSEA
 Hadamard
 Hao
-Heil
+heil
 hetmech
 hneem
 Hu
@@ -97,7 +99,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 yhao
 YhaoC
 Yun
