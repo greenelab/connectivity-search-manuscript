@@ -96,6 +96,14 @@ authors:
     email: yun.hao@pennmedicine.upenn.edu
     affiliations:
       - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA
+  - github: bdsullivan
+    name: Blair D. Sullivan
+    initials: BDS
+    orcid: 0000-0001-7720-6208
+    twitter: BlairDSullivan
+    email: sullivan@cs.utah.edu
+    affiliations:
+      - School of Computing, University of Utah, Salt Lake City, Utah, USA
   - github: naglem
     name: Michael W. Nagle
     initials: MWN
