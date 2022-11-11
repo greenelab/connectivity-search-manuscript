@@ -17,13 +17,13 @@ compbio
 CrC
 CtDrDtC
 CtDtCtD
-Customizable
+customizable
 customizations
 DaGiGpPW
 DaGpPWpG
 danich
 dataset
-datasets
+Datasets
 DdGpPW
 deepwalk
 Dev
@@ -44,7 +44,6 @@ Eisai
 erogeneous
 etcetera
 falquaddoomi
-familywise
 GBMF
 GiGdG
 GJA
@@ -55,7 +54,7 @@ GreeneScientist
 GSEA
 Hadamard
 Hao
-heil
+Heil
 hetmech
 hneem
 Hu
@@ -74,7 +73,6 @@ Nagle
 naglem
 Neurogenomics
 Numpy’s
-oppertunity
 parametrized
 piecewise
 Pinnable
@@ -87,6 +85,7 @@ Redux
 Redux’s
 RTX
 Rubinetti
+scalability
 smr
 sortable
 superset
@@ -95,6 +94,7 @@ underperforms
 vincerubinetti
 Webapps
 Webpack
+webserver
 XaXbX
 XaYbXcY
 XaYbYcX
