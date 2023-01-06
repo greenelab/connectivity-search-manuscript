@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2bb627e8eafad78771444f0a208504fb46d71499/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2bb627e8eafad78771444f0a208504fb46d71499/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2bb627e8eafad78771444f0a208504fb46d71499/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/cc51d18a9521fc3bdd7df6845878e8a377dfb1b2/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/cc51d18a9521fc3bdd7df6845878e8a377dfb1b2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/cc51d18a9521fc3bdd7df6845878e8a377dfb1b2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -132,9 +132,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/2bb627e8eafad78771444f0a208504fb46d71499/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/cc51d18a9521fc3bdd7df6845878e8a377dfb1b2/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@2bb627e](https://github.com/greenelab/connectivity-search-manuscript/tree/2bb627e8eafad78771444f0a208504fb46d71499)
+from [greenelab/connectivity-search-manuscript@cc51d18](https://github.com/greenelab/connectivity-search-manuscript/tree/cc51d18a9521fc3bdd7df6845878e8a377dfb1b2)
 on January 6, 2023.
 </em></small>
 
@@ -155,7 +155,7 @@ on January 6, 2023.
     [dhimmel](https://twitter.com/dhimmel)<br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Related Sciences
-     · Funded by GBMF4552
+     · Funded by The Gordon and Betty Moore Foundation (GBMF4552); Pfizer Worldwide Research, Development, and Medical
   </small>
 
 + **Michael Zietz**
@@ -284,7 +284,7 @@ on January 6, 2023.
     [GreeneScientist](https://twitter.com/GreeneScientist)<br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
-     · Funded by the National Human Genome Research Institute (R01 HG010067); the National Cancer Institute (R01 CA237170); the Gordon and Betty Moore Foundation (GBMF 4552)
+     · Funded by the National Human Genome Research Institute (R01 HG010067); the National Cancer Institute (R01 CA237170); the Gordon and Betty Moore Foundation (GBMF 4552); Pfizer Worldwide Research, Development, and Medical
   </small>
 
 
