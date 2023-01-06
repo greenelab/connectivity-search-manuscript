@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2022-11-11'
+date-meta: '2023-01-06'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -37,8 +37,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2022-11-11" />
-  <meta name="citation_publication_date" content="2022-11-11" />
+  <meta name="dc.date" content="2023-01-06" />
+  <meta name="citation_publication_date" content="2023-01-06" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/e2e2825f734a11e3814e07707a91ae059304a796/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/e2e2825f734a11e3814e07707a91ae059304a796/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/e2e2825f734a11e3814e07707a91ae059304a796/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/45ce6e15d28305486a8c51c1c161d8315cd79215/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/45ce6e15d28305486a8c51c1c161d8315cd79215/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/45ce6e15d28305486a8c51c1c161d8315cd79215/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -132,10 +132,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/e2e2825f734a11e3814e07707a91ae059304a796/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/45ce6e15d28305486a8c51c1c161d8315cd79215/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@e2e2825](https://github.com/greenelab/connectivity-search-manuscript/tree/e2e2825f734a11e3814e07707a91ae059304a796)
-on November 11, 2022.
+from [greenelab/connectivity-search-manuscript@45ce6e1](https://github.com/greenelab/connectivity-search-manuscript/tree/45ce6e15d28305486a8c51c1c161d8315cd79215)
+on January 6, 2023.
 </em></small>
 
 ## Authors
@@ -1294,6 +1294,10 @@ Datasets exceeding this size, along with other essential datasets, are available
 [@vagelos-2017]: doi:10.6084/m9.figshare.5346577
 [@xswap]: https://greenelab.github.io/xswap-manuscript/
 [@zenodo]: doi:10.5281/zenodo.1435833
+
+## Competing Interests
+
+This work was supported, in part, by Pfizer Worldwide Research, Development, and Medical.
 
 
 ## References {.page_break_before}

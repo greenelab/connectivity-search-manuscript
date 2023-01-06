@@ -23,7 +23,7 @@ DaGiGpPW
 DaGpPWpG
 danich
 dataset
-Datasets
+datasets
 DdGpPW
 deepwalk
 Dev
