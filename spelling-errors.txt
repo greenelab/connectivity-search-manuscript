@@ -54,7 +54,7 @@ GreeneScientist
 GSEA
 Hadamard
 Hao
-Heil
+heil
 hetmech
 hneem
 Hu
