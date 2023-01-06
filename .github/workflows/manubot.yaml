@@ -41,6 +41,7 @@ jobs:
       # Set SPELLCHECK to true/false for whether to check spelling in this action.
       # For workflow dispatch jobs, this SPELLCHECK setting will be overridden by the user input.
       SPELLCHECK: true
+      BUILD_DOCX: true
     defaults:
       run:
         shell: bash --login {0}
