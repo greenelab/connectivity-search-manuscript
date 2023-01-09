@@ -12,6 +12,7 @@ CbG
 CbGpPWpG
 CbGpPWpGaD
 cgreene
+citable
 colormap
 compbio
 CrC

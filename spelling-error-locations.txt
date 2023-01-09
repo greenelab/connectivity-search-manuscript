@@ -1,3 +1,4 @@
+content/00.front-matter.md:7:citable
 content/05.main-text.md:7:erogeneous
 content/05.main-text.md:48:DWPCs
 content/05.main-text.md:56:greenelab
