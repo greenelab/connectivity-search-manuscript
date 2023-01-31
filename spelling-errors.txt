@@ -55,6 +55,7 @@ GreeneScientist
 GSEA
 Hadamard
 Hao
+HD
 Heil
 hetmech
 hneem
@@ -87,6 +88,7 @@ Redux’s
 RTX
 Rubinetti
 scalability
+Shriver
 smr
 sortable
 superset
@@ -100,7 +102,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 yhao
 YhaoC
 Yun
