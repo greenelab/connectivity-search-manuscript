@@ -11,7 +11,19 @@ This document contains the response to reviewers for _GigaScience_ submission `G
 > Without line and page numbers, it was a bit tricky to point out the issues.
 > 
 > 1. "One such application" in the introduction does not read well - just "one application"
+
+Revised.
+
 > 2. It is nice to see that DWPCs that are not retained by the database can be generated on the fly. The para goes on to mention "while still allowing on-demand access to the full metrics for all metapaths with length ≤ 3" --- is it also possible to generate metrics for longer paths if needed?
+
+The webapp is limited to displaying metapaths that are in the relational database `Metapath` table, which is currently all metapaths with length ≤ 3.
+The backend API will respond to a query for the paths between a given source and target node across a metapath that is not in the database. 
+For example, the following API request for a length 4 metapath succeeds:
+<https://search-api.het.io/v1/paths/source/17054/target/6602/metapath/CbGpPWpGaD/?limit=5>.
+While the response includes paths along with the corresponding node and edge properties, it is missing information on the DWPC null distribution and hence the DWPC p-value.
+
+TODO: describe how to generate metrics for longer metapaths.
+
 > 3. Below Fig 2, there is a point about the adjusted p-value. I see that the discussion about FDR is presented later in the manuscript (and well justified), but there could be a pointer here to that section.
 > 4. Is there a possibility to include other computations like betweenness centrality and motifs also? This kind of data looks really ripe for an excellent analysis of repeated motifs etc.
 > 5. I found the Methods extremely long and may be a bit distracting for readers of this manuscript --- I was wondering if some of these can be moved to Supplementary.
@@ -22,6 +34,13 @@ This document contains the response to reviewers for _GigaScience_ submission `G
 > 10. In the section on "Prioritizing enriched metapaths for database storage", what is the logic underlying the choice of parameters? "For metapaths with length ≥ 2, we chose an adjusted pvalue threshold of 5 × (nsource × ntarget)^−0.3".
 > 11. Under "Visual Design", are the colours chosen "colour-blind friendly"?
 
+Good question.
+Using the [hclwizard CVD emulator](http://hclwizard.org:3000/cvdemulator/), we've [simulated](https://github.com/hetio/hetionet/pull/18#issuecomment-1452877325) the new and old Het.io color palettes for various CVDs at 100% severity:
+
+![hetionet metagraph colorblindness simulator](https://user-images.githubusercontent.com/1117703/222621153-a0954237-37e9-4729-a2f2-9d46521f96fb.png)
+
+Some colors are harder to differentiate. It's worth noting that we often show metanode abbreviations or node names along with colors,
+such that color is helpful but not essential for usage and interpretation.
 
 ## Reviewer #2:
 
