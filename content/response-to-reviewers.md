@@ -24,8 +24,22 @@ While the response includes paths along with the corresponding node and edge pro
 
 TODO: describe how to generate metrics for longer metapaths.
 
+The discussion touches on approaches future work could consider to subset all possible longer metapaths to only the most interesting starting with "One solution would be to only extend metapaths detected as informative".
+
 > 3. Below Fig 2, there is a point about the adjusted p-value. I see that the discussion about FDR is presented later in the manuscript (and well justified), but there could be a pointer here to that section.
+
+We've cross-referenced the text "Bonferroni-adjusted" to the "Adjusting DWPC _p_-values" methods section.
+
 > 4. Is there a possibility to include other computations like betweenness centrality and motifs also? This kind of data looks really ripe for an excellent analysis of repeated motifs etc.
+
+Existing methods for betweenness centrality and motifs are most commonly applied to homogeneous networks where there is a single type of node and edge.
+In the context of hetnets and this study, there are interesting parallels.
+For example, given a connectivity search query of a source and target node, one could aggregate path scores by the intermediate nodes, edges, or subpaths.
+We explore this idea for a single metapath in the discussion [Decomposing the DWPC to assess intermediate node or edge contributions](https://doi.org/10.15363/thinklab.d228 "Daniel Himmelstein (2016) Decomposing the DWPC to assess intermediate node or edge contributions. Thinklab. doi:10.15363/thinklab.d228").
+The idea generalizes to aggregating paths that traverse different metapaths.
+It's a good approach for reducing a large list of paths to a smaller number of intermediate nodes or edges to aid in interpretability.
+While not planned for the current version of the connectivity search webapp, it a promising future direction that we have added to the discussion.
+
 > 5. I found the Methods extremely long and may be a bit distracting for readers of this manuscript --- I was wondering if some of these can be moved to Supplementary.
 > 6. In the section on "Details of matrix DWPC implementation", it is stated that "our matrix methods were validated". It is not clear where these validations have been discussed. Supplementary?
 > 7. In the section on "Permuted hetnets", it is not fully clear what the parameters for XSwap algorithm was. What were the parameters, e.g. number of swaps, etc.?
@@ -35,7 +49,7 @@ TODO: describe how to generate metrics for longer metapaths.
 > 11. Under "Visual Design", are the colours chosen "colour-blind friendly"?
 
 Good question.
-Using the [hclwizard CVD emulator](http://hclwizard.org:3000/cvdemulator/), we've [simulated](https://github.com/hetio/hetionet/pull/18#issuecomment-1452877325) the new and old Het.io color palettes for various CVDs at 100% severity:
+Using the [hclwizard CVD emulator](http://hclwizard.org:3000/cvdemulator/), we've [simulated](https://github.com/hetio/hetionet/pull/18#issuecomment-1452877325) the new and old Hetio color palettes for various CVDs at 100% severity:
 
 ![hetionet metagraph colorblindness simulator](https://user-images.githubusercontent.com/1117703/222621153-a0954237-37e9-4729-a2f2-9d46521f96fb.png)
 
