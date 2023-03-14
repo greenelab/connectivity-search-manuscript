@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2023-01-31'
+date-meta: '2023-03-14'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -37,8 +37,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-01-31" />
-  <meta name="citation_publication_date" content="2023-01-31" />
+  <meta name="dc.date" content="2023-03-14" />
+  <meta name="citation_publication_date" content="2023-03-14" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/5f1141e7603e2642b4b7e3b96019a13c8aca1fd7/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/5f1141e7603e2642b4b7e3b96019a13c8aca1fd7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/5f1141e7603e2642b4b7e3b96019a13c8aca1fd7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2da9a86426d085fabced9260105a357ea231417e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2da9a86426d085fabced9260105a357ea231417e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2da9a86426d085fabced9260105a357ea231417e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -132,10 +132,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/5f1141e7603e2642b4b7e3b96019a13c8aca1fd7/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/2da9a86426d085fabced9260105a357ea231417e/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@5f1141e](https://github.com/greenelab/connectivity-search-manuscript/tree/5f1141e7603e2642b4b7e3b96019a13c8aca1fd7)
-on January 31, 2023.
+from [greenelab/connectivity-search-manuscript@2da9a86](https://github.com/greenelab/connectivity-search-manuscript/tree/2da9a86426d085fabced9260105a357ea231417e)
+on March 14, 2023.
 </em></small>
 
 ## Authors
@@ -341,7 +341,7 @@ The database is publicly accessible without login at <https://neo4j.het.io>.
 The Neo4j graph database enables querying Hetionet using the Cypher language,
 which was designed to interact with networks where nodes and edges have both types and properties.
 
-One such application, Project Rephetio, focused on drug repurposing [@rephetio].
+The initial application of Hetionet, named Project Rephetio, focused on drug repurposing [@rephetio].
 The authors [predicted](https://het.io/repurpose/) the probability of drug efficacy for 209,168 compound–disease pairs.
 A supervised machine learning approach identified types of paths that occur more or less frequently between known treatments than non-treatments (Figure {@fig:rephetio}B).
 To train the model, the authors created [PharmacotherapyDB](https://doi.org/10.6084/m9.figshare.3103054),
@@ -528,7 +528,7 @@ The table includes the following columns:
 - **adjusted _p_-value**:
   A measure of the significance of the DWPC that indicates whether more paths were observed than expected due to random chance.
   Compares the DWPC to a null distribution of DWPCs generated from degree-preserving permuted networks.
-  Bonferroni-adjusted for the number of metapaths with the same source metanode, target metanode, and length.
+  [Bonferroni-adjusted](#adjusting-dwpc-p-values) for the number of metapaths with the same source metanode, target metanode, and length.
 - **_p_-value**:
   A measure of the significance of the DWPC that indicates whether more paths were observed than expected due to random chance.
   Compares the DWPC to a null distribution of DWPCs generated from degree-preserving permuted networks.
@@ -665,6 +665,10 @@ using null DWPCs computed on permuted hetnets.
 We implemented these advances in the open-source hetmatpy Python package and HetMat data structure to provide highly-optimized computational infrastructure for representing and reasoning on hetnets using matrices.
 
 This work lays the foundation for exciting future directions.
+For many queries, a large number of paths are returned.
+Interpretation of large lists is difficult.
+Therefore, the dimensionality of results could be reduced by aggregating path scores across intermediate nodes or edges [@doi:10.15363/thinklab.d228].
+
 Here, we computed all DWPCs for Hetionet metapaths with length ≤ 3.
 Our search engine will therefore overlook important connectivity from longer metapaths.
 However, it is infeasible to compute DWPCs for all longer metapaths.
@@ -731,7 +735,7 @@ Nodes were excluded to avoid redundant or overly specific nodes,
 while ensuring a minimum level of connectivity for compounds and diseases.
 See the [Project Rephetio methods](https://git.dhimmel.com/rephetio-manuscript/#nodes) for more details [@rephetio].
 Nonetheless, Hetionet v1.0 remains one of the most comprehensive and integrative networks that consolidates biomedical knowledge into a manageable number of node and edge types [@doi:10.1093/bib/bbac404].
-Other integrative resources, some still under development, include [Wikidata](https://www.wikidata.org) [@doi:10.7554/eLife.52614], [SemMedDB](https://skr3.nlm.nih.gov/SemMedDB/) [@doi:10.1093/bioinformatics/bts591; @doi:10.1109/BIBM.2018.8621568; @doi:10.1186/s12859-019-3297-0], [SPOKE](https://spoke.ucsf.edu/), and [RTX-KG2c](https://github.com/RTXteam/RTX-KG2) [@doi:10.1186/s12859-022-04932-3].
+Other integrative resources, some still under development, include [Wikidata](https://www.wikidata.org) [@doi:10.7554/eLife.52614], [SemMedDB](https://skr3.nlm.nih.gov/SemMedDB/) [@doi:10.1093/bioinformatics/bts591; @doi:10.1109/BIBM.2018.8621568; @doi:10.1186/s12859-019-3297-0], [SPOKE](https://spoke.ucsf.edu/) [@doi:10.1093/bioinformatics/btad080], and [RTX-KG2c](https://github.com/RTXteam/RTX-KG2) [@doi:10.1186/s12859-022-04932-3].
 
 ### HetMat architecture
 
@@ -1212,7 +1216,7 @@ A limited palette of colors was chosen to represent the different types of nodes
 These colors are listed and programmatically accessible in the [`hetionet`](https://github.com/hetio/hetionet) repository under `/describe/styles.json`.
 
 At the time of developing connectivity search, Hetionet already had an established palette of colors (from Project Rephetio).
-To avoid confusion, we were careful to keep the general hue of each metanode color the same for backwards compatibility,
+To avoid confusion, we were [careful](https://github.com/hetio/hetionet/pull/18) to keep the general hue of each metanode color the same for backwards compatibility,
 e.g. genes stayed generally blue, diseases stayed generally brown.
 In this way, this palette selection was more of a modernization/refresh.
 For cohesiveness, accessibility, and aesthetic appeal,
