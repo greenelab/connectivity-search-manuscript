@@ -9,7 +9,7 @@ This document contains the response to reviewers for _GigaScience_ submission `G
 ### Minor comments:
 
 > Without line and page numbers, it was a bit tricky to point out the issues.
-> 
+>
 > 1. "One such application" in the introduction does not read well - just "one application"
 
 Revised.
@@ -17,7 +17,7 @@ Revised.
 > 2. It is nice to see that DWPCs that are not retained by the database can be generated on the fly. The para goes on to mention "while still allowing on-demand access to the full metrics for all metapaths with length ≤ 3" --- is it also possible to generate metrics for longer paths if needed?
 
 The webapp is limited to displaying metapaths that are in the relational database `Metapath` table, which is currently all metapaths with length ≤ 3.
-The backend API will respond to a query for the paths between a given source and target node across a metapath that is not in the database. 
+The backend API will respond to a query for the paths between a given source and target node across a metapath that is not in the database.
 For example, the following API request for a length 4 metapath succeeds:
 <https://search-api.het.io/v1/paths/source/17054/target/6602/metapath/CbGpPWpGaD/?limit=5>.
 While the response includes paths along with the corresponding node and edge properties, it is missing information on the DWPC null distribution and hence the DWPC p-value.
@@ -44,6 +44,10 @@ While not planned for the current version of the connectivity search webapp, it 
 > 6. In the section on "Details of matrix DWPC implementation", it is stated that "our matrix methods were validated". It is not clear where these validations have been discussed. Supplementary?
 > 7. In the section on "Permuted hetnets", it is not fully clear what the parameters for XSwap algorithm was. What were the parameters, e.g. number of swaps, etc.?
 > 8. In the section on "Details of the gamma-hurdle distribution", there is perhaps a missing equation below the second statement of "The probability of a draw from the distribution is"
+
+We updated the wording to be "The gamma-hurdle distribution is defined over the support [0, ∞). The probability of a draw, X, from the gamma-hurdle distribution is given as follows:".
+Since the distribution is defined only from zero (inclusive) to positive infinity, the two lines of equations that follow fully define the distribution.
+
 > 9. The validation here which points to an ipynb, could be put in Supplement.
 > 10. In the section on "Prioritizing enriched metapaths for database storage", what is the logic underlying the choice of parameters? "For metapaths with length ≥ 2, we chose an adjusted pvalue threshold of 5 × (nsource × ntarget)^−0.3".
 > 11. Under "Visual Design", are the colours chosen "colour-blind friendly"?
@@ -69,15 +73,15 @@ such that color is helpful but not essential for usage and interpretation.
 > I also have several minor concerns.
 >
 > (1) The authors introduce and compute a null distribution of the DWPC which takes into account node degree in a statistically controlled way when evaluating the connectivity between two nodes. However, the DWPC itself does take into account node degree, as the name implies, and contains a tunable parameter that can be optimized, at least when a ground truth is available (as in Ref 39 by the same first author). I understand such tuning is not possible when, as in the present case, no ground truth is available, but the authors should make this point more clearly.
-> 
+>
 > (2) I find Fig. 1B a bit confusing:  according to the legend, the top rows are known treatments, which should have higher than expected connectivity. However, based on the colors as explained by the legend, the bottom treatment/disease pairs seem to have higher connectivity
-> 
+>
 > (3) The acronym DWPC is defined after it has been used several times
-> 
+>
 > (4) The legend of Figure 2 should specify that these results apply to the nodes "Alzheimer disease" and "Circadian rhythm", although this becomes clear in Fig. 4
-> 
+>
 > (5) I don't think Figure 3, representing the home page of the web site, is especially useful
-> 
+>
 > (6) I found Fig. 4 confusing: the sum of the path counts for the selected metapaths in panel B is way larger than the 425 results shown in Panel C. As far as I understand no path can belong to more than one metapaths, so is there some further selection here?
-> 
+>
 > (7) The "Frontend" section of the Methods seems a bit too detailed for the Gigascience audience
