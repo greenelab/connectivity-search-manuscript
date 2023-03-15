@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2023-03-14'
+date-meta: '2023-03-15'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -37,8 +37,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-03-14" />
-  <meta name="citation_publication_date" content="2023-03-14" />
+  <meta name="dc.date" content="2023-03-15" />
+  <meta name="citation_publication_date" content="2023-03-15" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2da9a86426d085fabced9260105a357ea231417e/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2da9a86426d085fabced9260105a357ea231417e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2da9a86426d085fabced9260105a357ea231417e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/a1ad088a3575805823e9cb7ce2a2ab0a0c4470f8/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a1ad088a3575805823e9cb7ce2a2ab0a0c4470f8/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a1ad088a3575805823e9cb7ce2a2ab0a0c4470f8/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -132,10 +132,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/2da9a86426d085fabced9260105a357ea231417e/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/a1ad088a3575805823e9cb7ce2a2ab0a0c4470f8/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@2da9a86](https://github.com/greenelab/connectivity-search-manuscript/tree/2da9a86426d085fabced9260105a357ea231417e)
-on March 14, 2023.
+from [greenelab/connectivity-search-manuscript@a1ad088](https://github.com/greenelab/connectivity-search-manuscript/tree/a1ad088a3575805823e9cb7ce2a2ab0a0c4470f8)
+on March 15, 2023.
 </em></small>
 
 ## Authors
@@ -975,7 +975,8 @@ $$
 X \sim \Gamma_H(\lambda, \alpha, \beta)
 $$
 
-The probability of a draw from the distribution is
+The gamma-hurdle distribution is defined over the support [0, ∞).
+The probability of a draw, X, from the gamma-hurdle distribution is given as follows:
 
 \begin{align}
   P(X = 0) &= 1 - \lambda \\
