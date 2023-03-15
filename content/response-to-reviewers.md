@@ -44,6 +44,10 @@ While not planned for the current version of the connectivity search webapp, it 
 > 6. In the section on "Details of matrix DWPC implementation", it is stated that "our matrix methods were validated". It is not clear where these validations have been discussed. Supplementary?
 > 7. In the section on "Permuted hetnets", it is not fully clear what the parameters for XSwap algorithm was. What were the parameters, e.g. number of swaps, etc.?
 > 8. In the section on "Details of the gamma-hurdle distribution", there is perhaps a missing equation below the second statement of "The probability of a draw from the distribution is"
+
+We updated the wording to be "The gamma-hurdle distribution is defined over the support [0, ∞). The probability of a draw, X, from the gamma-hurdle distribution is given as follows:".
+Since the distribution is defined only from zero (inclusive) to positive infinity, the two lines of equations that follow fully define the distribution.
+
 > 9. The validation here which points to an ipynb, could be put in Supplement.
 > 10. In the section on "Prioritizing enriched metapaths for database storage", what is the logic underlying the choice of parameters? "For metapaths with length ≥ 2, we chose an adjusted pvalue threshold of 5 × (nsource × ntarget)^−0.3".
 > 11. Under "Visual Design", are the colours chosen "colour-blind friendly"?
