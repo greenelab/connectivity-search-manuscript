@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2023-03-15'
+date-meta: '2023-03-24'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -37,8 +37,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-03-15" />
-  <meta name="citation_publication_date" content="2023-03-15" />
+  <meta name="dc.date" content="2023-03-24" />
+  <meta name="citation_publication_date" content="2023-03-24" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/a1ad088a3575805823e9cb7ce2a2ab0a0c4470f8/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a1ad088a3575805823e9cb7ce2a2ab0a0c4470f8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/a1ad088a3575805823e9cb7ce2a2ab0a0c4470f8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/45eca3a5e07472654d4d5ca484d1810391d61a7e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/45eca3a5e07472654d4d5ca484d1810391d61a7e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/45eca3a5e07472654d4d5ca484d1810391d61a7e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -132,10 +132,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/a1ad088a3575805823e9cb7ce2a2ab0a0c4470f8/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/45eca3a5e07472654d4d5ca484d1810391d61a7e/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@a1ad088](https://github.com/greenelab/connectivity-search-manuscript/tree/a1ad088a3575805823e9cb7ce2a2ab0a0c4470f8)
-on March 15, 2023.
+from [greenelab/connectivity-search-manuscript@45eca3a](https://github.com/greenelab/connectivity-search-manuscript/tree/45eca3a5e07472654d4d5ca484d1810391d61a7e)
+on March 24, 2023.
 </em></small>
 
 ## Authors
@@ -1253,6 +1253,7 @@ Information about Hetio is also displayed and disseminated on the [Hetio website
 
 #### Hetnet Connectivity Search
 
+The Hetnet Connectivity Search web application is registered at [biotools:connectivity-search](https://bio.tools/connectivity-search).
 This study primarily involves the following repositories:
 <!-- https://github.com/topics/hetnet-connectivity-search -->
 
@@ -1260,7 +1261,7 @@ This study primarily involves the following repositories:
   Source code for this manuscript.
   Best place for general comments or questions.
   CC BY 4.0 License.
-- [greenelab/hetmech](https://github.com/greenelab/hetmech):
+- [greenelab/connectivity-search-analyses](https://github.com/greenelab/connectivity-search-analyses):
   The initial project repository that contains research notebooks, dataset generation code, and exploratory data analyses.
   The hetmatpy package was first developed as part of this repository until its [relocation](https://github.com/hetio/hetmatpy/issues/1) in November 2018.
   BSD 3-Clause License.
@@ -1274,6 +1275,7 @@ This study primarily involves the following repositories:
   Python package for matrix storage and operations on hetnets.
   Released on [PyPI](https://pypi.org/project/hetmatpy/).
   BSD 2-Clause Plus Patent License.
+  Registered at [biotools:hetmatpy](https://bio.tools/hetmatpy) and [RRID:SCR_023409](https://scicrunch.org/resolver/RRID:SCR_023409).
 - [hetio/hetnetpy](https://github.com/hetio/hetnetpy)
   Preexisiting python package for representing hetnets.
   Dependency of hetmatpy.

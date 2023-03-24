@@ -6,6 +6,7 @@ BAAB
 BABA
 bdsullivan
 Bioteque
+biotools
 BlairDSullivan
 CBABACXYZ
 CbG
@@ -18,13 +19,13 @@ compbio
 CrC
 CtDrDtC
 CtDtCtD
-Customizable
+customizable
 customizations
 DaGiGpPW
 DaGpPWpG
 danich
 dataset
-Datasets
+datasets
 DdGpPW
 deepwalk
 Dev
@@ -86,9 +87,11 @@ pykeen
 React’s
 Redux
 Redux’s
+RRID
 RTX
 Rubinetti
 scalability
+SCR
 Shriver
 smr
 sortable
@@ -103,7 +106,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 yhao
 YhaoC
 Yun
