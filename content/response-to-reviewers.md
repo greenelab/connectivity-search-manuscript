@@ -42,6 +42,11 @@ While not planned for the current version of the connectivity search webapp, it 
 
 > 5. I found the Methods extremely long and may be a bit distracting for readers of this manuscript --- I was wondering if some of these can be moved to Supplementary.
 > 6. In the section on "Details of matrix DWPC implementation", it is stated that "our matrix methods were validated". It is not clear where these validations have been discussed. Supplementary?
+
+There is no additional discussion of this validation in the manuscript.
+We've updated the sentence to clarify that the validation was based on the two explicit path enumeration methods in the hetnetpy package: pure Python and Neo4j Cypher.
+The validation was encoded for a smaller subset of 9 metapaths in the `hetmatpy` test suite file [`test_path_count.py`](https://github.com/hetio/hetmatpy/blob/v0.1.0/hetmatpy/tests/test_path_count.py).
+
 > 7. In the section on "Permuted hetnets", it is not fully clear what the parameters for XSwap algorithm was. What were the parameters, e.g. number of swaps, etc.?
 > 8. In the section on "Details of the gamma-hurdle distribution", there is perhaps a missing equation below the second statement of "The probability of a draw from the distribution is"
 
