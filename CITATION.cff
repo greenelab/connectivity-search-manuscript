@@ -1,0 +1,66 @@
+cff-version: 1.2.0
+title: >-
+  greenelab/connectivity-search-manuscript repository:
+  Manuscript source code for Hetnet Connectivity Search
+message: >-
+  This citation is for the source code of the manuscript that is rendered at
+  <https://greenelab.github.io/connectivity-search-manuscript/>.
+  It is likely that you want to cite that URL instead of this repository,
+  or perhaps the study preprint at <https://doi.org/10.1101/2023.01.05.522941>.
+type: software
+authors:
+  - given-names: Daniel
+    family-names: Himmelstein
+    orcid: 'https://orcid.org/0000-0002-3012-7446'
+  - given-names: Michael
+    family-names: Zietz
+    orcid: 'https://orcid.org/0000-0003-0539-630X'
+  - given-names: Vincent
+    family-names: Rubinetti
+    orcid: 'https://orcid.org/0000-0002-4655-3773'
+  - given-names: Kyle
+    family-names: Kloster
+    orcid: 'https://orcid.org/0000-0001-5678-7197'
+  - given-names: Benjamin
+    family-names: Heil
+    orcid: 'https://orcid.org/0000-0002-2811-1031'
+  - given-names: Faisal
+    family-names: Alquaddoomi
+    orcid: 'https://orcid.org/0000-0003-4297-8747'
+  - given-names: Dongbo
+    family-names: Hu
+    orcid: 'https://orcid.org/0000-0001-7870-8242'
+  - given-names: David
+    family-names: Nicholson
+    orcid: 'https://orcid.org/0000-0003-0002-5761'
+  - given-names: Yun
+    family-names: Hao
+    orcid: 'https://orcid.org/0000-0002-1684-0085'
+  - given-names: Blair
+    family-names: Sullivan
+    orcid: 'https://orcid.org/0000-0001-7720-6208'
+  - given-names: Michael
+    family-names: Nagle
+    orcid: 'https://orcid.org/0000-0002-4677-7582'
+  - given-names: Casey
+    family-names: Greene
+    orcid: 'https://orcid.org/0000-0001-8713-9213'
+identifiers:
+  - type: swh
+    value: 'swh:1:dir:356299176273482c2a0a2a23ce1578876eaf42ef'
+    description: Software Heritage Directory
+  - type: swh
+    value: 'swh:1:rev:45eca3a5e07472654d4d5ca484d1810391d61a7e'
+    description: Software Heritage Revision
+repository-code: 'https://github.com/greenelab/connectivity-search-manuscript'
+url: 'https://greenelab.github.io/connectivity-search-manuscript/'
+repository-artifact: 'https://www.biorxiv.org/content/10.1101/2023.01.05.522941v1'
+abstract: >-
+  Source code for the Hetnet Connectivity Search manuscript written using Manubot.
+keywords:
+  - networks
+  - manuscript
+  - hetnets
+  - hetnet-connectivity-search
+  - dwpcs
+license: CC-BY-4.0
