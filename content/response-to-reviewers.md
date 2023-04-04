@@ -1,6 +1,8 @@
 # Response to Reviewers
 
 This document contains the response to reviewers for _GigaScience_ submission `GIGA-D-23-00005` received on 2023-02-20.
+Along with changes related to reviewer feedback, we [made revisions](https://github.com/greenelab/connectivity-search-manuscript/issues/42) based on editorial requests to register software applications with biotools and RRID identifiers as well as to explicitly cite GitHub repositories.
+To define citation metadata, we added `CITATION.cff` files to the relevant GitHub repositories.
 
 ## Reviewer #1
 
