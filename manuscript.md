@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2023-03-24'
+date-meta: '2023-04-04'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -37,8 +37,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-03-24" />
-  <meta name="citation_publication_date" content="2023-03-24" />
+  <meta name="dc.date" content="2023-04-04" />
+  <meta name="citation_publication_date" content="2023-04-04" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/45eca3a5e07472654d4d5ca484d1810391d61a7e/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/45eca3a5e07472654d4d5ca484d1810391d61a7e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/45eca3a5e07472654d4d5ca484d1810391d61a7e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/ebbbab424c6606a57683fa78f4c72a0bfcba01a1/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ebbbab424c6606a57683fa78f4c72a0bfcba01a1/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ebbbab424c6606a57683fa78f4c72a0bfcba01a1/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -132,10 +132,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/45eca3a5e07472654d4d5ca484d1810391d61a7e/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/ebbbab424c6606a57683fa78f4c72a0bfcba01a1/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@45eca3a](https://github.com/greenelab/connectivity-search-manuscript/tree/45eca3a5e07472654d4d5ca484d1810391d61a7e)
-on March 24, 2023.
+from [greenelab/connectivity-search-manuscript@ebbbab4](https://github.com/greenelab/connectivity-search-manuscript/tree/ebbbab424c6606a57683fa78f4c72a0bfcba01a1)
+on April 4, 2023.
 </em></small>
 
 ## Authors
@@ -828,7 +828,7 @@ In addition to these matrix routines---which advantageously count rather than en
 The general method is important for patterns such as long (≥ 4) repeats, or complex repeat patterns (e.g. of the form ABCABC), but it requires path enumeration and is therefore slower.
 As an alternative approach for complex paths, we developed an approximate DWPC method that corrects repeats in disjoint simple patterns but only corrects the first repeat in complex patterns (e.g. ≥ length four repeat).
 Mayers et al. developed an alternative approximation, which subtracts the main diagonal at every occurrence of the first repeated metanode [@url:https://github.com/mmayers12/hetnet_ml].
-All our matrix methods were validated against existing implementations involving explicit path enumeration to ensure consistent results.
+Our matrix methods were validated against the existing Python and Cypher implementations in the `hetnetpy` package that rely on explicit path enumeration.
 
 
 <!-- Discuss caching strategies, sequential versus recursive
@@ -841,15 +841,15 @@ Rephetio computed a portion of in XX time -->
 175-fold, which underestimates since Rephetio did not compute the full DWPC matrix and benefited from concurrency. -->
 
 <!-- references
-  https://github.com/greenelab/hetmech/issues/20
-  https://github.com/greenelab/hetmech/pull/70
-  https://github.com/greenelab/hetmech/issues/53
-  https://github.com/greenelab/hetmech/pull/67
+  https://github.com/greenelab/connectivity-search-analyses/issues/20
+  https://github.com/greenelab/connectivity-search-analyses/pull/70
+  https://github.com/greenelab/connectivity-search-analyses/issues/53
+  https://github.com/greenelab/connectivity-search-analyses/pull/67
   https://github.com/hetio/hetmatpy/blob/bc36aa9859c43a1a5fb22808cd6eb952ef9d497c/hetmatpy/degree_weight.py#L210-L239
   https://github.com/mmayers12/hetnet_ml
-  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/7.rephetio-times.ipynb
-  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/recursive-chain/dwwc-chain-recursive.ipynb
-  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/cache-speeds.ipynb
+  https://nbviewer.jupyter.org/github/greenelab/connectivity-search-analyses/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/7.rephetio-times.ipynb
+  https://nbviewer.jupyter.org/github/greenelab/connectivity-search-analyses/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/recursive-chain/dwwc-chain-recursive.ipynb
+  https://nbviewer.jupyter.org/github/greenelab/connectivity-search-analyses/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/cache-speeds.ipynb
 -->
 
 ### Permuted hetnets
@@ -865,7 +865,16 @@ Project Rephetio created 5 permuted hetnets [@rephetio; @doi:10.15363/thinklab.d
 which were used to generate a null distribution of classifier performance for each metapath-based feature.
 Here, we aim to create a null distribution for individual DWPCs, which requires vastly more permuted values to estimate with accuracy.
 Therefore, we generated 200 permuted hetnets ([archive](https://github.com/hetio/hetionet/tree/a95ae76581af604e91d744680aee3f888fa18887/hetnet/permuted/matrix)).
-<!-- Permuted hetmats generated in PR https://github.com/greenelab/hetmech/pull/127 -->
+Permutations 001--005 are those generated by Project Rephetio,
+while permutations 006--200 were generated by this study.
+For the newly generated permutations, we attempted 10 times the number of swaps as edges for a given metaedge,
+which is the default multiplier set by the hetnetpy `permute_graph` function.
+<!-- Permuted hetmats generated in PRs
+https://github.com/greenelab/connectivity-search-analyses/pull/107
+https://github.com/greenelab/connectivity-search-analyses/pull/127
+Permutation statistics in
+https://github.com/greenelab/connectivity-search-analyses/blob/15f1925c0481d8e6bab8b0931f48f2fad388c68c/data/hetionet-v1.0.hetmat/permutations/stats.tsv
+-->
 More recently, we also developed the `xswap` Python [package](https://github.com/greenelab/xswap), whose optimized C/C++ implementation will enable future research to generate even larger sets of permuted networks [@xswap].
 
 ### Degree-grouping of node pairs
@@ -965,7 +974,7 @@ The proportion of null DWPCs that were zero is calculated, forming the "hurdle" 
 The nonzero null DWPCs are modeled using a gamma distribution, which can be fit solely from a sample mean and standard deviation.
 The mean of nonzero null DWPCs is denoted with a diamond, with the standard deviation plotted twice as a line in either direction.
 Actual DWPCs are compared to the gamma-hurdle null distribution to yield a _p_-value.
-](https://github.com/greenelab/hetmech/raw/9287986f331607cfdbc1ac197b52f36085723c6e/explore/gamma-hurdle/gamma-hurdle-distributions.png){#fig:null-dwpc-distributions}
+](https://github.com/greenelab/connectivity-search-analyses/raw/9287986f331607cfdbc1ac197b52f36085723c6e/explore/gamma-hurdle/gamma-hurdle-distributions.png){#fig:null-dwpc-distributions}
 
 #### Details of the gamma-hurdle distribution
 
@@ -985,7 +994,7 @@ The probability of a draw, X, from the gamma-hurdle distribution is given as fol
 
 We estimate all three parameters using the method of moments (using Bessel's correction to estimate the second moment).
 As a validation of our method,
-we [compared](https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/parameter_estimates.ipynb) our method of moments parameter estimates to approximate maximum likelihood estimates
+we [compared](https://nbviewer.jupyter.org/github/greenelab/connectivity-search-analyses/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/parameter_estimates.ipynb) our method of moments parameter estimates to approximate maximum likelihood estimates
 (gamma distribution parameters do not have closed-form maximum likelihood estimates)
 and found excellent concordance between the methods.
 Let *N* be the number of permuted DWPC values, and *n* the number of nonzero values.
@@ -1003,10 +1012,10 @@ p = P(X ≥ t) = \frac{\beta^\alpha}{\Gamma(\alpha)} \int_t^\infty x^{\alpha - 1
 $$
 
 <!-- references
-  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/gamma-heatmaps.ipynb
-  https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/0d83ec6063001d7b5cfcfa6a9fe3765bbe109aea/explore/gamma-hurdle/gamma-fit.ipynb
-  https://github.com/greenelab/hetmech/pull/157
-  https://github.com/greenelab/hetmech/issues/123
+  https://nbviewer.jupyter.org/github/greenelab/connectivity-search-analyses/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/gamma-heatmaps.ipynb
+  https://nbviewer.jupyter.org/github/greenelab/connectivity-search-analyses/blob/0d83ec6063001d7b5cfcfa6a9fe3765bbe109aea/explore/gamma-hurdle/gamma-fit.ipynb
+  https://github.com/greenelab/connectivity-search-analyses/pull/157
+  https://github.com/greenelab/connectivity-search-analyses/issues/123
 -->
 
 ### Empirical DWPC p-values
@@ -1031,9 +1040,9 @@ We decided to compute DWPCs and their significance for all source--target node p
 On Hetionet v1.0, there are 24 metapaths of length 1, 242 metapaths of length 2, and 1,939 metapaths of length 3.
 The decision to stop at length 3 was one of practicality, as length 4 would have added 17,511 metapaths.
 
-For each of the 2,205 [metapaths](https://github.com/greenelab/hetmech/raw/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/archives/metapath-dwpc-stats.tsv),
+For each of the 2,205 [metapaths](https://github.com/greenelab/connectivity-search-analyses/raw/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/archives/metapath-dwpc-stats.tsv),
 we computed the complete path count matrix and DWPC matrix
-([notebook](https://nbviewer.jupyter.org/github/greenelab/hetmech/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/bulk.ipynb)).
+([notebook](https://nbviewer.jupyter.org/github/greenelab/connectivity-search-analyses/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/bulk.ipynb)).
 In total, we computed 137,786,767,964 path counts (and the same number of DWPCs) on the unpermuted network,
 of which 11.6% were nonzero.
 
@@ -1044,7 +1053,7 @@ Here, we use _w_ = 0.5, since taking the square root of degrees has more intuiti
 
 We selected data types for matrix values that would allow for high precision.
 We used 64-bit unsigned integers for path counts and 64-bit floating-point numbers for DWPCs.
-We [considered](https://github.com/greenelab/hetmech/pull/91) using 16-bits or 32-bits per DWPC to reduce memory/storage requirements,
+We [considered](https://github.com/greenelab/connectivity-search-analyses/pull/91) using 16-bits or 32-bits per DWPC to reduce memory/storage requirements,
 but decided against it in case certain applications required greater precision.
 
 We used SciPy sparse for path count and DWPC matrices with density < 0.7, serialized to disk with compression and a `.sparse.npz` extension.
@@ -1087,7 +1096,7 @@ Storing DWPCs and their significance in the database (as part of the `PathCount`
 However, storing ~15.9 billion rows (the total number of nonzero DWPCs) in the database's `PathCount` table would exceed a reasonable disk quota.
 <!--
 # python code to estimate the total number of nonzero DWPCs
-url ="https://github.com/greenelab/hetmech/raw/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/archives/metapath-dwpc-stats.tsv"
+url ="https://github.com/greenelab/connectivity-search-analyses/raw/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/archives/metapath-dwpc-stats.tsv"
 metapath_df = pandas.read_table(url)
 (metapath_df.n_pairs * metapath_df.pc_density).round().sum()
 -->
@@ -1113,7 +1122,7 @@ For some node pairs, the on-the-fly computation is quick (less than a second).
 Other times, computing DWPCs for all metapaths might take more than a minute.
 
 <!--
-https://github.com/greenelab/hetmech/blob/cad458b29f508c66b4b14cdd641db6855426221b/explore/metapath-thresholds/metapath-thresholds.ipynb
+https://github.com/greenelab/connectivity-search-analyses/blob/cad458b29f508c66b4b14cdd641db6855426221b/explore/metapath-thresholds/metapath-thresholds.ipynb
 
 https://github.com/greenelab/connectivity-search-backend/blob/af12f8cf2ad47d9a25ce8d1b7889390654eb3bb9/dj_hetmech_app/management/commands/populate_database.py#L139-L146
 p-value threshold:
@@ -1236,7 +1245,7 @@ We used GitHub Issues for discussion, leaving a rich online history of the schol
 Furthermore, most additions to the analyses were performed by pull request,
 whereby a contributor proposes a set of changes.
 This provides an opportunity for other contributors to review changes before they are officially accepted.
-For example, in [greenelab/hetmech#156](https://github.com/greenelab/hetmech/pull/156) \@zietzm proposed a notebook to visualize parameters for null DWPC distributions.
+For example, in [greenelab/connectivity-search-analyses#156](https://github.com/greenelab/connectivity-search-analyses/pull/156) \@zietzm proposed a notebook to visualize parameters for null DWPC distributions.
 After \@zietzm addressed \@dhimmel's comments, the pull request was approved and merged into the project's main branch.
 
 The manuscript for this study was written using [Manubot](https://manubot.org/), which allows authors to collaboratively write manuscripts on GitHub [@doi:10.1371/journal.pcbi.1007128].
@@ -1257,35 +1266,43 @@ The Hetnet Connectivity Search web application is registered at [biotools:connec
 This study primarily involves the following repositories:
 <!-- https://github.com/topics/hetnet-connectivity-search -->
 
-- [greenelab/connectivity-search-manuscript](https://github.com/greenelab/connectivity-search-manuscript):
+- [greenelab/connectivity-search-manuscript](https://github.com/greenelab/connectivity-search-manuscript)
+  [@https://github.com/greenelab/connectivity-search-manuscript]:
   Source code for this manuscript.
   Best place for general comments or questions.
   CC BY 4.0 License.
-- [greenelab/connectivity-search-analyses](https://github.com/greenelab/connectivity-search-analyses):
+- [greenelab/connectivity-search-analyses](https://github.com/greenelab/connectivity-search-analyses)
+  [@https://github.com/greenelab/connectivity-search-analyses]:
   The initial project repository that contains research notebooks, dataset generation code, and exploratory data analyses.
   The hetmatpy package was first developed as part of this repository until its [relocation](https://github.com/hetio/hetmatpy/issues/1) in November 2018.
   BSD 3-Clause License.
-- [greenelab/connectivity-search-backend](https://github.com/greenelab/connectivity-search-backend):
+- [greenelab/connectivity-search-backend](https://github.com/greenelab/connectivity-search-backend)
+  [@https://github.com/greenelab/connectivity-search-backend]:
   Source code for the connectivity search database and API.
   BSD 3-Clause License.
-- [greenelab/connectivity-search-frontend](https://github.com/greenelab/connectivity-search-frontend):
+- [greenelab/connectivity-search-frontend](https://github.com/greenelab/connectivity-search-frontend)
+  [@https://github.com/greenelab/connectivity-search-frontend]:
   Source code for the connectivity search webapp.
   BSD 3-Clause License.
-- [hetio/hetmatpy](https://github.com/hetio/hetmatpy):
+- [hetio/hetmatpy](https://github.com/hetio/hetmatpy)
+  [@https://github.com/hetio/hetmatpy]:
   Python package for matrix storage and operations on hetnets.
   Released on [PyPI](https://pypi.org/project/hetmatpy/).
   BSD 2-Clause Plus Patent License.
   Registered at [biotools:hetmatpy](https://bio.tools/hetmatpy) and [RRID:SCR_023409](https://scicrunch.org/resolver/RRID:SCR_023409).
 - [hetio/hetnetpy](https://github.com/hetio/hetnetpy)
+  [@https://github.com/hetio/hetnetpy]:
   Preexisiting python package for representing hetnets.
   Dependency of hetmatpy.
   Released on [PyPI](https://pypi.org/project/hetnetpy/).
   Dual licensed under BSD 2-Clause Plus Patent License and CC0 1.0 (public domain dedication).
-- [hetio/hetionet](https://github.com/hetio/hetionet).
+- [hetio/hetionet](https://github.com/hetio/hetionet)
+  [@https://github.com/hetio/hetionet]:
   Preexisiting data repository for Hetionet,
   including the public Neo4j instance and HetMat archives.
   CC0 1.0 License.
-- [hetio/het.io](https://github.com/hetio/het.io).
+- [hetio/het.io](https://github.com/hetio/het.io)
+  [@https://github.com/hetio/het.io]:
   Preexisiting source code for the <https://het.io/> website.
   CC BY 4.0 License.
 

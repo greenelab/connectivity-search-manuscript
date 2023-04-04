@@ -106,7 +106,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 yhao
 YhaoC
 Yun
