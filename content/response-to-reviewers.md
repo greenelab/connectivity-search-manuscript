@@ -110,5 +110,12 @@ We decided to retain the figure because it demonstrates aspects of the website r
 As a result, figure numbers have changed in the revised manuscript.
 
 > (6) I found Fig. 4 confusing: the sum of the path counts for the selected metapaths in panel B is way larger than the 425 results shown in Panel C. As far as I understand no path can belong to more than one metapaths, so is there some further selection here?
-> 
+
+The API `paths` endpoint sets a default `limit=100` meaning that at most 100 paths are returned for a given (metapath, source node, target node) triplet ([source code](https://github.com/greenelab/connectivity-search-backend/blob/0a9a5a694c1df6a3a62d75d8b1122218f8bfb60f/dj_hetmech_app/views.py#L217-L234)).
+While the API will accept other values for `limit`, the webapp does not expose this parameter.
+We've found interactive web-based users rarely benefit from seeing more than 100 paths for a selected metapath.
+Furthermore, some limit is necessary as excessively large path counts would bog down the webapp.
+
+In a live session of panel B via the webapp, when the user hovers over the show _DaGiGpPW_ metapath checkbox, the documentation tooltip [notes](https://github.com/greenelab/connectivity-search-frontend/blob/8fae3b0c61ef7d831414b3d964de4d0120988ce2/src/metapath-results/table.js#L349-L354) "Show the top 100 of these 479 paths in the paths table". We've updated the figure caption to note this limit.
+
 > (7) The "Frontend" section of the Methods seems a bit too detailed for the Gigascience audience
