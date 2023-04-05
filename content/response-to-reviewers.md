@@ -103,7 +103,12 @@ We now use the long form before the first occurrence of DWPC.
 > (4) The legend of Figure 2 should specify that these results apply to the nodes "Alzheimer disease" and "Circadian rhythm", although this becomes clear in Fig. 4
 > 
 > (5) I don't think Figure 3, representing the home page of the web site, is especially useful
-> 
+
+We moved the figure titled "Homepage of the Hetio website" to the **Methods > Frontend > Hetio Website** section,
+so it no longer interrupts the more essential flow of figures in Results.
+We decided to retain the figure because it demonstrates aspects of the website revamping that occurred as part of this study.
+As a result, figure numbers have changed in the revised manuscript.
+
 > (6) I found Fig. 4 confusing: the sum of the path counts for the selected metapaths in panel B is way larger than the 425 results shown in Panel C. As far as I understand no path can belong to more than one metapaths, so is there some further selection here?
 > 
 > (7) The "Frontend" section of the Methods seems a bit too detailed for the Gigascience audience
