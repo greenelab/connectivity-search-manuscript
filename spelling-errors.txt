@@ -25,7 +25,7 @@ DaGiGpPW
 DaGpPWpG
 danich
 dataset
-datasets
+Datasets
 DdGpPW
 deepwalk
 Dev
@@ -40,6 +40,7 @@ DrDaGaDrD
 DrDtCrC
 DrugBank
 DrugCentral
+DrugMechDB
 DtCtDpC
 DWPC’s
 DWPCs
@@ -62,6 +63,7 @@ Heil
 hetmech
 hneem
 Hu
+interpretability
 kgem
 kkloste
 Kloster
@@ -69,6 +71,7 @@ kylekloster
 LFS
 linters
 Mayers
+MechRepoNet
 metapath’s
 MF
 mikenagle

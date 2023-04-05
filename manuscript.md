@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2023-04-04'
+date-meta: '2023-04-05'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -37,8 +37,8 @@ header-includes: |-
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-04-04" />
-  <meta name="citation_publication_date" content="2023-04-04" />
+  <meta name="dc.date" content="2023-04-05" />
+  <meta name="citation_publication_date" content="2023-04-05" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +105,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/ebbbab424c6606a57683fa78f4c72a0bfcba01a1/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ebbbab424c6606a57683fa78f4c72a0bfcba01a1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/ebbbab424c6606a57683fa78f4c72a0bfcba01a1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/252272fc96344d3ed71928c07a0ff50118564a62/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/252272fc96344d3ed71928c07a0ff50118564a62/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/252272fc96344d3ed71928c07a0ff50118564a62/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -132,10 +132,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/ebbbab424c6606a57683fa78f4c72a0bfcba01a1/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/252272fc96344d3ed71928c07a0ff50118564a62/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@ebbbab4](https://github.com/greenelab/connectivity-search-manuscript/tree/ebbbab424c6606a57683fa78f4c72a0bfcba01a1)
-on April 4, 2023.
+from [greenelab/connectivity-search-manuscript@252272f](https://github.com/greenelab/connectivity-search-manuscript/tree/252272fc96344d3ed71928c07a0ff50118564a62)
+on April 5, 2023.
 </em></small>
 
 ## Authors
@@ -358,14 +358,14 @@ The types of nodes and edges in Hetionet.
 **B. Supervised machine learning approach from Project Rephetio.**
 This figure visualizes the feature matrix used by Project Rephetio to make supervised predictions.
 Each row represents a compound–disease pair.
-The top half of rows correspond to known treatments (i.e. positives),
-while the bottom half correspond to non-treatments
+The bottom half of rows correspond to known treatments (i.e. positives),
+while the top half correspond to non-treatments
 (i.e. negatives under a *closed-world assumption*, not known to be treatments in PharmacotherapyDB).
 Here, an equal number of treatments and non-treatments are shown, but in reality the problem is heavily imbalanced.
 Project Rephetio scaled models to assume a positive prevalence of 0.36% [@rephetio; @doi:10.15363/thinklab.d210].
 Each column represents a metapath, labeled with its abbreviation.
 \
-Feature values are DWPCs (transformed and standardized),
+Feature values are degree-weighted path counts (abbreviated DWPCs, transformed and standardized),
 which assess the connectivity along the specified metapath between the specific compound and disease.
 Green colored values indicate above-average connectivity,
 whereas blue values indicate below average connectivity.
@@ -438,6 +438,16 @@ For example, the FAIRY framework explains for why items appear on a user's socia
 ESPRESSO explains how two sets of nodes are related by returning subgraphs [@espresso].
 Other approaches such as MetaExp return important metapaths rather than paths,
 but require some form of supervision [@metaexp; @doi:10.1145/2736277.2741123].
+
+MechRepoNet is a hetnet containing 250,035 nodes across 9 metanodes and 9,652,116 edges across 68 metaedges [@doi:10.1093/bioinformatics/btac205].
+The study trained a model using DWPCs as features to predict _Compound--treats--Disease_ relationships,
+which was able to select 89 metapaths with positive regression coefficients.
+The authors also created [DrugMechDB](https://sulab.github.io/DrugMechDB/) with a curated set of paths capturing known mechanisms of action for 123 compound--disease pairs [@doi:10.1093/bioinformatics/btac205].
+Metapath coefficients were used to rank paths, using DrugMechDB as validation.
+The method generally performed well, although interpretability was challenging when "hundreds, or thousands of paths ranked above the mechanistic path in DrugMechDB" [@doi:10.1093/bioinformatics/btac205].
+To address this issue, the study explores additional path filters, like filtering for paths that traverse known drug targets, and dimensionality reduction by aggregating paths across intermediate nodes and summing the path weights.
+Refinements to path scoring techniques might also be helpful solutions in this context.
+
 Hetnet connectivity search explains how two nodes are related in an unsupervised manner that captures the semantic richness of edge type and returns results in the form of both metapaths and paths.
 Our open source implementation, including for a query and visualization webserver, was designed with scalability and responsiveness in mind allowing in-browser exploration.
 
@@ -457,7 +467,7 @@ Each metaedge is represented by a distinct adjacency matrix,
 which can be either a dense Numpy array or sparse SciPy matrix (see [HetMat architecture]).
 Adjacency matrices are stored on disk and loaded in a lazy manner to help scale the software to hetnets that are too large to fit entirely in memory.
 
-The primary focus of the package is to provide compute optimized and memory efficient implementations of path counting algorithms.
+The primary focus of the package is to provide compute-optimized and memory-efficient implementations of path counting algorithms.
 Specifically, the package supports computing _degree-weighted_ path counts (DWPCs),
 which can be done efficiently using matrix multiplication
 but require complex adjustments to avoid counting paths with duplicate nodes
@@ -601,12 +611,6 @@ links to supporting studies and software,
 downloads and exploration of Hetionet data,
 and related media.
 
-![
-**Homepage of the Hetio website.**
-Provides a succinct overview of what Hetionet consists of and what its purpose is.
-](https://github.com/greenelab/connectivity-search-manuscript/raw/d5766924e8c774accdc143bea352e49610ee0673/content/media/website/website-homepage.png
-){#fig:website width="100%" .white}
-
 We created the connectivity search webapp available at <https://het.io/search/>.
 The tool is free to use, without any login or authentication.
 The app allows users to quickly explore how any two nodes in Hetionet v1.0 might be related.
@@ -636,7 +640,7 @@ The user unchecks "precomputed only" to compute results for all metapaths with l
 The user sorts by adjusted _p_-value and [selects][alzheimer-metapaths] 7 of the top 10 metapaths.
 \
 **C.**
-Paths for the selected metapaths are ordered by their path score.
+Paths for the selected metapaths are ordered by their path score (limited to 100 paths for each metapath).
 The user selects 8 paths (1 from a subsequent page of results) to show in the graph visualization and highlights a single path involving _ARNT2_ for emphasis.
 \
 **D.**
@@ -1170,13 +1174,19 @@ but are also available for general research use.
 
 #### Hetio Website
 
-We created a static website to serve as the home for the Hetio organization using Jekyll.
+We created a static website to serve as the home for the Hetio organization using Jekyll (Figure {@fig:website}).
 The source code is available in the [`het.io`](https://github.com/hetio/het.io) repository.
 
 To ease the burden of maintenance and typical website hosting costs, the HTML, CSS, JavaScript, and other assets for the website are hosted for free on GitHub Pages.
 Jekyll was chosen over other static site generators for simplicity, ease of use, popularity (support), and its convenient integration with GitHub Pages.
 To make a change to the website, an author simply commits the changes (either directly or through a pull request) to the repository's `gh-pages` branch, and GitHub automatically re-compiles the website and hosts the resulting files at the provided custom domain URL.
 No explicit build instructions or other continuous integration is required.
+
+![
+**Homepage of the Hetio website.**
+The redesigned homepage provides a succinct overview of what Hetionet consists of and what its purpose is.
+](https://github.com/greenelab/connectivity-search-manuscript/raw/d5766924e8c774accdc143bea352e49610ee0673/content/media/website/website-homepage.png
+){#fig:website width="100%" .white}
 
 #### Webapps
 
@@ -1254,13 +1264,9 @@ We encourage readers with feedback or questions to comment publicly via [GitHub 
 
 ### Software & data availability
 
-#### Hetio
-
 *Hetio* is a superset/collection of hetnet-related research, tools, and datasets that, most notably, includes the Hetionet project itself and the connectivity search tool that are the focus of this manuscript.
 Most of the Hetio resources and projects can be found under the [Hetio GitHub organization](https://github.com/hetio), with others being available under the [Greene Lab GitHub organization](https://github.com/greenelab), one of the collaborating groups.
-Information about Hetio is also displayed and disseminated on the [Hetio website](https://het.io/), as noted in the [Hetio Website] section. 
-
-#### Hetnet Connectivity Search
+Information about Hetio is also displayed and disseminated at <https://het.io>, as noted in the [Hetio Website] section. 
 
 The Hetnet Connectivity Search web application is registered at [biotools:connectivity-search](https://bio.tools/connectivity-search).
 This study primarily involves the following repositories:
