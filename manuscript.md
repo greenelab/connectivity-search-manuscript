@@ -27,18 +27,22 @@ author-meta:
 - Michael W. Nagle
 - Casey S. Greene
 manubot-fail-on-errors: true
-header-includes: |-
+header-includes: |
   <!--
   Manubot generated metadata rendered from header-includes-template.html.
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
+  <meta property="og:type" content="article" />
   <meta name="dc.title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta name="dc.date" content="2023-04-05" />
   <meta name="citation_publication_date" content="2023-04-05" />
+  <meta property="article:published_time" content="2023-04-05" />
+  <meta name="dc.modified" content="2023-04-05T20:40:30+00:00" />
+  <meta property="article:modified_time" content="2023-04-05T20:40:30+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -105,9 +109,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/252272fc96344d3ed71928c07a0ff50118564a62/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/252272fc96344d3ed71928c07a0ff50118564a62/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/252272fc96344d3ed71928c07a0ff50118564a62/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/d0b460d253f8577104656c11b0ef492b7deadbdc/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d0b460d253f8577104656c11b0ef492b7deadbdc/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d0b460d253f8577104656c11b0ef492b7deadbdc/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -132,11 +136,13 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/252272fc96344d3ed71928c07a0ff50118564a62/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/d0b460d253f8577104656c11b0ef492b7deadbdc/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@252272f](https://github.com/greenelab/connectivity-search-manuscript/tree/252272fc96344d3ed71928c07a0ff50118564a62)
+from [greenelab/connectivity-search-manuscript@d0b460d](https://github.com/greenelab/connectivity-search-manuscript/tree/d0b460d253f8577104656c11b0ef492b7deadbdc)
 on April 5, 2023.
 </em></small>
+
+
 
 ## Authors
 
@@ -152,7 +158,8 @@ on April 5, 2023.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [dhimmel](https://github.com/dhimmel)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [dhimmel](https://twitter.com/dhimmel)<br>
+    [dhimmel](https://twitter.com/dhimmel)
+    <br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Related Sciences
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552); Pfizer Worldwide Research, Development, and Medical
@@ -165,7 +172,8 @@ on April 5, 2023.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [zietzm](https://github.com/zietzm)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [ZietzMichael](https://twitter.com/ZietzMichael)<br>
+    [ZietzMichael](https://twitter.com/ZietzMichael)
+    <br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
   </small>
@@ -175,7 +183,8 @@ on April 5, 2023.
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0002-4655-3773](https://orcid.org/0000-0002-4655-3773)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [vincerubinetti](https://github.com/vincerubinetti)<br>
+    [vincerubinetti](https://github.com/vincerubinetti)
+    <br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
   </small>
@@ -187,7 +196,8 @@ on April 5, 2023.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [kkloste](https://github.com/kkloste)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [kylekloster](https://twitter.com/kylekloster)<br>
+    [kylekloster](https://twitter.com/kylekloster)
+    <br>
   <small>
      Carbon, Inc.; Department of Computer Science, North Carolina State University, Raleigh, North Carolina, United States of America
      · Funded by GBMF4560
@@ -200,7 +210,8 @@ on April 5, 2023.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [ben-heil](https://github.com/ben-heil)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [autobencoder](https://twitter.com/autobencoder)<br>
+    [autobencoder](https://twitter.com/autobencoder)
+    <br>
   <small>
      Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552)
@@ -211,7 +222,8 @@ on April 5, 2023.
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-4297-8747](https://orcid.org/0000-0003-4297-8747)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [falquaddoomi](https://github.com/falquaddoomi)<br>
+    [falquaddoomi](https://github.com/falquaddoomi)
+    <br>
   <small>
      Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
   </small>
@@ -221,7 +233,8 @@ on April 5, 2023.
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0001-7870-8242](https://orcid.org/0000-0001-7870-8242)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [dongbohu](https://github.com/dongbohu)<br>
+    [dongbohu](https://github.com/dongbohu)
+    <br>
   <small>
      Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
      · Funded by GBMF4552
@@ -232,7 +245,8 @@ on April 5, 2023.
     ![ORCID icon](images/orcid.svg){.inline_icon width=16 height=16}
     [0000-0003-0002-5761](https://orcid.org/0000-0003-0002-5761)
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
-    [danich1](https://github.com/danich1)<br>
+    [danich1](https://github.com/danich1)
+    <br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552); The National Institutes of Health (T32 HG000046)
@@ -245,7 +259,8 @@ on April 5, 2023.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [yhao-compbio](https://github.com/yhao-compbio)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [YhaoC](https://twitter.com/YhaoC)<br>
+    [YhaoC](https://twitter.com/YhaoC)
+    <br>
   <small>
      Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA
   </small>
@@ -257,7 +272,8 @@ on April 5, 2023.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [bdsullivan](https://github.com/bdsullivan)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [BlairDSullivan](https://twitter.com/BlairDSullivan)<br>
+    [BlairDSullivan](https://twitter.com/BlairDSullivan)
+    <br>
   <small>
      School of Computing, University of Utah, Salt Lake City, Utah, USA
   </small>
@@ -269,7 +285,8 @@ on April 5, 2023.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [naglem](https://github.com/naglem)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [mikenagle84](https://twitter.com/mikenagle84)<br>
+    [mikenagle84](https://twitter.com/mikenagle84)
+    <br>
   <small>
      Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc, Cambridge, Massachusetts, United States of America; Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc, Cambridge, Massachusetts, United States of America
   </small>
@@ -281,7 +298,8 @@ on April 5, 2023.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [cgreene](https://github.com/cgreene)
     · ![Twitter icon](images/twitter.svg){.inline_icon width=16 height=16}
-    [GreeneScientist](https://twitter.com/GreeneScientist)<br>
+    [GreeneScientist](https://twitter.com/GreeneScientist)
+    <br>
   <small>
      Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
      · Funded by the National Human Genome Research Institute (R01 HG010067); the National Cancer Institute (R01 CA237170); the Gordon and Betty Moore Foundation (GBMF 4552); Pfizer Worldwide Research, Development, and Medical; the Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765)
@@ -1334,3 +1352,4 @@ This work was supported, in part, by Pfizer Worldwide Research, Development, and
 
 <!-- Explicitly insert bibliography here -->
 <div id="refs"></div>
+
