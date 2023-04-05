@@ -92,9 +92,14 @@ such that color is helpful but not essential for usage and interpretation.
 > (1) The authors introduce and compute a null distribution of the DWPC which takes into account node degree in a statistically controlled way when evaluating the connectivity between two nodes. However, the DWPC itself does take into account node degree, as the name implies, and contains a tunable parameter that can be optimized, at least when a ground truth is available (as in Ref 39 by the same first author). I understand such tuning is not possible when, as in the present case, no ground truth is available, but the authors should make this point more clearly.
 > 
 > (2) I find Fig. 1B a bit confusing:  according to the legend, the top rows are known treatments, which should have higher than expected connectivity. However, based on the colors as explained by the legend, the bottom treatment/disease pairs seem to have higher connectivity
-> 
+
+The caption had top/bottom reversed!
+Many thanks for this keen observation.
+
 > (3) The acronym DWPC is defined after it has been used several times
-> 
+
+We now use the long form before the first occurrence of DWPC. 
+
 > (4) The legend of Figure 2 should specify that these results apply to the nodes "Alzheimer disease" and "Circadian rhythm", although this becomes clear in Fig. 4
 > 
 > (5) I don't think Figure 3, representing the home page of the web site, is especially useful
