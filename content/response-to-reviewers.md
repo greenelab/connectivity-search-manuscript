@@ -11,7 +11,14 @@ To define citation metadata, we added `CITATION.cff` files to the relevant GitHu
 ### Minor comments:
 
 > Without line and page numbers, it was a bit tricky to point out the issues.
-> 
+
+Apologies!
+The Manubot tool we're using to write the manuscript [struggles](https://github.com/manubot/rootstock/issues/244) with line numbering.
+Some alternatives in case they're helpful.
+Line numbers are available in the pre-rendered markdown source at [`05.main-text.md`](https://github.com/greenelab/connectivity-search-manuscript/blob/ebbbab424c6606a57683fa78f4c72a0bfcba01a1/content/05.main-text.md?plain=1) (replace commit hash in the URL with the latest `main` branch commit to see the most recent version).
+Going to <https://greenelab.github.io/connectivity-search-manuscript/v/freeze> will redirect you to a versioned permalink of the manuscript with HTML anchors for many elements and [Hypothesis](https://web.hypothes.is/) commenting available.
+Neither of these options are as convenient as having line numbers in the submitted PDF.
+
 > 1. "One such application" in the introduction does not read well - just "one application"
 
 Revised.
