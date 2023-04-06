@@ -37,8 +37,6 @@ For example, the following API request for a length 4 metapath succeeds:
 <https://search-api.het.io/v1/paths/source/17054/target/6602/metapath/CbGpPWpGaD/?limit=5>.
 While the response includes paths along with the corresponding node and edge properties, it is missing information on the DWPC null distribution and hence the DWPC p-value.
 
-TODO: describe how to generate metrics for longer metapaths.
-
 The discussion touches on approaches future work could consider to subset all possible longer metapaths to only the most interesting starting with "One solution would be to only extend metapaths detected as informative".
 
 > 3. Below [Fig 2](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#fig:webapp-metapaths), there is a point about the adjusted p-value. I see that the discussion about FDR is presented later in the manuscript (and well justified), but there could be a pointer here to that section.
@@ -56,6 +54,9 @@ It's a good approach for reducing a large list of paths to a smaller number of i
 While not planned for the current version of the connectivity search webapp, it a promising future direction that we have added to the discussion.
 
 > 5. I found the Methods extremely long and may be a bit distracting for readers of this manuscript --- I was wondering if some of these can be moved to Supplementary.
+
+TODO
+
 > 6. In the section on "Details of matrix DWPC implementation", it is stated that "our matrix methods were validated". It is not clear where these validations have been discussed. Supplementary?
 
 There is no additional discussion of this validation in the manuscript.
@@ -109,6 +110,13 @@ such that color is helpful but not essential for usage and interpretation.
 
 > If I understand correctly, given two nodes (say "Alzheimer disease" and "Circadian rhythm") the method extracts, in a statistically controlled way, the most significant metapaths joining the two nodes, and then the individual paths responsible for the enrichment. But this is not the most obvious question a life scientist would ask the network, which would be instead something like "Which are the pathways most significantly connected to "Alzheimer disease"? Indeed this type of question would be the one to ask when aiming for drug repurposing (possibly replacing "pathways" with "compounds" or "pharmacologic classes"). Based on Fig. 4A, the pathways are presented, or "suggested," in decreasing order of number of metapaths, but this is hardly a ranking by significance. Would it be possible to summarize the results in such a way as to rank the pathway nodes connected to a given disease node by significance (or more generally to rank the nodes of a certain type by the significance of their connection to a given node of another type)? This should be discussed.
 
+The reviewer's understanding is correct.
+The connectivity search webpage takes a metapath/path based approach to communicating query results.
+Many users will also be interested in metanode/node based results.
+The discussion now notes the possibility of "aggregating path scores across intermediate nodes or edges".
+We agree with the reviewer that this enhancement to the webapp would bring added utility and is an excellent future direction. 
+Furthermore, we now summarize the MechRepoNet/DrugMechDB [study](http://doi.org/10.1093/bioinformatics/btac205) in the introduction, which performed node aggregation techniques, such that readers can further appreciate this possibility.
+
 ### Minor comments
 
 > I also have several minor concerns.
@@ -135,7 +143,9 @@ Many thanks for this keen observation.
 We now use the long form before the first occurrence of DWPC. 
 
 > (4) The legend of [Figure 2](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#fig:webapp-metapaths) should specify that these results apply to the nodes "Alzheimer disease" and "Circadian rhythm", although this becomes clear in [Fig. 4](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#fig:webapp)
-> 
+
+TODO
+
 > (5) I don't think [Figure 3](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#fig:website), representing the home page of the web site, is especially useful
 
 We moved the figure titled "Homepage of the Hetio website" to the **Methods > Frontend > Hetio Website** section,
@@ -153,3 +163,5 @@ Furthermore, some limit is necessary as excessively large path counts would bog 
 In a live session of panel B via the webapp, when the user hovers over the show _DaGiGpPW_ metapath checkbox, the documentation tooltip [notes](https://github.com/greenelab/connectivity-search-frontend/blob/8fae3b0c61ef7d831414b3d964de4d0120988ce2/src/metapath-results/table.js#L349-L354) "Show the top 100 of these 479 paths in the paths table". We've updated the figure caption to note this limit.
 
 > (7) The "[Frontend](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#frontend)" section of the Methods seems a bit too detailed for the Gigascience audience
+
+TODO
