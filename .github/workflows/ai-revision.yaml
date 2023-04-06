@@ -11,7 +11,7 @@ on:
         description: 'File names to revise'
         required: false
         type: string
-        default: ''
+        default: '05.main-text.md'  # modified default for this manuscript
       model:
         description: 'Language model'
         required: true
@@ -51,6 +51,8 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           AI_EDITOR_LANGUAGE_MODEL: ${{ inputs.model }}
           AI_EDITOR_FILENAMES_TO_REVISE: ${{ inputs.file_names }}
+          # specific for this manuscript https://github.com/manubot/manubot-ai-editor/issues/13
+          AI_EDITOR_FILENAME_SECTION_MAPPING: '{"05.main-text.md": "methods"}'
           # More variables can be specified to control the behavior of the model:
           #  https://github.com/manubot/manubot-ai-editor/blob/main/libs/manubot_ai_editor/env_vars.py
         run: manubot ai-revision --content-directory content/
