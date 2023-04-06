@@ -144,7 +144,7 @@ We now use the long form before the first occurrence of DWPC.
 
 > (4) The legend of [Figure 2](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#fig:webapp-metapaths) should specify that these results apply to the nodes "Alzheimer disease" and "Circadian rhythm", although this becomes clear in [Fig. 4](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#fig:webapp)
 
-TODO
+We've updated the figure caption.
 
 > (5) I don't think [Figure 3](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#fig:website), representing the home page of the web site, is especially useful
 
