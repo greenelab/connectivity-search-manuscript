@@ -97,7 +97,17 @@ such that color is helpful but not essential for usage and interpretation.
 > I also have several minor concerns.
 >
 > (1) The authors introduce and compute a null distribution of the DWPC which takes into account node degree in a statistically controlled way when evaluating the connectivity between two nodes. However, the DWPC itself does take into account node degree, as the name implies, and contains a tunable parameter that can be optimized, at least when a ground truth is available (as in [Ref 39](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#ref-WkPlH1ds "Reference entry for Heterogeneous Network Edge Prediction: A Data Integration Approach to Prioritize Disease-Associated Genes") by the same first author). I understand such tuning is not possible when, as in the present case, no ground truth is available, but the authors should make this point more clearly.
-> 
+
+The DWPC metric itself does have a damping parameter to penalize paths that traverse high degree nodes.
+However, the degree-weighting of paths does not fully correct for source and target degree as seen in the figure "Path-based metrics vary by node degree and network permutation status".
+Specifically, the gamma-hurdle model for the null DWPC distribution is able to correct for two additional aspects of DWPCs:
+
+1. The proportion of DWPCs that are zero (i.e. no paths occurred) varies by source and target degree as shown in the "% Nonzero DWPCs" panel.
+2. For nonzero DWPCs, degree-weighting of paths still does not fully correct for source and target degree as shown in the "Mean Nonzero DWPC" panel.
+
+Note that the degree-weighting of paths is still important even when constructing a null distribution like we do here.
+That is because our null distributions are based only on source and target node degrees and cannot penalize high degree intermediate nodes that are traversed by specific paths.
+
 > (2) I find [Fig. 1B](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#fig:rephetio) a bit confusing:  according to the legend, the top rows are known treatments, which should have higher than expected connectivity. However, based on the colors as explained by the legend, the bottom treatment/disease pairs seem to have higher connectivity
 
 The caption had top/bottom reversed!
