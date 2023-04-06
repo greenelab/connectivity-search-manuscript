@@ -19,7 +19,7 @@ compbio
 CrC
 CtDrDtC
 CtDtCtD
-Customizable
+customizable
 customizations
 DaGiGpPW
 DaGpPWpG
