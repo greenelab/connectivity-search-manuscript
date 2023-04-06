@@ -19,13 +19,13 @@ compbio
 CrC
 CtDrDtC
 CtDtCtD
-Customizable
+customizable
 customizations
 DaGiGpPW
 DaGpPWpG
 danich
 dataset
-datasets
+Datasets
 DdGpPW
 deepwalk
 Dev
@@ -59,7 +59,7 @@ GSEA
 Hadamard
 Hao
 HD
-Heil
+heil
 hetmech
 hneem
 Hu
@@ -109,7 +109,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 yhao
 YhaoC
 Yun
