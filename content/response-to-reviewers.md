@@ -55,7 +55,9 @@ While not planned for the current version of the connectivity search webapp, it 
 
 > 5. I found the Methods extremely long and may be a bit distracting for readers of this manuscript --- I was wondering if some of these can be moved to Supplementary.
 
-TODO
+A large portion of this study is comprised of methods development, so we are hesitant to move important details to a supplement.
+Our hope is that the plentiful section headings will aid readers in navigating the methods.
+The revisions do include some refinements and shortening of certain methods sections.
 
 > 6. In the section on "Details of matrix DWPC implementation", it is stated that "our matrix methods were validated". It is not clear where these validations have been discussed. Supplementary?
 
@@ -87,7 +89,7 @@ We replaced the [nbviewer link](https://nbviewer.org/github/greenelab/hetmech/bl
 
 The objectives and effect of the parameters are described in the manuscript.
 As for setting their specific values, the multiplier of 5 was chosen to "saturate the available database capacity".
-Setting the exponent at −0.3 involved a bit of guesswork, which was prototyped in the [`metapath-thresholds.ipynb`](https://github.com/dhimmel/hetmech/blob/15f1925c0481d8e6bab8b0931f48f2fad388c68c/explore/metapath-thresholds/metapath-thresholds.ipynb) notebook.
+Setting the exponent at −0.3 involved a bit of guesswork, which was prototyped in the [`metapath-thresholds.ipynb`](https://github.com/greenelab/connectivity-search-analyses/blob/1c6827ce2544c17cef42bbccf098a312f2c44f97/explore/metapath-thresholds/metapath-thresholds.ipynb) notebook.
 We manually evaluated several exponent choices and reviewed the resulting p-value thresholds,
 looking for a threshold to ensure that the database capacity was not overwhelmingly devoted to large-sized DWPC matrices while still providing the ability for highly significant metapaths for large-sized DWPC matrices to be retained.
 The −0.3 exponent achieved these objectives, so we adopted it as a way to optimize the storage capacity towards presumed user interest.
@@ -164,4 +166,5 @@ In a live session of panel B via the webapp, when the user hovers over the show 
 
 > (7) The "[Frontend](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#frontend)" section of the Methods seems a bit too detailed for the Gigascience audience
 
-TODO
+We shortened the frontend section, while still retaining detail about the implementation and decision making process that might be of interest to readers looking to produce similar style webapps.
+Since this study contained considerable web development efforts, we would like the manuscript to dutifully reflect this work.
