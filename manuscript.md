@@ -41,8 +41,8 @@ header-includes: |
   <meta name="dc.date" content="2023-04-06" />
   <meta name="citation_publication_date" content="2023-04-06" />
   <meta property="article:published_time" content="2023-04-06" />
-  <meta name="dc.modified" content="2023-04-06T13:36:31+00:00" />
-  <meta property="article:modified_time" content="2023-04-06T13:36:31+00:00" />
+  <meta name="dc.modified" content="2023-04-06T15:09:12+00:00" />
+  <meta property="article:modified_time" content="2023-04-06T15:09:12+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -109,9 +109,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/cb30a0e70cf169a94c3079293c3badeb909d0a61/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/cb30a0e70cf169a94c3079293c3badeb909d0a61/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/cb30a0e70cf169a94c3079293c3badeb909d0a61/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/cd294aae997b9d820fcac22f79f6eb08b3a0f69b/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/cd294aae997b9d820fcac22f79f6eb08b3a0f69b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/cd294aae997b9d820fcac22f79f6eb08b3a0f69b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -136,9 +136,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/cb30a0e70cf169a94c3079293c3badeb909d0a61/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/cd294aae997b9d820fcac22f79f6eb08b3a0f69b/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@cb30a0e](https://github.com/greenelab/connectivity-search-manuscript/tree/cb30a0e70cf169a94c3079293c3badeb909d0a61)
+from [greenelab/connectivity-search-manuscript@cd294aa](https://github.com/greenelab/connectivity-search-manuscript/tree/cd294aae997b9d820fcac22f79f6eb08b3a0f69b)
 on April 6, 2023.
 </em></small>
 
@@ -545,7 +545,7 @@ while still allowing on-demand access to the full metrics for all metapaths with
 
 ![
 **Expanded metapath details from the connectivity search webapp.**
-This is the expanded view of the [metapath table][alzheimer-metapaths] in {@fig:webapp}B.
+This is the expanded view of the [metapath table][alzheimer-metapaths] in {@fig:webapp}B showing enriched metapaths between Alzheimer’s disease and the circadian rhythm pathway.
 ](https://github.com/greenelab/connectivity-search-manuscript/raw/b290b4ad435553c7126867e0720f3112b4692809/content/media/webapp/v3/b.metapaths-expanded.png){#fig:webapp-metapaths width="100%}
 
 Figure @fig:webapp-metapaths shows the information used to compute _p_-value for enriched metapaths.
@@ -1016,7 +1016,7 @@ The probability of a draw, X, from the gamma-hurdle distribution is given as fol
 
 We estimate all three parameters using the method of moments (using Bessel's correction to estimate the second moment).
 As a validation of our method,
-we [compared](https://nbviewer.jupyter.org/github/greenelab/connectivity-search-analyses/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/parameter_estimates.ipynb) our method of moments parameter estimates to approximate maximum likelihood estimates
+we [compared](https://github.com/greenelab/connectivity-search-analyses/blob/1c6827ce2544c17cef42bbccf098a312f2c44f97/explore/gamma-hurdle/parameter_estimates.ipynb) our method of moments parameter estimates to approximate maximum likelihood estimates
 (gamma distribution parameters do not have closed-form maximum likelihood estimates)
 and found excellent concordance between the methods.
 Let *N* be the number of permuted DWPC values, and *n* the number of nonzero values.
@@ -1064,7 +1064,7 @@ The decision to stop at length 3 was one of practicality, as length 4 would have
 
 For each of the 2,205 [metapaths](https://github.com/greenelab/connectivity-search-analyses/raw/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/archives/metapath-dwpc-stats.tsv),
 we computed the complete path count matrix and DWPC matrix
-([notebook](https://nbviewer.jupyter.org/github/greenelab/connectivity-search-analyses/blob/042063fb559048e52b3dc2731b6d6c6836f698cf/explore/bulk-pipeline/bulk.ipynb)).
+([notebook](https://github.com/greenelab/connectivity-search-analyses/blob/1c6827ce2544c17cef42bbccf098a312f2c44f97/explore/bulk-pipeline/bulk.ipynb)).
 In total, we computed 137,786,767,964 path counts (and the same number of DWPCs) on the unpermuted network,
 of which 11.6% were nonzero.
 
