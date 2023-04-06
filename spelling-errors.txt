@@ -59,7 +59,7 @@ GSEA
 Hadamard
 Hao
 HD
-Heil
+heil
 hetmech
 hneem
 Hu
@@ -109,7 +109,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 yhao
 YhaoC
 Yun
