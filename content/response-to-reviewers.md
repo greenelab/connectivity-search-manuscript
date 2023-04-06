@@ -79,6 +79,9 @@ We updated the wording to be "The gamma-hurdle distribution is defined over the 
 Since the distribution is defined only from zero (inclusive) to positive infinity, the two lines of equations that follow fully define the distribution.
 
 > 9. The validation here which points to an [ipynb](https://nbviewer.org/github/greenelab/hetmech/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/parameter_estimates.ipynb), could be put in Supplement.
+
+We replaced the [nbviewer link](https://nbviewer.org/github/greenelab/hetmech/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/parameter_estimates.ipynb) with a direct [GitHub link](https://github.com/greenelab/connectivity-search-analyses/blob/1c6827ce2544c17cef42bbccf098a312f2c44f97/explore/gamma-hurdle/parameter_estimates.ipynb), since GitHub is now fully capable of rendering this `.ipynb` file. This removes the dependency on `nbviewer.org` as a viewer of "supplementary" project content.
+
 > 10. In the section on "[Prioritizing enriched metapaths for database storage](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#prioritizing-enriched-metapaths-for-database-storage)", what is the logic underlying the choice of parameters? "For metapaths with length ≥ 2, we chose an adjusted pvalue threshold of 5 × (nsource × ntarget)^−0.3".
 > 11. Under "Visual Design", are the colours chosen "colour-blind friendly"?
 
