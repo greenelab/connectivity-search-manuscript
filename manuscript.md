@@ -41,8 +41,8 @@ header-includes: |
   <meta name="dc.date" content="2023-04-06" />
   <meta name="citation_publication_date" content="2023-04-06" />
   <meta property="article:published_time" content="2023-04-06" />
-  <meta name="dc.modified" content="2023-04-06T15:09:12+00:00" />
-  <meta property="article:modified_time" content="2023-04-06T15:09:12+00:00" />
+  <meta name="dc.modified" content="2023-04-06T17:16:30+00:00" />
+  <meta property="article:modified_time" content="2023-04-06T17:16:30+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -109,9 +109,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/cd294aae997b9d820fcac22f79f6eb08b3a0f69b/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/cd294aae997b9d820fcac22f79f6eb08b3a0f69b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/cd294aae997b9d820fcac22f79f6eb08b3a0f69b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/6606ed37efc717782ad67531a7c6760c35ceccc8/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6606ed37efc717782ad67531a7c6760c35ceccc8/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6606ed37efc717782ad67531a7c6760c35ceccc8/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -136,9 +136,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/cd294aae997b9d820fcac22f79f6eb08b3a0f69b/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/6606ed37efc717782ad67531a7c6760c35ceccc8/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@cd294aa](https://github.com/greenelab/connectivity-search-manuscript/tree/cd294aae997b9d820fcac22f79f6eb08b3a0f69b)
+from [greenelab/connectivity-search-manuscript@6606ed3](https://github.com/greenelab/connectivity-search-manuscript/tree/6606ed37efc717782ad67531a7c6760c35ceccc8)
 on April 6, 2023.
 </em></small>
 

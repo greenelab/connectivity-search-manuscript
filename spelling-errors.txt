@@ -19,7 +19,7 @@ compbio
 CrC
 CtDrDtC
 CtDtCtD
-customizable
+Customizable
 customizations
 DaGiGpPW
 DaGpPWpG
@@ -59,7 +59,7 @@ GSEA
 Hadamard
 Hao
 HD
-heil
+Heil
 hetmech
 hneem
 Hu
