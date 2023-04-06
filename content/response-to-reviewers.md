@@ -83,6 +83,14 @@ Since the distribution is defined only from zero (inclusive) to positive infinit
 We replaced the [nbviewer link](https://nbviewer.org/github/greenelab/hetmech/blob/025bdf8d5e63725ca2482d61fd8e421bf0001f93/explore/gamma-hurdle/parameter_estimates.ipynb) with a direct [GitHub link](https://github.com/greenelab/connectivity-search-analyses/blob/1c6827ce2544c17cef42bbccf098a312f2c44f97/explore/gamma-hurdle/parameter_estimates.ipynb), since GitHub is now fully capable of rendering this `.ipynb` file. This removes the dependency on `nbviewer.org` as a viewer of "supplementary" project content.
 
 > 10. In the section on "[Prioritizing enriched metapaths for database storage](https://greenelab.github.io/connectivity-search-manuscript/v/cf1000cbdfdb08a07e39cf9741d0300f76d157cf/#prioritizing-enriched-metapaths-for-database-storage)", what is the logic underlying the choice of parameters? "For metapaths with length ≥ 2, we chose an adjusted pvalue threshold of 5 × (nsource × ntarget)^−0.3".
+
+The objectives and effect of the parameters are described in the manuscript.
+As for setting their specific values, the multiplier of 5 was chosen to "saturate the available database capacity".
+Setting the exponent at −0.3 involved a bit of guesswork, which was prototyped in the [`metapath-thresholds.ipynb`](https://github.com/dhimmel/hetmech/blob/15f1925c0481d8e6bab8b0931f48f2fad388c68c/explore/metapath-thresholds/metapath-thresholds.ipynb) notebook.
+We manually evaluated several exponent choices and reviewed the resulting p-value thresholds,
+looking for a threshold to ensure that the database capacity was not overwhelmingly devoted to large-sized DWPC matrices while still providing the ability for highly significant metapaths for large-sized DWPC matrices to be retained.
+The −0.3 exponent achieved these objectives, so we adopted it as a way to optimize the storage capacity towards presumed user interest.
+
 > 11. Under "Visual Design", are the colours chosen "colour-blind friendly"?
 
 Good question.
