@@ -51,7 +51,8 @@ authors:
     affiliations:
       - Carbon, Inc.
       - Department of Computer Science, North Carolina State University, Raleigh, North Carolina, United States of America
-    funders: GBMF4560
+    funders:
+      - The Gordon and Betty Moore Foundation (GBMF4560)
   - github: ben-heil
     name: Benjamin J. Heil
     initials: BJH
@@ -78,7 +79,7 @@ authors:
     email: dongbo.hu@gmail.com
     affiliations:
       - Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
-    funders: GBMF4552
+    funders: The Gordon and Betty Moore Foundation (GBMF4552)
   - github: danich1
     name: David N. Nicholson
     initials: DNN
