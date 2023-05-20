@@ -26,6 +26,20 @@ authors:
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4552)
       - Pfizer Worldwide Research, Development, and Medical
+    roles:
+      - Conceptualization
+      - Data curation
+      - Formal analysis
+      - Funding acquisition
+      - Investigation
+      - Methodology
+      - Project administration
+      - Resources
+      - Software
+      - Supervision
+      - Visualization
+      - Writing – original draft
+      - Writing – review & editing
   - github: zietzm
     name: Michael Zietz
     initials: MZ
@@ -35,6 +49,16 @@ authors:
     affiliations:
       - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
       - Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
+    roles:
+      - Conceptualization
+      - Data curation
+      - Formal analysis
+      - Investigation
+      - Methodology
+      - Software
+      - Visualization
+      - Writing – original draft
+      - Writing – review & editing
   - github: vincerubinetti
     name: Vincent Rubinetti
     initials: VR
@@ -42,6 +66,13 @@ authors:
     affiliations:
       - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
       - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+    roles:
+      - Data curation
+      - Methodology
+      - Software
+      - Visualization
+      - Writing – original draft
+      - Writing – review & editing
   - github: kkloste
     name: Kyle Kloster
     initials: KK
@@ -53,6 +84,10 @@ authors:
       - Department of Computer Science, North Carolina State University, Raleigh, North Carolina, United States of America
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4560)
+    roles:
+      - Conceptualization
+      - Formal analysis
+      - Methodology
   - github: ben-heil
     name: Benjamin J. Heil
     initials: BJH
@@ -63,6 +98,12 @@ authors:
       - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4552)
+    roles:
+      - Formal analysis
+      - Investigation
+      - Methodology
+      - Software
+      - Validation
   - github: falquaddoomi
     name: Faisal Alquaddoomi
     initials: FSA
@@ -71,6 +112,9 @@ authors:
     affiliations:
       - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America
       - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+    roles:
+      - Resources
+      - Software
   - github: dongbohu
     name: Dongbo Hu
     initials: DH
@@ -79,6 +123,10 @@ authors:
     email: dongbo.hu@gmail.com
     affiliations:
       - Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
+    roles:
+      - Resources
+      - Software
+      - Writing – review & editing
     funders: The Gordon and Betty Moore Foundation (GBMF4552)
   - github: danich1
     name: David N. Nicholson
@@ -91,6 +139,9 @@ authors:
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4552)
       - The National Institutes of Health (T32 HG000046)
+    roles:
+      - Data curation
+      - Writing – original draft
   - github: yhao-compbio
     name: Yun Hao
     initials: YH
@@ -99,6 +150,9 @@ authors:
     email: yun.hao@pennmedicine.upenn.edu
     affiliations:
       - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA
+    roles:
+      - Investigation
+      - Visualization
   - github: bdsullivan
     name: Blair D. Sullivan
     initials: BDS
@@ -107,6 +161,11 @@ authors:
     email: sullivan@cs.utah.edu
     affiliations:
       - School of Computing, University of Utah, Salt Lake City, Utah, USA
+    roles:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+      - Writing – review & editing
   - github: naglem
     name: Michael W. Nagle
     initials: MWN
@@ -116,6 +175,9 @@ authors:
     affiliations:
       - Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc, Cambridge, Massachusetts, United States of America
       - Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc, Cambridge, Massachusetts, United States of America
+    roles:
+      - Investigation
+      - Resources
   - github: cgreene
     name: Casey S. Greene
     initials: CSG
@@ -132,6 +194,16 @@ authors:
       - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
       - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America
       - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+    roles:
+      - Conceptualization
+      - Funding acquisition
+      - Investigation
+      - Methodology
+      - Project administration
+      - Resources
+      - Supervision
+      - Writing – original draft
+      - Writing – review & editing
     corresponding: true
 pandoc:
   manubot-fail-on-errors: True
