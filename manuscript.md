@@ -12,7 +12,7 @@ keywords:
 - bioinformatics
 - biomedical informatics
 lang: en-US
-date-meta: '2023-04-06'
+date-meta: '2023-05-23'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -38,11 +38,11 @@ header-includes: |
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-04-06" />
-  <meta name="citation_publication_date" content="2023-04-06" />
-  <meta property="article:published_time" content="2023-04-06" />
-  <meta name="dc.modified" content="2023-04-06T18:32:02+00:00" />
-  <meta property="article:modified_time" content="2023-04-06T18:32:02+00:00" />
+  <meta name="dc.date" content="2023-05-23" />
+  <meta name="citation_publication_date" content="2023-05-23" />
+  <meta property="article:published_time" content="2023-05-23" />
+  <meta name="dc.modified" content="2023-05-23T01:43:36+00:00" />
+  <meta property="article:modified_time" content="2023-05-23T01:43:36+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -109,9 +109,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/6ab88cb32711334159d8ff4db9267c4022c0864c/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6ab88cb32711334159d8ff4db9267c4022c0864c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/6ab88cb32711334159d8ff4db9267c4022c0864c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/9a7c91fd67848a840980f928be8a7afff3eeb997/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/9a7c91fd67848a840980f928be8a7afff3eeb997/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/9a7c91fd67848a840980f928be8a7afff3eeb997/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -136,10 +136,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/6ab88cb32711334159d8ff4db9267c4022c0864c/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/9a7c91fd67848a840980f928be8a7afff3eeb997/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@6ab88cb](https://github.com/greenelab/connectivity-search-manuscript/tree/6ab88cb32711334159d8ff4db9267c4022c0864c)
-on April 6, 2023.
+from [greenelab/connectivity-search-manuscript@9a7c91f](https://github.com/greenelab/connectivity-search-manuscript/tree/9a7c91fd67848a840980f928be8a7afff3eeb997)
+on May 23, 2023.
 </em></small>
 
 
@@ -200,7 +200,7 @@ on April 6, 2023.
     <br>
   <small>
      Carbon, Inc.; Department of Computer Science, North Carolina State University, Raleigh, North Carolina, United States of America
-     · Funded by GBMF4560
+     · Funded by The Gordon and Betty Moore Foundation (GBMF4560)
   </small>
 
 + **Benjamin J. Heil**
@@ -237,7 +237,7 @@ on April 6, 2023.
     <br>
   <small>
      Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
-     · Funded by GBMF4552
+     · Funded by The Gordon and Betty Moore Foundation (GBMF4552)
   </small>
 
 + **David N. Nicholson**
@@ -317,24 +317,26 @@ Casey S. Greene \<casey.s.greene@cuanschutz.edu\>.
 
 ## Abstract {.page_break_before}
 
+**Background**
 Hetnets, short for “heterogeneous networks”, contain multiple node and relationship types and offer a way to encode biomedical knowledge.
 One such example, Hetionet connects 11 types of nodes
 — including genes, diseases, drugs, pathways, and anatomical structures
 — with over 2 million edges of 24 types.
 Previous work has demonstrated that supervised machine learning methods applied to such networks can identify drug repurposing opportunities.
-However, a training set of known relationships does not exist for many types of node pairs, even when it would be useful to examine how nodes of those types are meaningfully connected.
+However, a training set of known relationships does not exist for many types of node pairs,
+even when it would be useful to examine how nodes of those types are meaningfully connected.
 For example, users may be curious not only how metformin is related to breast cancer,
-but also how the _GJA1_ gene might be involved in insomnia.
+but also how a given gene might be involved in insomnia.
+
+**Findings**
 We developed a new procedure, termed hetnet connectivity search, that proposes important paths between any two nodes without requiring a supervised gold standard.
 The algorithm behind connectivity search identifies types of paths that occur more frequently than would be expected by chance (based on node degree alone).
-We find that predictions are broadly similar to those from previously described supervised approaches for certain node type pairs.
-Scoring of individual paths is based on the most specific paths of a given type.
 Several optimizations were required to precompute significant instances of node connectivity at the scale of large knowledge graphs.
+
+**Conclusion**
 We implemented the method on Hetionet and provide an online interface at <https://het.io/search>.
 We provide an open source implementation of these methods in our new Python package named [hetmatpy](https://github.com/hetio/hetmatpy "Python package for matrix storage and operations on hetnets").
-<!--
-To validate the method, we show that it identifies much of the same evidence for specific instances of drug repurposing as the previous supervised approach, but without requiring a training set.
--->
+
 
 ## Introduction {.page_break_before}
 
@@ -365,10 +367,6 @@ A supervised machine learning approach identified types of paths that occur more
 To train the model, the authors created [PharmacotherapyDB](https://doi.org/10.6084/m9.figshare.3103054),
 a physician-curated catalog of 755 disease-modifying treatments [@doi:10.15363/thinklab.d182].
 
-<!--
-  pretty sure a previous paper at gigascience required us to move figures to the results section,
-  so we may need to add a results panel and put this at the beginning of the results section.
--->
 ![
 **A. Hetionet v1.0 metagraph.**
 The types of nodes and edges in Hetionet.
@@ -469,7 +467,7 @@ Refinements to path scoring techniques might also be helpful solutions in this c
 Hetnet connectivity search explains how two nodes are related in an unsupervised manner that captures the semantic richness of edge type and returns results in the form of both metapaths and paths.
 Our open source implementation, including for a query and visualization webserver, was designed with scalability and responsiveness in mind allowing in-browser exploration.
 
-## Results {.page_break_before}
+## Findings {.page_break_before}
 
 Completing hetnet connectivity search involved advances on three fronts.
 We implemented new software for efficient matrix-based operations on hetnets.
@@ -706,7 +704,7 @@ Equally interesting would be queries where the input is a set of nodes of the sa
 The search would compute DWPCs for paths originating on the query nodes.
 The simpler formulation would compute DWPCs for metapaths separately and compare to null distributions from permuted hetnets.
 A more advanced formulation would combine scores across metapaths such that every node in the hetnet would receive a single score capturing its connectivity to the query set.
-This approach would have similar utility to gene set enrichment analysis (GSEA) in that the user could provide a set of genes as input and receive a ranked list of nodes that characterize the function of the query genes.
+This approach would have similar utility to gene set enrichment analysis in that the user could provide a set of genes as input and receive a ranked list of nodes that characterize the function of the query genes.
 However, it would excel in its versatility by returning results of any node type without requiring pre-defined gene sets to match against.
 Some users might be interested in node set transformations where scores for one node type are converted to another node type.
 This approach could take scores for human genes and convert them to side effects, diseases, pathways, etcetera.
@@ -1217,7 +1215,7 @@ At the time of authoring the app, React Hooks were still nascent, thus the simpl
 While writing this application, we also elected to re-write the pre-existing [Rephetio](https://het.io/repurpose/) and [disease-associated genes](https://het.io/disease-genes/) apps in the same manner.
 We created a custom package of React components and utility functions that could be shared across the multiple interactive apps on the website.
 The package is located at and can be installed from the [`frontend-components`](https://github.com/hetio/frontend-components) repository.
-The package consists of interface "components" (building blocks) like buttons, sortable/searchable/paginated tables, etc., as well as utility functions for formatting data, debugging, etcetera.
+The package consists of interface "components" (building blocks) like buttons and sortable/searchable/paginated tables as well as utility functions for formatting data and debugging.
 Each of the interactive apps import this package to reduce code repetition and to enforce a consistent style and behavior across the website.
 
 For managing state in the connectivity search app, we used the Redux library.
@@ -1238,7 +1236,7 @@ D3 satisfied several core requirements:
 3. Pinnable nodes and other physics customizations.
 4. Customizable node and edge drag/hover/select behavior.
 5. Intuitive pan/zoom view that worked on desktop and mobile.
-6. Node and edge appearances that were completely customizable for alignment, text wrapping, color, outlines, fonts, arrowheads, non-colliding coincident edges, etc.
+6. Node and edge appearances that were completely customizable for alignment, text wrapping, color, outlines, fonts, arrowheads, and non-colliding coincident edges.
 
 ### Visual Design
 
@@ -1278,8 +1276,22 @@ We encourage readers with feedback or questions to comment publicly via [GitHub 
 Most of the Hetio resources and projects can be found under the [Hetio GitHub organization](https://github.com/hetio), with others being available under the [Greene Lab GitHub organization](https://github.com/greenelab), one of the collaborating groups.
 Information about Hetio is also displayed and disseminated at <https://het.io>, as noted in the [Hetio Website] section. 
 
-The Hetnet Connectivity Search web application is registered at [biotools:connectivity-search](https://bio.tools/connectivity-search).
-This study primarily involves the following repositories:
+#### Availability of Supporting Source Code and Requirements
+
+- Project name: Hetnet Connectivity Search
+- Project home page: <https://het.io/search/>
+- Operating systems: Platform independent
+- Programming language: Python, Javascript, Cypher
+- Other requirements:
+  refer to specific repositories below for their respective dependency configuration files
+- License:
+  refer to specific repositories below,
+  but generally software is released under BSD,
+  figures and documentation under CC BY,
+  and data under CC0.
+- biotools ID: [connectivity-search](https://bio.tools/connectivity-search)
+
+This study primarily involves the following GitHub repositories:
 <!-- https://github.com/topics/hetnet-connectivity-search -->
 
 - [greenelab/connectivity-search-manuscript](https://github.com/greenelab/connectivity-search-manuscript)
@@ -1322,11 +1334,13 @@ This study primarily involves the following repositories:
   Preexisiting source code for the <https://het.io/> website.
   CC BY 4.0 License.
 
-The hetmech and hetionet repositories contain datasets related to this study.
+#### Data availability
+
+An archival copy of the code and supporting data is available via the GigaScience repository [@gigadb].
+The connectivity-search-analyses and hetionet repositories contain datasets related to this study.
 Large datasets were compressed and tracked with [Git LFS](https://git-lfs.github.com/) (Large File Storage).
 GitHub LFS had a max file size of 2 GB.
 Datasets exceeding this size, along with other essential datasets, are available from Zenodo [@zenodo].
-
 
 <!-- link reference syntax citation key aliases -->
 [@hetio-dag]: doi:10.1371/journal.pcbi.1004259
@@ -1334,10 +1348,71 @@ Datasets exceeding this size, along with other essential datasets, are available
 [@vagelos-2017]: doi:10.6084/m9.figshare.5346577
 [@xswap]: https://greenelab.github.io/xswap-manuscript/
 [@zenodo]: doi:10.5281/zenodo.1435833
+[@gigadb]: doi:10.5524/102389
 
-## Competing Interests
+## Declarations
+
+### List of abbreviations
+
+Arnt
+~ aryl hydrocarbon receptor nuclear translocator protein
+
+ARNT2
+~ aryl hydrocarbon receptor nuclear translocator 2
+
+DWPC
+~ degree-weighted path count
+
+LFS
+~ large file storage
+
+NPAS2
+~ neuronal PAS domain protein 2
+
+PAS
+~ Per-Arnt-Sim
+
+Per
+~ period circadian protein
+
+Sim
+~ single-minded protein
+
+
+### Competing Interests
 
 This work was supported, in part, by Pfizer Worldwide Research, Development, and Medical.
+
+## Funding
+
+
+DSH, BJH, DH, and DNN were funded by The Gordon and Betty Moore Foundation (GBMF4552).
+DSH and CSG were funded by Pfizer Worldwide Research, Development, and Medical.
+KK was funded by The Gordon and Betty Moore Foundation (GBMF4560).
+DNN was funded by The National Institutes of Health (T32 HG000046).
+CSG was funded by the National Human Genome Research Institute (R01 HG010067).
+CSG was funded by the National Cancer Institute (R01 CA237170).
+CSG was funded by the Gordon and Betty Moore Foundation (GBMF 4552).
+CSG was funded by the Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765).
+The funders had no role in the study design, data analysis and interpretation, or writing of the manuscript.
+
+## Authors' contributions
+
+Author contributions are noted here according to [CRediT](https://credit.niso.org/) (Contributor Roles Taxonomy).
+Conceptualization by DSH, MZ, KK, BDS, and CSG.
+Data curation by DSH, MZ, VR, and DNN.
+Formal analysis by DSH, MZ, KK, and BJH.
+Funding acquisition by DSH, BDS, and CSG.
+Investigation by DSH, MZ, BJH, YH, MWN, and CSG.
+Methodology by DSH, MZ, VR, KK, BJH, and CSG.
+Project administration by DSH and CSG.
+Resources by DSH, FSA, DH, MWN, and CSG.
+Software by DSH, MZ, VR, BJH, FSA, and DH.
+Supervision by DSH, BDS, and CSG.
+Visualization by DSH, MZ, VR, and YH.
+Writing – original draft by DSH, MZ, VR, DNN, and CSG.
+Writing – review & editing by DSH, MZ, VR, DH, BDS, and CSG.
+Validation by BJH.
 
 
 ## References {.page_break_before}
