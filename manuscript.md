@@ -41,8 +41,8 @@ header-includes: |
   <meta name="dc.date" content="2023-05-23" />
   <meta name="citation_publication_date" content="2023-05-23" />
   <meta property="article:published_time" content="2023-05-23" />
-  <meta name="dc.modified" content="2023-05-23T12:30:29+00:00" />
-  <meta property="article:modified_time" content="2023-05-23T12:30:29+00:00" />
+  <meta name="dc.modified" content="2023-05-23T12:53:00+00:00" />
+  <meta property="article:modified_time" content="2023-05-23T12:53:00+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -109,9 +109,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/8ad541fbe6791be7cb74c90c62ae8334cb1800e6/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/8ad541fbe6791be7cb74c90c62ae8334cb1800e6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/8ad541fbe6791be7cb74c90c62ae8334cb1800e6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/b6532fafbc126c0818c612febf86968e6fa8e21b/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/b6532fafbc126c0818c612febf86968e6fa8e21b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/b6532fafbc126c0818c612febf86968e6fa8e21b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -136,9 +136,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/8ad541fbe6791be7cb74c90c62ae8334cb1800e6/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/b6532fafbc126c0818c612febf86968e6fa8e21b/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@8ad541f](https://github.com/greenelab/connectivity-search-manuscript/tree/8ad541fbe6791be7cb74c90c62ae8334cb1800e6)
+from [greenelab/connectivity-search-manuscript@b6532fa](https://github.com/greenelab/connectivity-search-manuscript/tree/b6532fafbc126c0818c612febf86968e6fa8e21b)
 on May 23, 2023.
 </em></small>
 
@@ -1383,7 +1383,7 @@ Sim
 
 This work was supported, in part, by Pfizer Worldwide Research, Development, and Medical.
 
-## Funding
+### Funding
 
 
 DSH, BJH, DH, and DNN were funded by The Gordon and Betty Moore Foundation (GBMF4552).
@@ -1396,7 +1396,7 @@ CSG was funded by the Gordon and Betty Moore Foundation (GBMF 4552).
 CSG was funded by the Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765).
 The funders had no role in the study design, data analysis and interpretation, or writing of the manuscript.
 
-## Authors' contributions
+### Authors' contributions
 
 Author contributions are noted here according to [CRediT](https://credit.niso.org/) (Contributor Roles Taxonomy).
 Conceptualization by DSH, MZ, KK, BDS, and CSG.

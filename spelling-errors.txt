@@ -24,7 +24,7 @@ CSG
 CtDrDtC
 CtDtCtD
 curation
-customizable
+Customizable
 customizations
 DaGiGpPW
 DaGpPWpG
@@ -67,7 +67,7 @@ GreeneScientist
 Hadamard
 Hao
 HD
-heil
+Heil
 hneem
 Hu
 interpretability
