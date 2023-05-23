@@ -123,11 +123,12 @@ authors:
     email: dongbo.hu@gmail.com
     affiliations:
       - Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
+    funders:
+      - The Gordon and Betty Moore Foundation (GBMF4552)
     roles:
       - Resources
       - Software
       - Writing – review & editing
-    funders: The Gordon and Betty Moore Foundation (GBMF4552)
   - github: danich1
     name: David N. Nicholson
     initials: DNN
