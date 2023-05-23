@@ -1,6 +1,6 @@
 ABCABC
 Alquaddoomi
-ARNT
+Arnt
 aryl
 autobencoder
 BAAB
@@ -24,7 +24,7 @@ CSG
 CtDrDtC
 CtDtCtD
 curation
-Customizable
+customizable
 customizations
 DaGiGpPW
 DaGpPWpG

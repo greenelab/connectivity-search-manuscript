@@ -41,8 +41,8 @@ header-includes: |
   <meta name="dc.date" content="2023-05-23" />
   <meta name="citation_publication_date" content="2023-05-23" />
   <meta property="article:published_time" content="2023-05-23" />
-  <meta name="dc.modified" content="2023-05-23T01:43:36+00:00" />
-  <meta property="article:modified_time" content="2023-05-23T01:43:36+00:00" />
+  <meta name="dc.modified" content="2023-05-23T12:30:29+00:00" />
+  <meta property="article:modified_time" content="2023-05-23T12:30:29+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -109,9 +109,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/9a7c91fd67848a840980f928be8a7afff3eeb997/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/9a7c91fd67848a840980f928be8a7afff3eeb997/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/9a7c91fd67848a840980f928be8a7afff3eeb997/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/8ad541fbe6791be7cb74c90c62ae8334cb1800e6/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/8ad541fbe6791be7cb74c90c62ae8334cb1800e6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/8ad541fbe6791be7cb74c90c62ae8334cb1800e6/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -136,9 +136,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/9a7c91fd67848a840980f928be8a7afff3eeb997/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/8ad541fbe6791be7cb74c90c62ae8334cb1800e6/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@9a7c91f](https://github.com/greenelab/connectivity-search-manuscript/tree/9a7c91fd67848a840980f928be8a7afff3eeb997)
+from [greenelab/connectivity-search-manuscript@8ad541f](https://github.com/greenelab/connectivity-search-manuscript/tree/8ad541fbe6791be7cb74c90c62ae8334cb1800e6)
 on May 23, 2023.
 </em></small>
 
@@ -461,7 +461,7 @@ which was able to select 89 metapaths with positive regression coefficients.
 The authors also created [DrugMechDB](https://sulab.github.io/DrugMechDB/) with a curated set of paths capturing known mechanisms of action for 123 compound--disease pairs [@doi:10.1093/bioinformatics/btac205].
 Metapath coefficients were used to rank paths, using DrugMechDB as validation.
 The method generally performed well, although interpretability was challenging when "hundreds, or thousands of paths ranked above the mechanistic path in DrugMechDB" [@doi:10.1093/bioinformatics/btac205].
-To address this issue, the study explores additional path filters, like filtering for paths that traverse known drug targets, and dimensionality reduction by aggregating paths across intermediate nodes and summing the path weights.
+To address this issue, the study explored additional path filters, such as filtering for paths that traverse known drug targets, and dimensionality reduction by aggregating paths across intermediate nodes and summing the path weights.
 Refinements to path scoring techniques might also be helpful solutions in this context.
 
 Hetnet connectivity search explains how two nodes are related in an unsupervised manner that captures the semantic richness of edge type and returns results in the form of both metapaths and paths.
@@ -808,10 +808,10 @@ For example, disjoint groups of repeats like _DrDtCrC_ can be computed as the ma
 Randomly-inserted non-repeated metanodes (e.g. _G_ in _DrDaGaDrD_) require no special treatment and are included in DWPC with matrix multiplication.
 
 After metapath categorization, we segment metapaths according to their repeat pattern, following our order of operations.
-By segmenting and computing recursively, we can evaluate DWPC efficiently on highly complex metapaths, using simple patterns as building-blocks for higher-level patterns.
+By segmenting and computing recursively, we can efficiently evaluate DWPC on highly complex metapaths, using simple patterns as building-blocks for higher-level patterns.
 Finally, our specialized DWPC functions are applied to individual segments, the results are combined, and final corrections are made to ensure no repeated nodes are counted.
-The recursive, segmented approach we developed allowed us additionally to implement a caching strategy that improved speed by avoiding duplicate DWPC computations.
-In summary, the functionality we developed resulted in greater than a 175-fold reduction in compute time, allowing us to compute millions of DWPC values across Hetionet [@vagelos-2017].
+The recursive, segmented approach we developed also allowed us to implement a caching strategy that improved speed by avoiding duplicate DWPC computations.
+In summary, the functionality we developed resulted in more than a 175-fold reduction in compute time, allowing us to compute millions of DWPC values across Hetionet [@vagelos-2017].
 
 #### Details of matrix DWPC implementation
 
@@ -913,10 +913,10 @@ since no other disease besides Alzheimer's had 196 _associates_ edges (source de
 However, for other metapaths with over 5,000 null DWPCs, degree-grouping increased the size of the null distribution by a factor of 25.
 In general, source--target node pairs with lower degrees receive the largest sample size multiplier from degree-grouping.
 This is convenient since low-degree nodes also tend to produce the highest proportion of zero DWPCs, by virtue of low connectivity.
-Consequently, degree grouping excels where it is needed most.
+Consequently, degree grouping excels where it is most needed.
 
-One final benefit of degree-grouping is that reduces the disk space required to store null DWPC summary statistics.
-For example, with 20,945 genes in Hetionet v1.0, there exists 438,693,025 gene pairs.
+One final benefit of degree-grouping is that it reduces the disk space required to store null DWPC summary statistics.
+For example, with 20,945 genes in Hetionet v1.0, there exist 438,693,025 gene pairs.
 Gene nodes have 302 distinct degrees for _interacts_ edges, resulting in 91,204 degree pairs.
 This equates to an 4,810-fold reduction in the number of summary statistics that need to be stored to represent the null DWPC distribution for a metapath starting and ending with a _Gene--interacts--Gene_ metaedge.
 
@@ -980,7 +980,7 @@ First, a sizable fraction of permuted DWPC values is often zero, indicating that
 Second, we observed that non-zero DWPC values for any given source and target nodes are reasonably approximated as following a gamma distribution.
 Motivated by these observations, we parametrized permuted DWPC values using a zero-inflated gamma distribution, which we termed the gamma-hurdle distribution.
 We fit a gamma-hurdle distribution to each combination of source node, target node, and metapath.
-Finally, we estimate the probability of observing a permuted DWPC value greater than DWPC computed in the unpermuted network, akin to a one-tailed p-value.
+Finally, we estimated the probability of observing a permuted DWPC value greater than DWPC computed in the unpermuted network, akin to a one-tailed p-value.
 These quasi-significance scores ('_p_-values') allow us to identify outlier node pairs at the metapath level (see examples in Figure @fig:null-dwpc-distributions).
 
 ![
@@ -1066,7 +1066,7 @@ of which 11.6% were nonzero.
 
 The DWPC has a single parameter, called the damping exponent (_w_), which controls how much paths through high-degree nodes are downweighted [@hetio-dag].
 When _w_ = 0, the DWPC is equivalent to the path count.
-Previously, we found _w_ = 0.4 was optimal for predicting disease-associated genes [@hetio-dag, figure S3A].
+Previously, we found _w_ = 0.4 was optimal for predicting disease-associated genes [@hetio-dag, Figure S3A].
 Here, we use _w_ = 0.5, since taking the square root of degrees has more intuitive appeal.
 
 We selected data types for matrix values that would allow for high precision.
@@ -1216,7 +1216,7 @@ While writing this application, we also elected to re-write the pre-existing [Re
 We created a custom package of React components and utility functions that could be shared across the multiple interactive apps on the website.
 The package is located at and can be installed from the [`frontend-components`](https://github.com/hetio/frontend-components) repository.
 The package consists of interface "components" (building blocks) like buttons and sortable/searchable/paginated tables as well as utility functions for formatting data and debugging.
-Each of the interactive apps import this package to reduce code repetition and to enforce a consistent style and behavior across the website.
+Each of the interactive apps imports this package to reduce code repetition and to enforce a consistent style and behavior across the website.
 
 For managing state in the connectivity search app, we used the Redux library.
 Redux was chosen over vanilla React or other state management libraries since:
