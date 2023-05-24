@@ -11,6 +11,9 @@ keywords:
   - nodes
   - bioinformatics
   - biomedical informatics
+  - path counts
+  - matrix multiplication
+  - DWPC
 lang: en-US
 thumbnail: https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png
 authors:
@@ -63,6 +66,7 @@ authors:
     name: Vincent Rubinetti
     initials: VR
     orcid: 0000-0002-4655-3773
+    email: vince.rubinetti@gmail.com
     affiliations:
       - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
       - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
