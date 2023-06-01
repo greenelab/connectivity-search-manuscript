@@ -11,8 +11,11 @@ keywords:
 - nodes
 - bioinformatics
 - biomedical informatics
+- path counts
+- matrix multiplication
+- DWPC
 lang: en-US
-date-meta: '2023-05-23'
+date-meta: '2023-06-01'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -38,11 +41,11 @@ header-includes: |
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-05-23" />
-  <meta name="citation_publication_date" content="2023-05-23" />
-  <meta property="article:published_time" content="2023-05-23" />
-  <meta name="dc.modified" content="2023-05-23T23:14:05+00:00" />
-  <meta property="article:modified_time" content="2023-05-23T23:14:05+00:00" />
+  <meta name="dc.date" content="2023-06-01" />
+  <meta name="citation_publication_date" content="2023-06-01" />
+  <meta property="article:published_time" content="2023-06-01" />
+  <meta name="dc.modified" content="2023-06-01T00:08:45+00:00" />
+  <meta property="article:modified_time" content="2023-06-01T00:08:45+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -109,9 +112,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/b6532fafbc126c0818c612febf86968e6fa8e21b/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/b6532fafbc126c0818c612febf86968e6fa8e21b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/b6532fafbc126c0818c612febf86968e6fa8e21b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/2a9eb92a88f75814c7a965e9d488dfd81d57266e/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2a9eb92a88f75814c7a965e9d488dfd81d57266e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/2a9eb92a88f75814c7a965e9d488dfd81d57266e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -136,10 +139,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/b6532fafbc126c0818c612febf86968e6fa8e21b/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/2a9eb92a88f75814c7a965e9d488dfd81d57266e/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@b6532fa](https://github.com/greenelab/connectivity-search-manuscript/tree/b6532fafbc126c0818c612febf86968e6fa8e21b)
-on May 23, 2023.
+from [greenelab/connectivity-search-manuscript@2a9eb92](https://github.com/greenelab/connectivity-search-manuscript/tree/2a9eb92a88f75814c7a965e9d488dfd81d57266e)
+on June 1, 2023.
 </em></small>
 
 
@@ -1289,6 +1292,7 @@ Information about Hetio is also displayed and disseminated at <https://het.io>, 
   but generally software is released under BSD,
   figures and documentation under CC BY,
   and data under CC0.
+- RRID: [SCR_023630](https://scicrunch.org/resolver/RRID:SCR_023630)
 - biotools ID: [connectivity-search](https://bio.tools/connectivity-search)
 
 This study primarily involves the following GitHub repositories:
