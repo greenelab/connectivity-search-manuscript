@@ -268,7 +268,6 @@ content/05.main-text.md:1001:LFS
 content/05.main-text.md:1002:LFS
 content/05.main-text.md:1003:datasets
 content/05.main-text.md:1003:Datasets
-content/05.main-text.md:1009:greenelab
 content/05.main-text.md:1017:Arnt
 content/05.main-text.md:1018:aryl
 content/05.main-text.md:1018:translocator

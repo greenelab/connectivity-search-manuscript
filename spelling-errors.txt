@@ -1,6 +1,6 @@
 ABCABC
 Alquaddoomi
-Arnt
+ARNT
 aryl
 autobencoder
 BAAB
@@ -67,7 +67,7 @@ GreeneScientist
 Hadamard
 Hao
 HD
-Heil
+heil
 hneem
 Hu
 interpretability
@@ -121,7 +121,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 YH
 yhao
 YhaoC
