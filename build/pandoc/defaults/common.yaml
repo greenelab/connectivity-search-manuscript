@@ -2,6 +2,7 @@
 from: markdown
 input-file: output/manuscript.md
 filters:
+- build/assets/pandoc-delink-filter.lua
 - pandoc-fignos
 - pandoc-eqnos
 - pandoc-tablenos
