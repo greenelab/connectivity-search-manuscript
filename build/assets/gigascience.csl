@@ -77,10 +77,10 @@
   </macro>
   <macro name="access">
     <choose>
-      <if variable="URL" type="webpage">
-        <group>
-          <text variable="URL" suffix=" "/>
-          <date date-parts="year" form="text" variable="issued" prefix="(" suffix="). "/>
+      <if type="webpage software" match="any">
+        <group delimiter=" ">
+          <text variable="URL"/>
+          <date date-parts="year" form="text" variable="issued" prefix="(" suffix=")."/>
           <date form="text" variable="accessed" prefix="Accessed " suffix=". "/>
         </group>
       </if>
@@ -144,7 +144,7 @@
           <date variable="issued" form="text"/>
         </group>
       </if>
-      <else-if type="article-journal" match="any">
+      <else-if type="article-journal paper-conference" match="any">
         <group suffix=";" delimiter=" ">
           <date variable="issued" form="text" date-parts="year"/>
         </group>
@@ -160,7 +160,7 @@
           </date>
         </group>
       </else-if>
-      <else-if type="report">
+      <else-if type="report entry dataset manuscript" match="any">
         <date variable="issued" delimiter=" ">
           <date-part name="year"/>
           <date-part name="month" form="short" strip-periods="true"/>
@@ -234,11 +234,7 @@
       </group>
       <text macro="access"/>
       <text macro="report-details" suffix=". "/>
-      <choose>
-        <if type="article-journal" match="any">
-          <text variable="DOI" prefix="doi: " suffix="."/>
-        </if>
-      </choose>
+      <text variable="DOI" prefix="doi: " suffix="."/>
     </layout>
   </bibliography>
 </style>
