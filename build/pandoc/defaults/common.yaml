@@ -11,5 +11,5 @@ filters:
 wrap: preserve
 metadata:
   csl: build/assets/style.csl
-  # csl: https://github.com/citation-style-language/styles/raw/256250be9c6ab34bba4a070b5c050f7848b37beb/gigascience.csl
+  # csl: build/assets/gigascience.csl
   link-citations: true
