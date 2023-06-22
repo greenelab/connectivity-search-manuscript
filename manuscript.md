@@ -44,8 +44,8 @@ header-includes: |
   <meta name="dc.date" content="2023-06-22" />
   <meta name="citation_publication_date" content="2023-06-22" />
   <meta property="article:published_time" content="2023-06-22" />
-  <meta name="dc.modified" content="2023-06-22T13:53:56+00:00" />
-  <meta property="article:modified_time" content="2023-06-22T13:53:56+00:00" />
+  <meta name="dc.modified" content="2023-06-22T23:52:57+00:00" />
+  <meta property="article:modified_time" content="2023-06-22T23:52:57+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -112,9 +112,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -139,9 +139,9 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@46e165b](https://github.com/greenelab/connectivity-search-manuscript/tree/46e165b38bf3bf03e17dbdcaa19eae7c396bc284)
+from [greenelab/connectivity-search-manuscript@7b4b9f1](https://github.com/greenelab/connectivity-search-manuscript/tree/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea)
 on June 22, 2023.
 </em></small>
 
@@ -836,12 +836,12 @@ $$
 
 Overlapping repeats _XaYbXcY_ (e.g. _CtDtCtD_) require several corrections ($\odot$ denotes the Hadamard product).
 
-\begin{align}
+\begin{align*}
 \mathrm{D}(\mathit{XaYbXcY}) =\ &\mathrm{D}(\mathit{XaY})\  \mathrm{D}(\mathit{YbX})\  \mathrm{D}(\mathit{XcY}) \\
 &- \mathrm{diag}(\mathrm{D}(\mathit{XaY})\  \mathrm{D}(\mathit{YbX}))\  \mathrm{D}(\mathit{XcY}) \\
 &- \mathrm{D}(\mathit{XaY})\  \mathrm{diag}(\mathrm{D}(\mathit{YbX})\  \mathrm{D}(\mathit{XcY})) \\
 &+ \mathrm{D}(\mathit{XaY})\  \odot \mathrm{D}(\mathit{YbX})^T\  \odot \mathrm{D}(\mathit{XcY})
-\end{align}
+\end{align*}
 
 Most paths of length six---and many even longer paths---can be represented hierarchically using these patterns.
 For example, a long metapath pattern of the form CBABACXYZ can be segmented as (C(BABA)C)XYZ using patterns for short and overlapping repeats and can be computed using the tools we developed.
@@ -1008,10 +1008,10 @@ $$
 The gamma-hurdle distribution is defined over the support [0, ∞).
 The probability of a draw, X, from the gamma-hurdle distribution is given as follows:
 
-\begin{align}
+\begin{align*}
   P(X = 0) &= 1 - \lambda \\
   P(X \in A; A \subseteq (0, \infty)) &= \frac{\lambda \beta^\alpha}{\Gamma(\alpha)}  \int  _{x \in A} \bigg( x^{\alpha - 1} e^{-\beta x} \bigg)
-\end{align}
+\end{align*}
 
 We estimate all three parameters using the method of moments (using Bessel's correction to estimate the second moment).
 As a validation of our method,
@@ -1020,11 +1020,11 @@ we [compared](https://github.com/greenelab/connectivity-search-analyses/blob/1c6
 and found excellent concordance between the methods.
 Let *N* be the number of permuted DWPC values, and *n* the number of nonzero values.
 
-\begin{align}
+\begin{align*}
   \hat{\lambda} &= \frac{n}{N} \\
   \hat{\alpha} &= \frac{(n - 1) \sum x_i}{n \sum (x_i^2) - (\sum x_i)^2} \\
   \hat{\beta} &= \frac{n - 1}{n} \frac{(\sum x_i)^2}{n \sum (x_i)^2 - (\sum x_i)^2}
-\end{align}
+\end{align*}
 
 Finally, we compute a p-value for each DWPC value, *t*.
 

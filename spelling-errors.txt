@@ -30,7 +30,7 @@ DaGiGpPW
 DaGpPWpG
 danich
 dataset
-datasets
+Datasets
 DdGpPW
 deepwalk
 Dev
@@ -67,7 +67,7 @@ GreeneScientist
 Hadamard
 Hao
 HD
-Heil
+heil
 hneem
 Hu
 interpretability
@@ -121,7 +121,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 YH
 yhao
 YhaoC
