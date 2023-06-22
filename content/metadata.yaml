@@ -24,8 +24,8 @@ authors:
     twitter: dhimmel
     email: daniel.himmelstein@gmail.com
     affiliations:
-      - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
-      - Related Sciences
+      - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA
+      - Related Sciences, Denver, CO 80202, USA
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4552)
       - Pfizer Worldwide Research, Development, and Medical
@@ -50,8 +50,8 @@ authors:
     twitter: ZietzMichael
     email: michael.zietz@gmail.com
     affiliations:
-      - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
-      - Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
+      - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA
+      - Department of Biomedical Informatics, Columbia University, New York, NY 10032, USA
     roles:
       - Conceptualization
       - Data curation
@@ -68,8 +68,8 @@ authors:
     orcid: 0000-0002-4655-3773
     email: vince.rubinetti@gmail.com
     affiliations:
-      - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
-      - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+      - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA
+      - Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA
     roles:
       - Data curation
       - Methodology
@@ -84,8 +84,8 @@ authors:
     twitter: kylekloster
     email: kyle.kloster@gmail.com
     affiliations:
-      - Carbon, Inc.
-      - Department of Computer Science, North Carolina State University, Raleigh, North Carolina, United States of America
+      - Carbon, Inc., Redwood City, CA 94063, USA
+      - Department of Computer Science, North Carolina State University, Raleigh, NC 27606, USA
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4560)
     roles:
@@ -99,7 +99,7 @@ authors:
     twitter: autobencoder
     email: benheil@pennmedicine.upenn.edu
     affiliations:
-      - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
+      - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4552)
     roles:
@@ -114,8 +114,8 @@ authors:
     orcid: 0000-0003-4297-8747
     email: faisal.alquaddoomi@cuanschutz.edu
     affiliations:
-      - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America
-      - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+      - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA
+      - Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA
     roles:
       - Resources
       - Software
@@ -126,7 +126,7 @@ authors:
     twitter: null
     email: dongbo.hu@gmail.com
     affiliations:
-      - Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
+      - Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia, PA 19104, USA
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4552)
     roles:
@@ -140,7 +140,7 @@ authors:
     twitter: null
     email: dnicholson329@gmail.com
     affiliations:
-      - Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
+      - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA
     funders:
       - The Gordon and Betty Moore Foundation (GBMF4552)
       - The National Institutes of Health (T32 HG000046)
@@ -154,7 +154,7 @@ authors:
     twitter: YhaoC
     email: yun.hao@pennmedicine.upenn.edu
     affiliations:
-      - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA
+      - Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
     roles:
       - Investigation
       - Visualization
@@ -165,7 +165,7 @@ authors:
     twitter: BlairDSullivan
     email: sullivan@cs.utah.edu
     affiliations:
-      - School of Computing, University of Utah, Salt Lake City, Utah, USA
+      - School of Computing, University of Utah, Salt Lake City, UT 84112, USA
     roles:
       - Conceptualization
       - Funding acquisition
@@ -178,8 +178,8 @@ authors:
     twitter: mikenagle84
     email: mike_nagle@eisai.com
     affiliations:
-      - Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc, Cambridge, Massachusetts, United States of America
-      - Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc, Cambridge, Massachusetts, United States of America
+      - Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc., Cambridge, MA 02139, USA
+      - Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc., Cambridge, MA 02140, USA
     roles:
       - Investigation
       - Resources
@@ -196,9 +196,9 @@ authors:
       - Pfizer Worldwide Research, Development, and Medical
       - the Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765)
     affiliations:
-      - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America
-      - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America
-      - Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+      - Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA
+      - Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA
+      - Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA
     roles:
       - Conceptualization
       - Funding acquisition
