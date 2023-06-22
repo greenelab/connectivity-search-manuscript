@@ -64,8 +64,8 @@
   <meta name="dc.date" content="2023-06-22" />
   <meta name="citation_publication_date" content="2023-06-22" />
   <meta property="article:published_time" content="2023-06-22" />
-  <meta name="dc.modified" content="2023-06-22T13:53:56+00:00" />
-  <meta property="article:modified_time" content="2023-06-22T13:53:56+00:00" />
+  <meta name="dc.modified" content="2023-06-22T23:52:57+00:00" />
+  <meta property="article:modified_time" content="2023-06-22T23:52:57+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -132,9 +132,9 @@
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -154,9 +154,9 @@
 <p><em>A DOI-citable version of this manuscript is available at <a href="https://doi.org/10.1101/2023.01.05.522941" class="uri">https://doi.org/10.1101/2023.01.05.522941</a></em>.</p>
 <p><small><em>
 This manuscript
-(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/">permalink</a>)
+(<a href="https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/46e165b38bf3bf03e17dbdcaa19eae7c396bc284">greenelab/connectivity-search-manuscript@46e165b</a>
+from <a href="https://github.com/greenelab/connectivity-search-manuscript/tree/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea">greenelab/connectivity-search-manuscript@7b4b9f1</a>
 on June 22, 2023.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -807,12 +807,12 @@ Additionally, let <span class="math inline">\(\mathrm{diag}(A)\)</span> represen
 \mathrm{D}(\mathit{XaYbYcX}) = \mathrm{D}(\mathit{XaY}) \mathrm{D}(\mathit{YbY}) \mathrm{D}(\mathit{YcX}) - \mathrm{diag}(\mathrm{D}(\mathit{XaY}) (\mathrm{D}(\mathit{YbY}) \mathrm{D}(\mathit{YcX}))
 \]</span></p>
 <p>Overlapping repeats <em>XaYbXcY</em> (e.g. <em>CtDtCtD</em>) require several corrections (<span class="math inline">\(\odot\)</span> denotes the Hadamard product).</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \mathrm{D}(\mathit{XaYbXcY}) =\ &amp;\mathrm{D}(\mathit{XaY})\  \mathrm{D}(\mathit{YbX})\  \mathrm{D}(\mathit{XcY}) \\
 &amp;- \mathrm{diag}(\mathrm{D}(\mathit{XaY})\  \mathrm{D}(\mathit{YbX}))\  \mathrm{D}(\mathit{XcY}) \\
 &amp;- \mathrm{D}(\mathit{XaY})\  \mathrm{diag}(\mathrm{D}(\mathit{YbX})\  \mathrm{D}(\mathit{XcY})) \\
 &amp;+ \mathrm{D}(\mathit{XaY})\  \odot \mathrm{D}(\mathit{YbX})^T\  \odot \mathrm{D}(\mathit{XcY})
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>Most paths of length six—and many even longer paths—can be represented hierarchically using these patterns.
 For example, a long metapath pattern of the form CBABACXYZ can be segmented as (C(BABA)C)XYZ using patterns for short and overlapping repeats and can be computed using the tools we developed.
 In addition to these matrix routines—which advantageously count rather than enumerate paths—we implemented a general matrix method for any metapath type.
@@ -958,21 +958,21 @@ X \sim \Gamma_H(\lambda, \alpha, \beta)
 \]</span></p>
 <p>The gamma-hurdle distribution is defined over the support [0, ∞).
 The probability of a draw, X, from the gamma-hurdle distribution is given as follows:</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
   P(X = 0) &amp;= 1 - \lambda \\
   P(X \in A; A \subseteq (0, \infty)) &amp;= \frac{\lambda \beta^\alpha}{\Gamma(\alpha)}  \int  _{x \in A} \bigg( x^{\alpha - 1} e^{-\beta x} \bigg)
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>We estimate all three parameters using the method of moments (using Bessel’s correction to estimate the second moment).
 As a validation of our method,
 we <a href="https://github.com/greenelab/connectivity-search-analyses/blob/1c6827ce2544c17cef42bbccf098a312f2c44f97/explore/gamma-hurdle/parameter_estimates.ipynb">compared</a> our method of moments parameter estimates to approximate maximum likelihood estimates
 (gamma distribution parameters do not have closed-form maximum likelihood estimates)
 and found excellent concordance between the methods.
 Let <em>N</em> be the number of permuted DWPC values, and <em>n</em> the number of nonzero values.</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
   \hat{\lambda} &amp;= \frac{n}{N} \\
   \hat{\alpha} &amp;= \frac{(n - 1) \sum x_i}{n \sum (x_i^2) - (\sum x_i)^2} \\
   \hat{\beta} &amp;= \frac{n - 1}{n} \frac{(\sum x_i)^2}{n \sum (x_i)^2 - (\sum x_i)^2}
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>Finally, we compute a p-value for each DWPC value, <em>t</em>.</p>
 <p><span class="math display">\[
 p = P(X ≥ t) = \frac{\beta^\alpha}{\Gamma(\alpha)} \int_t^\infty x^{\alpha - 1} \exp(-\beta x) dx
