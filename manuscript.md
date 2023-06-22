@@ -15,7 +15,7 @@ keywords:
 - matrix multiplication
 - DWPC
 lang: en-US
-date-meta: '2023-06-01'
+date-meta: '2023-06-22'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -41,11 +41,11 @@ header-includes: |
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-06-01" />
-  <meta name="citation_publication_date" content="2023-06-01" />
-  <meta property="article:published_time" content="2023-06-01" />
-  <meta name="dc.modified" content="2023-06-01T14:15:29+00:00" />
-  <meta property="article:modified_time" content="2023-06-01T14:15:29+00:00" />
+  <meta name="dc.date" content="2023-06-22" />
+  <meta name="citation_publication_date" content="2023-06-22" />
+  <meta property="article:published_time" content="2023-06-22" />
+  <meta name="dc.modified" content="2023-06-22T13:53:56+00:00" />
+  <meta property="article:modified_time" content="2023-06-22T13:53:56+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -53,57 +53,57 @@ header-includes: |
   <meta name="citation_journal_title" content="Manubot" />
   <meta name="citation_technical_report_institution" content="Manubot" />
   <meta name="citation_author" content="Daniel S. Himmelstein" />
-  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
-  <meta name="citation_author_institution" content="Related Sciences" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_institution" content="Related Sciences, Denver, CO 80202, USA" />
   <meta name="citation_author_orcid" content="0000-0002-3012-7446" />
   <meta name="twitter:creator" content="@dhimmel" />
   <meta name="citation_author" content="Michael Zietz" />
-  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
-  <meta name="citation_author_institution" content="Department of Biomedical Informatics, Columbia University, New York, New York, United States of America" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_institution" content="Department of Biomedical Informatics, Columbia University, New York, NY 10032, USA" />
   <meta name="citation_author_orcid" content="0000-0003-0539-630X" />
   <meta name="twitter:creator" content="@ZietzMichael" />
   <meta name="citation_author" content="Vincent Rubinetti" />
-  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
-  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
   <meta name="citation_author_orcid" content="0000-0002-4655-3773" />
   <meta name="citation_author" content="Kyle Kloster" />
-  <meta name="citation_author_institution" content="Carbon, Inc." />
-  <meta name="citation_author_institution" content="Department of Computer Science, North Carolina State University, Raleigh, North Carolina, United States of America" />
+  <meta name="citation_author_institution" content="Carbon, Inc., Redwood City, CA 94063, USA" />
+  <meta name="citation_author_institution" content="Department of Computer Science, North Carolina State University, Raleigh, NC 27606, USA" />
   <meta name="citation_author_orcid" content="0000-0001-5678-7197" />
   <meta name="twitter:creator" content="@kylekloster" />
   <meta name="citation_author" content="Benjamin J. Heil" />
-  <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania" />
+  <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
   <meta name="citation_author_orcid" content="0000-0002-2811-1031" />
   <meta name="twitter:creator" content="@autobencoder" />
   <meta name="citation_author" content="Faisal Alquaddoomi" />
-  <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
-  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
+  <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
+  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
   <meta name="citation_author_orcid" content="0000-0003-4297-8747" />
   <meta name="citation_author" content="Dongbo Hu" />
-  <meta name="citation_author_institution" content="Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
+  <meta name="citation_author_institution" content="Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia, PA 19104, USA" />
   <meta name="citation_author_orcid" content="0000-0001-7870-8242" />
   <meta name="twitter:creator" content="@None" />
   <meta name="citation_author" content="David N. Nicholson" />
-  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA" />
   <meta name="citation_author_orcid" content="0000-0003-0002-5761" />
   <meta name="twitter:creator" content="@None" />
   <meta name="citation_author" content="Yun Hao" />
-  <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA" />
+  <meta name="citation_author_institution" content="Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA" />
   <meta name="citation_author_orcid" content="0000-0002-1684-0085" />
   <meta name="twitter:creator" content="@YhaoC" />
   <meta name="citation_author" content="Blair D. Sullivan" />
-  <meta name="citation_author_institution" content="School of Computing, University of Utah, Salt Lake City, Utah, USA" />
+  <meta name="citation_author_institution" content="School of Computing, University of Utah, Salt Lake City, UT 84112, USA" />
   <meta name="citation_author_orcid" content="0000-0001-7720-6208" />
   <meta name="twitter:creator" content="@BlairDSullivan" />
   <meta name="citation_author" content="Michael W. Nagle" />
-  <meta name="citation_author_institution" content="Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc, Cambridge, Massachusetts, United States of America" />
-  <meta name="citation_author_institution" content="Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc, Cambridge, Massachusetts, United States of America" />
+  <meta name="citation_author_institution" content="Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc., Cambridge, MA 02139, USA" />
+  <meta name="citation_author_institution" content="Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc., Cambridge, MA 02140, USA" />
   <meta name="citation_author_orcid" content="0000-0002-4677-7582" />
   <meta name="twitter:creator" content="@mikenagle84" />
   <meta name="citation_author" content="Casey S. Greene" />
-  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America" />
-  <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
-  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America" />
+  <meta name="citation_author_institution" content="Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA" />
+  <meta name="citation_author_institution" content="Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
+  <meta name="citation_author_institution" content="Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA" />
   <meta name="citation_author_orcid" content="0000-0001-8713-9213" />
   <meta name="twitter:creator" content="@GreeneScientist" />
   <link rel="canonical" href="https://greenelab.github.io/connectivity-search-manuscript/" />
@@ -112,9 +112,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/79b83d77cd74c8914bba55bf1beeb99ace4c9d2a/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/79b83d77cd74c8914bba55bf1beeb99ace4c9d2a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/79b83d77cd74c8914bba55bf1beeb99ace4c9d2a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -139,10 +139,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/79b83d77cd74c8914bba55bf1beeb99ace4c9d2a/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/46e165b38bf3bf03e17dbdcaa19eae7c396bc284/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@79b83d7](https://github.com/greenelab/connectivity-search-manuscript/tree/79b83d77cd74c8914bba55bf1beeb99ace4c9d2a)
-on June 1, 2023.
+from [greenelab/connectivity-search-manuscript@46e165b](https://github.com/greenelab/connectivity-search-manuscript/tree/46e165b38bf3bf03e17dbdcaa19eae7c396bc284)
+on June 22, 2023.
 </em></small>
 
 
@@ -164,7 +164,7 @@ on June 1, 2023.
     [dhimmel](https://twitter.com/dhimmel)
     <br>
   <small>
-     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Related Sciences
+     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA; Related Sciences, Denver, CO 80202, USA
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552); Pfizer Worldwide Research, Development, and Medical
   </small>
 
@@ -178,7 +178,7 @@ on June 1, 2023.
     [ZietzMichael](https://twitter.com/ZietzMichael)
     <br>
   <small>
-     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biomedical Informatics, Columbia University, New York, New York, United States of America
+     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA; Department of Biomedical Informatics, Columbia University, New York, NY 10032, USA
   </small>
 
 + **Vincent Rubinetti**
@@ -189,7 +189,7 @@ on June 1, 2023.
     [vincerubinetti](https://github.com/vincerubinetti)
     <br>
   <small>
-     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA; Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA
   </small>
 
 + **Kyle Kloster**
@@ -202,7 +202,7 @@ on June 1, 2023.
     [kylekloster](https://twitter.com/kylekloster)
     <br>
   <small>
-     Carbon, Inc.; Department of Computer Science, North Carolina State University, Raleigh, North Carolina, United States of America
+     Carbon, Inc., Redwood City, CA 94063, USA; Department of Computer Science, North Carolina State University, Raleigh, NC 27606, USA
      · Funded by The Gordon and Betty Moore Foundation (GBMF4560)
   </small>
 
@@ -216,7 +216,7 @@ on June 1, 2023.
     [autobencoder](https://twitter.com/autobencoder)
     <br>
   <small>
-     Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania
+     Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552)
   </small>
 
@@ -228,7 +228,7 @@ on June 1, 2023.
     [falquaddoomi](https://github.com/falquaddoomi)
     <br>
   <small>
-     Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+     Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA; Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA
   </small>
 
 + **Dongbo Hu**
@@ -239,7 +239,7 @@ on June 1, 2023.
     [dongbohu](https://github.com/dongbohu)
     <br>
   <small>
-     Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
+     Department of Pathology, Perelman School of Medicine University of Pennsylvania, Philadelphia, PA 19104, USA
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552)
   </small>
 
@@ -251,7 +251,7 @@ on June 1, 2023.
     [danich1](https://github.com/danich1)
     <br>
   <small>
-     Department of Systems Pharmacology and Translational Therapeutics, Perelman School of Medicine University of Pennsylvania, Philadelphia PA, USA
+     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA
      · Funded by The Gordon and Betty Moore Foundation (GBMF4552); The National Institutes of Health (T32 HG000046)
   </small>
 
@@ -265,7 +265,7 @@ on June 1, 2023.
     [YhaoC](https://twitter.com/YhaoC)
     <br>
   <small>
-     Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia PA, USA
+     Genomics and Computational Biology Graduate Group, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA
   </small>
 
 + **Blair D. Sullivan**
@@ -278,7 +278,7 @@ on June 1, 2023.
     [BlairDSullivan](https://twitter.com/BlairDSullivan)
     <br>
   <small>
-     School of Computing, University of Utah, Salt Lake City, Utah, USA
+     School of Computing, University of Utah, Salt Lake City, UT 84112, USA
   </small>
 
 + **Michael W. Nagle**
@@ -291,7 +291,7 @@ on June 1, 2023.
     [mikenagle84](https://twitter.com/mikenagle84)
     <br>
   <small>
-     Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc, Cambridge, Massachusetts, United States of America; Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc, Cambridge, Massachusetts, United States of America
+     Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc., Cambridge, MA 02139, USA; Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc., Cambridge, MA 02140, USA
   </small>
 
 + **Casey S. Greene**
@@ -304,7 +304,7 @@ on June 1, 2023.
     [GreeneScientist](https://twitter.com/GreeneScientist)
     <br>
   <small>
-     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, Pennsylvania, United States of America; Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, Colorado, United States of America; Center for Health AI, University of Colorado School of Medicine, Aurora, Colorado, United States of America
+     Department of Systems Pharmacology and Translational Therapeutics, University of Pennsylvania, Philadelphia, PA 19104, USA; Department of Biochemistry and Molecular Genetics, University of Colorado School of Medicine, Aurora, CO 80045, USA; Center for Health AI, University of Colorado School of Medicine, Aurora, CO 80045, USA
      · Funded by the National Human Genome Research Institute (R01 HG010067); the National Cancer Institute (R01 CA237170); the Gordon and Betty Moore Foundation (GBMF 4552); Pfizer Worldwide Research, Development, and Medical; the Eunice Kennedy Shriver National Institute of Child Health and Human Development (R01 HD109765)
   </small>
 
