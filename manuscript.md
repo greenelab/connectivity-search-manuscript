@@ -15,7 +15,7 @@ keywords:
 - matrix multiplication
 - DWPC
 lang: en-US
-date-meta: '2023-06-22'
+date-meta: '2023-06-23'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -41,11 +41,11 @@ header-includes: |
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-06-22" />
-  <meta name="citation_publication_date" content="2023-06-22" />
-  <meta property="article:published_time" content="2023-06-22" />
-  <meta name="dc.modified" content="2023-06-22T23:52:57+00:00" />
-  <meta property="article:modified_time" content="2023-06-22T23:52:57+00:00" />
+  <meta name="dc.date" content="2023-06-23" />
+  <meta name="citation_publication_date" content="2023-06-23" />
+  <meta property="article:published_time" content="2023-06-23" />
+  <meta name="dc.modified" content="2023-06-23T01:49:10+00:00" />
+  <meta property="article:modified_time" content="2023-06-23T01:49:10+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -112,9 +112,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/d0bfc6f58f15a66c2eff487b265945adbcc99df4/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d0bfc6f58f15a66c2eff487b265945adbcc99df4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/d0bfc6f58f15a66c2eff487b265945adbcc99df4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -139,10 +139,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/d0bfc6f58f15a66c2eff487b265945adbcc99df4/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@7b4b9f1](https://github.com/greenelab/connectivity-search-manuscript/tree/7b4b9f1d5d363ffb56a8b1d8ed59f8e955de67ea)
-on June 22, 2023.
+from [greenelab/connectivity-search-manuscript@d0bfc6f](https://github.com/greenelab/connectivity-search-manuscript/tree/d0bfc6f58f15a66c2eff487b265945adbcc99df4)
+on June 23, 2023.
 </em></small>
 
 
@@ -328,7 +328,7 @@ One such example, Hetionet connects 11 types of nodes
 Previous work has demonstrated that supervised machine learning methods applied to such networks can identify drug repurposing opportunities.
 However, a training set of known relationships does not exist for many types of node pairs,
 even when it would be useful to examine how nodes of those types are meaningfully connected.
-For example, users may be curious not only how metformin is related to breast cancer,
+For example, users may be curious about not only how metformin is related to breast cancer
 but also how a given gene might be involved in insomnia.
 
 **Findings**
@@ -338,7 +338,7 @@ Several optimizations were required to precompute significant instances of node 
 
 **Conclusion**
 We implemented the method on Hetionet and provide an online interface at <https://het.io/search>.
-We provide an open source implementation of these methods in our new Python package named [hetmatpy](https://github.com/hetio/hetmatpy "Python package for matrix storage and operations on hetnets").
+We provide an open-source implementation of these methods in our new Python package named [hetmatpy](https://github.com/hetio/hetmatpy "Python package for matrix storage and operations on hetnets").
 
 
 ## Introduction {.page_break_before}
@@ -386,8 +386,8 @@ Each column represents a metapath, labeled with its abbreviation.
 \
 Feature values are degree-weighted path counts (abbreviated DWPCs, transformed and standardized),
 which assess the connectivity along the specified metapath between the specific compound and disease.
-Green colored values indicate above-average connectivity,
-whereas blue values indicate below average connectivity.
+Green values indicate above-average connectivity,
+whereas blue values indicate below-average connectivity.
 In general, positives have greater connectivity for the selected metapaths than negatives.
 Rephetio used a logistic regression model to learn the effect of each type of connectivity (feature) on the likelihood that a compound treats a disease.
 The model predicts whether a compound–disease pair is a treatment based on its features,
@@ -396,11 +396,11 @@ but requires supervision in the form of known treatments.
 ](https://github.com/greenelab/connectivity-search-manuscript/raw/f98c3470a8bf8f40f5f6aed2794c6ea66b93b14b/content/media/rephetio/metagraph-and-features.png){#fig:rephetio width="100%" .white}
 
 Project Rephetio successfully predicted treatments,
-including those under investigation by clinical trail.
+including those under investigation by clinical trial.
 However, two challenges limit the applicability of Rephetio.
 First, Rephetio required known labels (i.e. treatment status) to train a model.
 Hence, the approach cannot be applied to domains where training labels do not exist.
-Second, the DWPC metric used to assess connectivity is sensitive to node degree.
+Second, the degree-weighted path count (DWPC) metric used to assess connectivity is sensitive to node degree.
 The Rephetio approach was incapable of detecting whether a high DWPC score indicated meaningful connectivity above the level expected by the background network degrees.
 Here we develop Hetnet connectivity search, which defines a null distribution for DWPCs that accounts for degree and enables detecting meaningful hetnet connectivity without training labels.
 
@@ -451,7 +451,7 @@ Once these dense vectors have been produced, quantitative scores that measure no
 These approaches have been quite successful in determining node relatedness.
 Yet, they only state _whether_ two nodes are related and fail to explain _why_ two nodes are related.
 
-Explaining why two nodes are related is a non-trivial task because approaches must output more than a simple similarity score.
+Explaining why two nodes are related is a nontrivial task because approaches must output more than a simple similarity score.
 The first group of approaches output a list of ranked paths that are most relevant between two nodes [@recap; @fairy; @twitter-kg]. 
 For example, the FAIRY framework explains for why items appear on a user's social media feed based on a network of users and content classes (e.g. categories, user posts, songs) [@fairy].
 ESPRESSO explains how two sets of nodes are related by returning subgraphs [@espresso].
@@ -465,10 +465,10 @@ The authors also created [DrugMechDB](https://sulab.github.io/DrugMechDB/) with 
 Metapath coefficients were used to rank paths, using DrugMechDB as validation.
 The method generally performed well, although interpretability was challenging when "hundreds, or thousands of paths ranked above the mechanistic path in DrugMechDB" [@doi:10.1093/bioinformatics/btac205].
 To address this issue, the study explored additional path filters, such as filtering for paths that traverse known drug targets, and dimensionality reduction by aggregating paths across intermediate nodes and summing the path weights.
-Refinements to path scoring techniques might also be helpful solutions in this context.
+Refinements to path-scoring techniques might also be helpful solutions in this context.
 
 Hetnet connectivity search explains how two nodes are related in an unsupervised manner that captures the semantic richness of edge type and returns results in the form of both metapaths and paths.
-Our open source implementation, including for a query and visualization webserver, was designed with scalability and responsiveness in mind allowing in-browser exploration.
+Our open-source implementation, including for a query and visualization webserver, was designed with scalability and responsiveness in mind allowing in-browser exploration.
 
 ## Findings {.page_break_before}
 
@@ -486,8 +486,8 @@ Each metaedge is represented by a distinct adjacency matrix,
 which can be either a dense Numpy array or sparse SciPy matrix (see [HetMat architecture]).
 Adjacency matrices are stored on disk and loaded in a lazy manner to help scale the software to hetnets that are too large to fit entirely in memory.
 
-The primary focus of the package is to provide compute-optimized and memory-efficient implementations of path counting algorithms.
-Specifically, the package supports computing _degree-weighted_ path counts (DWPCs),
+The primary focus of the package is to provide compute-optimized and memory-efficient implementations of path-counting algorithms.
+Specifically, the package supports computing DWPCs,
 which can be done efficiently using matrix multiplication
 but require complex adjustments to avoid counting paths with duplicate nodes
 (i.e. to filter walks that are not paths, see [DWPC matrix multiplication algorithms]).
@@ -495,16 +495,16 @@ The package can reuse existing path count computations that span segments of a l
 The package also supports generating null distributions for DWPCs derived from permuted networks,
 see [Degree-grouping of node pairs].
 Since this approach generates too many permuted DWPC values to store on disk,
-our implementation retains summary statistics for each degree-group that allow computation of a [Gamma-hurdle distribution] from which null DWPC _p_-values can be generated.
+our implementation retains summary statistics for each degree group that allow computation of a [gamma-hurdle distribution] from which null DWPC _p_-values can be generated.
 
 ### DWPC null distribution
 
 To assess connectivity between a source and target node,
-we use the DWPC (degree-weighted path count) metric.
+we use the DWPC metric.
 The DWPC is similar to path count (number of paths between the source and target node along a given metapath),
-except that it downweights paths through high degree nodes.
-Rather than using the raw DWPC for a source-metapath-target combination,
-we transform the DWPC across all source-target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling [@doi:10.15363/thinklab.d193].
+except that it downweights paths through high-degree nodes.
+Rather than using the raw DWPC for a source–metapath–target combination,
+we transform the DWPC across all source–target node pairs for a metapath to yield a distribution that is more compact and amenable to modeling [@doi:10.15363/thinklab.d193].
 <!--
 Future work should consider a different method for transforming DWPCs:
 scale by nonzero mean rather than mean.
@@ -532,14 +532,14 @@ we account for degree effects when determining the significance of a DWPC.
 To improve the accuracy of DWPC _p_-values,
 we use fit a [gamma-hurdle distribution] to the null DWPCs.
 In rare cases, there are insufficient nonzero null DWPCs to fit the gamma portion of the null distribution.
-In these cases, we fallback to an empirical calculation as described in [Empirical DWPC p-values].
+In these cases, we fall back to an empirical calculation as described in [Empirical DWPC p-values].
 
 ### Enriched metapaths
 
 For each of the 2,205 metapaths in Hetionet v1.0 with length ≤ 3,
 we computed DWPCs for all node pairs and their corresponding null distributions, see [DWPC and null distribution computation].
 We store the most significant DWPCs as described in [Prioritizing enriched metapaths for database storage],
-which appear as the "precomputed" rows in the webapp metapath table (Figure {@fig:webapp}B & @fig:webapp-metapaths).
+which appear as the "precomputed" rows in the webapp metapath table (Figures {@fig:webapp}B & @fig:webapp-metapaths).
 DWPCs that are not retained by the database can be regenerated on the fly.
 This design allows us to immediately provide users with the metapaths that are most enriched between two query nodes,
 while still allowing on-demand access to the full metrics for all metapaths with length ≤ 3.
@@ -575,7 +575,7 @@ The table includes the following columns:
   The number of DWPCs calculated on permuted networks used to generate a null distribution for the DWPC from the real network.
   Permuted DWPCs are aggregated for all permuted node pairs with the same degrees as the source and target node.
 - **# non-0 DWPCs**:
-  The number of permuted DWPCs from '# of DWPCs' column that were nonzero.
+  The number of permuted DWPCs from the “# of DWPCs” column that were nonzero.
   Nonzero DWPCs indicate at least one path between the source and target node existed in the permuted network.
 - **non-0 mean**:
   The mean of nonzero permuted DWPCs.
@@ -593,7 +593,7 @@ it is helpful to see the specific paths that contribute highly to such enrichmen
 Since the DWPC is a summation of a path metric (called the path degree product),
 it is straightforward to calculate the proportion of a DWPC attributable to an individual path.
 The webapp allows users to select a metapath to populate a table of the corresponding paths.
-These paths are generated on-the-fly through a Cypher query to the Hetionet Neo4j database.
+These paths are generated on the fly through a Cypher query to the Hetionet Neo4j database.
 
 It is desirable to have a consolidated view of paths across multiple metapaths.
 Therefore, we calculate a _path score_ heuristic,
@@ -607,7 +607,7 @@ To illustrate, the paths webapp panel includes the following information (Figure
   Duplicate nodes are not permitted in paths.
 - **path score**:
   A metric of how meaningful the path is in describing the connectivity between the source and target node.
-  The score combines the magnitude of the metapath's p-value with the percent of the DWPC contributed by the path.
+  The score combines the magnitude of the metapath's p-value with the percentage of the DWPC contributed by the path.
 - **% of DWPC**
   The contribution of the path to the DWPC for its metapath.
   This metric compares the importance of all paths of the same metapath from the source node to the target node.
@@ -663,7 +663,7 @@ The user selects 8 paths (1 from a subsequent page of results) to show in the gr
 **D.**
 A subgraph displays the previously selected paths.
 The user improves on the automated layout by repositioning nodes.
-Clicking an edge displays its properties, informing the user that association between Creutzfeldt-Jakob disease and _NPAS2_ was detected by GWAS.
+Clicking an edge displays its properties, informing the user that association between Creutzfeldt–Jakob disease and _NPAS2_ was detected by genome-wide association study.
 <!--
   This example is also used at https://slides.com/dhimmel/rocky2019#/4
   More info at https://github.com/greenelab/connectivity-search-manuscript/issues/7
@@ -675,7 +675,7 @@ Clicking an edge displays its properties, informing the user that association be
 
 ## Discussion {.page_break_before}
 
-In this study, we introduce a search engine for hetnet connectivity between two nodes that returns results in realtime.
+In this study, we introduce a search engine for hetnet connectivity between two nodes that returns results in real time.
 An interactive webapp helps users explore node connectivity by ranking metapaths and paths,
 while visualizing multiple paths in a subgraph.
 
@@ -683,7 +683,7 @@ We made several methodological contributions to support this application.
 We developed optimized algorithms for computing DWPCs using matrix multiplication.
 In addition, we created a method for estimating a _p_-value for a DWPC,
 using null DWPCs computed on permuted hetnets.
-We implemented these advances in the open-source hetmatpy Python package and HetMat data structure to provide highly-optimized computational infrastructure for representing and reasoning on hetnets using matrices.
+We implemented these advances in the open-source hetmatpy Python package and HetMat data structure to provide highly optimized computational infrastructure for representing and reasoning on hetnets using matrices.
 
 This work lays the foundation for exciting future directions.
 For many queries, a large number of paths are returned.
@@ -708,9 +708,9 @@ The search would compute DWPCs for paths originating on the query nodes.
 The simpler formulation would compute DWPCs for metapaths separately and compare to null distributions from permuted hetnets.
 A more advanced formulation would combine scores across metapaths such that every node in the hetnet would receive a single score capturing its connectivity to the query set.
 This approach would have similar utility to gene set enrichment analysis in that the user could provide a set of genes as input and receive a ranked list of nodes that characterize the function of the query genes.
-However, it would excel in its versatility by returning results of any node type without requiring pre-defined gene sets to match against.
+However, it would excel in its versatility by returning results of any node type without requiring predefined gene sets to match against.
 Some users might be interested in node set transformations where scores for one node type are converted to another node type.
-This approach could take scores for human genes and convert them to side effects, diseases, pathways, etcetera.
+This approach could take scores for human genes and convert them to side effects, diseases, pathways, and so on.
 
 Our work is not without limitations.
 The final application relies on multiple databases and cached computations specific to Hetionet v1.0.
@@ -734,7 +734,7 @@ The network contains 47,031 nodes of [11 types](https://git.dhimmel.com/repheti
 | Anatomy | A | 402 | Anatomical structures, excluding structures that are known not to be found in humans. From [Uberon](http://uberon.github.io/). |
 | Biological Process | BP | 11381 | Larger processes or biological programs accomplished by multiple molecular activities. From [Gene Ontology](http://geneontology.org/). |
 | Cellular Component | CC | 1391 | The locations relative to cellular structures in which a gene product performs a function. From [Gene Ontology](http://geneontology.org/). |
-| Compound | C | 1552 | Approved small molecule compounds with documented chemical structures. From [DrugBank](https://www.drugbank.ca/). |
+| Compound | C | 1552 | Approved small-molecule compounds with documented chemical structures. From [DrugBank](https://www.drugbank.ca/). |
 | Disease | D | 137 | Complex diseases, selected to be distinct and specific enough to be clinically relevant yet general enough to be well annotated. From [Disease Ontology](http://disease-ontology.org/). |
 | Gene | G | 20945 | Protein-coding human genes. From [Entrez Gene](https://www.ncbi.nlm.nih.gov/gene). |
 | Molecular Function | MF | 2884 | Activities that occur at the molecular level, such as "catalysis" or "transport". From [Gene Ontology](http://geneontology.org/). |
@@ -743,8 +743,8 @@ The network contains 47,031 nodes of [11 types](https://git.dhimmel.com/repheti
 | Side Effect | SE | 5734 | Adverse drug reactions. From [SIDER](http://sideeffects.embl.de/)/[UMLS](https://www.nlm.nih.gov/research/umls/). |
 | Symptom | S | 438 | Signs and Symptoms (i.e. clinical abnormalities that can indicate a medical condition). From the [MeSH ontology](https://www.nlm.nih.gov/mesh/meshhome.html). |
 
-Table: **Node types in Hetionet**
-The abbreviation, number of nodes, and description for each of the 11 metanodes in Hetionet v1.0.
+Table: **Node types in Hetionet**,
+including the abbreviation, number of nodes, and description for each of the 11 metanodes in Hetionet v1.0.
 {#tbl:metanodes}
 
 
@@ -770,7 +770,7 @@ A HetMat directory stores a single heterogeneous network, whose data resides in 
    [@hetio-dag; @rephetio],
    but we [renamed](https://github.com/hetio/hetnetpy/issues/40) it to het**net**py for better disambiguation from het**mat**py.
 2. A `nodes` directory containing one file per node type (metanode) that defines each node.
-   Currently, `.tsv` files where each row represents a node are supported.
+   Currently, `.tsv` files in which each row represents a node are supported.
 3. An `edges` directory containing one file per edge type (metadata) that encodes the adjacency matrix.
    The matrix can be serialized using either the Numpy dense format (`.npy`) or SciPy sparse format (`.sparse.npz`).
 
@@ -780,13 +780,13 @@ For example, a certain computation may only require access to a subset of the no
 By only loading the required node and edge types, we reduce memory usage and read times.
 
 Additional subdirectories, such as `path-counts` and `permutations`, store data generated from the HetMat.
-By using consistent paths for generated data, we avoid recomputing data that already exists on disk.
+By using consistent paths for generated data, we avoid recomputing data that already exist on disk.
 A HetMat directory can be zipped for archiving and transfer.
 Users can selectively include generated data in archives.
 Since the primary application of HetMats is to generate computationally demanding measurements on hetnets, the ability to share HetMats with precomputed data is paramount.
 
 The [`HetMat`](https://hetio.github.io/hetmatpy/reference/hetmatpy/hetmat/#hetmat) class implements the above logic.
-A `hetmat_from_graph` function creates a HetMat object and directory on disk from the pre-existing `hetnetpy.hetnet.Graph` format.
+A `hetmat_from_graph` function creates a HetMat object and directory on disk from the preexisting `hetnetpy.hetnet.Graph` format.
 
 We converted Hetionet v1.0 to HetMat format and uploaded the `hetionet-v1.0.hetmat.zip` archive to the [Hetionet data repository](https://github.com/hetio/hetionet/tree/master/hetnet/matrix).
 
@@ -801,17 +801,17 @@ Hence, they are computationally cumbersome despite optimizations [@doi:10.15363/
 Since our methods only require degree-weighted counts, not fully enumerated paths, adjacency matrix multiplication presents an alternative approach.
 Multiplication alone, however, counts walks rather than paths, meaning paths traversing a single node multiple times are counted.
 When computing network-based features to quantify the relationship between a source and target node,
-we would like to exclude traversing duplicate nodes (i.e. paths, not trails nor walks) [@doi:10.15363/thinklab.d134].
+we would like to exclude traversing duplicate nodes (i.e. paths, not trails or walks) [@doi:10.15363/thinklab.d134].
 We developed a suite of algorithms to compute true path counts and DWPCs using matrix multiplication that benefits from the speed advantages of only counting paths.
 
 Our implementation begins by categorizing a metapath according to the pattern of its repeated metanodes, allowing DWPC computation using a specialized order of operations.
 For example, the metapath _DrDtCrC_  is categorized as a set of disjoint repeats, while _DtCtDpC_ is categorized as repeats of the form BABA.
 Many complex repeat patterns can be represented piecewise as simpler patterns, allowing us to compute DWPC for most metapaths up to length 5 and many of length 6 and beyond without enumerating individual paths.
 For example, disjoint groups of repeats like _DrDtCrC_ can be computed as the matrix product of DWPC matrices for _DrD_ and _CrC_.
-Randomly-inserted non-repeated metanodes (e.g. _G_ in _DrDaGaDrD_) require no special treatment and are included in DWPC with matrix multiplication.
+Randomly inserted non-repeated metanodes (e.g. _G_ in _DrDaGaDrD_) require no special treatment and are included in DWPC with matrix multiplication.
 
 After metapath categorization, we segment metapaths according to their repeat pattern, following our order of operations.
-By segmenting and computing recursively, we can efficiently evaluate DWPC on highly complex metapaths, using simple patterns as building-blocks for higher-level patterns.
+By segmenting and computing recursively, we can efficiently evaluate DWPC on highly complex metapaths, using simple patterns as building blocks for higher-level patterns.
 Finally, our specialized DWPC functions are applied to individual segments, the results are combined, and final corrections are made to ensure no repeated nodes are counted.
 The recursive, segmented approach we developed also allowed us to implement a caching strategy that improved speed by avoiding duplicate DWPC computations.
 In summary, the functionality we developed resulted in more than a 175-fold reduction in compute time, allowing us to compute millions of DWPC values across Hetionet [@vagelos-2017].
@@ -886,7 +886,7 @@ Project Rephetio created 5 permuted hetnets [@rephetio; @doi:10.15363/thinklab.d
 which were used to generate a null distribution of classifier performance for each metapath-based feature.
 Here, we aim to create a null distribution for individual DWPCs, which requires vastly more permuted values to estimate with accuracy.
 Therefore, we generated [200 permuted hetnets](https://github.com/hetio/hetionet/tree/a95ae76581af604e91d744680aee3f888fa18887/hetnet/permuted/matrix).
-Permutations 001--005 are those generated by Project Rephetio,
+Permutations 001--005 were those generated by Project Rephetio,
 while permutations 006--200 were generated by this study.
 For the newly generated permutations, we attempted 10 times the number of swaps as edges for a given metaedge,
 which is the default multiplier set by the hetnetpy `permute_graph` function.
@@ -916,7 +916,7 @@ since no other disease besides Alzheimer's had 196 _associates_ edges (source de
 However, for other metapaths with over 5,000 null DWPCs, degree-grouping increased the size of the null distribution by a factor of 25.
 In general, source--target node pairs with lower degrees receive the largest sample size multiplier from degree-grouping.
 This is convenient since low-degree nodes also tend to produce the highest proportion of zero DWPCs, by virtue of low connectivity.
-Consequently, degree grouping excels where it is most needed.
+Consequently, degree-grouping excels where it is most needed.
 
 One final benefit of degree-grouping is that it reduces the disk space required to store null DWPC summary statistics.
 For example, with 20,945 genes in Hetionet v1.0, there exist 438,693,025 gene pairs.
@@ -945,7 +945,7 @@ The rows display the following metrics of the DWPC distribution for all node-pai
 - **# Nonzero DWPCs**:
   The number of nonzero DWPCs values (on average per network to enable comparison).
 - **% Nonzero DWPCs**:
-  Of the total number of DWPCs, the percent that is nonzero.
+  Of the total number of DWPCs, the percentage that is nonzero.
   As node degrees increase, the chance of node pairs having at least one path, and hence a nonzero DWPC, greatly increases.
 - **Mean DWPC**:
   The average value of all DWPCs including zeros.
@@ -966,7 +966,7 @@ Metrics are computed for degree-groups,
 which is a specific pair of source degree (in this case, the source compound's count of CbG edges)
 and target degree (in this case, the target gene's count of GpPW edges).
 On the left, metrics are reported for the unpermuted hetnet and on the right for the 200 permuted hetnets.
-Hence, each cell on right summarizes 200 times the number of DWPCs as the corresponding cell on the left.
+Hence, each cell on the right summarizes 200 times the number of DWPCs as the corresponding cell on the left.
 The colormap is row normalized, such that its intensity peaks for the maximum value of each metric across the unpermuted and permuted values.
 Gray indicates null values.
 ](https://github.com/greenelab/connectivity-search-analyses/raw/15f1925c0481d8e6bab8b0931f48f2fad388c68c/explore/degree-group-analyses.png){#fig:degree-group-metrics}
@@ -990,7 +990,7 @@ These quasi-significance scores ('_p_-values') allow us to identify outlier node
 **From null distribution to _p_-value for DWPCs.**
 Null DWPC distributions are shown for three metapaths between Alzheimer's disease and the circadian rhythm pathway, selected from Figure @fig:webapp-metapaths.
 For each metapath, null DWPCs are computed on 200 permuted hetnets and grouped according to source--target degree.
-Histograms show the null DWPCs for the degree group corresponding to Alzheimer's disease and the circadian rhythm pathway (as noted in the plot titles by deg.)
+Histograms show the null DWPCs for the degree group corresponding to Alzheimer's disease and the circadian rhythm pathway (as noted in the plot titles by deg).
 The proportion of null DWPCs that were zero is calculated, forming the "hurdle" of the null distribution model.
 The nonzero null DWPCs are modeled using a gamma distribution, which can be fit solely from a sample mean and standard deviation.
 The mean of nonzero null DWPCs is denoted with a diamond, with the standard deviation plotted twice as a line in either direction.
@@ -1045,7 +1045,7 @@ We [calculate](https://github.com/hetio/hetmatpy/blob/bc36aa9859c43a1a5fb22808cd
 These cases include when the observed DWPC is zero or when the null DWPC distribution is all zeroes or has only a single distinct nonzero value.
 The empirical _p_-value (_p~empiric~_) equals the proportion of null DPWCs ≥ the observed DWPC.
 
-Since we don't store all null DWPC values,
+Since we do not store all null DWPC values,
 we apply the following criteria to calculate _p~empiric~_ from summary statistics:
 
 1. When the observed DWPC = 0 (no paths of the specified metapath existed between the source and target node),
@@ -1073,18 +1073,18 @@ Here, we use _w_ = 0.5, since taking the square root of degrees has more intuiti
 
 We selected data types for matrix values that would allow for high precision.
 We used 64-bit unsigned integers for path counts and 64-bit floating-point numbers for DWPCs.
-We [considered](https://github.com/greenelab/connectivity-search-analyses/pull/91) using 16-bits or 32-bits per DWPC to reduce memory/storage requirements,
+We [considered](https://github.com/greenelab/connectivity-search-analyses/pull/91) using 16 bits or 32 bits per DWPC to reduce memory/storage requirements,
 but decided against it in case certain applications required greater precision.
 
 We used SciPy sparse for path count and DWPC matrices with density < 0.7, serialized to disk with compression and a `.sparse.npz` extension.
 This format minimizes the space on disk and load time for the entire matrix but does not offer read access to slices.
-We used Numpy 2D arrays for DWPC matrices with density ≥ 0.7, serialized to disk using Numpy's `.npy` format.
+We used Numpy 2 dimensional arrays for DWPC matrices with density ≥ 0.7, serialized to disk using Numpy's `.npy` format.
 We bundled the path count and DWPC matrix files into HetMat archives by metapath length and deposited the archives to Zenodo [@zenodo].
 The archive for length 3 DWPCs was the largest at 131.7 GB.
 
 We also generated null DWPC summary statistics for the 2,205 metapaths,
 which are also available by metapath length from Zenodo as HetMat archives consisting of `.tsv.gz` files [@zenodo].
-Due to degree grouping, null DWPCs summary statistic archives are much smaller than the DWPC archives.
+Due to degree-grouping, null DWPC summary statistic archives are much smaller than the DWPC archives.
 The archive for length 3 null DWPCs summary statistics was 733.1 MB.
 However, the compute required to generate null DWPCs is far greater because there are multiple permuted hetnets (in our case 200).
 As a result, computing and saving all DWPCs took 6 hours,
@@ -1192,7 +1192,7 @@ but are also available for general research use.
 
 We created a static website to serve as the home for the Hetio organization using Jekyll hosted on GitHub Pages (Figure {@fig:website}).
 The source code is available in the [`het.io`](https://github.com/hetio/het.io) repository.
-To make a change to the website, an author simply commits the changes (either directly or through a pull request) to the repository's `gh-pages` branch, and GitHub automatically re-compiles the website and hosts the resulting files at the provided custom domain URL.
+To make a change to the website, an author simply commits the changes (either directly or through a pull request) to the repository's `gh-pages` branch, and GitHub automatically recompiles the website and hosts the resulting files at the provided custom domain URL.
 
 ![
 **Homepage of the Hetio website.**
@@ -1205,16 +1205,16 @@ The redesigned homepage provides a succinct overview of what Hetionet consists o
 We developed the [connectivity search app](https://het.io/search) as a single-page, standalone application using React and associated tools.
 The source code is available in the [`connectivity-search-frontend`](https://github.com/greenelab/connectivity-search-frontend) repository.
 
-Since the rest of the overarching Hetio website was mostly non-interactive content, it was appropriate to construct the bulk of the website in simple static formats like Markdown and HTML using Jekyll, and leave React for implementing the sections of the site that required more complex behavior.
+Since the rest of the overarching Hetio website was mostly noninteractive content, it was appropriate to construct the bulk of the website in simple static formats like Markdown and HTML using Jekyll, and leave React for implementing the sections of the site that required more complex behavior.
 
-We used React's own `create-react-app` command line tool to generate a boilerplate for the app.
+We used React's own `create-react-app` command-line tool to generate a boilerplate for the app.
 This simplified setup, testing, and building pipelines, bypassing time-consuming configuration of things like Webpack and linters.
 Some configuration was necessary to produce non-hashed, consistently named output files like `index.js` that could be easily and reliably referenced by and embedded into the Hetio Jekyll website.
 
 For authoring components, we used React's traditional class syntax.
-At the time of authoring the app, React Hooks were still nascent, thus the simpler and less-verbose functional syntax was not viable.
+At the time of authoring the app, React Hooks were still nascent, and thus the simpler and less-verbose functional syntax was not viable.
 
-While writing this application, we also elected to re-write the pre-existing [Rephetio](https://het.io/repurpose/) and [disease-associated genes](https://het.io/disease-genes/) apps in the same manner.
+While writing this application, we also elected to rewrite the preexisting [Rephetio](https://het.io/repurpose/) and [disease-associated genes](https://het.io/disease-genes/) apps in the same manner.
 We created a custom package of React components and utility functions that could be shared across the multiple interactive apps on the website.
 The package is located at and can be installed from the [`frontend-components`](https://github.com/hetio/frontend-components) repository.
 The package consists of interface "components" (building blocks) like buttons and sortable/searchable/paginated tables as well as utility functions for formatting data and debugging.
@@ -1238,7 +1238,7 @@ D3 satisfied several core requirements:
 3. Pinnable nodes and other physics customizations.
 4. Customizable node and edge drag/hover/select behavior.
 5. Intuitive pan/zoom view that worked on desktop and mobile.
-6. Node and edge appearances that were completely customizable for alignment, text wrapping, color, outlines, fonts, arrowheads, and non-colliding coincident edges.
+6. Node and edge appearances that were completely customizable for alignment, text wrapping, color, outlines, fonts, arrowheads, and noncolliding coincident edges.
 
 ### Visual Design
 
@@ -1246,11 +1246,11 @@ A limited palette of colors was chosen to represent the different types of nodes
 These colors are listed and programmatically accessible in the [`hetionet`](https://github.com/hetio/hetionet) repository under `/describe/styles.json`.
 
 At the time of developing connectivity search, Hetionet already had an established palette of colors (from Project Rephetio).
-To avoid confusion, we were [careful](https://github.com/hetio/hetionet/pull/18) to keep the general hue of each metanode color the same for backwards compatibility,
+To avoid confusion, we were [careful](https://github.com/hetio/hetionet/pull/18) to keep the general hue of each metanode color the same for backward compatibility,
 e.g. genes stayed generally blue, diseases stayed generally brown.
 In this way, this palette selection was more of a modernization/refresh.
 For cohesiveness, accessibility, and aesthetic appeal,
-we used the professionally-curated Material Design palette as a source for the specific color values.
+we used the professionally curated Material Design palette as a source for the specific color values.
 
 The palette is now used in all Hetio-related applications and materials.
 This is not just to maintain a consistent look and feel across the Hetio organization, but to convey clear and precise meaning.
@@ -1258,7 +1258,7 @@ For example, the colors used in the metagraph in Figure {@fig:rephetio}A are exa
 
 Colors in the palette are also used in the Hetio logo (seen in Figure {@fig:website}) and other miscellaneous logos and iconography across the website, to establish an identifiable brand for the Hetio organization as a whole.
 
-### Realtime open science
+### Real-time open science
 
 This study was conducted entirely in the open via public GitHub repositories.
 We used GitHub Issues for discussion, leaving a rich online history of the scholarly process.
@@ -1274,20 +1274,20 @@ We encourage readers with feedback or questions to comment publicly via [GitHub 
 
 ### Software & data availability
 
-*Hetio* is a superset/collection of hetnet-related research, tools, and datasets that, most notably, includes the Hetionet project itself and the connectivity search tool that are the focus of this manuscript.
+*Hetio* is a superset/collection of hetnet-related research, tools, and datasets that, most notably, includes the Hetionet project itself and the connectivity search tool that are the focus of this article.
 Most of the Hetio resources and projects can be found under the [Hetio GitHub organization](https://github.com/hetio), with others being available under the [Greene Lab GitHub organization](https://github.com/greenelab), one of the collaborating groups.
 Information about Hetio is also displayed and disseminated at <https://het.io>, as noted in the [Hetio Website] section. 
 
 #### Availability of Supporting Source Code and Requirements
 
 - Project name: Hetnet Connectivity Search
-- Project home page: <https://het.io/search/>
+- Project homepage: <https://het.io/search/>
 - Operating systems: Platform independent
 - Programming language: Python, Javascript, Cypher
 - Other requirements:
-  refer to specific repositories below for their respective dependency configuration files
+  Refer to specific repositories below for their respective dependency configuration files
 - License:
-  refer to specific repositories below,
+  Refer to specific repositories below,
   but generally software is released under BSD,
   figures and documentation under CC BY,
   and data under CC0.
@@ -1323,7 +1323,7 @@ This study primarily involves the following GitHub repositories:
   Registered at [biotools:hetmatpy](https://bio.tools/hetmatpy) and [RRID:SCR_023409](https://scicrunch.org/resolver/RRID:SCR_023409).
 - [hetio/hetnetpy](https://github.com/hetio/hetnetpy)
   [@https://github.com/hetio/hetnetpy]:
-  Preexisiting python package for representing hetnets.
+  Preexisiting Python package for representing hetnets.
   Dependency of hetmatpy.
   Released on [PyPI](https://pypi.org/project/hetnetpy/).
   Dual licensed under BSD 2-Clause Plus Patent License and CC0 1.0 (public domain dedication).

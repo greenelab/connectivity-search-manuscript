@@ -79,7 +79,6 @@ content/05.main-text.md:352:DWPCs
 content/05.main-text.md:358:DWPCs
 content/05.main-text.md:364:DWPCs
 content/05.main-text.md:365:DWPCs
-content/05.main-text.md:370:etcetera
 content/05.main-text.md:376:underperforms
 content/05.main-text.md:386:dhimmel
 content/05.main-text.md:387:dhimmel
@@ -180,7 +179,6 @@ content/05.main-text.md:732:DWPCs
 content/05.main-text.md:733:greenelab
 content/05.main-text.md:738:Numpy's
 content/05.main-text.md:740:DWPCs
-content/05.main-text.md:744:DWPCs
 content/05.main-text.md:745:DWPCs
 content/05.main-text.md:746:DWPCs
 content/05.main-text.md:747:DWPCs
@@ -207,9 +205,11 @@ content/05.main-text.md:817:greenelab
 content/05.main-text.md:818:greenelab
 content/05.main-text.md:824:greenelab
 content/05.main-text.md:833:greenelab
+content/05.main-text.md:852:recompiles
 content/05.main-text.md:857:greenelab
 content/05.main-text.md:860:Webapps
 content/05.main-text.md:863:greenelab
+content/05.main-text.md:865:noninteractive
 content/05.main-text.md:867:React's
 content/05.main-text.md:868:linters
 content/05.main-text.md:868:Webpack
@@ -226,6 +226,7 @@ content/05.main-text.md:895:customizations
 content/05.main-text.md:895:Pinnable
 content/05.main-text.md:896:Customizable
 content/05.main-text.md:898:customizable
+content/05.main-text.md:898:noncolliding
 content/05.main-text.md:903:programmatically
 content/05.main-text.md:925:greenelab
 content/05.main-text.md:925:greenelab

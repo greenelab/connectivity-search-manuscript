@@ -30,7 +30,7 @@ DaGiGpPW
 DaGpPWpG
 danich
 dataset
-Datasets
+datasets
 DdGpPW
 deepwalk
 Dev
@@ -53,7 +53,6 @@ DWPC’s
 DWPCs
 Eisai
 erogeneous
-etcetera
 falquaddoomi
 FSA
 funders
@@ -67,7 +66,7 @@ GreeneScientist
 Hadamard
 Hao
 HD
-heil
+Heil
 hneem
 Hu
 interpretability
@@ -89,6 +88,8 @@ MZ
 Nagle
 naglem
 Neurogenomics
+noncolliding
+noninteractive
 Numpy’s
 parametrized
 piecewise
@@ -98,6 +99,7 @@ programmatically
 prtransx
 pykeen
 React’s
+recompiles
 Redux
 Redux’s
 RRID
@@ -121,7 +123,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XyZ
+XYZ
 YH
 yhao
 YhaoC
