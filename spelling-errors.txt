@@ -1,6 +1,6 @@
 ABCABC
 Alquaddoomi
-ARNT
+Arnt
 aryl
 autobencoder
 BAAB
@@ -123,7 +123,7 @@ XaXbX
 XaYbXcY
 XaYbYcX
 XwXyZ
-XYZ
+XyZ
 YH
 yhao
 YhaoC
