@@ -1,6 +1,6 @@
 
 # Figure 1
-# TODO export content/media/rephetio/metagraph-and-features.psd to EPS via photo
+cp content/media/rephetio/metagraph-and-features.eps content/media/gigascience/giad047_f1.eps
 
 # Figure 2 and 3
 # see https://github.com/greenelab/connectivity-search-manuscript/issues/7
