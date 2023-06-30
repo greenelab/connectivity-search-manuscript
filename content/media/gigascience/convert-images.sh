@@ -2,15 +2,15 @@
 # Figure 1
 cp content/media/rephetio/metagraph-and-features.eps content/media/gigascience/giad047_f1.eps
 
-# Figure 2 and 3
+# Figure 2
 # see https://github.com/greenelab/connectivity-search-manuscript/issues/7
-# confirm that the source is not vector, hence an EPS version would not make sense
-# Figure 2 content/media/webapp/v3/b.metapaths-expanded.png
-# Figure 3 content/media/webapp/v3/webapp.png
-# Failed approach below:
-# https://cloudconvert.com/psd-to-eps output was bad
-# the following failed due to STDIN - is not in ppmraw or pbmraw format
-# cat content/media/webapp/v3/webapp.psd | ps2eps > content/media/gigascience/giad047_f3.eps
+# The source is not vector, hence an EPS version would not make sense
+cp content/media/webapp/v3/b.metapaths-expanded.png content/media/gigascience/giad047_f2.png
+convert content/media/gigascience/giad047_f2.png content/media/gigascience/giad047_f2.jpg
+
+# Figure 3
+cp content/media/webapp/v3/webapp.png content/media/gigascience/giad047_f3.png
+convert content/media/gigascience/giad047_f3.png content/media/gigascience/giad047_f3.jpg
 
 # Figure 4
 curl --location --silent https://github.com/greenelab/connectivity-search-analyses/raw/15f1925c0481d8e6bab8b0931f48f2fad388c68c/explore/degree-group-analyses.pdf > content/media/gigascience/giad047_f4.pdf
@@ -25,4 +25,5 @@ curl --location --silent https://github.com/greenelab/connectivity-search-backen
 pdftops content/media/gigascience/giad047_f6.pdf content/media/gigascience/giad047_f6.eps
 
 # Figure 7
-# content/media/website/website-homepage.png has raster source
+cp content/media/website/website-homepage.png content/media/gigascience/giad047_f7.png
+convert content/media/gigascience/giad047_f7.png content/media/gigascience/giad047_f7.jpg
