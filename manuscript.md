@@ -15,7 +15,7 @@ keywords:
 - matrix multiplication
 - DWPC
 lang: en-US
-date-meta: '2023-06-23'
+date-meta: '2023-06-30'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -41,11 +41,11 @@ header-includes: |
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-06-23" />
-  <meta name="citation_publication_date" content="2023-06-23" />
-  <meta property="article:published_time" content="2023-06-23" />
-  <meta name="dc.modified" content="2023-06-23T18:32:18+00:00" />
-  <meta property="article:modified_time" content="2023-06-23T18:32:18+00:00" />
+  <meta name="dc.date" content="2023-06-30" />
+  <meta name="citation_publication_date" content="2023-06-30" />
+  <meta property="article:published_time" content="2023-06-30" />
+  <meta name="dc.modified" content="2023-06-30T13:23:14+00:00" />
+  <meta property="article:modified_time" content="2023-06-30T13:23:14+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -97,7 +97,7 @@ header-includes: |
   <meta name="twitter:creator" content="@BlairDSullivan" />
   <meta name="citation_author" content="Michael W. Nagle" />
   <meta name="citation_author_institution" content="Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc., Cambridge, MA 02139, USA" />
-  <meta name="citation_author_institution" content="Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc., Cambridge, MA 02140, USA" />
+  <meta name="citation_author_institution" content="Human Biology Integration Foundation, Deep Human Biology Learning, Eisai Inc., Cambridge, MA 02140, USA" />
   <meta name="citation_author_orcid" content="0000-0002-4677-7582" />
   <meta name="twitter:creator" content="@mikenagle84" />
   <meta name="citation_author" content="Casey S. Greene" />
@@ -112,9 +112,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/4a3751b9dc44f179e343684da0b0edb7663a7cdb/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4a3751b9dc44f179e343684da0b0edb7663a7cdb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/4a3751b9dc44f179e343684da0b0edb7663a7cdb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/53fc9f3862b9b38ebd463edce6cda72ab1cb64a7/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/53fc9f3862b9b38ebd463edce6cda72ab1cb64a7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/53fc9f3862b9b38ebd463edce6cda72ab1cb64a7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -139,10 +139,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/4a3751b9dc44f179e343684da0b0edb7663a7cdb/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/53fc9f3862b9b38ebd463edce6cda72ab1cb64a7/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@4a3751b](https://github.com/greenelab/connectivity-search-manuscript/tree/4a3751b9dc44f179e343684da0b0edb7663a7cdb)
-on June 23, 2023.
+from [greenelab/connectivity-search-manuscript@53fc9f3](https://github.com/greenelab/connectivity-search-manuscript/tree/53fc9f3862b9b38ebd463edce6cda72ab1cb64a7)
+on June 30, 2023.
 </em></small>
 
 
@@ -291,7 +291,7 @@ on June 23, 2023.
     [mikenagle84](https://twitter.com/mikenagle84)
     <br>
   <small>
-     Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc., Cambridge, MA 02139, USA; Neurogenomics, Translational Sciences, Neurology Business Group, Eisai Inc., Cambridge, MA 02140, USA
+     Integrative Biology, Internal Medicine Research Unit, Worldwide Research, Development, and Medicine, Pfizer Inc., Cambridge, MA 02139, USA; Human Biology Integration Foundation, Deep Human Biology Learning, Eisai Inc., Cambridge, MA 02140, USA
   </small>
 
 + **Casey S. Greene**
