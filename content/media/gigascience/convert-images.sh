@@ -7,10 +7,12 @@ cp content/media/rephetio/metagraph-and-features.eps content/media/gigascience/g
 # The source is not vector, hence an EPS version would not make sense
 cp content/media/webapp/v3/b.metapaths-expanded.png content/media/gigascience/giad047_f2.png
 convert content/media/gigascience/giad047_f2.png content/media/gigascience/giad047_f2.jpg
+convert content/media/gigascience/giad047_f2.png content/media/gigascience/giad047_f2.tiff
 
 # Figure 3
 cp content/media/webapp/v3/webapp.png content/media/gigascience/giad047_f3.png
 convert content/media/gigascience/giad047_f3.png content/media/gigascience/giad047_f3.jpg
+convert -background white -alpha remove content/media/gigascience/giad047_f3.png content/media/gigascience/giad047_f3.tiff
 
 # Figure 4
 curl --location --silent https://github.com/greenelab/connectivity-search-analyses/raw/15f1925c0481d8e6bab8b0931f48f2fad388c68c/explore/degree-group-analyses.pdf > content/media/gigascience/giad047_f4.pdf
