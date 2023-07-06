@@ -24,13 +24,13 @@ CSG
 CtDrDtC
 CtDtCtD
 curation
-Customizable
+customizable
 customizations
 DaGiGpPW
 DaGpPWpG
 danich
 dataset
-datasets
+Datasets
 DdGpPW
 deepwalk
 Dev
@@ -66,7 +66,7 @@ GreeneScientist
 Hadamard
 Hao
 HD
-heil
+Heil
 hneem
 Hu
 interpretability
