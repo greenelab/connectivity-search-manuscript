@@ -3,10 +3,16 @@
 cp content/media/rephetio/metagraph-and-features.eps content/media/gigascience/giad047_f1.eps
 
 # Figure 2
-pdftops -rasterize never content/media/webapp/v4/b.metapaths-expanded.pdf content/media/gigascience/giad047_f2.eps
+cp content/media/webapp/v4/b.metapaths-expanded.eps content/media/gigascience/giad047_f2.eps
+# pdftops had trouble with checkboxes (probably due to transparency)
+# pdftops -rasterize never content/media/webapp/v4/b.metapaths-expanded.pdf content/media/gigascience/giad047_f2.eps
+# rsvg-convert seemed to rasterize text
+# rsvg-convert --format=eps --output=content/media/gigascience/giad047_f2.eps content/media/webapp/v4/b.metapaths-expanded.svg
+# inkscape content/media/webapp/v4/b.metapaths-expanded.svg --export-type=eps --export-filename=content/media/gigascience/giad047_f2.eps
 
 # Figure 3
-pdftops -rasterize never content/media/webapp/v4/webapp.pdf content/media/gigascience/giad047_f3.eps
+cp content/media/webapp/v4/webapp.eps content/media/gigascience/giad047_f3.eps
+# pdftops -rasterize never content/media/webapp/v4/webapp.pdf content/media/gigascience/giad047_f3.eps
 # convert -background white -alpha remove content/media/gigascience/giad047_f3.png content/media/gigascience/giad047_f3.tiff
 
 # Figure 4
