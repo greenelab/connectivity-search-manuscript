@@ -24,13 +24,13 @@ CSG
 CtDrDtC
 CtDtCtD
 curation
-customizable
+Customizable
 customizations
 DaGiGpPW
 DaGpPWpG
 danich
 dataset
-Datasets
+datasets
 DdGpPW
 deepwalk
 Dev
