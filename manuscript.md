@@ -15,7 +15,7 @@ keywords:
 - matrix multiplication
 - DWPC
 lang: en-US
-date-meta: '2023-07-07'
+date-meta: '2023-07-20'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -41,11 +41,11 @@ header-includes: |
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-07-07" />
-  <meta name="citation_publication_date" content="2023-07-07" />
-  <meta property="article:published_time" content="2023-07-07" />
-  <meta name="dc.modified" content="2023-07-07T14:19:14+00:00" />
-  <meta property="article:modified_time" content="2023-07-07T14:19:14+00:00" />
+  <meta name="dc.date" content="2023-07-20" />
+  <meta name="citation_publication_date" content="2023-07-20" />
+  <meta property="article:published_time" content="2023-07-20" />
+  <meta name="dc.modified" content="2023-07-20T16:28:51+00:00" />
+  <meta property="article:modified_time" content="2023-07-20T16:28:51+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -112,9 +112,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/22db7d904da23b4aa31c3d878fb4c6abacd8a6bc/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/22db7d904da23b4aa31c3d878fb4c6abacd8a6bc/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/22db7d904da23b4aa31c3d878fb4c6abacd8a6bc/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/f3817a792d42f1372efde6e20071ba88eab85687/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f3817a792d42f1372efde6e20071ba88eab85687/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f3817a792d42f1372efde6e20071ba88eab85687/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -139,10 +139,10 @@ _A DOI-citable version of this manuscript is available at <https://doi.org/10.11
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/22db7d904da23b4aa31c3d878fb4c6abacd8a6bc/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/f3817a792d42f1372efde6e20071ba88eab85687/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@22db7d9](https://github.com/greenelab/connectivity-search-manuscript/tree/22db7d904da23b4aa31c3d878fb4c6abacd8a6bc)
-on July 7, 2023.
+from [greenelab/connectivity-search-manuscript@f3817a7](https://github.com/greenelab/connectivity-search-manuscript/tree/f3817a792d42f1372efde6e20071ba88eab85687)
+on July 20, 2023.
 </em></small>
 
 
@@ -518,7 +518,7 @@ The shortcomings of these methods are twofold.
 First, neither the percentile nor absolute value of a DWPC has inherent meaning.
 To select transformed DWPCs greater than 3.5, or alternatively the top 1% of DWPCs, is arbitrary.
 Second, comparing DWPCs between node pairs fails to account for the situation where high-degree node pairs are likely to score higher,
-solely on due to their degree (@fig:degree-group-metrics).
+solely on due to their degree (Figure @fig:degree-group-metrics).
 
 To address these shortcomings,
 we developed a method to compute the right-tail _p_-value of a DWPC.
