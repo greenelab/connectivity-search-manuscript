@@ -15,7 +15,7 @@ keywords:
 - matrix multiplication
 - DWPC
 lang: en-US
-date-meta: '2023-07-20'
+date-meta: '2023-07-28'
 author-meta:
 - Daniel S. Himmelstein
 - Michael Zietz
@@ -41,11 +41,11 @@ header-includes: |
   <meta name="citation_title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="og:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
   <meta property="twitter:title" content="Hetnet connectivity search provides rapid insights into how two biomedical entities are related" />
-  <meta name="dc.date" content="2023-07-20" />
-  <meta name="citation_publication_date" content="2023-07-20" />
-  <meta property="article:published_time" content="2023-07-20" />
-  <meta name="dc.modified" content="2023-07-20T16:28:51+00:00" />
-  <meta property="article:modified_time" content="2023-07-20T16:28:51+00:00" />
+  <meta name="dc.date" content="2023-07-28" />
+  <meta name="citation_publication_date" content="2023-07-28" />
+  <meta property="article:published_time" content="2023-07-28" />
+  <meta name="dc.modified" content="2023-07-28T12:16:22+00:00" />
+  <meta property="article:modified_time" content="2023-07-28T12:16:22+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -112,9 +112,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://greenelab.github.io/connectivity-search-manuscript/" />
   <meta name="citation_pdf_url" content="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://greenelab.github.io/connectivity-search-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/f3817a792d42f1372efde6e20071ba88eab85687/" />
-  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f3817a792d42f1372efde6e20071ba88eab85687/" />
-  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/f3817a792d42f1372efde6e20071ba88eab85687/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://greenelab.github.io/connectivity-search-manuscript/v/54317f330b3f7139d0d7f03d4b1187d01017e9d0/" />
+  <meta name="manubot_html_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/54317f330b3f7139d0d7f03d4b1187d01017e9d0/" />
+  <meta name="manubot_pdf_url_versioned" content="https://greenelab.github.io/connectivity-search-manuscript/v/54317f330b3f7139d0d7f03d4b1187d01017e9d0/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://github.com/hetio/het.io/raw/e1ca4fd591e0aa01a3767bbf5597a910528f6f86/explore/connectivity-search.png" />
@@ -134,15 +134,20 @@ manubot-clear-requests-cache: false
 
 
 
-_A DOI-citable version of this manuscript is available at <https://doi.org/10.1101/2023.01.05.522941>_.
+[
+<i class="fas fa-scroll fa-lg"></i> **Now Published**<br>
+This study is published in _GigaScience_ at <https://doi.org/10.1093/gigascience/giad047>,
+which is the preferred location for citations, although this Manubot version offers the best viewing experience.
+A _bioRxiv_ preprint also exists at <https://doi.org/10.1101/2023.01.05.522941>.
+]{.banner .lightpurple}
 
 
 <small><em>
 This manuscript
-([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/f3817a792d42f1372efde6e20071ba88eab85687/))
+([permalink](https://greenelab.github.io/connectivity-search-manuscript/v/54317f330b3f7139d0d7f03d4b1187d01017e9d0/))
 was automatically generated
-from [greenelab/connectivity-search-manuscript@f3817a7](https://github.com/greenelab/connectivity-search-manuscript/tree/f3817a792d42f1372efde6e20071ba88eab85687)
-on July 20, 2023.
+from [greenelab/connectivity-search-manuscript@54317f3](https://github.com/greenelab/connectivity-search-manuscript/tree/54317f330b3f7139d0d7f03d4b1187d01017e9d0)
+on July 28, 2023.
 </em></small>
 
 
@@ -150,7 +155,7 @@ on July 20, 2023.
 ## Authors
 
 <!-- include the Font Awesome library, per: https://fontawesome.com/start -->
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
 
 

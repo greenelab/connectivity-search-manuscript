@@ -7,6 +7,7 @@ BAAB
 BABA
 BDS
 bdsullivan
+bioRxiv
 Bioteque
 biotools
 BJH
@@ -16,7 +17,6 @@ CbG
 CbGpPWpG
 CbGpPWpGaD
 cgreene
-citable
 colormap
 compbio
 CrC
@@ -94,6 +94,7 @@ parametrized
 piecewise
 Pinnable
 Preexisiting
+preprint
 programmatically
 prtransx
 pykeen

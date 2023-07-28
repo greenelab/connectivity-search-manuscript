@@ -1,7 +1,8 @@
-content/00.front-matter.md:7:citable
-content/00.front-matter.md:66:funders
-content/00.front-matter.md:66:funders
-content/00.front-matter.md:67:funders
+content/00.front-matter.md:9:gigascience
+content/00.front-matter.md:11:preprint
+content/00.front-matter.md:71:funders
+content/00.front-matter.md:71:funders
+content/00.front-matter.md:72:funders
 content/05.main-text.md:7:erogeneous
 content/05.main-text.md:44:DWPCs
 content/05.main-text.md:52:greenelab
